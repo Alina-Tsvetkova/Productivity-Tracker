@@ -3,17 +3,6 @@ class Categories {
         this.category = category;
     }
 
-    static renderEarlierSavedCtegories() {
-        let choosedEarlierInputs = document.getElementsByClassName('possible-category');
-        let i = 0;
-        categories.on('value', function (data) {
-            for (let k = 0; k < choosedEarlierInputs.length; k++) {
-                choosedEarlierInputs[k].value = data.val()[i];
-                i++;
-            }
-        })
-    }
-
     static saveCategories() {
         let possibleCategoriesSet = new Set();
         let allPossibleCategories = document.getElementsByClassName('possible-category');
@@ -39,6 +28,6 @@ class Categories {
             k++;
         }
         categories.set(choosedCategories);
-        Categories.renderEarlierSavedCtegories();
+        CategoriesView.renderEarlierSavedCategories();
     }
 }

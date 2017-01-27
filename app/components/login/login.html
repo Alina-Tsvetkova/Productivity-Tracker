@@ -8,12 +8,12 @@
 <body>
 <div id="wrapper" class="login-wrapper">
     <div class="logo-part">
-        <img  class="logo-img" width="450" height="450" src="assets/img/Logo-1.svg">
+        <img class="logo-img" width="450" height="450" src="assets/img/Logo-1.svg">
         <p class="app-name">Productivity Tracker</p>
     </div>
     <form class="login-form">
         <div class=input-group>
-            <input type="email" placeholder="Username" class="field for-username" required value="test@mail.ua" />
+            <input type="email" placeholder="Username" class="field for-username" required value="test@mail.ua"/>
             <i class="icon icon-login"></i>
             <div class="fail-validation">
                 <span class="false-data">There is no User with such Username</span>
@@ -26,7 +26,10 @@
                 <span class="false-data">Password is incorrect</span>
             </div>
         </div>
-        <button class="submit-btn">Log In</button>
+        <div class="btn-group">
+            <button class="submit-btn sign-in">Sign In</button>
+            <button class="submit-btn sign-up">Sign Up</button>
+        </div>
     </form>
 </div>
 </body>

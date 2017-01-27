@@ -76,8 +76,8 @@ class Cycle {
     }
 
     countAllWidth () {
-        let wotkIteraration = this.workTime + this.shortBreak;
-        let totalWidth = (wotkIteraration * this.workIteration) * 2 - (this.shortBreak) * 2 + this.longBreak;
+        let workIteration = this.getWorkTime() + this.getShortBreak();
+        let totalWidth = (workIteration * this.getWorkIterations()) * 2 - (this.getShortBreak()) * 2 + this.getLongBreak();
         return totalWidth;
     }
 
@@ -94,8 +94,8 @@ class Cycle {
     }
 
     countFullCycleHours(elem) {
-        let wotkIteraration = this.workTime + this.shortBreak;
-        let totalWidth = (wotkIteraration * this.workIteration) - (this.shortBreak) + this.longBreak;
+        let workIteration = this.workTime + this.shortBreak;
+        let totalWidth = (workIteration * this.workIteration) - (this.shortBreak) + this.longBreak;
         let totalHours = parseInt(totalWidth / 60);
         let totalMinutes = parseInt(totalWidth % 60);
         elem.innerHTML = 'Full cycle: ' + totalHours + 'h ' + totalMinutes + 'm';

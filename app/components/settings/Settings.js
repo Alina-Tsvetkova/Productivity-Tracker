@@ -19,7 +19,7 @@ class Settings {
         $(document).ready(function () {
             let tabs = $("#tabs");
             tabs.tabSwitcher();
-            Categories.renderEarlierSavedCtegories();
+            CategoriesView.renderEarlierSavedCategories();
 
             let tooltips = $('.tooltip');
             tooltips.tooltipSwitcher();

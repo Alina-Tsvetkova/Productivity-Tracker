@@ -138,7 +138,7 @@ class funcTask {
             let thisCategory = renderedTask.category;
             document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].classList.add('done-task');
             document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute('category-name', thisCategory);
-            document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute('color-category', renderedTask.color-indicator);
+            document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute('color-category', renderedTask.colorIndicator);
             document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute("taskKey", data.key);
             document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute("dailyTask", '' + renderedTask.dailyTask);
             document.body.querySelectorAll('#tab2 .task')[counterOfTasksDone].setAttribute("taskisdone", renderedTask.taskisdone);

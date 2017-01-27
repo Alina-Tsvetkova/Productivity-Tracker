@@ -10,6 +10,7 @@ firebase.initializeApp(config);
 let allTasksToDo = firebase.database().ref("tasksToDo");
 
 let allTasksDone = firebase.database().ref("tasksDone");
+
 //allTasksDone.push({
 //    title: 'Add slider',
 //    description: 'Add slider to my web-site',

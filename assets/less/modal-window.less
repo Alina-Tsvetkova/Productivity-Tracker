@@ -1,5 +1,5 @@
 
-.modal_wrapper {
+.modal-wrapper {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -9,14 +9,14 @@
   z-index: 10;
 }
 
-#modal_w_remove {
+#modal-w-remove {
   display: none;
 }
 
-.modal_window {
+.modal-window {
   padding: 15px 10px 50px 40px;
   h2 {
-    color: @color-3;
+    color: @light-blue;
     font-size: 28px;
     text-align: center;
     margin-bottom: 0px;
@@ -25,7 +25,7 @@
   }
 }
 
-.add_task_modal {
+.add-task-modal {
   padding: 20px 40px 50px;
   margin-bottom: 30px;
   background: #2a3f50;
@@ -43,7 +43,7 @@
   transition-duration: 0.6s;
 }
 
-.modal_functionality {
+.modal-functionality {
   width: 24px;
   height: 24px;
   margin-left: 5px;
@@ -53,25 +53,25 @@
   }
 }
 
-.modal_functionality.close_button {
+.modal-functionality.close-button {
   float: right;
 }
 
-.modal_functionality.check_button {
+.modal-functionality.check-button {
   float: right;
   margin-right: -30px;
 }
 
-.field_name {
+.field-name {
   font-size: 14px;
-  color: @color_1;
+  color: @lightest-grey;
   margin-bottom: 10px;
   margin-top: 14px;
   margin-left: 0px;
 }
 
 .categories {
-  color: @color_2;
+  color: @light-bluish;
   border-bottom: 1px solid #425869;
   padding-bottom: 10px;
   li {
@@ -79,7 +79,7 @@
   }
 }
 
-.remove_task_modal {
+.remove-task-modal {
   h1 {
     color: white;
   }
@@ -90,10 +90,10 @@ input {
   margin-bottom: 15px;
   width: 100%;
   padding-bottom: 10px;
-  color: @color_2;
+  color: @light-bluish;
   font-size: 16px;
   &:focus {
-    color: @color_3;
+    color: @light-blue;
   }
 }
 
@@ -112,24 +112,24 @@ label {
   cursor: pointer;
 }
 
-.priority_name {
+.priority-name {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.category_name {
+.category-name {
   margin-left: 5px;
 }
 
-.tomato_estim {
+.tomato-estim {
   display: none;
 }
 
-#modal_window_elem {
+#modal-window-elem {
   z-index: 10;
-  .tomato_estim {
+  .tomato-estim {
     & + label {
-      background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+      background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato-variants.png');
       background-position: 89% 15%;
       width: 21px;
       height: 19px;
@@ -137,33 +137,33 @@ label {
     }
     &:checked {
       & + label {
-        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato-variants.png');
         background-position: 89% 90%;
       }
     }
     &:hover {
       & + label {
-        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato-variants.png');
         background-position: 89% 90%;
       }
     }
   }
 }
 
-.modal_window {
+.modal-window {
   span {
-    color: @light-white2;
+    color: @light-blue;
     &:hover {
       color: @white-color;
     }
   }
 }
 
-.modal_window h2 {
+.modal-window h2 {
   margin-top: 30px;
 }
 
-.remove_task_modal {
+.remove-task-modal {
   text-align: center;
   width: 400px;
   background: #2a3f50;
@@ -180,13 +180,13 @@ label {
   h1 {
     font-size: 28px;
   }
-  .modal_functionality {
+  .modal-functionality {
     float: right;
     margin-right: 15px;
   }
 }
 
-.cancel_btn {
+.cancel-btn {
   width: 126px;
   height: 44px;
   color: @white-color;
@@ -197,7 +197,7 @@ label {
   margin-right: 22px;
 }
 
-.remove_btn {
+.remove-btn {
   width: 126px;
   height: 44px;
   color: @white-color;
@@ -207,7 +207,7 @@ label {
   background: #f15a4a;
 }
 
-.remove_warn {
+.remove-warn {
   font-size: 36px;
   color: @light-blue;
   padding: 0 11%;
@@ -215,44 +215,44 @@ label {
   font-family: 'Roboto-Light', sans-serif;
 }
 
-#deadline_input {
+#deadline-input {
   margin-top: 0;
   height: auto !important;
 }
 
-.category_title {
+.category-title {
   width: auto;
   vertical-align: text-top;
 }
 
 @media screen and (max-width: 740px) {
-  .add_task_modal {
+  .add-task-modal {
     width: 90%;
     min-width: 300px;
     padding-left: 2%;
     padding-right: 2%;
   }
 
-  .modal_window span {
+  .modal-window span {
     font-size: 12px;
   }
 
-  .modal_functionality.check_button {
+  .modal-functionality.check-button {
     margin-right: 0;
   }
 
-  .modal_window h2 {
+  .modal-window h2 {
     margin-top: 27px;
   }
 
-  .field_name {
+  .field-name {
     font-size: 13px;
     margin-top: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  header.fixed_logo {
+  header.fixed-logo {
     padding: 20px 1% 20px 5%
   }
 

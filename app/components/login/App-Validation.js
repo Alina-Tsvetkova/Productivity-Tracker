@@ -29,11 +29,25 @@ class UserValidation {
 let checkLoginPassObj = new UserValidation('test@mail.ua', '123456');
 
 document.body.onclick = function (event) {
-    if (event.target == document.getElementsByClassName('submit-btn')[0]) {
+    if (event.target == document.getElementsByClassName('sign-in')[0]) {
         event.preventDefault();
         checkLoginPassObj.checkLoginPass();
     }
-}
+
+    if (event.target == document.getElementsByClassName('sign-up')[0]) {
+        event.preventDefault();
+        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html', document.body);
+        registrationFormBinder.downloadComponent();
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.takeUserInfo);
+        setTimeout(function () {
+            document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
+
+        }, 500);
+
+    }
+};
+
+
 
 
 
