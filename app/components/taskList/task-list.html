@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+
+    <title>Task List</title>
+</head>
+
+<body>
+<div id="outer-wrapper">
+    <header class="fixed-logo">
+        <a href="task-list.html" class="logo-link">
+            <object data="images/logo.svg" type="image/svg+xml" class="logo-img-fixed" width="250"
+                    height="80"></object>
+        </a>
+
+        <div class="icons">
+            <div class="group-btn ">
+                <button type="submit" class="add-task add-task-header tooltip" data-tooltip="Add New Task"><i
+                        class="icon-add"></i></button>
+            </div>
+            <div class="group-btn ">
+                <button type="submit" class="remove-btn-icon tooltip" data-tooltip="Remove Task"><i
+                        class="icon-trash"></i>
+                </button>
+                <div class="quantity-del-tasks"></div>
+            </div>
+            <div class="group-btn ">
+                <button type="submit" class="reports-switcher tooltip" data-tooltip="Go to Reports"><i
+                        class="icon-statistics"></i>
+                </button>
+            </div>
+            <div class="group-btn ">
+                <button type="submit" class="settings-switcher tooltip tooltip-right" data-tooltip="Go to Settings"><i
+                        class="icon-settings"></i></button>
+            </div>
+            <div class="group-btn ">
+                <button type="submit" class="log-out tooltip tooltip-right" data-tooltip="Log Out"><i
+                        class="icon-logout"
+                ></i></button>
+            </div>
+        </div>
+    </header>
+    <div id="wrapper">
+
+        <div id="fixed-logo">
+
+            <section class="daily-task-list" id="daily-task-list">
+                <div class="icons">
+                    <div class="group-btn">
+                        <button type="submit" class="remove-btn-icon tooltip" data-tooltip="Remove Task"><i
+                                class="icon-trash"></i></button>
+                        <div class="quantity-del-tasks"></div>
+                    </div>
+                    <div class="group-btn ">
+                        <button type="submit" class="reports-switcher tooltip" data-tooltip="Go to Reports"><i
+                                class="icon-statistics"></i>
+                        </button>
+                    </div>
+                    <div class="group-btn ">
+                        <button type="submit" class="settings-switcher tooltip tooltip-right"
+                                data-tooltip="Go to Settings">
+                            <i
+                                    class="icon-settings"></i></button>
+                    </div>
+                    <div class="group-btn ">
+                        <button type="submit" class="log-out tooltip tooltip-right" data-tooltip="Log Out"><i
+                                class="icon-logout"
+                        ></i></button>
+                    </div>
+                </div>
+                <h1>Daily Task List
+                    <div class="group-btn">
+                        <button type="submit" class="add-task tooltip" data-tooltip="Add New Task"><i
+                                class="icon-add"></i>
+                        </button>
+                    </div>
+                </h1>
+
+            </section>
+            <div id="tasksTabs">
+                <div class="opportunity-select daily-opportunity">
+                    <button type="submit" class="select-all select-all-daily">Select All</button>
+                     <span class="visual-divider">|</span>
+                    <button type="submit" class="deselect-all deselect-all-daily">Deselect All</button>
+                </div>
+                <div class="toggle-doneable">
+                    <ul class="tabNavigation">
+                        <li><a class="ui-tabs-anchor" href="#tab1">To Do</a></li>
+                         <span class="visual-divider">|</span>
+                        <li><a class="ui-tabs-anchor" href="#tab2">Done</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tab1" class="ui-tabs-panel">
+                    <div class="tasks-intro">
+                        <section class="add-task-sect">
+                            <i class="add-indicator icon-arrow-circle"></i>
+
+                            <h2 class="add-task-logo">Add your first task</h2>
+                        </section>
+                        <section class="added-task">
+                            <h2 class="add-task-logo">Task added,<br> drag it to the top 5 in daily task list</h2>
+                            <i class="add-indicator icon-arrow-circle"></i>
+                        </section>
+
+                        <div id="daily-tasks"></div>
+                    </div>
+                    <div class="btn-wrap accordion-button ">
+                        <span class="global-name">Global list</span>
+                        <button type="submit" class="global-list-btn global-list-close tooltip "
+                                data-tooltip="Go to Global List"><i
+                                class="icon-global-list-arrow-down "></i>
+                        </button>
+                    </div>
+                    <div class="priority-list">
+                        <button type="submit">All</button>
+                        <span class="visual-divider">|</span>
+                        <button type="submit">Urgent</button>
+                         <span class="visual-divider">|</span>
+                        <button type="submit">High</button>
+                         <span class="visual-divider">|</span>
+                        <button type="submit">Middle</button>
+                         <span class="visual-divider">|</span>
+                        <button type="submit">Low</button>
+                    </div>
+                    <div class="opportunity-select">
+                        <button type="submit" class="select-all select-all-global">Select All</button>
+                         <span class="visual-divider">|</span>
+                        <button type="submit" class="deselect-all deselect-all-global">Deselect All</button>
+                    </div>
+
+
+                    <div id="globalTasks" class="accordion-content">
+                        <div class="tasks-list">
+                            <ul class="tasks-content">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab2" class="ui-tabs-panel"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-w-remove">
+        <div class="modal-wrapper">
+            <div class="modal-window">
+                <section class="remove-task-modal">
+                    <button type="submit" class="modal-functionality close-button"><i class="icon-close"></i>
+                    </button>
+                    <h1>Remove Task</h1>
+
+                    <p class="remove-warn">Are you sure you want to remove selected task(s)?</p>
+                    <button type="submit" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="remove-btn">Remove</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

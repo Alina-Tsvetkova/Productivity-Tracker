@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="wrapper" class="login-wrapper">
+    <div class="logo-part">
+        <img  class="logo-img" width="450" height="450" src="assets/img/Logo-1.svg">
+        <p class="app-name">Productivity Tracker</p>
+    </div>
+    <form class="login-form">
+        <div class=input-group>
+            <input type="email" placeholder="Username" class="field for-username" required value="test@mail.ua" />
+            <i class="icon icon-login"></i>
+            <div class="fail-validation">
+                <span class="false-data">There is no User with such Username</span>
+            </div>
+        </div>
+        <div class='input-group'>
+            <input type="password" placeholder="Password" class="field for-password" required value="123456"/>
+            <i class="icon icon-password"></i>
+            <div class="fail-validation">
+                <span class="false-data">Password is incorrect</span>
+            </div>
+        </div>
+        <button class="submit-btn">Log In</button>
+    </form>
+</div>
+</body>
+</html>

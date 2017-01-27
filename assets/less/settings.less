@@ -1,0 +1,72 @@
+.main-title {
+  color: white;
+}
+
+.toggle-settings {
+  position: absolute;
+}
+
+.toggle-settings button {
+  font-size: 16px;
+}
+
+.pomodoros-settings .next-btn {
+  width: 125px;
+  height: 41px;
+}
+
+.possible-category:focus {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.ui-tabs-anchor {
+  font-family: @font-family-roboto;
+}
+
+.color-circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.for(@list, @code) {
+  & {
+    .loop(@i:1) when (@i =< length(@list)) {
+      @value: extract(@list, @i);
+
+      @code();
+
+      .loop(@i + 1);
+    }
+
+    .loop();
+  }
+}
+
+@colors: #f75c4c,  #e67e22, #fddc43, #ffb200;
+
+.for(@colors, {
+  .color-circle-@{i} {
+    background-color: @value;
+  }
+});
+
+@media screen and (max-width: 640px) {
+  .toggle-settings .tab-links {
+    font-size: 18px;
+  }
+
+  .choose-num {
+    width: 50%;
+  }
+
+  .choose-num .field {
+    font-size: 14px;
+    padding-bottom: 6px;
+  }
+
+  .choose-num .increment, .choose-num .dicrement {
+    bottom: 6px;
+  }
+}

@@ -1,0 +1,55 @@
+.trash_button {
+  float: left;
+  margin-left: -25px;
+}
+
+#modal_window_elem_edit {
+  .tomato_estim {
+    & + label {
+      background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+      background-position: 89% 15%;
+      width: 21px;
+      height: 19px;
+      display: inline-block;
+    }
+    &:checked {
+      & + label {
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background-position: 89% 90%;
+      }
+    }
+    &:hover {
+      & + label {
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background-position: 89% 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .add_task_modal {
+    width: 90%;
+    min-width: 300px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0;
+  }
+
+  .modal_window span {
+    font-size: 12px;
+  }
+
+
+  .modal_functionality.check_button {
+    margin-right: 0;
+  }
+
+  .modal_wrapper {
+    background: #2a3f50;
+  }
+
+  .modal_window {
+    padding: 0;
+  }
+}

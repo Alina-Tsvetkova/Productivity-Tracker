@@ -1,0 +1,97 @@
+.bottom-message {
+  display: table;
+  height: 53px;
+  background: #1ca991;
+  color: @white-color;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  clear: both;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  max-width: 500px;
+  .message-content {
+    padding-top: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+
+.message-content {
+  display: inline-block;
+  text-align: center;
+  padding-left: 3%;
+  font-family: @font-family-3;
+  font-size: 15px;
+}
+
+.message {
+  clear: both;
+  float: right;
+  margin-top: -70px;
+  transition-duration: 1s;
+}
+
+.remove-message {
+  background: url('../images/remove-message.png') no-repeat;
+  width: 25px;
+  height: 100%;
+  float: right;
+  margin-right: 25px;
+  background-position: 50% 50%;
+}
+
+.pomodoro-logo {
+  width: 60px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.notification-message-wrapper {
+  background-color: #59abe3;
+}
+
+.error-message-wrapper {
+  background-color: #f75c4c;
+}
+
+.warning-message-wrapper {
+  background-color: #ffa841;
+}
+
+.succesfull-message-wrapper {
+  background-color: #1abc9c;
+}
+
+.completed-message-wrapper {
+  background-color: #fddc43;
+}
+
+.notification-message {
+  background-color: #7abce9;
+  background-image: url('../images/warning-message.png');
+}
+
+.error-message {
+  background-color: #f97d70;
+  background-image: url('../images/error-message.png');
+}
+
+.warning-message {
+  background-color: #ffb967;
+  background-image: url('../images/warning-message.png');
+}
+
+.successful-message {
+  background-color: #48c9b0;
+  background-image: url('../images/info-message.png');
+}
+
+.completed-message {
+  background-color: #eae943;
+  background-image: url('../images/info-message.png');
+}

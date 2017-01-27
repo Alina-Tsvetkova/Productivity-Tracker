@@ -1,0 +1,388 @@
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name { @arguments();
+  }
+  @-webkit-keyframes @name { @arguments();
+  }
+  @keyframes @name { @arguments();
+  }
+}
+
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+  -moz-animation: @arguments;
+  animation: @arguments;
+}
+
+@keyframes animateOpacity {
+  0% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+* {
+  font-family:@font-family-sans;
+}
+
+.timer-content button {
+  font-family: @font-family-roboto-light;
+}
+
+.next-btn {
+  width: 64px;
+  height: 64px;
+  &:hover {
+    & + .hint-next {
+      display: table-cell;
+    }
+  }
+}
+
+.hint-next {
+  font-size: 12px;
+  background: #ccdce8;
+  width: 127px;
+  color: @dirty-blue;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  display: none;
+  vertical-align: middle;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #ccdce8;
+    left: 80%;
+  }
+}
+
+.timer-content h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.pomodoros {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.pomodoro {
+  background: url('../img/tomato-variants-active.png') no-repeat;
+  list-style: none;
+  width: 35px;
+  height: 25px;
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.failed-tomato {
+  background-position: 11% 17%;
+}
+
+.add-tomato-btn {
+  color: @light-grey-blue;
+  vertical-align: super;
+  margin-left: 10px;
+  .timer-content i {
+    color: @white-color;
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: normal;
+    vertical-align: super;
+  }
+}
+
+.timer-content {
+  margin: 0 auto;
+  text-align: center;
+  clear: both;
+  margin-top: 50px;
+  min-height: 700px;
+}
+
+.timer {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: table;
+  overflow: hidden;
+  box-shadow: 0px 0px 55px 10px #243747;
+  background: #2a3f50;
+  margin: 100px auto;
+}
+
+.task-description-timer {
+  color: white;
+}
+
+.group-buttons {
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.timer-btn {
+  border: none;
+  outline: none;
+  width: 175px;
+  height: 44px;
+  color: @white-color;
+  font-size: 18px;
+}
+
+.icon {
+  border: none;
+  outline: none;
+}
+
+.start-btn-break {
+  margin-right: 10px;
+  background: #1abc9c;
+  &:hover {
+    background: #16A085;
+  }
+}
+
+.fail-btn {
+  margin-right: 10px;
+  background: #f75c4c;
+  &:hover {
+    background: #B74E4B;
+  }
+}
+
+.finish-btn {
+  background: #1abc9c;
+  &:hover {
+    background: #16A085;
+  }
+}
+
+.start-btn {
+  background: #1abc9c;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  &:hover {
+    background: #16A085;
+  }
+}
+
+.time {
+  font-size: 10%;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  border-radius: 50% !important;
+  background: #2a3f50;
+  margin: 0 auto;
+  line-height: 0.7;
+}
+
+.q-minutes {
+  font-size: 5em;
+  display: block;
+  font-size: 0px;
+  margin-top: 40%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  color: white;
+}
+
+.finish-btn-break {
+  background: #59abe3;
+  &:hover {
+    background: #368BC5;
+  }
+}
+
+.next-arrow {
+  right: 1%;
+  position: absolute;
+  top: 50%;
+}
+
+#process-btn {
+  margin-bottom: 50px;
+}
+
+.timer-block {
+  position: relative;
+  width: 315px;
+  height: 315px;
+  margin: 100px auto 100px auto;
+  border: 5px solid #ffa841;
+  border-radius: 50%;
+  box-shadow: 0px 0px 55px 10px #243747;
+}
+
+.measurement {
+  font-size: 0px;
+  letter-spacing: 1.5px;
+  font-size: 30px;
+}
+
+.timer-wrapper {
+  position: absolute;
+  margin: 0;
+  background: #2a3f50;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  overflow: hidden;
+  .timer-part {
+    transform-origin: 100% 50%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+  .rotator {
+    width: 50%;
+    height: 100%;
+    border-radius: 100% 0 0 100% e("/") 50% 0 0 50%;
+    z-index: 2;
+    border-right: none;
+    .keyframes(rotateTimer; { 0% {
+      transform: rotate(0deg);
+      background: #8da5b8;
+    } 100% {
+        transform: rotate(360deg);
+        background: #8da5b8;
+      } });
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+  }
+  .invader {
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    opacity: 0;
+    z-index: 1;
+    border-radius: 0 100% 100% 0 e('/') 0 50% 50% 0;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+    background: #8da5b8;
+    border-left: none;
+  }
+  .dimElem {
+    width: 50%;
+    height: 100%;
+    border-radius: 100% 0 0 100% e("/") 50% 0 0 50%;
+    position: absolute;
+    background: inherit;
+    opacity: 0;
+    z-index: 3;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+}
+
+.intro-slog {
+  font-size: 30px;
+  vertical-align: middle;
+  display: table-cell;
+  color: white;
+  border: 5px solid #ffa841;
+  border-radius: 50%;
+}
+
+.intro-timer {
+  animation: scaleTimer 1s linear 1;
+  .keyframes(scaleTimer; { 0% {
+    transform: scale(0);
+  } 100% {
+      transform: scale(1);
+    } });
+}
+
+.fail-pomodora-btn {
+  background: #f75c4c;
+  margin-right: 2%;
+}
+
+.finish-pomodora-btn {
+  background: #1abc9c;
+}
+
+.intro-break {
+  border: 5px solid #ffa841;
+  border-radius: 50%;
+}
+
+.intro-break {
+  /* visible on the stage of break*/
+  font-size: 24px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.intro-completed {
+  /* visible when completed*/
+  font-size: 30px;
+  color: white;
+  vertical-align: middle;
+  display: table-cell;
+  border-radius: 50%;
+  border: 37px solid #8da5b8;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.completed-notification {
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+}
+
+.timer-completed-wrapper, .timer-break-wrapper, .timer-failed-wrapper {
+  border: 5px solid orange;
+  border-radius: 50%;
+  width: 325px;
+  height: 325px;
+  margin: 80px auto 0 auto;
+}
+
+.paused-animation {
+  animation-play-state: paused !important;
+}
+
+.running-animation {
+  animation-play-state: running !important;
+}
+
+.completed-timer {
+  margin-top: 7px;
+}
+
+.fail-pomodoro {
+  background: url('../img/tomato-variants-break.png') no-repeat;;
+}
+
+.finish-pomodoro {
+  background: url('../img/tomato-variants-finish.png') no-repeat;;
+}
+
+.finish-task-btn {
+  background: #59abe3;
+}
+
+.start-pomodora-btn {
+  background: #1abc9c;
+  margin-right: 20px;
+}

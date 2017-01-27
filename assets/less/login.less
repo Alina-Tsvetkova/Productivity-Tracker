@@ -1,0 +1,127 @@
+html,body {
+    min-height: 100%;
+}
+#wrapper.login-wrapper {
+    background: -webkit-linear-gradient(rgba(8, 41, 63, 0.92), rgba(8, 41, 63, 0.92)), url('../img/01-Log-In.png');
+    background: linear-gradient(rgba(8, 41, 63, 0.92), rgba(8, 41, 63, 0.92)), url('../img/01-Log-In.png');
+    width: 100%;
+    max-width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fail-validation, .fail-validation2 {
+    display: none;
+}
+.login-form, .logo-part {
+    width: 330px;
+    margin: 0 auto;
+    display: block;
+}
+.app-name {
+    height: 1px;
+    visibility: hidden;
+}
+.logo {
+    width: 100%;
+    background-position: center;
+    margin-bottom: 55px;
+}
+.logo-img {
+    position: relative;
+    right: 18%;
+    margin-bottom: 60px;
+}
+.for-icon {
+    width: 20px;
+    height: 20px;
+}
+.input-group {
+    position: relative;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+}
+.field {
+    color: #8da5b8;
+    border-bottom: 1px solid ;
+    display: block;
+    margin-bottom: 0px;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+    margin-top: 25px;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+.field:focus {
+    color: white;
+        i {
+            color: white;
+        }
+    
+}
+.field:invalid {
+    border-bottom: 1px solid #f75c4c;
+}
+.field.for-password {
+    margin-bottom: 5px;
+    text-align: left;
+}
+.field.for-username {
+    text-align: left;
+}
+.submit-btn {
+    display: block;
+    width: 123px;
+    background: #1ABC9C;
+    color: white;
+    height: 42px;
+    margin: 50px auto 0 auto;
+    font-size: 16px;
+    font-family: 'PT Sans-Bold', sans-serif;
+}
+.submit-btn:hover {
+    background: #16A085;
+}
+.false-data {
+    color: #f75c4c;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+}
+
+.no-validate {
+    display: block;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .submit-btn {
+        width: 100%;
+        height: 55px;
+    }
+
+    .logo-img {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .logo-img {
+        width: 200px;
+        right: -18%;
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        height: 55px;
+    }
+}

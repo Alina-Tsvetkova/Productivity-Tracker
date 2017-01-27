@@ -1,0 +1,259 @@
+
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(13, 19, 24, .5);
+  z-index: 10;
+}
+
+#modal_w_remove {
+  display: none;
+}
+
+.modal_window {
+  padding: 15px 10px 50px 40px;
+  h2 {
+    color: @color-3;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.add_task_modal {
+  padding: 20px 40px 50px;
+  margin-bottom: 30px;
+  background: #2a3f50;
+  width: 25%;
+  min-width: 500px;
+  margin: 0 auto;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition-duration: 0.6s;
+}
+
+.modal_functionality {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  i {
+    float: right;
+    font-size: 20px;
+  }
+}
+
+.modal_functionality.close_button {
+  float: right;
+}
+
+.modal_functionality.check_button {
+  float: right;
+  margin-right: -30px;
+}
+
+.field_name {
+  font-size: 14px;
+  color: @color_1;
+  margin-bottom: 10px;
+  margin-top: 14px;
+  margin-left: 0px;
+}
+
+.categories {
+  color: @color_2;
+  border-bottom: 1px solid #425869;
+  padding-bottom: 10px;
+  li {
+    display: inline-block;
+  }
+}
+
+.remove_task_modal {
+  h1 {
+    color: white;
+  }
+}
+
+input {
+  border-bottom: 1px solid #425869;
+  margin-bottom: 15px;
+  width: 100%;
+  padding-bottom: 10px;
+  color: @color_2;
+  font-size: 16px;
+  &:focus {
+    color: @color_3;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1px;
+  vertical-align: sub;
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+.priority_name {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.category_name {
+  margin-left: 5px;
+}
+
+.tomato_estim {
+  display: none;
+}
+
+#modal_window_elem {
+  z-index: 10;
+  .tomato_estim {
+    & + label {
+      background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+      background-position: 89% 15%;
+      width: 21px;
+      height: 19px;
+      display: inline-block;
+    }
+    &:checked {
+      & + label {
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background-position: 89% 90%;
+      }
+    }
+    &:hover {
+      & + label {
+        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
+        background-position: 89% 90%;
+      }
+    }
+  }
+}
+
+.modal_window {
+  span {
+    color: @light-white2;
+    &:hover {
+      color: @white-color;
+    }
+  }
+}
+
+.modal_window h2 {
+  margin-top: 30px;
+}
+
+.remove_task_modal {
+  text-align: center;
+  width: 400px;
+  background: #2a3f50;
+  padding: 10px 0 50px 0;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -49%);
+  -ms-transform: translate(-50%, -49%);
+  -webkit-transform: translate(-50%, -49%);
+  -o-transform: translate(-50%, -49%);
+  transform: translate(-50%, -49%);
+  h1 {
+    font-size: 28px;
+  }
+  .modal_functionality {
+    float: right;
+    margin-right: 15px;
+  }
+}
+
+.cancel_btn {
+  width: 126px;
+  height: 44px;
+  color: @white-color;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: #59abe3;
+  margin-right: 22px;
+}
+
+.remove_btn {
+  width: 126px;
+  height: 44px;
+  color: @white-color;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: #f15a4a;
+}
+
+.remove_warn {
+  font-size: 36px;
+  color: @light-blue;
+  padding: 0 11%;
+  height: 330px;
+  font-family: 'Roboto-Light', sans-serif;
+}
+
+#deadline_input {
+  margin-top: 0;
+  height: auto !important;
+}
+
+.category_title {
+  width: auto;
+  vertical-align: text-top;
+}
+
+@media screen and (max-width: 740px) {
+  .add_task_modal {
+    width: 90%;
+    min-width: 300px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .modal_window span {
+    font-size: 12px;
+  }
+
+  .modal_functionality.check_button {
+    margin-right: 0;
+  }
+
+  .modal_window h2 {
+    margin-top: 27px;
+  }
+
+  .field_name {
+    font-size: 13px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header.fixed_logo {
+    padding: 20px 1% 20px 5%
+  }
+
+}

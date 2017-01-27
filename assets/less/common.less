@@ -1,0 +1,175 @@
+a {
+  color: @light-bluish;
+}
+
+body {
+  min-width: 320px;
+  background: linear-gradient(rgba(8, 41, 63, 0.92), rgba(8, 41, 63, 0.92));
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'PTSans-Bold';
+  src: url('../fonts/PTSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url('../fonts/PTSans.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  color: @lightest-grey;
+  padding: 40px 2% 70px 2%;
+}
+
+#wrapper.login-wrapper {
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: @light-bluish;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: @light-bluish;
+  font-size: 18px;
+  &:hover {
+    color: @lightest-grey;
+  }
+  &:active {
+    color: @light-blue;
+  }
+  &:focus {
+    color: @light-blue;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  clear: both;
+  font-family: @font-family-roboto-bold;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 80px;
+  text-align: center;
+  font-family: @font-family-roboto-bold;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  z-index: 20;
+}
+
+.prev-btn {
+  width: 64px;
+  height: 64px;
+  i {
+    font-size: 40px;
+  }
+
+}
+
+.next-btn {
+  i {
+    font-size: 40px;
+  }
+}
+
+.icons {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.icon {
+  width: 25px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.group-btn {
+  display: inline-block;
+  position: relative;
+  button {
+    width: 26px;
+    height: 30px;
+    margin-left: 20px;
+  }
+}
+
+.hint-next {
+  &::after {
+    content: '';
+    border: 5px solid transparent;
+    border-bottom: 5px solid #ccdce8;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+  }
+}
+
+.is-present {
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Settings</title>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="icons">
+        <div class="group-btn ">
+            <button type="submit" class="reports-switcher tooltip" data-tooltip="Go to Reports"><i
+                    class="icon-statistics"></i>
+            </button>
+        </div>
+        <div class="group-btn ">
+            <button type="submit" class="settings-switcher tooltip" data-tooltip="Go to Settings"><i
+                    class="icon-settings"></i></button>
+        </div>
+        <div class="group-btn ">
+            <button type="submit" class="log-out tooltip" data-tooltip="Log Out"><i class="icon-logout"
+            ></i></button>
+        </div>
+    </div>
+    <h1 class="main-title">Settings</h1>
+
+    <div id="tabs">
+        <!-- appears wheh the button 'pomodoros' is clicked  -->
+        <ul class="toggle-settings tabNavigation">
+            <li><a class="ui-tabs-anchor" href="#tab1">Pomodoros</a></li>
+            |
+            <li><a class="ui-tabs-anchor" href="#tab2">Categories</a></li>
+        </ul>
+
+        <div id="tab1" class="ui-tabs-panel">
+            <div id="pomodoros-chooser">
+                <section class="pomodoros-settings">
+                    <div class="settings">
+                        <h2>Pomodoros settings</h2>
+                        <ul class="settings-variants">
+                            <li class="pomodoro-variant">
+                                <div class="color-circle color-circle-1"></div>
+                                <h3>WORK TIME</h3>
+
+                                <div class="choose-num">
+                                    <button type="submit" class="dicrement">
+                                        <i class="icon-minus"></i>
+                                    </button>
+                                    <button type="submit" class="increment">
+                                        <i class="icon-add"></i>
+                                    </button>
+                                    <input type="text" value="25 min" class="field counter-work-time" disabled>
+                                </div>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            </li>
+                            <li class="pomodoro-variant">
+                                <div class="color-circle color-circle-2"></div>
+                                <h3>WORK ITERATION</h3>
+
+                                <div class="choose-num">
+                                    <button type="submit" class="dicrement">
+                                        <i class="icon-minus"></i>
+                                    </button>
+                                    <button type="submit" class="increment">
+                                        <i class="icon-add"></i>
+                                    </button>
+                                    <input type="text" value="5" class="field counter-work-iteration" disabled>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            </li>
+                            <li class="pomodoro-variant">
+                                <div class="color-circle color-circle-3"></div>
+                                <h3>SHORT BREAK</h3>
+
+                                <div class="choose-num">
+                                    <button type="submit" class="dicrement">
+                                        <i class="icon-minus"></i>
+                                    </button>
+                                    <button type="submit" class="increment">
+                                        <i class="icon-add"></i>
+                                    </button>
+                                    <input type="text" value="5 min" class="field counter-short-break" disabled>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            </li>
+                            <li class="pomodoro-variant">
+                                <div class="color-circle color-circle-4"></div>
+                                <h3>LONG BREAK</h3>
+
+                                <div class="choose-num">
+                                    <button type="submit" class="dicrement">
+                                        <i class="icon-minus"></i>
+                                    </button>
+                                    <button type="submit" class="increment">
+                                        <i class="icon-add"></i>
+                                    </button>
+                                    <input type="text" value="45 min" class="field counter-long-time" disabled>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <section class="cycle">
+                        <h2>Your cycle</h2>
+
+                        <div class="cycle-info"></div>
+                        <div class="time-points"></div>
+                    </section>
+
+
+                    <button type="submit" class="next-btn">Next</button>
+                </section>
+            </div>
+        </div>
+
+
+        <div id="tab2" class="ui-tabs-panel">
+            <div id="categories-chooser">
+                <section class="choose-categories">
+                    <h2>Choose Categories</h2>
+
+                    <div class="choose-functional">
+                        <ul class="radio-list">
+                            <li>
+                                <input type="radio" name="category" id="work" checked>
+                                <label for="work" class="radio-notch work"></label>
+                                <input type="text" value="Work" class="possible-category">
+                            </li>
+                            <li>
+                                <input type="radio" name="category" id="education">
+                                <label for="education" class="radio-notch education"></label>
+                                <input type="text" value="Education" class="possible-category">
+                            </li>
+                            <li>
+                                <input type="radio" name="category" id="hobby">
+                                <label for="hobby" class="radio-notch hobby"></label>
+                                <input type="text" value="Hobby" class="possible-category">
+                            </li>
+                            <li>
+                                <input type="radio" name="category" id="sport">
+                                <label for="sport" class="radio-notch sport"></label>
+                                <input type="text" value="Sport" class="possible-category">
+                            </li>
+                            <li>
+                                <input type="radio" name="category" id="other">
+                                <label for="other" class="radio-notch other"></label>
+                                <input type="text" value="Other" class="possible-category">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="back-btn">Back</button>
+                        <button type="submit" class="save-btn">Save</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

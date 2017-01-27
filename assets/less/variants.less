@@ -1,0 +1,154 @@
+input[type="radio"] + label {
+  background: #8da5b8;
+}
+
+.urgent, .urgent:hover {
+  background-color: #f75c4c;
+}
+
+.high, .high:hover {
+  background-color: #e67e22;
+}
+
+.middle, .middle:hover {
+  background-color: #fddc43;
+}
+
+.low, .low:hover {
+  background-color: #1abc9c;
+}
+
+input[type="radio"] {
+  &:checked {
+    & + label {
+      background-image: url('../img/radio-checked.png');
+    }
+    & + .urgent {
+      background-position: 50% 0%;
+    }
+    & + .high {
+      background-position: 0% 0%;
+    }
+    & + .middle {
+      background-image: url('../img/additional-radio-checked.png') !important;
+      background-position: 66% 3%;
+    }
+    & + .low {
+      background-position: 25% 0%;
+    }
+    & + .work {
+      background-position: 0% 0%;
+    }
+    & + .education {
+      background-position: 100% 1% !important;
+    }
+    & + .hobby {
+      background-position: 75% 0% !important;
+    }
+    & + .sport {
+      background-position: 50% 0% !important;
+    }
+    & + .other {
+      background-position: 25% 0% !important;
+    }
+  }
+
+}
+
+input[type='radio']:checked + label + .category-title {
+  color: white;
+}
+
+.urgent-sign {
+  color: @red;
+}
+
+.high-sign {
+  color: @orange;
+}
+
+.middle-sign {
+  color: @deep-yellow;
+}
+
+.low-sign {
+  color: @deep-sea;
+}
+
+.hobby, .hobby:hover {
+  background-color: #9849b8;
+}
+
+.sport, .sport:hover {
+  background-color: #e16c65;
+}
+
+.work, .work:hover {
+  background-color: #ffb200;
+}
+
+.education, .education:hover {
+  background-color: #59abe3;
+}
+
+.other, .other:hover {
+  background: #00d4d9;
+}
+
+.work-group {
+  border-left-color: #ffb200;
+}
+
+.work-group-title {
+  color: #ffb200;
+}
+
+.education-group {
+  border-left-color: #59abe3;
+}
+
+.education-group-title {
+  color: #59abe3;
+}
+
+.hobby-group {
+  border-left-color: #9849b8;
+}
+
+.hobby-group-title {
+  color: #9849b8;
+}
+
+.sport-group {
+  border-left-color: #e16c65;
+}
+
+.sport-group-title {
+  color: #e16c65;
+}
+
+.other-group {
+  border-left-color: #00d4d9;
+}
+
+.other-group-title {
+  color: #00d4d9;
+}
+
+.done-task {
+  text-decoration: line-through;
+}
+
+.done-task-elem {
+  background-color: #d4d9dc;
+  background-image: none;
+}
+
+.edit-done {
+  display: none;
+}
+
+.edit-position {
+  position: absolute;
+  right: 0;
+}
