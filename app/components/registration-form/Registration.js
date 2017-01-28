@@ -30,7 +30,6 @@ class Registration {
 
     cancelRegistration() {
         event.preventDefault();
-        console.log(123);
         classManager.removeClass(document.getElementsByClassName('form-registration')[0], 'form-registration-appearance');
     }
 }

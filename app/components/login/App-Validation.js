@@ -6,24 +6,34 @@ class UserValidation {
 
     checkLoginPass(event) {
         let loginValidator = {
-            loginField: document.getElementsByClassName('for-username')[0].value,
-            passwordField: document.getElementsByClassName('for-password')[0].value,
+            loginField: document.getElementsByClassName('for-username')[0],
+            passwordField: document.getElementsByClassName('for-password')[0],
             inputGroups: document.getElementsByClassName('input-groups')
         };
 
-
-        firebase.auth().signInWithEmailAndPassword(loginValidator.loginField, loginValidator.passwordField).then(function (user) {
+        let logInFields = document.getElementsByClassName('fail-validation');
+        firebase.auth().signInWithEmailAndPassword(loginValidator.loginField.value, loginValidator.passwordField.value).then(function (user) {
             let userNew = new UserData(user.uid, user.email);
             userNew.saveUserDataLocally();
             let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
         }).catch(function (error) {
+
+            for (let k = 0; k < logInFields.length; k++) {
+                classManager.removeClass(logInFields[k], 'no-validate');
+            }
+            classManager.removeClass(loginValidator.passwordField, 'invalid-field');
+            classManager.removeClass(loginValidator.loginField, 'invalid-field');
+
             if (error.code == 'auth/wrong-password') {
                 document.getElementsByClassName('fail-validation')[1].classList.add('no-validate');
+                loginValidator.passwordField.classList.add('invalid-field');
+
             }
             if (error.code == 'auth/user-not-found') {
                 document.getElementsByClassName('fail-validation')[0].classList.add('no-validate');
+                loginValidator.loginField.classList.add('invalid-field');
             }
         });
     }
@@ -47,7 +57,6 @@ document.body.onclick = function (event) {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
         setTimeout(function () {
             document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
-
         }, 500);
 
     }

@@ -78,7 +78,7 @@ html, body {
 
 }
 
-.field:invalid {
+.invalid-field {
   border-bottom: 1px solid #f75c4c;
 }
 
@@ -102,9 +102,12 @@ html, body {
 }
 
 .btn-group {
-  width: 77%;
+  text-align: center;
   margin: 0 auto;
+}
 
+.sign-in {
+  margin-right: 20px;
 }
 
 .sign-up {
@@ -112,15 +115,20 @@ html, body {
 }
 
 .form-registration {
-  width: 35%;
+  width: 30%;
   left: 33%;
   transition-duration: 1s;
   border-radius: 30px;
   border: 1px solid @light-grey;
-  padding: 30px;
+  padding: 50px 20px 20px 20px;
   position: absolute;
   top: -550px;
-  background: linear-gradient(rgba(8, 41, 63, 0.92), rgba(8, 41, 63, 0.92));
+  background: linear-gradient(rgba(8, 41, 63, 0.95), rgba(8, 41, 63, 0.95));
+}
+
+.form-registration h2 {
+  margin-bottom: 20px;
+  color: @white-color;
 }
 
 .form-registration input:focus {
@@ -148,11 +156,11 @@ html, body {
 
 .center-btn {
   display: block;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 
 .registration-field {
-  width: 50%;
+  width: 80%;
   margin: 30px auto;
   display: block;
   text-align: center;
