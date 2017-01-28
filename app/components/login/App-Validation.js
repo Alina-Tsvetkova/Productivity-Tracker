@@ -10,18 +10,22 @@ class UserValidation {
             passwordField: document.getElementsByClassName('for-password')[0].value,
             inputGroups: document.getElementsByClassName('input-groups')
         };
-        if (loginValidator.loginField === this.login && loginValidator.passwordField === this.password) {
+
+
+        firebase.auth().signInWithEmailAndPassword(loginValidator.loginField, loginValidator.passwordField).then(function (user) {
+            let userNew = new UserData(user.uid, user.email);
+            userNew.saveUserDataLocally();
             let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
-        }
-        if (loginValidator.passwordField !== this.password) {
-            document.getElementsByClassName('fail-validation')[1].classList.add('no-validate');
-        }
-
-        if (loginValidator.loginField !== this.login) {
-            document.getElementsByClassName('fail-validation')[0].classList.add('no-validate');
-        }
+        }).catch(function (error) {
+            if (error.code == 'auth/wrong-password') {
+                document.getElementsByClassName('fail-validation')[1].classList.add('no-validate');
+            }
+            if (error.code == 'auth/user-not-found') {
+                document.getElementsByClassName('fail-validation')[0].classList.add('no-validate');
+            }
+        });
     }
 }
 
@@ -36,9 +40,11 @@ document.body.onclick = function (event) {
 
     if (event.target == document.getElementsByClassName('sign-up')[0]) {
         event.preventDefault();
-        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html', document.body);
-        registrationFormBinder.downloadComponent();
+        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
+        let regFom = registrationFormBinder.downloadComponent();
+        document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.takeUserInfo);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
         setTimeout(function () {
             document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
 

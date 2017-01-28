@@ -2,24 +2,24 @@
   position: relative;
 }
 
-.added_task {
+.added-task {
   display: none;
   text-align: center;
   margin-bottom: 50px;
   margin-top: 30px;
-  .add_task_logo {
+  .add-task-logo {
     margin: 30px 0;
   }
 }
 
-.daily_task_list {
+.daily-task-list {
   padding: 0px 0% 50px 0%;
   .icons {
     margin-right: 0 !important;
   }
 }
 
-#daily_task_list h1 {
+#daily-task-list h1 {
   color: @white-color;
   text-align: center;
   margin-bottom: 70px;
@@ -28,30 +28,31 @@
   font-weight: bold;
 }
 
-.add_task_logo {
+.add-task-logo {
   font-size: 36px;
-  color: @light-blue;
+  color: @white-color;
   font-weight: normal;
   text-align: center;
   margin: 40px 0;
+  clear: both;
 }
 
-.add_task_header {
+.add-task-header {
   vertical-align: baseline !important;
 }
 
-.add_task_sect {
+.add-task-sect {
   text-align: center;
   margin-bottom: 50px;
   margin-top: 30px;
 }
 
-.add_indicator {
+.add-indicator {
   margin-top: 30px;
   font-size: 60px;
 }
 
-.toggle_doneable {
+.toggle-doneable {
   color: @middle-grey;
   margin-bottom: 20px;
   float: right;
@@ -59,24 +60,24 @@
     padding: 0 10px;
     font-size: 16px;
     color: @light-blue;
-    font-family: @font-family-roboto;
+    font-family: @font-family-roboto-light;
     &:hover {
       color: @white-color;
     }
   }
-  .to_do {
+  .to-do {
     color: @white-color;
   }
 }
 
-.edit_group {
+.edit-group {
   height: 100%;
   float: left;
   width: 90px;
   padding: 2.5%;
 }
 
-.color_circle_group {
+.color-circle-group {
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -86,33 +87,33 @@
   display: none;
 }
 
-.inner_circle {
+.inner-circle {
   border: 2px solid #2a3f50;
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-.btn_wrap {
+.btn-wrap {
   margin-bottom: 30px;
   float: left;
   clear: both;
 }
 
-.global_name {
+.global-name {
   font-size: 20px;
-  color: @light-blue;
+  color: @light-bluish;
   font-family: @font-family-roboto;
   margin-right: 5px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.global_list {
+.global-list {
   margin-top: 50px;
 }
 
-.global_list_btn {
+.global-list-btn {
   width: 17px;
   font-weight: bold;
   position: relative;
@@ -128,19 +129,19 @@
   }
 }
 
-.opportunity_select {
-  color: @light-blue;
+.opportunity-select {
+  color: @light-bluish;
   button {
-    color: @light-blue;
+    color: @light-bluish;
     font-size: 15px;
-    font-family: @font-family-roboto;
+    font-family: @font-family-roboto-light;
     &:hover {
       color: @white-color;
     }
   }
 }
 
-.visit_timer {
+.visit-timer {
   &:hover {
     & + .hint {
       display: block;
@@ -152,7 +153,7 @@
   }
 }
 
-.add_task {
+.add-task {
   background: none;
   color: @white-color;
   margin-left: 5px;
@@ -166,7 +167,7 @@
   font-weight: normal;
 }
 
-.priority_list {
+.priority-list {
   margin-top: 46px;
   float: right;
   color: @light-blue;
@@ -178,7 +179,7 @@
     font-weight: normal;
     font-size: 16px;
     color: @light-grey-blue;
-    font-family: @font-family-roboto;
+    font-family: @font-family-roboto-light;
     &:hover {
       color: @white-color;
     }
@@ -186,8 +187,8 @@
 }
 
 
-.extended_functionality {
-  .task_description {
+.extended-functionality {
+  .task-description {
     position: relative;
   }
   .editors {
@@ -202,16 +203,16 @@
   }
 }
 
-.delete_btn {
+.delete-btn {
   float: left;
 }
 
-.remove_btn_icon {
+.remove-btn-icon {
   width: 40px;
   height: 40px;
 }
 
-.color_circle {
+.color-circle {
   border-radius: 50%;
   width: 22px;
   height: 22px;
@@ -221,11 +222,11 @@
   margin-left: 7px;
 }
 
-.cross_btn {
+.cross-btn {
   margin-right: 5px;
 }
 
-.button_hint_group {
+.button-hint-group {
   cursor: pointer;
 }
 
@@ -238,35 +239,35 @@
 
 
 @media screen and (max-width: 640px) {
-  .add_task {
+  .add-task {
     vertical-align: text-top;
   }
 
-  .tab_links {
+  .tab-links {
     font-size: 14px;
   }
 
-  .toggle_doneable {
+  .toggle-doneable {
     margin-right: 3%;
   }
 
-  .daily_task_list .icons {
+  .daily-task-list .icons {
     right: 0;
   }
 
-  .priority_list {
+  .priority-list {
     margin-top: 43px;
   }
 
-  .priority_list button {
+  .priority-list button {
     font-size: 14px;
   }
 
-  .global_name {
+  .global-name {
     font-size: 16px;
   }
 
-  .fixed_logo .icons {
+  .fixed-logo .icons {
     right: 6%;
   }
 
@@ -281,52 +282,52 @@
     left: -72px;
   }
 
-  .remove_task_modal .modal_functionality {
+  .remove-task-modal .modal-functionality {
     margin-right: 15%;
   }
 
-  .opportunity_select {
+  .opportunity-select {
     width: 50%;
   }
 
-  .daily_task_list .group_btn button {
+  .daily-task-list .group-btn button {
     margin-left: 15px;
   }
 
-  .fixed_logo .icons {
+  .fixed-logo .icons {
     right: 3%;
   }
 
-  .daily_task_list h1 {
+  .daily-task-list h1 {
     display: inline;
     font-size: 21px;
   }
 
-  .date_indicator, .task .indicator {
+  .date-indicator, .task .indicator {
     width: 80px;
   }
 
-  .daily_task_list, .tasks_intro, #global_tasks, .btn_wrap, .priority_list, .select_all {
+  .daily-task-list, .tasks-intro, #global-tasks, .btn-wrap, .priority-list, .select-all {
     padding-right: 2%;
     padding-left: 2%;
   }
 
-  .select_all {
+  .select-all {
     padding-right: 0;
   }
 
-  .daily_task_list .icons {
+  .daily-task-list .icons {
     right: 0.5%;
   }
 
 }
 
 @media (max-width: 385px) {
-  .priority_indicator {
+  .priority-indicator {
     width: 75px;
   }
 
-  .align_button {
+  .align-button {
     right: 6em;
   }
 }

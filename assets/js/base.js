@@ -7,9 +7,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-let allTasksToDo = firebase.database().ref("tasksToDo");
-
-let allTasksDone = firebase.database().ref("tasksDone");
 
 //allTasksDone.push({
 //    title: 'Add slider',
@@ -25,8 +22,8 @@ let allTasksDone = firebase.database().ref("tasksDone");
 
 let tasks = firebase.database();
 
-let reports = firebase.database().ref("reports");
+let users = firebase.database().ref("users");
 
-let categories = firebase.database().ref("categories");
+
 
 

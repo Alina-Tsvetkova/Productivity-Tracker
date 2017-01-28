@@ -4,7 +4,20 @@ class Cycle {
         this.workIteration = +workIteration;
         this.shortBreak = +shortBreak;
         this.longBreak = +longBreak;
-        this.cycleHours = 0;
+    }
+
+    renderSavedCycleSettings() {
+        let userId = localStorage.getItem('currentUser');
+        let i = 0;
+        let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
+        cycleReceiver.on('value', function (data) {
+            document.getElementsByClassName('counter-long-time')[0].value = data.val().longBreak + " min";
+            document.getElementsByClassName('counter-short-break')[0].value = data.val().shortBreak + " min";
+            document.getElementsByClassName('counter-work-iteration')[0].value = data.val().workIteration;
+            document.getElementsByClassName('counter-work-time')[0].value = data.val().workTime + " min";
+            myCycle.getDataForCycle();
+        });
+
     }
 
     getDataForCycle() { // this function is needful to transfer data from document inputs to cycle object
@@ -12,6 +25,7 @@ class Cycle {
         this.workIteration = parseInt(document.getElementsByClassName('counter-work-iteration')[0].value);
         this.shortBreak = parseInt(document.getElementsByClassName('counter-short-break')[0].value);
         this.longBreak = parseInt(document.getElementsByClassName('counter-long-time')[0].value);
+        console.log(document.getElementsByClassName('counter-work-time')[0]);
         this.createWorkTime();
     }
 
@@ -75,7 +89,7 @@ class Cycle {
         return this.longBreak;
     }
 
-    countAllWidth () {
+    countAllWidth() {
         let workIteration = this.getWorkTime() + this.getShortBreak();
         let totalWidth = (workIteration * this.getWorkIterations()) * 2 - (this.getShortBreak()) * 2 + this.getLongBreak();
         return totalWidth;

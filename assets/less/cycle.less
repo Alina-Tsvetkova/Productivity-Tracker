@@ -122,18 +122,30 @@
   color: white;
 }
 
+.cycle + .btn-group {
+  text-align: center;
+}
+
 .next-btn {
   background: #1abc9c;
   color: white;
-  display: block;
+  width: 125px;
+  height: 45px;
   font-family: @font-family-sans-bold;
   font-size: 18px;
-  height: 41px;
   margin: 0px auto 30px;
-  width: 125px;
   &:hover {
     background: #16A085;
   }
+}
+
+.btn-group .save-cycle-btn {
+  vertical-align: top;
+  background: @sky-blue;
+}
+
+.btn-group .save-cycle-btn:hover {
+  background: @light-blue;
 }
 
 .choose-categories {
@@ -260,6 +272,7 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
   .settings {
     width: 100%;
   }
@@ -356,7 +369,7 @@
   }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
 
   .pomodoro-variant {
     width: 95%;

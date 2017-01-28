@@ -1,34 +1,31 @@
-.trash_button {
+.trash-button {
   float: left;
   margin-left: -25px;
 }
 
-#modal_window_elem_edit {
-  .tomato_estim {
+#modal-window-elem-edit {
+  .tomato-estim {
     & + label {
-      background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
-      background-position: 89% 15%;
+      background: url('../img/tomato-variants.png') 89% 15%;
       width: 21px;
       height: 19px;
       display: inline-block;
     }
     &:checked {
       & + label {
-        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
-        background-position: 89% 90%;
+        background: url('../img/tomato-variants.png') 89% 90%;
       }
     }
     &:hover {
       & + label {
-        background: url('/productivity-app/task-list/modal-window/modal-window-images/tomato_variants.png');
-        background-position: 89% 90%;
+        background: url('../img/tomato-variants.png') 89% 90%;
       }
     }
   }
 }
 
 @media screen and (max-width: 740px) {
-  .add_task_modal {
+  .add-task-modal {
     width: 90%;
     min-width: 300px;
     padding-left: 2%;
@@ -36,20 +33,19 @@
     padding-top: 0;
   }
 
-  .modal_window span {
+  .modal-window span {
     font-size: 12px;
   }
 
-
-  .modal_functionality.check_button {
+  .modal-functionality.check-button {
     margin-right: 0;
   }
 
-  .modal_wrapper {
+  .modal-wrapper {
     background: #2a3f50;
   }
 
-  .modal_window {
+  .modal-window {
     padding: 0;
   }
 }

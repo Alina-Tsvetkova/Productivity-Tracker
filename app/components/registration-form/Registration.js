@@ -1,17 +1,20 @@
 class Registration {
 
     takeUserInfo() {
+        event.preventDefault();
         userRegistration.checkUserInfo();
     }
 
     checkUserInfo() {
         let email = document.getElementsByClassName('email')[0].value;
         let password = document.getElementsByClassName('password')[0].value;
-        console.log(email,password );
+        console.log(email, password);
         if (email != '' && password != '') {
-            firebase.auth().createUserWithEmailAndPassword(email , password).then(function (user) {
-                console.log('everything went fine');
-                console.log('user object:' + user);
+            firebase.auth().createUserWithEmailAndPassword(email, password).then(function (user) {
+                alert('everything went fine');
+                let userNew = new UserData(user.uid, user.email);
+                userNew.writeUserData();
+                classManager.removeClass(document.getElementsByClassName('form-registration')[0], 'form-registration-appearance');
             }).catch(function (error) {
                 console.log('there was an error');
                 let errorCode = error.code;
@@ -19,9 +22,16 @@ class Registration {
                 console.log(errorCode + ' - ' + errorMessage);
             });
 
+
         } else {
             console.log('fill in both fields');
         }
+    }
+
+    cancelRegistration() {
+        event.preventDefault();
+        console.log(123);
+        classManager.removeClass(document.getElementsByClassName('form-registration')[0], 'form-registration-appearance');
     }
 }
 

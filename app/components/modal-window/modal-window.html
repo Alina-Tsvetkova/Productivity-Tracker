@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="modal-window-elem">
+    <!-- modal window appears when adding task or editing it -->
+    <div class="modal-wrapper">
+        <div class="modal-window">
+            <section class="add-task-modal">
+                <button type="submit" class="modal-functionality check-button icon-add-task"><i class="icon-check"></i>
+                </button>
+                <button type="submit" class="modal-functionality close-button"><i class="icon-close"></i></button>
+                <h2>Add Task</h2>
+
+                <div>
+                    <label class="field-name">TITLE</label>
+                    <input value="Add title here" class="title-input">
+                </div>
+                <div>
+                    <label class="field-name">DESCRIPTION</label>
+                    <input value="Add description here" class="description-input">
+                </div>
+                <div>
+                    <label class="field-name category-input">CATEGORY</label>
+                    <ul class="categories categories-names">
+                        <li>
+                            <input type="radio" name="category" id="work-category" value="Work" class="category-input"
+                                   checked/>
+                            <label for="work-category" class="work"></label><label class="category-name category-title"
+                                                                                   for="work-category"></label></li>
+                        <li>
+                            <input type="radio" name="category" id="edu-category" value="Education"
+                                   class="category-input"/>
+                            <label for="edu-category" class="education"></label><label
+                                class="category-name category-title" for="edu-category"></label></li>
+                        <li>
+                            <input type="radio" name="category" id="hob-category" value="Hobby" class="category-input"/>
+                            <label for="hob-category" class="hobby"></label><label class="category-name category-title"
+                                                                                   for="hob-category"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="category" id="sport-category" value="Sport"
+                                   class="category-input"/>
+                            <label for="sport-category" class="sport"></label><label
+                                class="category-name category-title" for="sport-category"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="category" id="oth-category" value="Other" class="category-input"/>
+                            <label for="oth-category" class="other"></label><label class="category-name category-title"
+                                                                                   for="oth-category"></label>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <label class="field-name">DEADLINE</label>
+                    <input value="" class="deadline-input" id="deadline-input">
+                </div>
+                <div>
+                    <label class="field-name">ESTIMATION</label>
+
+                    <div class="categories">
+                        <input class="tomato-estim" type="checkbox" id="one-estimation" checked/>
+                        <label for="one-estimation"></label>
+                        <input class="tomato-estim" type="checkbox" id="two-estimation"/>
+                        <label for="two-estimation"></label>
+                        <input class="tomato-estim" type="checkbox" id="three-estimation"/>
+                        <label for="three-estimation"></label>
+                        <input class="tomato-estim" type="checkbox" id="four-estimation"/>
+                        <label for="four-estimation"></label>
+                        <input class="tomato-estim" type="checkbox" id="five-estimation"/>
+                        <label for="five-estimation"></label>
+                    </div>
+                </div>
+                <div>
+                    <label class="field-name">PRIORITY</label>
+                    <ul class="categories priorities">
+                        <li>
+                            <input type="radio" name="priority-level" id="red" checked/>
+                            <label for="red" class="urgent"></label><label class="priority-name category-title"
+                                                                           for="red">Urgent</label></li>
+                        <li>
+                            <input type="radio" name="priority-level" id="blue"/>
+                            <label for="blue" class="high"></label><label class="priority-name category-title"
+                                                                          for="blue">High</label></li>
+                        <li>
+                            <input type="radio" name="priority-level" id="yellow"/>
+                            <label for="yellow" class="middle"></label><label class="priority-name category-title"
+                                                                              for="yellow">Middle</label></li>
+                        <li>
+                            <input type="radio" name="priority-level" id="grey"/>
+                            <label for="grey" class="low"></label><label class="priority-name category-title"
+                                                                         for="grey">Low</label></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<script src="modal-window.js"></script>
+</body>
+</html>

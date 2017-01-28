@@ -237,22 +237,8 @@ class funcTask {
     }
 
     ifTaskPresent() {
-        document.getElementById('globalTasks').innerHTML = '';
-        document.getElementById('daily-tasks').innerHTML = '';
-        allTasksToDo.on('child_added', function (data) {
-            productivityObj.createTaskField(data);
-            funcTask.notifyAboutMissedDeadlines(data.val());
-        });
-        allTasksDone.on('child_added', function (data) {
-            productivityObj.createTaskFieldDone(data);
-        });
-        if (document.getElementsByClassName('task').length === 0) {
-            taskListElements.globalListBtn.style.display = 'none';
-            document.getElementsByClassName('opportunity-select')[0].style.display = 'none';
-            document.getElementsByClassName('opportunity-select')[1].style.display = 'none';
-            document.getElementsByClassName('priority-list')[0].style.display = 'none';
-            document.getElementsByClassName('toggle-doneable')[0].style.display = 'none';
-        }
+
+
     }
 
     removeIndicatorOfQuantityDel() {
@@ -405,7 +391,7 @@ class TaskListTransfer {
         taskBinder.downloadComponent();
         taskListInitiator.initializeTaskListElements();
         taskListInitiator.initModalWindowElements();
-        //ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
         //ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('icon-add-task'), productivityManager.submitTask);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {

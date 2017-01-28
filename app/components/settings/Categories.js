@@ -3,31 +3,17 @@ class Categories {
         this.category = category;
     }
 
-    static saveCategories() {
-        let possibleCategoriesSet = new Set();
+    saveCategories(userId) {
+        let possibleCategories = new Array();
         let allPossibleCategories = document.getElementsByClassName('possible-category');
         for (let i = 0; i < allPossibleCategories.length; i++) {
-            possibleCategoriesSet.add(allPossibleCategories[i].value);
+            possibleCategories.push(allPossibleCategories[i].value);
         }
-        Categories.pushCategoriesToDB(possibleCategoriesSet);
-        let choosedCategories = {};
-        let k = 0;
-        for (let item of possibleCategoriesSet) {
-            choosedCategories[k] = item;
-            k++;
-        }
-        localStorage.setItem('categories', JSON.stringify(choosedCategories));
-    }
+        firebase.database().ref('users/' + userId).update({
+            categories: possibleCategories
+        });
 
-    static pushCategoriesToDB(iterableSet) {
-        let choosedCategories = {};
-        let k = 0;
-        let ifBaseIsFULL = false;
-        for (let item of iterableSet) {
-            choosedCategories[k] = item;
-            k++;
-        }
-        categories.set(choosedCategories);
         CategoriesView.renderEarlierSavedCategories();
-    }
+    };
+
 }
