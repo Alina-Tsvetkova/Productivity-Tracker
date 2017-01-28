@@ -29,7 +29,6 @@ class UserData {
     }
 
     saveUserDataLocally() {
-        window.location.hash = this.userId;
         localStorage.setItem('currentUser', this.userId);
     }
 }

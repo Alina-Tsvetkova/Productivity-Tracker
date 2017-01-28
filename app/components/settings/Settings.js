@@ -1,5 +1,6 @@
 class Settings {
     static downloadSettings() {
+        Router.addHash("settings-cycle");
         //ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), function () {
             let savedCycle = new CycleModel();

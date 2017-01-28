@@ -25,7 +25,6 @@ class Cycle {
         this.workIteration = parseInt(document.getElementsByClassName('counter-work-iteration')[0].value);
         this.shortBreak = parseInt(document.getElementsByClassName('counter-short-break')[0].value);
         this.longBreak = parseInt(document.getElementsByClassName('counter-long-time')[0].value);
-        console.log(document.getElementsByClassName('counter-work-time')[0]);
         this.createWorkTime();
     }
 

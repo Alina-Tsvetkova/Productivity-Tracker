@@ -8,6 +8,7 @@
   padding: 10px 20px;
   transition-duration: 1s;
   transform: translate(-50%);
+  min-width: 300px;
 }
 
 .close-log-out-form {
@@ -35,4 +36,16 @@
   font-family: 'PTSans-Bold', sans-serif;
   font-size: 18px;
   margin: 30px auto 30px;
+}
+
+@media (max-width: 1024px) {
+  .log-out-form-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .log-out-form-wrapper {
+    width: 90%;
+  }
 }
