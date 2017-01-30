@@ -31,4 +31,8 @@ class UserData {
     saveUserDataLocally() {
         localStorage.setItem('currentUser', this.userId);
     }
+
+    static getUserDataLocally() {
+        return localStorage.getItem('currentUser');
+    }
 }

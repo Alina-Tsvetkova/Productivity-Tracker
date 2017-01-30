@@ -1,7 +1,7 @@
 class TaskManager {
     submitTask() {
         taskListInitiator.initModalWindowElements();
-        var postData = {
+        let postData = {
             title: modalWindowElements.titleInput.value,
             description: modalWindowElements.descriptionInput.value,
             category: modalWindowElements.categoryRadioBtn.innerHTML,
@@ -16,7 +16,7 @@ class TaskManager {
 
         let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
-        for (var j = 0; j < allCategoriesNames.length; j++) {
+        for (let j = 0; j < allCategoriesNames.length; j++) {
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
         let foundCategory = allCategoriesValues.indexOf(postData.category);
@@ -27,7 +27,7 @@ class TaskManager {
         dateArray.forEach(function (item) {
             dateArray[k] = item.replace(',', '');
             k++;
-        })
+        });
 
 
         let monthDeadline, dayDeadline, yearDeadline;
@@ -51,54 +51,77 @@ class TaskManager {
         }
 
         postData.deadline = dayDeadline + '.' + monthDeadline + '.' + yearDeadline;
-        allTasksToDo.push(postData);
+
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
         counterOfTasks = 0;
-        productivityObj.ifTaskPresent();
-        if (document.getElementById('modal_window_elem')) {
-            document.body.removeChild(document.getElementById('modal_window_elem'));
+
+        tasksRenderer.ifTaskPresent();
+        if (document.getElementById('modal-window-elem')) {
+            document.body.removeChild(document.getElementById('modal-window-elem'));
         }
         taskListElements.globalListBtn.style.display = 'block';
-        document.getElementsByClassName('opportunity_select')[0].style.display = 'block';
-        document.getElementsByClassName('opportunity_select')[1].style.display = 'block';
-        document.getElementsByClassName('priority_list')[0].style.display = 'block';
-        document.getElementsByClassName('toggle_doneable')[0].style.display = 'block';
         funcTask.groupTasksByCategory();
         let newNotification = new TaskNotification();
         newNotification.wrapNotificationFunctionality('.message-success');
     }
 
     saveEditedTask(index) {
-        var updates = {};
-        updates.title = document.querySelectorAll('.title_input')[0].value;
-        updates.description = document.querySelectorAll('.description_input')[0].value;
-        updates.category = document.querySelector('input.category-input:checked + label + label').innerHTML;
-        updates.priority = document.querySelector('input[name="priority_level"]:checked + label + label').innerHTML;
-        updates.deadline = document.querySelectorAll('.deadline_input')[0].value;
+        let updates = {
+            title: document.querySelectorAll('.title-input')[0].value,
+            description: document.querySelectorAll('.description-input')[0].value,
+            category: document.querySelector('input.category-input:checked + label + label').innerHTML,
+            priority: document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML,
+            deadline: document.querySelectorAll('.deadline-input')[0].value
+        };
+
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
-        console.log(document.getElementsByClassName('task')[index].getAttribute('taskKey'));
-        tasks.ref('tasksToDo/' + editedHash).update(updates);
-        document.getElementById('global-tasks').innerHTML = '';
-        document.getElementById('daily-tasks').innerHTML = '';
+
         counterOfTasks = 0;
-        allTasksToDo.on('child_added', function (data) {
-            productivityObj.createTaskField(data);
-        });
-        ModalWindow.closeModalWindow(document.getElementById('modal_window_elem_edit'));
+
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
+
+        tasksRenderer.ifTaskPresent();
+
+        ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 
-    submitDeleteTask() {
-        for (let selectedTaskHash of selectedTaskHashes) {
-            tasks.ref('tasksToDo/' + selectedTaskHash).remove();
-        }
-        let deleteTaskModal = $('#modal_w_remove');
-        deleteTaskModal.dialogSwitcher('close');
-        productivityObj.removeIndicatorOfQuantityDel();
-        counterOfTasks = 0;
-        productivityObj.ifTaskPresent();
-        if (document.getElementsByClassName('task').length == 0) {
-            document.getElementsByClassName('add_task_sect')[0].style.display = 'block';
-        }
-        selectedTaskHashes.clear();
+    moveTaskToDailyGroup(i) {
+        // if (document.getElementsByClassName('task')[i].getAttribute('dailyTask') == 'true') {
+        //     console.log(document.getElementById('daily-tasks'));
+        //     document.querySelectorAll('.categorized-ul')[i].getElementsByClassName('move-task')[0].style.display = 'none';
+        //     document.querySelectorAll('.categorized-ul')[i].getElementsByClassName('edit')[0].style.marginTop = '15px';
+        //     document.getElementById('daily-tasks').appendChild(document.getElementsByClassName('categorized-ul')[i]);
+        // }
+    }
+
+    moveTaskToDaily() {
+        // console.log('daily');
+        // if (document.querySelectorAll('#daily-tasks .task ').length >= 5) {
+        //     let newNotification = new TaskNotification();
+        //     newNotification.wrapNotificationFunctionality('.message-error');
+        //     return false;
+        // }
+        // else {
+        //     let updates = {
+        //         dailyTask: true
+        //     };
+        //     let allMoveButtons = Array.prototype.slice.call($('#globalTasks .move-task'));
+        //     let index = allMoveButtons.indexOf(event.target);
+        //     let allTasksToDo = $('#globalTasks .task');
+        //     let globalUls = $('#globalTasks .categorized-ul');
+        //
+        //     moveableTask = allTasksToDo[index].getAttribute('taskKey');
+        //
+        //     firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + moveableTask).update(updates);
+        //
+        //     $('.added-task')[0].classList.add('non-visible-elem');
+        //     document.querySelectorAll('#globalTasks .task')[index].setAttribute('dailyTask', 'true');
+        //
+        //     globalUls[index].getElementsByClassName('move-task')[0].classList.add('non-visible-elem');
+        //     globalUls[index].getElementsByClassName('edit')[0].style.marginTop = '15px';
+        //     $('#daily-tasks').append(globalUls[index]);
+        // }
     }
 }
 
+let productivityManager = new TaskManager();

@@ -14,26 +14,26 @@ class EventHandler {
             let key = document.body.getElementsByClassName('task')[index].getAttribute("taskKey");
             modalWindowObj.showEditModal(index, key);
         }
-        if (event.target.parentNode.classList.contains('check_button_edit')) {
-            let editTaskModal = $('#modal_window_elem_edit');
+        if (event.target.parentNode.classList.contains('check-button-edit')) {
+            let editTaskModal = $('#modal-window-elem-edit');
             productivityManager.saveEditedTask(index);
         }
 
-        if (event.target.parentNode.classList.contains('remove_btn_icon') || event.target.classList.contains('quantity_del_tasks')) {
-            if (document.querySelector('.quantity_del_tasks').innerHTML > 0) {
-                let deleteTaskModal = $('#modal_w_remove');
-                ElementsListener.listenToEvents('click', document.getElementsByClassName('remove_btn'), productivityManager.submitDeleteTask);
-                ElementsListener.listenToEvents('click', document.getElementsByClassName('cancel_btn'), productivityObj.cancelDeletion);
-                $('.remove_btn_icon').click(function () {
-                    if (document.querySelector('.quantity_del_tasks').innerHTML > 0) {
+        if (event.target.parentNode.classList.contains('remove-btn-icon') || event.target.classList.contains('quantity-del-tasks')) {
+            if (document.querySelector('.quantity-del-tasks').innerHTML > 0) {
+                let deleteTaskModal = $('#modal-w-remove');
+                ElementsListener.listenToEvents('click', document.getElementsByClassName('remove-btn'), taskDeletorObj.submitDeleteTask);
+                ElementsListener.listenToEvents('click', document.getElementsByClassName('cancel-btn'), taskDeletorObj.cancelDeletion);
+                $('.remove-btn-icon').click(function () {
+                    if (document.querySelector('.quantity-del-tasks').innerHTML > 0) {
                         deleteTaskModal.dialogSwitcher('show');
                     }
                 })
             }
-            productivityObj.givePossibilityToDelete();
+            taskDeletorObj.givePossibilityToDelete();
         }
 
-        if (event.target.parentNode.classList.contains('log_out')) {
+        if (event.target.parentNode.classList.contains('log-out')) {
             localStorage.isLoggedIn = false;
             let loginBinder = new Binder('login/login.html', document.body, 'loggedOut');
             loginBinder.downloadComponent();

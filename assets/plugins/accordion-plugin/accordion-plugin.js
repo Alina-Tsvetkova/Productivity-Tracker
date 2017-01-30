@@ -1,5 +1,5 @@
 $.fn.accordionSwitcher = (function () {
-    $('.accordion_button').click (function () {
-        $('.accordion_content').slideToggle("slow");
+    $('.accordion-button').click (function () {
+        $('.accordion-content').slideToggle("slow");
     })
 });

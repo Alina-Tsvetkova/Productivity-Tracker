@@ -12,7 +12,6 @@ class ModalWindow {
                 i++;
             }
         });
-
     }
 
     addTaskModal(event) {
@@ -48,7 +47,7 @@ class ModalWindow {
         let editedTaskKey = document.getElementsByClassName('task')[index].getAttribute('taskKey');
         var taskEditRequest = new XMLHttpRequest();
         let taskEditItemParser = new DOMParser();
-        taskEditRequest.open('GET', 'task-list/modal-window/edit-modal-window/edit-modal-window.html', false);
+        taskEditRequest.open('GET', 'app/components/modal-window/edit-modal-window.html', false);
         taskEditRequest.send();
         let doc9 = taskEditItemParser.parseFromString(taskEditRequest.responseText, "text/html");
         document.body.appendChild(doc9.getElementById('modal-window-elem-edit'));

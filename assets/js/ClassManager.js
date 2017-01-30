@@ -4,7 +4,6 @@ class ClassManager {
     }
 
     removeClass(obj, cls){
-        console.log(546456);
         var classes = obj.className.split(' ');
         for (var i = 0; i < classes.length; i++) {
             if (classes[i] == cls) {

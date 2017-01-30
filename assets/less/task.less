@@ -159,7 +159,9 @@
 
 .task {
   .indicator {
-    background: url('../img/remove-task.png') no-repeat center;
+    background-image: url('../img/remove-task.png');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -191,6 +193,8 @@
 
 .indicator.for-delete-bg {
   background-image: url('../img/remove-task-active.png');
+  left:-10px;
+  transition-duration: 1s;
 }
 
 .indicator.canceled-delete {

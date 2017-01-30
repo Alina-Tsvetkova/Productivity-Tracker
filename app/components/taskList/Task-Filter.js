@@ -1,22 +1,28 @@
-let priorityFilters;
-
-class filtrationTask {
+class filtrationTask extends TaskManager {
     static filterTasks() {
-        document.getElementById('global-tasks').innerHTML = '';
+        document.getElementById('globalTasks').innerHTML = '';
         document.getElementById('daily-tasks').innerHTML = '';
         counterOfTasks = 0;
-        for (var i = 0; i < priorityFilters.length; i++) {
-            priorityFilters[i].style.color = '#8ea5b8';
-        }
-        event.target.style.color = 'white';
+        let priorityFilters = document.querySelectorAll('.priority-list button');
 
-        allTasksToDo.on('child_added', function (data) {
-            if (event.target.innerHTML == data.val().priority) {
-                productivityObj.createTaskField(data);
-            }
-            else if (event.target.innerHTML == 'All') {
-                productivityObj.createTaskField(data);
-            }
+        for (let i = 0; i < priorityFilters.length; i++) {
+            classManager.removeClass(priorityFilters[i], 'active-elem-white');
+        }
+        event.target.classList.add('active-elem-white');
+
+
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks');
+        taskData.on('value', function (snapshot) {
+            snapshot.forEach(function (child) {
+                let value = child.val();
+                if (event.target.innerHTML == child.val().priority) {
+                    console.log(child.val().priority);
+                    tasksRenderer.renderTask(value, child.key);
+                }
+                else if (event.target.innerHTML == 'All') {
+                    tasksRenderer.createTaskField(value, child.key);
+                }
+            });
         });
     }
 }
