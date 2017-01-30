@@ -1,9 +1,11 @@
 let breakTimerAttempts = 0;
 let timerElements = {}
 let finishTaskAttempts = 0;
+let timerKey;
 
 class Timer {
-    static showTimer() {
+    static showTimer(key) {
+        timerKey=key;
         let timerBinder = new Binder('app/components/timer/timer.html', document.body);
         let receivedDoc = timerBinder.downloadComponent();
         let tooltips = $('.tooltip');
@@ -13,6 +15,13 @@ class Timer {
         document.getElementsByClassName('timer-content')[0].appendChild(receivedDocIntroTimer.getElementById('intro-timer'));
         ElementsListener.listenToEvents('click', document.getElementsByClassName('start-timer'), timer.startTimer);
         timer.initializeTimerElements();
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key);
+        taskData.on('value', function (data) {
+            let value = data.val();
+            document.getElementsByClassName('task-title-timer')[0].innerHTML = value.title;
+            document.getElementsByClassName('task-description-timer')[0].innerHTML = value.description;
+        });
+
     }
 
     downloadTimerComponents(route) {
@@ -84,7 +93,7 @@ class Timer {
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('break-timer')[0]);
         timer.initializeTimerElements();
-        ElementsListener.listenToEvents('click', timerElements.finishTaskButton, timer.finishTask);
+        ElementsListener.listenToEvents('click', timerElements.finishTaskButton, timer.finishTask(timerKey));
         ElementsListener.listenToEvents('click', timerElements.startPomodoraButton, timer.startPomodora);
         timer.addAnimationToTimerComponents();
 
@@ -148,12 +157,13 @@ class Timer {
         timer.downloadActiveTimer();
     }
 
-    finishTask() {
+    finishTask(timerKey) {
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
         timer.downloadActiveTimer();
         for (let k = 0; k < timerElements.pomodoroAttempts.length; k++) {
             timerElements.pomodoroAttempts[k].classList.add('finish-pomodoro');
         }
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({'taskisdone':true});
     }
 
     downloadActiveTimer() {

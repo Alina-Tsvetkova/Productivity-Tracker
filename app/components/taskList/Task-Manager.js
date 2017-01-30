@@ -29,7 +29,6 @@ class TaskManager {
             k++;
         });
 
-
         let monthDeadline, dayDeadline, yearDeadline;
 
         let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -66,22 +65,25 @@ class TaskManager {
     }
 
     saveEditedTask(index) {
-        let updates = {
-            title: document.querySelectorAll('.title-input')[0].value,
-            description: document.querySelectorAll('.description-input')[0].value,
-            category: document.querySelector('input.category-input:checked + label + label').innerHTML,
-            priority: document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML,
-            deadline: document.querySelectorAll('.deadline-input')[0].value
-        };
-
+        let updates = {};
+        updates.title = document.querySelectorAll('.title-input')[0].value;
+        updates.description = document.querySelectorAll('.description-input')[0].value;
+        updates.category = document.querySelector('input.category-input:checked + label + label').innerHTML;
+        updates.priority = document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML;
+        updates.deadline = document.querySelectorAll('.deadline-input')[0].value;
+        let allCategoriesNames = document.getElementsByClassName('category-input');
+        let allCategoriesValues = [];
+        for (let j = 0; j < allCategoriesNames.length; j++) {
+            allCategoriesValues.push(allCategoriesNames[j].value);
+        }
+        let foundCategory = allCategoriesValues.indexOf(updates.category);
+        updates.color_indicator = foundCategory;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
 
         counterOfTasks = 0;
 
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
-
         tasksRenderer.ifTaskPresent();
-
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 

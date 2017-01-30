@@ -15,6 +15,7 @@ class EventHandler {
             modalWindowObj.showEditModal(index, key);
         }
         if (event.target.parentNode.classList.contains('check-button-edit')) {
+            console.log('edit');
             let editTaskModal = $('#modal-window-elem-edit');
             productivityManager.saveEditedTask(index);
         }

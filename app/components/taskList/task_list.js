@@ -168,10 +168,12 @@ class TaskListTransfer {
         });
 
         window.onscroll = function () {
-            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrolled > 100) {
-                document.getElementsByClassName('fixed-logo')[0].style.display = 'block';
-                document.getElementsByClassName('daily-task-list')[0].style.paddingTop = '60px';
+            if (document.getElementsByClassName('fixed-logo')[0]) {
+                let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrolled > 100) {
+                    document.getElementsByClassName('fixed-logo')[0].style.display = 'block';
+                    document.getElementsByClassName('daily-task-list')[0].style.paddingTop = '60px';
+                }
             }
         }
     }

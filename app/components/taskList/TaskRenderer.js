@@ -26,24 +26,22 @@ class TaskRenderer extends TaskManager {
         let renderedTask = data;
         let thisCategory = renderedTask.category;
 
-        if (renderedTask.taskisdone == true) {
-            $('#tab2').appendChild(docTask.getElementsByClassName('task')[0]);
-        }
+        // if (renderedTask.taskisdone == true) {
+        //     $('#tab2').appendChild(docTask.getElementsByClassName('task')[0]);
+        // }
 
-        else {
+        if (renderedTask.taskisdone == 'false') {
             TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.color_indicator);
         }
-
-        let regExpDate = /[0-9]{2}/i;
+        else {
+            console.log(true);
+        }
 
         allTasksToDoFromDatabase.push(data.val);
 
-        function fillTaskContainer(deadline) {
-            let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+        function fillTaskContainer(deadline, dataKey) {
+            console.log(renderedTask,counterOfTasks);
             try {
-                let renderedTaskDeadline = deadline.split('.');
-                let monthDeadline;
                 let task = $('.task');
                 let taskTitle = $('.task-title');
                 let monthDeadlineElem = $('.monthDeadline');
@@ -53,15 +51,8 @@ class TaskRenderer extends TaskManager {
                 taskTitle[counterOfTasks].innerHTML = renderedTask.title;
                 taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
                 descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
-                $('.dayDeadline')[counterOfTasks].innerHTML = renderedTask.deadline.match(regExpDate);
+                $('.dayDeadline')[counterOfTasks].innerHTML = renderedTask.deadline;
 
-                for (let m = 0; m < renderedTaskDeadline.length; m++) {
-                    if (parseInt(renderedTaskDeadline[m]) <= 12) {
-                        monthDeadline = allMonths[Number(renderedTaskDeadline[m] - 1)];
-                    }
-                }
-
-                monthDeadlineElem[counterOfTasks].innerHTML = monthDeadline.toUpperCase();
                 priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                 $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
 
@@ -70,7 +61,7 @@ class TaskRenderer extends TaskManager {
                     'color-category': renderedTask.color_indicator,
                     'taskKey': dataKey,
                     'dailyTask': renderedTask.dailyTask,
-                    'taskIsDone': renderedTask.taskisdone
+                    'taskisdone': renderedTask.taskisdone
                 };
 
                 for (let key in attributesObj) {
@@ -85,7 +76,10 @@ class TaskRenderer extends TaskManager {
             }
         }
 
-        fillTaskContainer(data.deadline);
+        setTimeout(function () {
+            fillTaskContainer(data.deadline, dataKey)
+        }, 100);
+
         setTimeout(function () {
             funcTask.groupTasksByCategory('.task');
         }, 60);
@@ -96,7 +90,11 @@ class TaskRenderer extends TaskManager {
         let elementListenerData = {
             "0": taskDeletorObj.pushTaskToDelete,
             "1": taskDeletorObj.givePossibilityToDelete,
-            "2": Timer.showTimer,
+            "2": function (event) {
+                let timerHash = event.target.parentNode.parentNode.getAttribute('taskkey');
+                console.log(timerHash);
+                Timer.showTimer(timerHash);
+            },
             "3": productivityManager.moveTaskToDaily
         };
 
@@ -118,9 +116,9 @@ class TaskRenderer extends TaskManager {
     }
 
     static createCategoryGroup(category, docTask, indicator) {
-        var ul = document.createElement('ul');
+        let ul = document.createElement('ul');
         ul.setAttribute('category', category);
-        var h3 = document.createElement('h3');
+        let h3 = document.createElement('h3');
         h3.innerHTML = category;
         h3.classList.add('categorized-ul-title');
         ul.appendChild(h3);

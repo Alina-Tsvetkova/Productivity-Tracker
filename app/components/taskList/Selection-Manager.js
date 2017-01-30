@@ -39,6 +39,7 @@ class SelectionManager {
 
     static changeDeselectedTaskImage(task) {
         classManager.removeClass(task,'for-delete-bg');
+        classManager.removeClass(task,'for-delete');
         task.classList.add('canceled-delete');
     }
 
