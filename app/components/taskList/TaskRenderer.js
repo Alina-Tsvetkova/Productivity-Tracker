@@ -58,8 +58,21 @@ class TaskRenderer extends TaskManager {
                 taskTitle[counterOfTasks].innerHTML = renderedTask.title;
                 taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
                 descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
-                $('.dayDeadline')[counterOfTasks].innerHTML = renderedTask.deadline;
+                let splitedArray = renderedTask.deadline.split('.');
+                $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
 
+
+                let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                let todayMonth = splitedArray[1];
+
+                for (let k = 0; k < allMonths.length; k++) {
+                    if (todayMonth == k) {
+                        todayMonth = allMonths[k-1];
+                    }
+                }
+
+                $('.monthDeadline')[counterOfTasks].innerHTML = todayMonth;
                 priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                 $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
 
@@ -109,12 +122,6 @@ class TaskRenderer extends TaskManager {
             $('.add-task-sect')[0].classList.add('non-visible-elem');
         }
         $.fn.tooltipSwitcher();
-    }
-
-    createTaskField(data) {
-        tasksRenderer.renderTask(data);
-        let tooltips = $('.tooltip');
-        tooltips.tooltipSwitcher();
     }
 
     static createCategoryGroup(category, docTask, indicator,renderedTask) {

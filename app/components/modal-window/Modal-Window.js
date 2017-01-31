@@ -27,20 +27,16 @@ class ModalWindow {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {
             ModalWindow.closeModalWindow(document.getElementById('modal-window-elem'));
         });
-        let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        let today = new Date();
-        let todayMonth;
-
-        for (let k = 0; k < allMonths.length; k++) {
-            if (today.getMonth() == k) {
-                todayMonth = allMonths[k];
-            }
-        }
-        document.querySelector('.deadline-input').value = today.getDate() + " " + todayMonth + ", " + today.getFullYear();
 
         setTimeout(function () {
             document.getElementsByClassName('add-task-modal')[0].style.top = '50%';
         }, 100)
+
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                dateFormat: 'dd.mm.yy'
+            });
+        } );
     }
 
     showEditModal(index, key) {
@@ -90,6 +86,11 @@ class ModalWindow {
         setTimeout(function () {
             document.getElementsByClassName('add-task-modal')[0].style.top = '50%';
         }, 100)
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                dateFormat: 'dd.mm.yy'
+            });
+        } );
     }
 
     static closeModalWindow(child) {

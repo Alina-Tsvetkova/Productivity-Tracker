@@ -22,34 +22,34 @@ class TaskManager {
         let foundCategory = allCategoriesValues.indexOf(postData.category);
         postData.color_indicator = foundCategory;
 
-        let dateArray = (postData.deadline).split(' ');
-        let k = 0;
-        dateArray.forEach(function (item) {
-            dateArray[k] = item.replace(',', '');
-            k++;
-        });
-
-        let monthDeadline, dayDeadline, yearDeadline;
-
-        let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        for (let k = 0; k < allMonths.length; k++) {
-            if (dateArray.indexOf(allMonths[k]) == 1) {
-                monthDeadline = k + 1;
-            }
-        }
-
-        let yearRegExp = /[0-9]{4}/;
-        let dayRegExp = /[0-9]{1,2}/;
-        for (let k = 0; k < dateArray.length; k++) {
-            if (dateArray[k].match(yearRegExp)) {
-                yearDeadline = dateArray[k];
-            }
-            else if (dateArray[k].match(dayRegExp)) {
-                dayDeadline = dateArray[k];
-            }
-        }
-
-        postData.deadline = dayDeadline + '.' + monthDeadline + '.' + yearDeadline;
+        // let dateArray = (postData.deadline).split(' ');
+        // let k = 0;
+        // dateArray.forEach(function (item) {
+        //     dateArray[k] = item.replace(',', '');
+        //     k++;
+        // });
+        //
+        // let monthDeadline, dayDeadline, yearDeadline;
+        //
+        // let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        // for (let k = 0; k < allMonths.length; k++) {
+        //     if (dateArray.indexOf(allMonths[k]) == 1) {
+        //         monthDeadline = k + 1;
+        //     }
+        // }
+        //
+        // let yearRegExp = /[0-9]{4}/;
+        // let dayRegExp = /[0-9]{1,2}/;
+        // for (let k = 0; k < dateArray.length; k++) {
+        //     if (dateArray[k].match(yearRegExp)) {
+        //         yearDeadline = dateArray[k];
+        //     }
+        //     else if (dateArray[k].match(dayRegExp)) {
+        //         dayDeadline = dateArray[k];
+        //     }
+        // }
+        //
+        // postData.deadline = dayDeadline + '.' + monthDeadline + '.' + yearDeadline;
 
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
         counterOfTasks = 0;
