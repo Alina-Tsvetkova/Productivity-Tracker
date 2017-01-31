@@ -2,32 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Settings.js" afterPath="$PROJECT_DIR$/app/components/settings/Settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" afterPath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/animated.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/screen-reader.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_animated.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_screen-reader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/libs/scss/font-awesome.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/reports.html" afterPath="$PROJECT_DIR$/app/components/reports/reports.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/settings.html" afterPath="$PROJECT_DIR$/app/components/settings/settings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/task-list.html" afterPath="$PROJECT_DIR$/app/components/taskList/task-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/task_list.js" afterPath="$PROJECT_DIR$/app/components/taskList/task_list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/timer.html" afterPath="$PROJECT_DIR$/app/components/timer/timer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/timer.js" afterPath="$PROJECT_DIR$/app/components/timer/timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/less-content.js" afterPath="$PROJECT_DIR$/assets/js/less-content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/common.less" afterPath="$PROJECT_DIR$/assets/less/common.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/entry-less.less" afterPath="$PROJECT_DIR$/assets/less/entry-less.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/task.less" afterPath="$PROJECT_DIR$/assets/less/task.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/base.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/base.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.amd.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.amd.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/base.js" afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/dist/less.js" afterPath="$PROJECT_DIR$/node_modules/less/dist/less.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/dist/less.min.js" afterPath="$PROJECT_DIR$/node_modules/less/dist/less.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/jasmine-jsreporter.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/jasmine-jsreporter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/less/report.less" afterPath="$PROJECT_DIR$/assets/less/reports.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +64,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="357">
+              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -58,8 +74,18 @@
       <file leaf-file-name="timer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/timer/timer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="70" column="24" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="24" />
+            <state relative-caret-position="183">
+              <caret line="75" column="80" lean-forward="false" selection-start-line="75" selection-start-column="80" selection-end-line="75" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reports.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -157,19 +183,14 @@
         <option value="$PROJECT_DIR$/app/components/modal-window/edit-modal-window.html" />
         <option value="$PROJECT_DIR$/assets/libs/datepicker.css" />
         <option value="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/settings.html" />
         <option value="$PROJECT_DIR$/app/components/taskList/notifications/Task-Notification.js" />
         <option value="$PROJECT_DIR$/assets/js/Router.js" />
-        <option value="$PROJECT_DIR$/app/components/taskList/task-list.html" />
         <option value="$PROJECT_DIR$/app/components/reports/report.html" />
-        <option value="$PROJECT_DIR$/app/components/timer/timer.html" />
         <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
         <option value="$PROJECT_DIR$/assets/less/entry-less.less" />
         <option value="$PROJECT_DIR$/assets/less/report.less" />
         <option value="$PROJECT_DIR$/assets/less/reports.less" />
-        <option value="$PROJECT_DIR$/app/components/reports/reports.html" />
         <option value="$PROJECT_DIR$/app/components/taskList/task_list.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/components/reports/report.js" />
         <option value="$PROJECT_DIR$/assets/less/task-list.less" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
@@ -178,6 +199,11 @@
         <option value="$PROJECT_DIR$/app/components/reports/default-data.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
         <option value="$PROJECT_DIR$/assets/less/task.less" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/components/timer/timer.html" />
+        <option value="$PROJECT_DIR$/app/components/taskList/task-list.html" />
+        <option value="$PROJECT_DIR$/app/components/settings/settings.html" />
+        <option value="$PROJECT_DIR$/app/components/reports/reports.html" />
         <option value="$PROJECT_DIR$/app/components/timer/timer.js" />
       </list>
     </option>
@@ -263,10 +289,6 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -283,6 +305,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reports" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,12 +426,12 @@
       <workItem from="1485600583002" duration="22427000" />
       <workItem from="1485772263298" duration="15379000" />
       <workItem from="1485808544511" duration="3848000" />
-      <workItem from="1485850628672" duration="34834000" />
+      <workItem from="1485850628672" duration="35533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95560000" />
+    <option name="totallyTimeSpent" value="96259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -667,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -695,14 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/timer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -731,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/task_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -751,14 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/task-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="38" column="84" lean-forward="false" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -851,18 +845,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/timer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+        <state relative-caret-position="357">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/task-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="127" lean-forward="false" selection-start-line="12" selection-start-column="127" selection-end-line="12" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/timer/timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="70" column="24" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="24" />
+        <state relative-caret-position="183">
+          <caret line="75" column="80" lean-forward="false" selection-start-line="75" selection-start-column="80" selection-end-line="75" selection-end-column="80" />
           <folding />
         </state>
       </provider>

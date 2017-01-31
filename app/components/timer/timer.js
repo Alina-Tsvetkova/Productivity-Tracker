@@ -72,6 +72,10 @@ class Timer {
                 document.getElementsByClassName('invader')[0].style.animationDuration = 0 + 's';
                 document.getElementsByClassName('dimElem')[0].style.animationDuration = 0 + 's';
             }
+            if(rotateDeg >= 360){
+                document.getElementsByClassName('rotator')[0].style.rotate = 360 + 'deg';
+                timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
+            }
             firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
                 console.log(data.val().startOfTimer);
                 if (data.val().startOfTimer === 0) {
