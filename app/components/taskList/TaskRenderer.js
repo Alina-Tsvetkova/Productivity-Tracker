@@ -40,7 +40,6 @@ class TaskRenderer extends TaskManager {
         allTasksToDoFromDatabase.push(data.val);
 
         function fillTaskContainer(deadline, dataKey) {
-            console.log(renderedTask,counterOfTasks);
             try {
                 let task = $('.task');
                 let taskTitle = $('.task-title');
@@ -68,7 +67,6 @@ class TaskRenderer extends TaskManager {
                     task[counterOfTasks].setAttribute(key, attributesObj[key]);
                 }
 
-                productivityManager.moveTaskToDailyGroup(counterOfTasks);
                 ++counterOfTasks;
             }
             catch (e) {
@@ -95,7 +93,6 @@ class TaskRenderer extends TaskManager {
                 console.log(timerHash);
                 Timer.showTimer(timerHash);
             },
-            "3": productivityManager.moveTaskToDaily
         };
 
         for (let key in elementListenerData) {

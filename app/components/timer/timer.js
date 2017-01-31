@@ -2,10 +2,11 @@ let breakTimerAttempts = 0;
 let timerElements = {}
 let finishTaskAttempts = 0;
 let timerKey;
+let estimationOfTask = 0;
 
 class Timer {
     static showTimer(key) {
-        timerKey=key;
+        timerKey = key;
         let timerBinder = new Binder('app/components/timer/timer.html', document.body);
         let receivedDoc = timerBinder.downloadComponent();
         let tooltips = $('.tooltip');
@@ -18,9 +19,16 @@ class Timer {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key);
         taskData.on('value', function (data) {
             let value = data.val();
+            estimationOfTask = value.estimation;
             document.getElementsByClassName('task-title-timer')[0].innerHTML = value.title;
             document.getElementsByClassName('task-description-timer')[0].innerHTML = value.description;
+            for (let j = 0; j < estimationOfTask; j++) {
+                let pomodoroLi = document.createElement('li');
+                pomodoroLi.classList.add('pomodoro');
+                document.getElementsByClassName('pomodoros')[0].appendChild(pomodoroLi);
+            }
         });
+
 
     }
 
@@ -36,6 +44,9 @@ class Timer {
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('active-timer')[0]);
         timer.initializeTimerElements();
         timer.addAnimationToTimerComponents();
+        ElementsListener.listenToEvents('click', timerElements.finishTaskButton, function () {
+            timer.finishTask(timerKey)
+        });
         ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, timer.finishPomodora);
         ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, timer.failPomodora);
         timer.receiveDurationOfTimer(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
@@ -48,8 +59,8 @@ class Timer {
         timerElements.timerInvader = document.getElementsByClassName('invader')[0];
         timerElements.timerDivider = document.getElementsByClassName('dimElem')[0];
         timerElements.finishPomodoraButton = document.getElementsByClassName('finish-pomodora-btn');
-        timerElements.failPomodoraButton = document.getElementsByClassName('fail-pomodora-btn');
         timerElements.finishTaskButton = document.getElementsByClassName('finish-task-btn');
+        timerElements.failPomodoraButton = document.getElementsByClassName('fail-pomodora-btn');
         timerElements.startPomodoraButton = document.getElementsByClassName('start-pomodora-btn');
         timerElements.breakTimer = document.getElementsByClassName('break-timer')[0];
         timerElements.pomodoroAttempts = document.getElementsByClassName('pomodoro');
@@ -61,9 +72,8 @@ class Timer {
         timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
         timerElements.pomodoroAttempts[breakTimerAttempts].classList.add('finish-pomodoro');
         breakTimerAttempts++;
-        //let degRotated = window.getComputedStyle(timerElements.timerRotator, null);
-        //let rotationDeg = degRotated.getPropertyValue("transform");
-        if (breakTimerAttempts === 3) {
+        console.log(breakTimerAttempts, 'finish pomodoro');
+        if (breakTimerAttempts === estimationOfTask) {
             timer.completeTask();
             Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
         }
@@ -76,7 +86,8 @@ class Timer {
         timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
         timerElements.pomodoroAttempts[breakTimerAttempts].classList.add('fail-pomodoro');
         breakTimerAttempts++;
-        if (breakTimerAttempts === 3) {
+        timer.startBreak();
+        if (breakTimerAttempts === estimationOfTask) {
             timer.failTask();
         }
     }
@@ -88,21 +99,23 @@ class Timer {
     }
 
     startBreak() {
-        //matrix(1, -2.44929e-16, 2.44929e-16, 1, 0, 0)
+        console.log('started break');
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/break-timer.html');
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('break-timer')[0]);
         timer.initializeTimerElements();
-        ElementsListener.listenToEvents('click', timerElements.finishTaskButton, timer.finishTask(timerKey));
         ElementsListener.listenToEvents('click', timerElements.startPomodoraButton, timer.startPomodora);
         timer.addAnimationToTimerComponents();
 
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/cycle');
+        let shortBreakDuration = 0;
+        taskData.on('value', function (data) {
+            shortBreakDuration = data.val().shortBreak;
+        });
+        document.getElementsByClassName('q-minutes')[0].innerHTML = shortBreakDuration;
         setTimeout(function () {
-            //let degRotated = window.getComputedStyle(timerElements.timerRotator, null);
-            //let rotationDeg = degRotated.getPropertyValue("transform");
-            //console.log(rotationDeg);
             timer.notifyBreakOver();
-        }, 10000)
+        }, shortBreakDuration * 60 * 1000)
     }
 
     notifyBreakOver() {
@@ -120,9 +133,15 @@ class Timer {
     }
 
     receiveDurationOfTimer() {
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/cycle');
+        let workTimerDuration = 0;
+        taskData.on('value', function (data) {
+            workTimerDuration = data.val().workTime;
+        });
         for (let j = 0; j < arguments.length; j++) {
-            arguments[j].style.animationDuration = '10s';
+            arguments[j].style.animationDuration = workTimerDuration * 60 + 's';
         }
+        document.getElementsByClassName('q-minutes')[0].innerHTML = workTimerDuration;
     }
 
     startPomodora() {
@@ -154,23 +173,26 @@ class Timer {
 
     completeTask() {
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
-        timer.downloadActiveTimer();
+        timer.downloadCompleteTimer();
     }
 
     finishTask(timerKey) {
-        Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
-        timer.downloadActiveTimer();
-        for (let k = 0; k < timerElements.pomodoroAttempts.length; k++) {
+        for (let k = 0; k < estimationOfTask; k++) {
             timerElements.pomodoroAttempts[k].classList.add('finish-pomodoro');
         }
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({'taskisdone':true});
+        timer.completeTask();
     }
 
-    downloadActiveTimer() {
+    downloadCompleteTimer() {
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/completed-timer.html');
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('timer-completed-wrapper')[0]);
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-completed');
+        document.getElementsByClassName('pomodoros')[0].style.display = 'none';
+        setTimeout(function () {
+            estimationOfTask = 0;
+            let newNotification = new TaskNotification();
+            newNotification.wrapNotificationFunctionality('.message-completed');
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({'taskisdone': true});
+        }, 1000);
     }
 
 

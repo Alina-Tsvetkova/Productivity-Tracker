@@ -87,43 +87,6 @@ class TaskManager {
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 
-    moveTaskToDailyGroup(i) {
-        // if (document.getElementsByClassName('task')[i].getAttribute('dailyTask') == 'true') {
-        //     console.log(document.getElementById('daily-tasks'));
-        //     document.querySelectorAll('.categorized-ul')[i].getElementsByClassName('move-task')[0].style.display = 'none';
-        //     document.querySelectorAll('.categorized-ul')[i].getElementsByClassName('edit')[0].style.marginTop = '15px';
-        //     document.getElementById('daily-tasks').appendChild(document.getElementsByClassName('categorized-ul')[i]);
-        // }
-    }
-
-    moveTaskToDaily() {
-        // console.log('daily');
-        // if (document.querySelectorAll('#daily-tasks .task ').length >= 5) {
-        //     let newNotification = new TaskNotification();
-        //     newNotification.wrapNotificationFunctionality('.message-error');
-        //     return false;
-        // }
-        // else {
-        //     let updates = {
-        //         dailyTask: true
-        //     };
-        //     let allMoveButtons = Array.prototype.slice.call($('#globalTasks .move-task'));
-        //     let index = allMoveButtons.indexOf(event.target);
-        //     let allTasksToDo = $('#globalTasks .task');
-        //     let globalUls = $('#globalTasks .categorized-ul');
-        //
-        //     moveableTask = allTasksToDo[index].getAttribute('taskKey');
-        //
-        //     firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + moveableTask).update(updates);
-        //
-        //     $('.added-task')[0].classList.add('non-visible-elem');
-        //     document.querySelectorAll('#globalTasks .task')[index].setAttribute('dailyTask', 'true');
-        //
-        //     globalUls[index].getElementsByClassName('move-task')[0].classList.add('non-visible-elem');
-        //     globalUls[index].getElementsByClassName('edit')[0].style.marginTop = '15px';
-        //     $('#daily-tasks').append(globalUls[index]);
-        // }
-    }
 }
 
 let productivityManager = new TaskManager();

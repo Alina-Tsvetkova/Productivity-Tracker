@@ -13,9 +13,8 @@
     <header class="fixed-logo">
         <a href="task-list.html" class="logo-link">
             <img src="assets/img/Logo.svg" class="logo-img-fixed" width="250"
-                    height="80">
+                 height="80">
         </a>
-
         <div class="icons">
             <div class="group-btn ">
                 <button type="submit" class="add-task add-task-header tooltip" data-tooltip="Add New Task"><i
@@ -76,72 +75,60 @@
                         </button>
                     </div>
                 </h1>
-
             </section>
-            <div id="tasksTabs">
-                <!--<div class="opportunity-select daily-opportunity">-->
-                    <!--<button type="submit" class="select-all select-all-daily">Select All</button>-->
-                     <!--<span class="visual-divider">|</span>-->
-                    <!--<button type="submit" class="deselect-all deselect-all-daily">Deselect All</button>-->
-                <!--</div>-->
-                <!--<div class="toggle-doneable">-->
-                    <!--<ul class="tabNavigation">-->
-                        <!--<li><a class="ui-tabs-anchor" href="#tab1">To Do</a></li>-->
-                         <!--<span class="visual-divider">|</span>-->
-                        <!--<li><a class="ui-tabs-anchor" href="#tab2">Done</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
+        </div>
 
-                <div id="tab1" class="ui-tabs-panel">
-                    <div class="tasks-intro">
-                        <!--<section class="add-task-sect">-->
-                            <!--<i class="add-indicator icon-arrow-circle"></i>-->
+        <div id="tasksTabs">
+            <div class="tasks-intro">
+                <!--<section class="add-task-sect">-->
+                <!--<i class="add-indicator icon-arrow-circle"></i>-->
 
-                            <!--<h2 class="add-task-logo">Add your first task</h2>-->
-                        <!--</section>-->
-                        <section class="added-task">
-                            <h2 class="add-task-logo">Task added,<br> drag it to the top 5 in daily task list</h2>
-                            <i class="add-indicator icon-arrow-circle"></i>
-                        </section>
+                <!--<h2 class="add-task-logo">Add your first task</h2>-->
+                <!--</section>-->
+                <section class="added-task">
+                    <h2 class="add-task-logo">Task added,<br> drag it to the top 5 in daily task list</h2>
+                    <i class="add-indicator icon-arrow-circle"></i>
+                </section>
 
-                        <div id="daily-tasks"></div>
-                    </div>
-                    <div class="btn-wrap accordion-button ">
-                        <span class="global-name">Global list</span>
-                        <button type="submit" class="global-list-btn global-list-close tooltip "
-                                data-tooltip="Go to Global List"><i
-                                class="icon-global-list-arrow-down "></i>
-                        </button>
-                    </div>
-                    <div class="priority-list">
-                        <button type="submit">All</button>
-                        <span class="visual-divider">|</span>
-                        <button type="submit">Urgent</button>
-                         <span class="visual-divider">|</span>
-                        <button type="submit">High</button>
-                         <span class="visual-divider">|</span>
-                        <button type="submit">Middle</button>
-                         <span class="visual-divider">|</span>
-                        <button type="submit">Low</button>
-                    </div>
-                    <div class="opportunity-select">
-                        <button type="submit" class="select-all select-all-global">Select All</button>
-                         <span class="visual-divider">|</span>
-                        <button type="submit" class="deselect-all deselect-all-global">Deselect All</button>
-                    </div>
-
-
-                    <div id="globalTasks" class="accordion-content">
-                        <div class="tasks-list">
-                            <ul class="tasks-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="tab2" class="ui-tabs-panel"></div>
+                <div id="daily-tasks"></div>
             </div>
+            <div class="btn-wrap accordion-button ">
+                <span class="global-name">Global list</span>
+                <button type="submit" class="global-list-btn global-list-close tooltip "
+                        data-tooltip="Go to Global List"><i
+                        class="icon-global-list-arrow-down "></i>
+                </button>
+            </div>
+            <div class="priority-list">
+                <button type="submit">All</button>
+                <span class="visual-divider">|</span>
+                <button type="submit">Urgent</button>
+                <span class="visual-divider">|</span>
+                <button type="submit">High</button>
+                <span class="visual-divider">|</span>
+                <button type="submit">Middle</button>
+                <span class="visual-divider">|</span>
+                <button type="submit">Low</button>
+            </div>
+            <div class="opportunity-select">
+                <button type="submit" class="select-all select-all-global">Select All</button>
+                <span class="visual-divider">|</span>
+                <button type="submit" class="deselect-all deselect-all-global">Deselect All</button>
+            </div>
+            <div class="toggle-doneable">
+                <ul class="tabNavigation">
+                    <li><a class="ui-tabs-anchor" href="#tab1">To Do</a></li>
+                    <span class="visual-divider">|</span>
+                    <li><a class="ui-tabs-anchor" href="#tab2">Done</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tasks-list ui-tabs-panel" id="tab1" >
+                <div id="globalTasks" class="accordion-content">
+                </div>
+            </div>
+
+            <div id="tab2" class="ui-tabs-panel"></div>
         </div>
     </div>
 
