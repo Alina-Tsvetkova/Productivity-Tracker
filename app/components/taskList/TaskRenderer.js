@@ -36,10 +36,10 @@ class TaskRenderer extends TaskManager {
         let docTask = taskItemParser.parseFromString(taskRequest.responseText, "text/html");
         let renderedTask;
 
-        if(!(bool)) {
+        if (!(bool)) {
             renderedTask = data[dataKey];
         }
-        else if(bool){
+        else if (bool) {
             renderedTask = data;
         }
 
@@ -49,7 +49,6 @@ class TaskRenderer extends TaskManager {
         allTasksToDoFromDatabase.push(data.val);
 
         function fillTaskContainer(dataKey) {
-            console.log(dataKey,data);
             try {
                 let task = $('.task');
                 let taskTitle = $('.task-title');
@@ -68,7 +67,7 @@ class TaskRenderer extends TaskManager {
 
                 for (let k = 0; k < allMonths.length; k++) {
                     if (todayMonth == k) {
-                        todayMonth = allMonths[k-1];
+                        todayMonth = allMonths[k - 1];
                     }
                 }
 
@@ -124,7 +123,7 @@ class TaskRenderer extends TaskManager {
         $.fn.tooltipSwitcher();
     }
 
-    static createCategoryGroup(category, docTask, indicator,renderedTask) {
+    static createCategoryGroup(category, docTask, indicator, renderedTask) {
         let ul = document.createElement('ul');
         ul.setAttribute('category', category);
         let h3 = document.createElement('h3');
@@ -134,7 +133,7 @@ class TaskRenderer extends TaskManager {
         ul.classList.add('categorized-ul');
         ul.appendChild(docTask.getElementsByClassName('task')[0]);
 
-        if(renderedTask.taskisdone == 'false'){
+        if (renderedTask.taskisdone == 'false') {
             document.getElementById('globalTasks').appendChild(ul);
         }
         else {
