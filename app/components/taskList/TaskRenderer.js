@@ -18,7 +18,6 @@ class TaskRenderer extends TaskManager {
     }
 
     filterToDoTasks() {
-        console.log('filter');
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks');
         taskData.orderByChild("taskisdone").equalTo(true).on("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
@@ -29,15 +28,21 @@ class TaskRenderer extends TaskManager {
         });
     }
 
-    renderTask(data, dataKey) {
-        console.log(data);
+    renderTask(data, dataKey, bool) {
         let taskRequest = new XMLHttpRequest();
         let taskItemParser = new DOMParser();
         taskRequest.open('GET', 'app/components/taskList/task/task.html', false);
         taskRequest.send();
         let docTask = taskItemParser.parseFromString(taskRequest.responseText, "text/html");
-        let renderedTask = data;
-        renderedTask = renderedTask[dataKey];
+        let renderedTask;
+
+        if(!(bool)) {
+            renderedTask = data[dataKey];
+        }
+        else if(bool){
+            renderedTask = data;
+        }
+
         let thisCategory = renderedTask.category;
         TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.color_indicator, renderedTask);
 
@@ -50,7 +55,6 @@ class TaskRenderer extends TaskManager {
                 let monthDeadlineElem = $('.monthDeadline');
                 let priorityIndicator = $('.priority-indicator');
                 let descriptionContent = $('.description-content');
-                console.log(counterOfTasks, task);
                 taskTitle[counterOfTasks].innerHTML = renderedTask.title;
                 taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
                 descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
