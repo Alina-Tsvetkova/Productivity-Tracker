@@ -126,8 +126,8 @@ class TaskListTransfer {
         taskBinder.downloadComponent();
         taskListInitiator.initializeTaskListElements();
         taskListInitiator.initModalWindowElements();
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
-        //ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('icon-add-task'), productivityManager.submitTask);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {
             TaskListTransfer.addActiveClassSelector(this);
@@ -165,7 +165,7 @@ class TaskListTransfer {
         window.onscroll = function () {
             if (document.getElementsByClassName('fixed-logo')[0]) {
                 let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrolled > 100) {
+                if (scrolled > 50) {
                     document.getElementsByClassName('fixed-logo')[0].style.display = 'block';
                     document.getElementsByClassName('daily-task-list')[0].style.paddingTop = '60px';
                 }

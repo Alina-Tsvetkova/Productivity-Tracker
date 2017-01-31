@@ -1,4 +1,4 @@
-.report_info {
+.report-info {
   margin: 0 auto;
   position: relative;
   margin-top: 50px;
@@ -12,7 +12,7 @@
 
 .head {
   text-align: center;
-  font-family: @font-family_1;
+  font-family: @font-family-sans;
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 30px;
@@ -21,23 +21,23 @@
 
 .tab {
   font-size: 16px;
-  font-family: @font-family_2;
+  font-family: @font-family-roboto;
   display: inline-block;
   &:hover {
-    color: @color_white;
+    color: @white-color;
   }
 }
 
-.gap_variant {
+.gap-variant {
   font-size: 16px;
-  font-family: @font-family_2;
+  font-family: @font-family-roboto;
   display: inline-block;
   &:hover {
-    color: @color_white;
+    color: @white-color;
   }
 }
 
-.gap_variants {
+.gap-variants {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
@@ -46,23 +46,23 @@
   }
 }
 
-#day_report {
+#day-report {
   position: relative;
 }
 
-.visual_chart_day {
+.visual-chart-day {
   height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
   display: table;
 }
 
-.tabs_reports {
+.tabs-reports {
   margin-top: 30px;
   text-align: center;
 }
 
-#container_month_report {
+#container-month-report {
   max-width: 700px;
   height: 450px;
   width: 100%;
@@ -70,7 +70,7 @@
   margin: 0 auto;
 }
 
-#container_week_report {
+#container-week-report {
   cursor: pointer;
   margin: 0 auto;
   width: 100%;
@@ -78,7 +78,7 @@
   max-width: 600px;
 }
 
-#container_day_report {
+#container-day-report {
   cursor: pointer;
   margin: 0 auto;
   margin-bottom: 80px;
@@ -96,8 +96,8 @@
   opacity: 0.95;
 }
 
-.task_tab {
-  color: @color_white;
+.task-tab {
+  color: @white-color;
 }
 
 .notSelectedTab {
@@ -105,15 +105,15 @@
 }
 
 .selectedTab {
-  color: @color_white;
+  color: @white-color;
 }
 
 @media screen and (max-width: 640px) {
-  .charts, #container_month_report {
+  .charts, #container-month-report {
     max-width: 400px;
   }
 
-  .report_info .gap_variants {
+  .report-info .gap-variants {
     margin-bottom: 20px;
   }
 
@@ -123,33 +123,33 @@
 }
 
 @media screen and (max-width: 740px) {
-  .button_hint_group {
+  .button-hint-group {
     display: none;
   }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-  #container_month_report {
+  #container-month-report {
     max-width: 600px;
   }
 
-  #container_week_report {
+  #container-week-report {
     max-width: 600px;
   }
 
-  .report_info .gap_variants {
+  .report-info .gap-variants {
     margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
-  #container_month_report {
+  #container-month-report {
     max-width: 500px;
   }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
-  #container_month_report {
+  #container-month-report {
     max-width: 500px;
   }
 }

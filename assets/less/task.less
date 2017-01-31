@@ -18,6 +18,10 @@
   }
 }
 
+.priority-indicator.active-task-timer {
+  background-image: url('../img/active-timer.png');
+}
+
 .indicator {
   width: 90px;
   height: 100%;
@@ -46,8 +50,8 @@
 }
 
 .monthDeadline {
-  font-size: 12px;
-  font-family: @font-family-roboto;
+  font-size: 14px;
+  font-family: @font-family-sans;
 }
 
 .indicator-wrapper {
@@ -164,7 +168,7 @@
 .categorized-ul {
   border-left: 10px solid;
   position: relative;
-  margin-top: 60px;
+  margin-top: 45px;
   clear: both;
 }
 
@@ -182,7 +186,7 @@
 
 .indicator.for-delete-bg {
   background-image: url('../img/remove-task-active.png');
-  left:-10px;
+  left: -10px;
   transition-duration: 1s;
 }
 

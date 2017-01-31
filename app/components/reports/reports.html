@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Report</title>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="icons">
+        <div class="group-btn ">
+            <button type="submit" class="tasks-list-icon tooltip" data-tooltip="Go to Tasks List"><i
+                    class="fa fa-tasks"
+                    aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="group-btn ">
+            <button type="submit" class="reports-switcher tooltip tooltip-right" data-tooltip="Go to Reports"><i
+                    class="icon-statistics"></i>
+            </button>
+        </div>
+        <div class="group-btn ">
+            <button type="submit" class="settings-switcher tooltip tooltip-right" data-tooltip="Go to Settings"><i
+                    class="icon-settings" ></i></button>
+        </div>
+        <div class="group-btn ">
+            <button type="submit" class="log-out tooltip tooltip-right"  data-tooltip="Log Out"><i class="icon-logout"
+            ></i></button>
+        </div>
+    </div>
+
+    <section class="report-info" id="report-info">
+        <h1 class="head">Report</h1>
+        <ul class="gap-variants">
+            <li class="gap-variant-li">
+                <button class="gap-variant day-chart-visualizer">Day</button>
+                <span class="visual-divider">|</span>
+            </li>
+            <li class="gap-variant-li">
+                <button class="gap-variant week-chart-visualizer">Week</button>
+                <span class="visual-divider">|</span>
+            </li>
+            <li class="gap-variant-li">
+                <button class="gap-variant month-chart-visualizer">Month</button>
+
+            </li>
+        </ul>
+        <div class="charts"></div>
+    </section>
+
+    <div class="tabs-reports">
+        <button type="submit" class="tab pomodoro-tab">Pomodoros</button>
+        <span class="visual-divider">|</span>
+        <button type="submit" class="tab task-tab">Tasks</button>
+    </div>
+</div>
+
+
+</body>
+
+</html>

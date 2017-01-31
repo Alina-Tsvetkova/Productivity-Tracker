@@ -610,7 +610,7 @@
                 }
             };
             e.prototype.getFileManager = function (a, b, c, e, f) {
-                a || d.warn("getFileManager called with no filename.. Please report this issue. continuing."), null == b && d.warn("getFileManager called with null directory.. Please report this issue. continuing.");
+                a || d.warn("getFileManager called with no filename.. Please reports this issue. continuing."), null == b && d.warn("getFileManager called with null directory.. Please reports this issue. continuing.");
                 var g = this.fileManagers;
                 c.pluginManager && (g = [].concat(g).concat(c.pluginManager.getFileManagers()));
                 for (var h = g.length - 1; h >= 0; h--) {

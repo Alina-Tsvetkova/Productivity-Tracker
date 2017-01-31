@@ -10,7 +10,8 @@ class TaskManager {
             priority: modalWindowElements.priorityRadioBtn.innerHTML,
             color_indicator: null,
             taskisdone: 'false',
-            dailyTask: false
+            timerIsOn: false,
+            startOfTimer:0
 
         };
         if (postData.deadline == '') {

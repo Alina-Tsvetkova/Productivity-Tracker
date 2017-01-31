@@ -22,14 +22,19 @@ class Timer {
             estimationOfTask = value.estimation;
             document.getElementsByClassName('task-title-timer')[0].innerHTML = value.title;
             document.getElementsByClassName('task-description-timer')[0].innerHTML = value.description;
+            document.getElementsByClassName('pomodoros')[0].innerHTML = '';
             for (let j = 0; j < estimationOfTask; j++) {
                 let pomodoroLi = document.createElement('li');
                 pomodoroLi.classList.add('pomodoro');
                 document.getElementsByClassName('pomodoros')[0].appendChild(pomodoroLi);
             }
+            if (value.startOfTimer != 0) {
+                timer.startTimer(value.startOfTimer);
+            }
         });
 
 
+        Router.iconLinksBinder();
     }
 
     downloadTimerComponents(route) {
@@ -38,18 +43,47 @@ class Timer {
         return receivedDocTimer;
     }
 
-    startTimer() {
-        let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/active-timer.html');
-        timerElements.timerContainer.removeChild(document.getElementById('intro-timer'));
-        timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('active-timer')[0]);
-        timer.initializeTimerElements();
-        timer.addAnimationToTimerComponents();
-        ElementsListener.listenToEvents('click', timerElements.finishTaskButton, function () {
-            timer.finishTask(timerKey)
-        });
-        ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, timer.finishPomodora);
-        ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, timer.failPomodora);
-        timer.receiveDurationOfTimer(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
+    startTimer(startTimerTime) {
+        let rotateDeg;
+        (function countCurrentAngelOfTimer() {
+            let timeNow = new Date();
+            let timeBefore = new Date(startTimerTime);
+            let timeDiff = Math.abs(timeNow.getTime() - timeBefore.getTime());
+            rotateDeg = (timeDiff / 1000) / (40 * 60) * 360;
+        }());
+        try {
+            let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/active-timer.html');
+            timerElements.timerContainer.removeChild(document.getElementById('intro-timer'));
+            timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('active-timer')[0]);
+            timer.initializeTimerElements();
+            timer.addAnimationToTimerComponents();
+            let timerStartTime = new Date();
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
+                'timerIsOn': true
+            });
+            ElementsListener.listenToEvents('click', timerElements.finishTaskButton, function () {
+                timer.finishTask(timerKey)
+            });
+            ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, timer.finishPomodora);
+            ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, timer.failPomodora);
+            timer.receiveDurationOfTimer(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
+            document.getElementsByClassName('rotator')[0].style.rotate = rotateDeg + 'deg';
+            if(rotateDeg > 180){
+                document.getElementsByClassName('invader')[0].style.animationDuration = 0 + 's';
+                document.getElementsByClassName('dimElem')[0].style.animationDuration = 0 + 's';
+            }
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
+                console.log(data.val().startOfTimer);
+                if (data.val().startOfTimer === 0) {
+                    firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
+                        startOfTimer: timerStartTime
+                    });
+                }
+            });
+        }
+        catch (e) {
+            return false;
+        }
     }
 
     initializeTimerElements() {
