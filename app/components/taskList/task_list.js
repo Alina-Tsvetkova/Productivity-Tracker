@@ -1,10 +1,5 @@
-let counterOfTasksDone = 0;
 let allRenderedEditButtons = document.querySelectorAll('.edit');
 let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
-
-
-let moveableTask;
-
 let modalWindowElements = {};
 let taskListElements = {};
 
@@ -57,7 +52,6 @@ class funcTask {
     static groupTasksByCategory(elems) {
         let allTasksToDo = document.querySelectorAll(elems);
         for (let j = 0; j < allTasksToDo.length; j++) {
-            let thisCategory = allTasksToDo[j].getAttribute('color-category');
             if (allTasksToDo[j].getAttribute('color-category') == 0) {
                 allTasksToDo[j].getElementsByClassName('indicator')[0].classList.add('work');
             }
@@ -81,7 +75,6 @@ class funcTask {
         }
     }
 
-
     static notifyAboutMissedDeadlines(task) {
         let thisDate = new Date();
         thisDate.setDate(thisDate.getDate() - 1);
@@ -94,7 +87,7 @@ class funcTask {
         })
 
         let dayDeadlineDate, monthDeadlineDate, yearDeadlineDate;
-        let dayRegExp = /^[0-9]{4}$/i;
+
         for (let i = 0; i < parsedTaskDeadline.length; i++) {
             if (parsedTaskDeadline[i] <= 12) {
                 monthDeadlineDate = parsedTaskDeadline[i];
@@ -154,7 +147,9 @@ class TaskListTransfer {
         });
         document.querySelector('.priority-list button:first-child').classList.add('active-elem-white');
 
-        tasksRenderer.ifTaskPresent();
+        setTimeout(function () {
+            tasksRenderer.ifTaskPresent();
+        }, 100)
         let priorityFilters = document.querySelectorAll('.priority-list button');
         for (let i = 0; i < priorityFilters.length; i++) {
             priorityFilters[i].addEventListener('click', filtrationTask.filterTasks, false);
@@ -176,9 +171,9 @@ class TaskListTransfer {
                 }
             }
         }
+
+        Router.iconLinksBinder();
     }
 }
-
-let productivityObj = new funcTask();
 
 

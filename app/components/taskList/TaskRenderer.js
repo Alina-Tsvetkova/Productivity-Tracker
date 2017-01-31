@@ -49,6 +49,7 @@ class TaskRenderer extends TaskManager {
         allTasksToDoFromDatabase.push(data.val);
 
         function fillTaskContainer(dataKey) {
+            console.log(dataKey,data);
             try {
                 let task = $('.task');
                 let taskTitle = $('.task-title');
@@ -60,7 +61,6 @@ class TaskRenderer extends TaskManager {
                 descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
                 let splitedArray = renderedTask.deadline.split('.');
                 $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
-
 
                 let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 

@@ -41,7 +41,5 @@ class TaskNotification {
                 return false;
             }
         }, 2500)
-
-
     }
 }

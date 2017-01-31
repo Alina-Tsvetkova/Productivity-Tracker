@@ -6,7 +6,10 @@ class Settings {
             let savedCycle = new CycleModel();
             savedCycle.saveUserCycle(localStorage.getItem('currentUser'));
         });
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), TaskListTransfer.moveToTaskList);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function(){
+            counterOfTasks = 0;
+            TaskListTransfer.moveToTaskList();
+        });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('settings-switcher'), Settings.downloadSettings);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('pomodoros-var'), Settings.downloadSettings);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
@@ -49,7 +52,7 @@ class Settings {
             tooltips.tooltipSwitcher();
         });
         myCycle.renderSavedCycleSettings();
-
+        Router.iconLinksBinder();
     }
 }
 

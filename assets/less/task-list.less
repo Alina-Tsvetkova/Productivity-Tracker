@@ -2,6 +2,10 @@
   position: relative;
 }
 
+ul.tabNavigation {
+  clear: both;
+}
+
 .added-task {
   display: none;
   text-align: center;
@@ -13,7 +17,7 @@
 }
 
 .daily-task-list {
-  padding: 0px 0% 50px 0%;
+  padding: 0;
   .icons {
     margin-right: 0 !important;
   }
@@ -22,7 +26,7 @@
 #daily-task-list h1 {
   color: @white-color;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   clear: both;
   font-family: @font-family-sans;
   font-weight: bold;
@@ -131,9 +135,12 @@
 
 .opportunity-select {
   color: @light-bluish;
+  clear: both;
+  float: left;
+  margin-bottom: 60px;
   button {
     color: @light-bluish;
-    font-size: 15px;
+    font-size: 16px;
     font-family: @font-family-roboto-light;
     &:hover {
       color: @white-color;
