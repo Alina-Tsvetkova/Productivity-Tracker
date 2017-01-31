@@ -4,49 +4,53 @@ let allTasksToDoFromDatabase = [];
 class TaskRenderer extends TaskManager {
     ifTaskPresent() {
         document.getElementById('globalTasks').innerHTML = '';
-        document.getElementById('daily-tasks').innerHTML = '';
+        document.getElementById('tab2').innerHTML = '';
 
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks');
-        taskData.on('value', function (snapshot) {
-            snapshot.forEach(function (child) {
-                let key = child.key;
-                let value = child.val();
-                tasksRenderer.renderTask(value, child.key);
+        taskData.orderByChild("taskisdone").equalTo('false').on("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childData = snapshot.val();
+                let key = childSnapshot.key;
+                tasksRenderer.renderTask(childData, key);
             });
         });
+        tasksRenderer.filterToDoTasks();
+    }
 
+    filterToDoTasks() {
+        console.log('filter');
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks');
+        taskData.orderByChild("taskisdone").equalTo(true).on("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childData = snapshot.val();
+                let key = childSnapshot.key;
+                tasksRenderer.renderTask(childData, key);
+            });
+        });
     }
 
     renderTask(data, dataKey) {
+        console.log(data);
         let taskRequest = new XMLHttpRequest();
         let taskItemParser = new DOMParser();
         taskRequest.open('GET', 'app/components/taskList/task/task.html', false);
         taskRequest.send();
         let docTask = taskItemParser.parseFromString(taskRequest.responseText, "text/html");
         let renderedTask = data;
+        renderedTask = renderedTask[dataKey];
         let thisCategory = renderedTask.category;
-
-        // if (renderedTask.taskisdone == true) {
-        //     $('#tab2').appendChild(docTask.getElementsByClassName('task')[0]);
-        // }
-
-        if (renderedTask.taskisdone == 'false') {
-            TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.color_indicator);
-        }
-        else {
-            console.log(true);
-        }
+        TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.color_indicator, renderedTask);
 
         allTasksToDoFromDatabase.push(data.val);
 
-        function fillTaskContainer(deadline, dataKey) {
+        function fillTaskContainer(dataKey) {
             try {
                 let task = $('.task');
                 let taskTitle = $('.task-title');
                 let monthDeadlineElem = $('.monthDeadline');
                 let priorityIndicator = $('.priority-indicator');
                 let descriptionContent = $('.description-content');
-
+                console.log(counterOfTasks, task);
                 taskTitle[counterOfTasks].innerHTML = renderedTask.title;
                 taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
                 descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
@@ -62,11 +66,9 @@ class TaskRenderer extends TaskManager {
                     'dailyTask': renderedTask.dailyTask,
                     'taskisdone': renderedTask.taskisdone
                 };
-
                 for (let key in attributesObj) {
                     task[counterOfTasks].setAttribute(key, attributesObj[key]);
                 }
-
                 ++counterOfTasks;
             }
             catch (e) {
@@ -75,7 +77,7 @@ class TaskRenderer extends TaskManager {
         }
 
         setTimeout(function () {
-            fillTaskContainer(data.deadline, dataKey)
+            fillTaskContainer(dataKey)
         }, 100);
 
         setTimeout(function () {
@@ -99,7 +101,6 @@ class TaskRenderer extends TaskManager {
             ElementsListener.listenToEvents('click', elementListenerElems[i], elementListenerData[key]);
             i++;
         }
-
         if ($('.add-task-sect')[0]) {
             $('.add-task-sect')[0].classList.add('non-visible-elem');
         }
@@ -112,7 +113,7 @@ class TaskRenderer extends TaskManager {
         tooltips.tooltipSwitcher();
     }
 
-    static createCategoryGroup(category, docTask, indicator) {
+    static createCategoryGroup(category, docTask, indicator,renderedTask) {
         let ul = document.createElement('ul');
         ul.setAttribute('category', category);
         let h3 = document.createElement('h3');
@@ -121,7 +122,15 @@ class TaskRenderer extends TaskManager {
         ul.appendChild(h3);
         ul.classList.add('categorized-ul');
         ul.appendChild(docTask.getElementsByClassName('task')[0]);
-        document.getElementById('globalTasks').appendChild(ul);
+
+        if(renderedTask.taskisdone == 'false'){
+            document.getElementById('globalTasks').appendChild(ul);
+        }
+        else {
+            document.getElementById('tab2').appendChild(ul);
+            ul.getElementsByClassName('task')[0].classList.add('done-task');
+        }
+
         ul.setAttribute('color-category', indicator);
         funcTask.addColorsToCategories();
     }
