@@ -17,14 +17,14 @@ class TaskRenderer extends TaskManager {
                     try {
                         addTaskSection.classList.add('non-visible-elem');
                     }
-                    catch (e){
+                    catch (e) {
                         return false;
                     }
                 }
             });
         }
         catch (e) {
-            return;
+            return 'nothing to remove';
         }
     }
 
@@ -121,6 +121,10 @@ class TaskRenderer extends TaskManager {
 
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
+        ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
+            let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
+            Timer.showTimer(taskKey);
+        });
     }
 
     static createCategoryGroup(category, docTask, indicator, renderedTask) {
