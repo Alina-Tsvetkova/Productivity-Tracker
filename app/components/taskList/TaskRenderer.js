@@ -144,6 +144,12 @@ class TaskRenderer extends TaskManager {
             else {
                 document.getElementById('tab2').appendChild(ul);
                 ul.getElementsByClassName('task')[0].classList.add('done-task');
+
+                let doneTasks = document.getElementsByClassName('done-task');
+                for (let j = 0; j < doneTasks.length; j++) {
+                    doneTasks[j].getElementsByClassName('edit')[0].style.display = 'none';
+                    doneTasks[j].getElementsByClassName('move-task')[0].style.display = 'none';
+                }
             }
 
             ul.setAttribute('color-category', indicator);

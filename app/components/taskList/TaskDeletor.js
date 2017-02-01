@@ -14,6 +14,7 @@ class TaskDeletor extends TaskManager {
     }
 
     givePossibilityToDelete() {
+        let taskListElements = taskListInitiator.initializeTaskListElements();
         let allTrashViews = document.getElementsByClassName('indicator');
         for (let l = 0; l < allTrashViews.length; l++) {
             document.getElementsByClassName('indicator')[l].classList.remove('canceled-delete');
@@ -28,6 +29,7 @@ class TaskDeletor extends TaskManager {
     }
 
     pushTaskToDelete() {
+        let taskListElements = taskListInitiator.initializeTaskListElements();
         if (event.target.classList.contains('indicator')) {
             let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
             event.target.classList.add('for-delete-bg');
