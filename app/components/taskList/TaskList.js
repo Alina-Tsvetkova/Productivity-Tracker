@@ -100,6 +100,7 @@ class TaskListTransfer {
             TaskListTransfer.addActiveClassSelector(this);
             SelectionManager.deselectAllSelectedTasks('#globalTasks .task');
         });
+
         document.querySelector('.priority-list button:first-child').classList.add('active-elem-white');
         setTimeout(function () {
             tasksRenderer.checkIfTaskListEmpty();
@@ -108,6 +109,7 @@ class TaskListTransfer {
         $(document).ready(function () {
             let tasksTabs = $("#tasksTabs");
             tasksTabs.tabSwitcher();
+            $.fn.accordionSwitcher();
             let tooltips = $('.tooltip');
             tooltips.tooltipSwitcher();
         });

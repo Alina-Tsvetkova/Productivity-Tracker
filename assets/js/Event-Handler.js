@@ -32,12 +32,6 @@ class EventHandler {
             }
             taskDeletorObj.givePossibilityToDelete();
         }
-
-        if (event.target.parentNode.classList.contains('log-out')) {
-            localStorage.isLoggedIn = false;
-            let loginBinder = new Binder('login/login.html', document.body, 'loggedOut');
-            loginBinder.downloadComponent();
-        }
     }
 }
 

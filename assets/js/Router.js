@@ -21,8 +21,9 @@ class Router {
             counterOfTasks = 0;
             TaskListTransfer.moveToTaskList();
         });
-
-
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
+            loggedUser.logOutWrapper();
+        });
     }
 }
 
