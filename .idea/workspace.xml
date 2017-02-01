@@ -2,32 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/plugins/accordion-plugin/accordion-plugin.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/breakTimer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/active-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/break-over-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/break-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/completed-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/failed-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer-states/intro-timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/timer/timer.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/logOut/LogOut.js" afterPath="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/login/App-Validation.js" afterPath="$PROJECT_DIR$/app/components/login/App-Validation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" afterPath="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/modal-window/modal-window.html" afterPath="$PROJECT_DIR$/app/components/modal-window/modal-window.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/registration-form/Registration.js" afterPath="$PROJECT_DIR$/app/components/registration-form/Registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Settings.js" afterPath="$PROJECT_DIR$/app/components/settings/Settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/Selection-Manager.js" afterPath="$PROJECT_DIR$/app/components/taskList/Selection-Manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/Task-Filter.js" afterPath="$PROJECT_DIR$/app/components/taskList/Task-Filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" afterPath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/task-list.html" afterPath="$PROJECT_DIR$/app/components/taskList/task-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/task/task.html" afterPath="$PROJECT_DIR$/app/components/taskList/task/task.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/timer.js" afterPath="$PROJECT_DIR$/app/components/timer/timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/Binder.js" afterPath="$PROJECT_DIR$/assets/js/Binder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/ClassManager.js" afterPath="$PROJECT_DIR$/assets/js/ClassManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/Event-Handler.js" afterPath="$PROJECT_DIR$/assets/js/Event-Handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/modal-window.less" afterPath="$PROJECT_DIR$/assets/less/modal-window.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/task.less" afterPath="$PROJECT_DIR$/assets/less/task.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/settings/Categories.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/settings/CategoriesController.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/settings/CategoriesView.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/taskList/task_list.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,28 +36,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="432">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/timer/timer.js">
+      <file leaf-file-name="TaskRenderer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3913">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="breakTimer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/timer/breakTimer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="155">
+              <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,17 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FINISHp</find>
-      <find>fin</find>
-      <find>cons</find>
-      <find>checked</find>
-      <find>taskis</find>
-      <find>pomodoro</find>
-      <find>breakTimer</find>
-      <find>render</find>
-      <find>f</find>
-      <find>receiveDurationOfTimer</find>
-      <find>false</find>
       <find>active-task</find>
       <find>finishTask</find>
       <find>ctive-t</find>
@@ -116,6 +83,17 @@
       <find>swi</find>
       <find>edit</find>
       <find>take</find>
+      <find>downloadTimerComponents</find>
+      <find>SH</find>
+      <find>show</find>
+      <find>inner</find>
+      <find>inn</find>
+      <find>bre</find>
+      <find>receive</find>
+      <find>rece</find>
+      <find>showTimer</find>
+      <find>startBreak</find>
+      <find>startTimer</find>
       <find>acc</find>
     </findStrings>
     <replaceStrings>
@@ -137,14 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/js/App-Starter.js" />
-        <option value="$PROJECT_DIR$/assets/less/login.less" />
-        <option value="$PROJECT_DIR$/assets/less/log-out.less" />
-        <option value="$PROJECT_DIR$/app/components/taskList/notifications/notifications.less" />
-        <option value="$PROJECT_DIR$/assets/less/notifications.less" />
-        <option value="$PROJECT_DIR$/app/components/taskList/task/TaskDeletor.js" />
-        <option value="$PROJECT_DIR$/assets/js/UserData.js" />
-        <option value="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
         <option value="$PROJECT_DIR$/assets/plugins/accordion-plugin/accordion-plugin.js" />
         <option value="$PROJECT_DIR$/app/components/timer/timer-states/break-timer.html" />
         <option value="$PROJECT_DIR$/app/components/timer/timer-states/failed-pomodoro.html" />
@@ -169,7 +139,6 @@
         <option value="$PROJECT_DIR$/assets/less/task-list.less" />
         <option value="$PROJECT_DIR$/app/components/taskList/task-list.html" />
         <option value="$PROJECT_DIR$/app/components/settings/CategoriesView.js" />
-        <option value="$PROJECT_DIR$/assets/js/ClassManager.js" />
         <option value="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/task/task.html" />
         <option value="$PROJECT_DIR$/assets/less/common.less" />
@@ -181,13 +150,22 @@
         <option value="$PROJECT_DIR$/app/components/taskList/Selection-Manager.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/task_list.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Filter.js" />
-        <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
         <option value="$PROJECT_DIR$/app/components/registration-form/Registration.js" />
         <option value="$PROJECT_DIR$/app/components/login/App-Validation.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/components/timer/timer.js" />
         <option value="$PROJECT_DIR$/app/components/timer/breakTimer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/BreakTimer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/PomodoraTimer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/timer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/ActiveTimer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
+        <option value="$PROJECT_DIR$/assets/js/ClassManager.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/PomodoraPhase.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
+        <option value="$PROJECT_DIR$/app/components/taskList/timer.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
       </list>
     </option>
   </component>
@@ -289,7 +267,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="timer" />
+              <option name="myItemId" value="taskList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,11 +312,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\timer" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\settings\Categories" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\reports" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\report\report-js" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\assets" />
-      <recent name="E:\REPOSITORY\Productivity-Tracker\assets\less" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\REPOSITORY\Productivity-Tracker\app\components" />
@@ -430,15 +408,15 @@
       <workItem from="1485850628672" duration="35702000" />
       <workItem from="1485892916101" duration="56000" />
       <workItem from="1485895025063" duration="740000" />
-      <workItem from="1485943356053" duration="15479000" />
+      <workItem from="1485943356053" duration="20186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112703000" />
+    <option name="totallyTimeSpent" value="117410000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -490,41 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/components/timer/timer-states/intro-timer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/variants.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="94" column="18" lean-forward="false" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/libs/datepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/modal-window/edit-modal-window.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="56" column="65" lean-forward="false" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/plugins/accordion-plugin/accordion-plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/fonts/icomoon/selection.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-476">
@@ -668,14 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/ClassManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/less/common.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -798,14 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-278">
-          <caret line="96" column="26" lean-forward="true" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/Task-Manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -840,32 +767,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="115" column="24" lean-forward="true" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+        <state relative-caret-position="192">
+          <caret line="96" column="50" lean-forward="false" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/app/components/timer/BreakPhase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="102">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ClassManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/ActiveTimer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/FinishPhase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/PomodoraPhase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/timer/timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3913">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/breakTimer.js">
+    <entry file="file://$PROJECT_DIR$/app/components/timer/timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/timer-settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding />
         </state>
       </provider>

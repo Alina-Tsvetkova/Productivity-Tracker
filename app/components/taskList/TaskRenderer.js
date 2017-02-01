@@ -3,35 +3,49 @@ let counterOfTasks = 0;
 class TaskRenderer extends TaskManager {
 
     checkIfTaskListEmpty() {
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {
-            let tasksTabs = document.getElementById('tasksTabs');
-            let addTaskSection = $('.add-task-sect')[0];
-            console.log(data.val() == null);
-            if (data.val() == null) {
-                classManager.removeClass(addTaskSection, 'non-visible-elem');
-                tasksTabs.classList.add('non-visible-elem');
-            }
-            else {
-                classManager.removeClass(tasksTabs, 'non-visible-elem');
-                tasksRenderer.filterDoneTasks();
-                addTaskSection.classList.add('non-visible-elem');
-            }
-        });
+        try {
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {
+                let tasksTabs = document.getElementById('tasksTabs');
+                let addTaskSection = $('.add-task-sect')[0];
+                if (data.val() == null) {
+                    classManager.removeClass(addTaskSection, 'non-visible-elem');
+                    tasksTabs.classList.add('non-visible-elem');
+                }
+                else {
+                    classManager.removeClass(tasksTabs, 'non-visible-elem');
+                    tasksRenderer.filterDoneTasks();
+                    try {
+                        addTaskSection.classList.add('non-visible-elem');
+                    }
+                    catch (e){
+                        return false;
+                    }
+                }
+            });
+        }
+        catch (e) {
+            return;
+        }
     }
 
     filterDoneTasks() {
-        document.getElementById('globalTasks').innerHTML = '';
-        document.getElementById('tab2').innerHTML = '';
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
+        try {
+            document.getElementById('globalTasks').innerHTML = '';
+            document.getElementById('tab2').innerHTML = '';
+            let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
+            taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
+                snapshot.forEach(function (childSnapshot) {
+                    let childData = snapshot.val();
+                    let key = childSnapshot.key;
+                    tasksRenderer.renderTask(childData, key);
+                });
             });
-        });
-        tasksRenderer.filterToDoTasks();
-        Binder.downloadPlugins();
+            tasksRenderer.filterToDoTasks();
+            Binder.downloadPlugins();
+        }
+        catch (e) {
+            return;
+        }
     }
 
     filterToDoTasks() {
@@ -84,10 +98,7 @@ class TaskRenderer extends TaskManager {
                     monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
                     priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                     $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
-                    // if (renderedTask.timerIsOn == true) {
-                    //     document.getElementsByClassName('priority-indicator')[counterOfTasks].classList.add('active-task-timer');
-                    //     $('.priority-indicator span')[counterOfTasks].innerHTML = '';
-                    // }
+
                     (function addAttributesToTask() {
                         let attributesObj = {
                             'color-category': renderedTask.colorIndicator,
@@ -106,7 +117,7 @@ class TaskRenderer extends TaskManager {
                     return false;
                 }
             }(dataKey));
-        },100)
+        }, 100);
 
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
