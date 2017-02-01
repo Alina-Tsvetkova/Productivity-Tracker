@@ -4,11 +4,11 @@ class AppStarter {
         loginBinder.downloadComponent();
         Router.addHash("");
 
-        // if (UserData.getUserDataLocally()) {
-        //     let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
-        //     settingsBinder.downloadComponent();
-        //     Settings.downloadSettings();
-        // }
+        if (UserData.getUserDataLocally()) {
+            let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
+            settingsBinder.downloadComponent();
+            Settings.downloadSettings();
+        }
     }
 }
 

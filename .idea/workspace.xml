@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/App-Starter.js" afterPath="$PROJECT_DIR$/assets/js/App-Starter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/common.less" afterPath="$PROJECT_DIR$/assets/less/common.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/cycle.less" afterPath="$PROJECT_DIR$/assets/less/cycle.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/task-list.less" afterPath="$PROJECT_DIR$/assets/less/task-list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/timer.less" afterPath="$PROJECT_DIR$/assets/less/timer.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,15 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start</find>
-      <find>sta</find>
-      <find>startPo</find>
-      <find>workPhase</find>
-      <find>finishPomodora</find>
-      <find>failPomodora</find>
-      <find>downloadActiveTimer</find>
-      <find>finishTask</find>
-      <find>taskIsDone</find>
       <find>INTRI</find>
       <find>border</find>
       <find>timer</find>
@@ -72,7 +66,16 @@
       <find>selectAll</find>
       <find>pushHashesToDeleteSet</find>
       <find>taskHashes</find>
+      <find>next</find>
+      <find>dail</find>
+      <find>80px</find>
+      <find>main</find>
+      <find>100px</find>
+      <find>100p</find>
+      <find>ul.tabNavigation</find>
       <find>sett</find>
+      <find>add-t</find>
+      <find>text</find>
     </findStrings>
     <replaceStrings>
       <replace>light_azure</replace>
@@ -84,8 +87,8 @@
       <replace>workIteration</replace>
       <replace>super</replace>
       <replace>let</replace>
-      <replace>let</replace>
       <replace>-</replace>
+      <replace>let</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -94,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/less/entry-less.less" />
         <option value="$PROJECT_DIR$/assets/less/report.less" />
         <option value="$PROJECT_DIR$/assets/less/reports.less" />
         <option value="$PROJECT_DIR$/app/components/reports/report.js" />
@@ -105,7 +107,6 @@
         <option value="$PROJECT_DIR$/app/components/settings/CategoriesView.js" />
         <option value="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/task/task.html" />
-        <option value="$PROJECT_DIR$/assets/less/common.less" />
         <option value="$PROJECT_DIR$/assets/less/task.less" />
         <option value="$PROJECT_DIR$/assets/js/Binder.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Selection-Manager.js" />
@@ -123,7 +124,6 @@
         <option value="$PROJECT_DIR$/app/components/taskList/timer.js" />
         <option value="$PROJECT_DIR$/app/components/timer/timer-states/active-timer.html" />
         <option value="$PROJECT_DIR$/app/components/timer/timer.js" />
-        <option value="$PROJECT_DIR$/assets/less/timer.less" />
         <option value="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
         <option value="$PROJECT_DIR$/app/components/timer/timer.html" />
         <option value="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
@@ -131,8 +131,6 @@
         <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/task-list.html" />
         <option value="$PROJECT_DIR$/assets/plugins/accordion-plugin/accordion-plugin.js" />
-        <option value="$PROJECT_DIR$/assets/less/task-list.less" />
-        <option value="$PROJECT_DIR$/assets/js/App-Starter.js" />
         <option value="$PROJECT_DIR$/assets/less/log-out.less" />
         <option value="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
@@ -145,6 +143,11 @@
         <option value="$PROJECT_DIR$/assets/js/Event-Handler.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
+        <option value="$PROJECT_DIR$/assets/js/App-Starter.js" />
+        <option value="$PROJECT_DIR$/assets/less/timer.less" />
+        <option value="$PROJECT_DIR$/assets/less/cycle.less" />
+        <option value="$PROJECT_DIR$/assets/less/common.less" />
+        <option value="$PROJECT_DIR$/assets/less/task-list.less" />
       </list>
     </option>
   </component>
@@ -220,11 +223,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,14 +242,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taskList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,12 +365,12 @@
       <workItem from="1485892916101" duration="56000" />
       <workItem from="1485895025063" duration="740000" />
       <workItem from="1485943356053" duration="20186000" />
-      <workItem from="1485964493272" duration="9971000" />
+      <workItem from="1485964493272" duration="11934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127381000" />
+    <option name="totallyTimeSpent" value="129344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -430,36 +425,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/less/task.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/task/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/modal-window/Modal-Window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="97" column="41" lean-forward="true" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/logOut/logOut.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/settings/Cycle/CycleView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -548,30 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/common.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2723">
-          <caret line="162" column="16" lean-forward="true" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/variants.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="130" column="21" lean-forward="true" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/timer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="242" column="20" lean-forward="false" selection-start-line="242" selection-start-column="20" selection-end-line="242" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/timer/BreakPhase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -644,26 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/task-list.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="107" column="14" lean-forward="false" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/login/App-Validation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="19" column="40" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/App-Starter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -800,6 +725,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/App-Starter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/timer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="411" column="10" lean-forward="false" selection-start-line="411" selection-start-column="10" selection-end-line="411" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/categories.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="99" column="22" lean-forward="false" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/settings.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/variants.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="130" column="21" lean-forward="true" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/tabs-plugin.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="189" column="23" lean-forward="false" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/cycle.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="269" column="38" lean-forward="true" selection-start-line="269" selection-start-column="38" selection-end-line="269" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/task-list.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="246" column="38" lean-forward="false" selection-start-line="246" selection-start-column="38" selection-end-line="246" selection-end-column="38" />
           <folding />
         </state>
       </provider>

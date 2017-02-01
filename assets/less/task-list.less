@@ -194,7 +194,6 @@ ul.tabNavigation {
   }
 }
 
-
 .extended-functionality {
   .task-description {
     position: relative;
@@ -245,11 +244,7 @@ ul.tabNavigation {
   color: #8da5b8;
 }
 
-
 @media screen and (max-width: 640px) {
-  .add-task {
-    vertical-align: text-top;
-  }
 
   .tab-links {
     font-size: 14px;
@@ -282,12 +277,8 @@ ul.tabNavigation {
 }
 
 @media screen and (max-width: 740px) {
-  ul.tabNavigation {
-    top: 100px;
-  }
-
-  .task .indicator {
-    left: -72px;
+  .date-indicator {
+    width: 70px;
   }
 
   .remove-task-modal .modal-functionality {
@@ -306,13 +297,32 @@ ul.tabNavigation {
     right: 3%;
   }
 
-  .daily-task-list h1 {
-    display: inline;
-    font-size: 21px;
+  .visual-divider {
+    vertical-align: middle;
+  }
+
+  .tasks-list {
+    padding: 1%;
+  }
+
+  .task-description h3 {
+    font-size: 16px !important;
+  }
+
+  .task .align-button {
+    right: 5.5em !important;
+  }
+
+  .edit, .move-task {
+    width: 45px;
+  }
+
+  .task-description .description-content {
+    font-size: 14px !important;
   }
 
   .date-indicator, .task .indicator {
-    width: 80px;
+    width: 80px !important;
   }
 
   .daily-task-list, .tasks-intro, #global-tasks, .btn-wrap, .priority-list, .select-all {
