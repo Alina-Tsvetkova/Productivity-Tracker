@@ -1,7 +1,6 @@
 let counterOfTasks = 0;
 
 class TaskRenderer extends TaskManager {
-
     checkIfTaskListEmpty() {
         try {
             firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {

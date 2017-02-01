@@ -54,12 +54,12 @@ class TaskDeletor extends TaskManager {
         deleteTaskModal.dialogSwitcher('close');
         taskDeletorObj.removeIndicatorOfQuantityDel();
         counterOfTasks = 0;
-        tasksRenderer.ifTaskPresent();
-
+        tasksRenderer.checkIfTaskListEmpty();
         selectedTaskHashes.clear();
     }
 
     removeIndicatorOfQuantityDel() {
+        let taskListElements = taskListInitiator.initializeTaskListElements();
         for (let j = 0; j < taskListElements.quantityOfSelectedTasks.length; j++) {
             taskListElements.quantityOfSelectedTasks[j].innerHTML = 0;
             taskListElements.quantityOfSelectedTasks[j].style.display = 'none';
