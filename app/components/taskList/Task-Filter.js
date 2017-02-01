@@ -19,7 +19,7 @@ class filtrationTask extends TaskManager {
                     tasksRenderer.renderTask(value, child.key, true);
                 }
                 else if (event.target.innerHTML == 'All') {
-                    tasksRenderer.ifTaskPresent();
+                    tasksRenderer.filterDoneTasks();
                 }
             });
         });

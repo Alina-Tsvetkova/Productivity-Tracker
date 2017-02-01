@@ -1,6 +1,5 @@
 let breakTimerAttempts = 0;
 let timerElements = {}
-let finishTaskAttempts = 0;
 let timerKey;
 let estimationOfTask = 0;
 
@@ -64,15 +63,17 @@ class Timer {
             ElementsListener.listenToEvents('click', timerElements.finishTaskButton, function () {
                 timer.finishTask(timerKey)
             });
-            ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, timer.finishPomodora);
+            ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, function () {
+                timer.finishPomodora(timerKey);
+            });
             ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, timer.failPomodora);
             timer.receiveDurationOfTimer(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
             document.getElementsByClassName('rotator')[0].style.rotate = rotateDeg + 'deg';
-            if(rotateDeg > 180){
+            if (rotateDeg > 180) {
                 document.getElementsByClassName('invader')[0].style.animationDuration = 0 + 's';
                 document.getElementsByClassName('dimElem')[0].style.animationDuration = 0 + 's';
             }
-            if(rotateDeg >= 360){
+            if (rotateDeg >= 360) {
                 document.getElementsByClassName('rotator')[0].style.rotate = 360 + 'deg';
                 timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
             }
@@ -106,13 +107,12 @@ class Timer {
         timerElements.breakButtons = document.getElementsByClassName('break-buttons')[0];
     }
 
-    finishPomodora() { // break starts
+    finishPomodora(timerKey) { // break starts
         timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
         timerElements.pomodoroAttempts[breakTimerAttempts].classList.add('finish-pomodoro');
         breakTimerAttempts++;
-        console.log(breakTimerAttempts, 'finish pomodoro');
         if (breakTimerAttempts === estimationOfTask) {
-            timer.completeTask();
+            timer.completeTask(timerKey);
             Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
         }
         else {
@@ -146,14 +146,16 @@ class Timer {
         timer.addAnimationToTimerComponents();
 
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/cycle');
-        let shortBreakDuration = 0;
+        let shortBreakDuration;
         taskData.on('value', function (data) {
             shortBreakDuration = data.val().shortBreak;
+            document.getElementsByClassName('q-minutes')[0].innerHTML = shortBreakDuration;
+            timer.receiveDurationOfBreak(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider, shortBreakDuration);
+            setTimeout(function () {
+                timer.notifyBreakOver();
+            }, shortBreakDuration * 60 * 1000)
         });
-        document.getElementsByClassName('q-minutes')[0].innerHTML = shortBreakDuration;
-        setTimeout(function () {
-            timer.notifyBreakOver();
-        }, shortBreakDuration * 60 * 1000)
+
     }
 
     notifyBreakOver() {
@@ -168,6 +170,13 @@ class Timer {
         timerElements.timerInvader.style.animation = 'animateOpacity steps(1, end) 1 reverse forwards';
         timerElements.timerDivider.style.animation = 'animateOpacity steps(1, end) 1 forwards';
         timer.receiveDurationOfTimer(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
+    }
+
+    receiveDurationOfBreak(elem1, elem2, elem3, shortBreakDuration) {
+        console.log(shortBreakDuration);
+        for (let j = 0; j < arguments.length - 1; j++) {
+            arguments[j].style.animationDuration = shortBreakDuration * 60 + 's';
+        }
     }
 
     receiveDurationOfTimer() {
@@ -189,7 +198,9 @@ class Timer {
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('active-timer')[0]);
         timerElements.activeTimer = document.getElementsByClassName('active-timer')[0];
         timer.initializeTimerElements();
-        ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, timer.finishPomodora);
+        ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, function () {
+            timer.finishPomodora(timerKey)
+        });
         ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, timer.failPomodora);
         timer.addAnimationToTimerComponents();
         timer.addRunningAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
@@ -209,19 +220,20 @@ class Timer {
         }
     }
 
-    completeTask() {
+    completeTask(timerKey) {
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
-        timer.downloadCompleteTimer();
+        timer.downloadCompleteTimer(timerKey);
     }
 
     finishTask(timerKey) {
         for (let k = 0; k < estimationOfTask; k++) {
             timerElements.pomodoroAttempts[k].classList.add('finish-pomodoro');
         }
-        timer.completeTask();
+        timer.completeTask(timerKey);
     }
 
-    downloadCompleteTimer() {
+    downloadCompleteTimer(timerKey) {
+        console.log(timerKey);
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/completed-timer.html');
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('timer-completed-wrapper')[0]);
         document.getElementsByClassName('pomodoros')[0].style.display = 'none';
@@ -229,7 +241,10 @@ class Timer {
             estimationOfTask = 0;
             let newNotification = new TaskNotification();
             newNotification.wrapNotificationFunctionality('.message-completed');
-            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({'taskisdone': true});
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
+                'taskisdone': true,
+                'timerIsOn': false
+            });
         }, 1000);
     }
 
@@ -242,6 +257,25 @@ class Timer {
             console.log('element is already removed');
         }
 
+    }
+
+    checkIfTimerIsProcessing() {
+        let priorityIndicators = document.getElementsByClassName('priority-indicator');
+        ElementsListener.listenToEvents('click', priorityIndicators, function (event) {
+            let activeTimersOnPage = document.getElementsByClassName('active-task-timer');
+            let timersQuantity = activeTimersOnPage.length;
+            let timerHash = event.target.parentNode.parentNode.getAttribute('taskkey');
+            if (timersQuantity == 1) {
+                if (event.target.parentNode.classList.contains('active-task-timer')) {
+                    ElementsListener.listenToEvents('click', document.getElementsByClassName('active-task-timer'), Timer.showTimer(timerHash));
+                }
+            }
+            else if (timersQuantity == 0) {
+                if (!(event.target.parentNode.classList.contains('active-task-timer'))) {
+                    ElementsListener.listenToEvents('click', priorityIndicators, Timer.showTimer(timerHash));
+                }
+            }
+        });
     }
 }
 

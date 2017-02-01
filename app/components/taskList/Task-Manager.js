@@ -1,6 +1,6 @@
 class TaskManager {
     submitTask() {
-        taskListInitiator.initModalWindowElements();
+        let modalWindowElements = taskListInitiator.initModalWindowElements();
         let postData = {
             title: modalWindowElements.titleInput.value,
             description: modalWindowElements.descriptionInput.value,
@@ -8,16 +8,20 @@ class TaskManager {
             deadline: modalWindowElements.deadlineInput.value,
             estimation: modalWindowElements.estimationCheckboxes,
             priority: modalWindowElements.priorityRadioBtn.innerHTML,
-            color_indicator: null,
-            taskisdone: 'false',
+            colorIndicator: null,
+            taskIsDone: false,
             timerIsOn: false,
-            startOfTimer:0
-
+            startOfTimer: 0,
+            timerIterations: 0
         };
-        if (postData.deadline == '') {
-            let today = new Date().getDate() + '.' + new Date().getMonth()+1 + '.' + new Date().getFullYear();
-            postData.deadline = today;
-        }
+
+        (function addDefaultData() {
+            if (postData.deadline == '') {
+                let today = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+                postData.deadline = today;
+            }
+        }());
+
 
         let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
@@ -25,19 +29,24 @@ class TaskManager {
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
         let foundCategory = allCategoriesValues.indexOf(postData.category);
-        postData.color_indicator = foundCategory;
 
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
+        postData.colorIndicator = foundCategory - 1;
+
+        tasksRenderer.sendSubmittedData(postData);
         counterOfTasks = 0;
 
-        tasksRenderer.ifTaskPresent();
+        tasksRenderer.checkIfTaskListEmpty();
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
         }
-        taskListElements.globalListBtn.style.display = 'block';
+
         funcTask.groupTasksByCategory();
         let newNotification = new TaskNotification();
         newNotification.wrapNotificationFunctionality('.message-success');
+    }
+
+    sendSubmittedData(postData) {
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
     }
 
     saveEditedTask(index) {
@@ -52,15 +61,16 @@ class TaskManager {
         for (let j = 0; j < allCategoriesNames.length; j++) {
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
-        let foundCategory = allCategoriesValues.indexOf(updates.category);
-        updates.color_indicator = foundCategory;
+        updates.colorIndicator = allCategoriesValues.indexOf(updates.category);
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
-
         counterOfTasks = 0;
-
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
-        tasksRenderer.ifTaskPresent();
+        tasksRenderer.sendEditedData(updates, editedHash);
+        tasksRenderer.checkIfTaskListEmpty();
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
+    }
+
+    sendEditedData(updates, editedHash) {
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
     }
 
 }

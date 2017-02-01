@@ -1,23 +1,24 @@
-let allRenderedEditButtons = document.querySelectorAll('.edit');
-let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
-let modalWindowElements = {};
-let taskListElements = {};
-
 class taskListInitiator {
     static initModalWindowElements() {
-        modalWindowElements.titleInput = document.getElementsByClassName('title-input')[0];
-        modalWindowElements.descriptionInput = document.getElementsByClassName('description-input')[0];
-        modalWindowElements.categoryRadioBtn = document.querySelector('input.category-input:checked + label + label');
-        modalWindowElements.deadlineInput = document.getElementsByClassName('deadline-input')[0];
-        modalWindowElements.estimationCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
-        modalWindowElements.priorityRadioBtn = document.querySelector('input[name="priority-level"]:checked + label + label')
+        let modalWindowElements = {
+            titleInput: document.getElementsByClassName('title-input')[0],
+            descriptionInput: document.getElementsByClassName('description-input')[0],
+            categoryRadioBtn: document.querySelector('input.category-input:checked + label + label'),
+            deadlineInput: document.getElementsByClassName('deadline-input')[0],
+            estimationCheckboxes: document.querySelectorAll('input[type="checkbox"]:checked').length,
+            priorityRadioBtn: document.querySelector('input[name="priority-level"]:checked + label + label')
+        };
+
+        return modalWindowElements;
     }
 
     static initializeTaskListElements() {
-        taskListElements = {
+        let taskListElements = {
             globalListBtn: document.getElementsByClassName('btn-wrap')[0],
-            quantityOfSelectedTasks: document.getElementsByClassName('quantity-del-tasks'),
-        }
+            quantityOfSelectedTasks: document.getElementsByClassName('quantity-del-tasks')
+        };
+
+        return taskListElements;
     }
 }
 
@@ -74,43 +75,6 @@ class funcTask {
             }
         }
     }
-
-    static notifyAboutMissedDeadlines(task) {
-        let thisDate = new Date();
-        thisDate.setDate(thisDate.getDate() - 1);
-        let taskDeadline = task.deadline;
-        let parsedTaskDeadline = taskDeadline.split('.');
-        let k = 0;
-        parsedTaskDeadline.forEach(function (item) {
-            parsedTaskDeadline[k] = Number(item);
-            k++;
-        })
-
-        let dayDeadlineDate, monthDeadlineDate, yearDeadlineDate;
-
-        for (let i = 0; i < parsedTaskDeadline.length; i++) {
-            if (parsedTaskDeadline[i] <= 12) {
-                monthDeadlineDate = parsedTaskDeadline[i];
-            }
-            else if (parsedTaskDeadline[i] <= 31) {
-                dayDeadlineDate = parsedTaskDeadline[i];
-            }
-            else {
-                yearDeadlineDate = parsedTaskDeadline[i];
-            }
-        }
-
-        let taskDeadlineDate = new Date(yearDeadlineDate, monthDeadlineDate - 1, dayDeadlineDate);
-        let monthDeadlineWord;
-        let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-        monthDeadlineWord = allMonths[monthDeadlineDate - 1];
-
-        if (taskDeadlineDate < thisDate) {
-            NotificationManager.showNotification("You have missed Deadline on " + task.title + ' from ' + dayDeadlineDate + ' ' + monthDeadlineWord
-                + '!', 'images/tomato-failed.png', 'Productivity Tracker');
-        }
-    }
 }
 
 class TaskListTransfer {
@@ -128,40 +92,25 @@ class TaskListTransfer {
         taskListInitiator.initModalWindowElements();
         ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('icon-add-task'), productivityManager.submitTask);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {
             TaskListTransfer.addActiveClassSelector(this);
             SelectionManager.selectAll('#globalTasks .task');
-        });
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-daily'), function () {
-            TaskListTransfer.addActiveClassSelector(this);
-            SelectionManager.selectAll('#daily-tasks .task');
         });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('deselect-all-global'), function () {
             TaskListTransfer.addActiveClassSelector(this);
             SelectionManager.deselectAllSelectedTasks('#globalTasks .task');
         });
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('deselect-all-daily'), function () {
-            TaskListTransfer.addActiveClassSelector(this);
-            SelectionManager.deselectAllSelectedTasks('#daily-tasks .task');
-        });
         document.querySelector('.priority-list button:first-child').classList.add('active-elem-white');
-
         setTimeout(function () {
-            tasksRenderer.ifTaskPresent();
-        }, 100)
-        let priorityFilters = document.querySelectorAll('.priority-list button');
-        for (let i = 0; i < priorityFilters.length; i++) {
-            priorityFilters[i].addEventListener('click', filtrationTask.filterTasks, false);
-        }
+            tasksRenderer.checkIfTaskListEmpty();
+        }, 100);
+        ElementsListener.listenToEvents('click', document.querySelectorAll('.priority-list button'), filtrationTask.filterTasks);
         $(document).ready(function () {
             let tasksTabs = $("#tasksTabs");
             tasksTabs.tabSwitcher();
-            $.fn.accordionSwitcher();
             let tooltips = $('.tooltip');
             tooltips.tooltipSwitcher();
         });
-
         window.onscroll = function () {
             if (document.getElementsByClassName('fixed-logo')[0]) {
                 let scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -170,8 +119,7 @@ class TaskListTransfer {
                     document.getElementsByClassName('daily-task-list')[0].style.paddingTop = '60px';
                 }
             }
-        }
-
+        };
         Router.iconLinksBinder();
     }
 }

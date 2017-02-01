@@ -16,4 +16,13 @@ class Binder {
         Router.listenToHashChanges();
         return doc;
     }
+
+    static downloadPlugins(){
+        $(document).ready(function () {
+            let tabs = $("#tabs");
+            tabs.tabSwitcher();
+            let tooltips = $('.tooltip');
+            tooltips.tooltipSwitcher();
+        });
+    }
 }

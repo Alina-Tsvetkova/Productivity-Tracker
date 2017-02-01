@@ -3,7 +3,6 @@ class LogOut {
         firebase.auth().signOut().then(function () {
             localStorage.removeItem('currentUser');
             location.reload();
-            console.log(localStorage);
         }, function (error) {
             console.log('An error occured!');
         });

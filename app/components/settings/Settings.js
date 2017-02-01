@@ -43,21 +43,11 @@ class Settings {
             buttonsArr: Array.prototype.slice.call(document.getElementsByClassName('increment')).concat(Array.prototype.slice.call(document.getElementsByClassName('dicrement'))),
             timePoints: document.getElementsByClassName('time-points')[0]
         };
-        $(document).ready(function () {
-            let tabs = $("#tabs");
-            tabs.tabSwitcher();
-            CategoriesView.renderEarlierSavedCategories();
+        CategoriesView.renderEarlierSavedCategories();
 
-            let tooltips = $('.tooltip');
-            tooltips.tooltipSwitcher();
-        });
+        Binder.downloadPlugins();
+
         myCycle.renderSavedCycleSettings();
         Router.iconLinksBinder();
     }
 }
-
-
-
-
-
-

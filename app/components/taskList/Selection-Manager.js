@@ -1,19 +1,9 @@
 class SelectionManager {
-
-    deleteAllSelectedTasks(elem) {
-        selectedTaskHashes.clear();
-        console.log(selectedTaskHashes);
-        let allTasksToDoSelected = document.querySelectorAll(elem);
-        for (let j = 0; j < allTasksToDoSelected.length; j++) {
-            selectedTaskHashes.add(allTasksToDoSelected[j].getAttribute('taskKey'));
-        }
-    }
-
     static selectAll(elements) {
+        let taskListElements = taskListInitiator.initializeTaskListElements();
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.pushHashesToDeleteSet(taskHashes);
         let selectedSize = selectedTaskHashes.size;
-        let selectedElements = document.querySelectorAll(elements);
         let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
         quantityOfSelectedTasks = selectedSize;
         for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
@@ -44,10 +34,10 @@ class SelectionManager {
     }
 
     static deselectAllSelectedTasks(elements) {
+        let taskListElements = taskListInitiator.initializeTaskListElements();
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.removeHashesToDeselect(taskHashes);
         let selectedSize = selectedTaskHashes.size;
-        let selectedElements = document.querySelectorAll(elements);
         let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
         quantityOfSelectedTasks = selectedSize;
         for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {

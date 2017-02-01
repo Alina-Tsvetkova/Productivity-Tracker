@@ -53,7 +53,7 @@ document.body.onclick = function (event) {
         let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
         let regFom = registrationFormBinder.downloadComponent();
         document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.takeUserInfo);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.checkUserInfo);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
         setTimeout(function () {
             document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');

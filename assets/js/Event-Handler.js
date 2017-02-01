@@ -1,4 +1,3 @@
-let globalListIsOpened = true;
 let index;
 class EventHandler {
     addAdditionalEvents(event) {
@@ -8,6 +7,8 @@ class EventHandler {
         }
 
         if (event.target.classList.contains('edit')) {
+            let allRenderedEditButtons = document.querySelectorAll('.edit');
+            let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
             allRenderedEditButtons = document.querySelectorAll('.edit');
             allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
             index = allRenderedEditButtonsArr.indexOf(event.target);
@@ -15,8 +16,6 @@ class EventHandler {
             modalWindowObj.showEditModal(index, key);
         }
         if (event.target.parentNode.classList.contains('check-button-edit')) {
-            console.log('edit');
-            let editTaskModal = $('#modal-window-elem-edit');
             productivityManager.saveEditedTask(index);
         }
 
@@ -46,5 +45,5 @@ let commonEventHandler = new EventHandler();
 
 document.onclick = function (event) {
     commonEventHandler.addAdditionalEvents(event);
-}
+};
 

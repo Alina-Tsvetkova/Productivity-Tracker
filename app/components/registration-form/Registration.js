@@ -1,11 +1,7 @@
 class Registration {
 
-    takeUserInfo() {
-        event.preventDefault();
-        userRegistration.checkUserInfo();
-    }
-
     checkUserInfo() {
+        event.preventDefault();
         let email = document.getElementsByClassName('email')[0].value;
         let password = document.getElementsByClassName('password')[0].value;
         console.log(email, password);

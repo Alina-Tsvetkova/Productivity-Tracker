@@ -1,12 +1,29 @@
 let counterOfTasks = 0;
-let allTasksToDoFromDatabase = [];
 
 class TaskRenderer extends TaskManager {
-    ifTaskPresent() {
+
+    checkIfTaskListEmpty() {
+        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {
+            let tasksTabs = document.getElementById('tasksTabs');
+            let addTaskSection = $('.add-task-sect')[0];
+            console.log(data.val() == null);
+            if (data.val() == null) {
+                classManager.removeClass(addTaskSection, 'non-visible-elem');
+                tasksTabs.classList.add('non-visible-elem');
+            }
+            else {
+                classManager.removeClass(tasksTabs, 'non-visible-elem');
+                tasksRenderer.filterDoneTasks();
+                addTaskSection.classList.add('non-visible-elem');
+            }
+        });
+    }
+
+    filterDoneTasks() {
         document.getElementById('globalTasks').innerHTML = '';
         document.getElementById('tab2').innerHTML = '';
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskisdone").equalTo('false').once("value", function (snapshot) {
+        taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -14,11 +31,12 @@ class TaskRenderer extends TaskManager {
             });
         });
         tasksRenderer.filterToDoTasks();
+        Binder.downloadPlugins();
     }
 
     filterToDoTasks() {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskisdone").equalTo(true).once("value", function (snapshot) {
+        taskData.orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -28,11 +46,9 @@ class TaskRenderer extends TaskManager {
     }
 
     renderTask(data, dataKey, bool) {
-        let taskRequest = new XMLHttpRequest();
-        let taskItemParser = new DOMParser();
-        taskRequest.open('GET', 'app/components/taskList/task/task.html', false);
-        taskRequest.send();
-        let docTask = taskItemParser.parseFromString(taskRequest.responseText, "text/html");
+        let taskBinder = new Binder('app/components/taskList/task/task.html');
+        let docTask = taskBinder.downloadComponent();
+
         let renderedTask;
 
         if (!(bool)) {
@@ -43,87 +59,60 @@ class TaskRenderer extends TaskManager {
         }
 
         let thisCategory = renderedTask.category;
-        TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.color_indicator, renderedTask);
+        TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.colorIndicator, renderedTask);
 
-        allTasksToDoFromDatabase.push(data.val);
-
-        function fillTaskContainer(dataKey) {
-            try {
-                let task = $('.task');
-                let taskTitle = $('.task-title');
-                let monthDeadlineElem = $('.monthDeadline');
-                let priorityIndicator = $('.priority-indicator');
-                let descriptionContent = $('.description-content');
-                taskTitle[counterOfTasks].innerHTML = renderedTask.title;
-                taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
-                descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
-                let splitedArray = renderedTask.deadline.split('.');
-                $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
-                let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-                let todayMonth = splitedArray[1];
-                for (let k = 0; k < allMonths.length; k++) {
-                    if (todayMonth == k) {
-                        todayMonth = allMonths[k - 1];
+        setTimeout(function () {
+            (function fillTaskContainer(dataKey) {
+                try {
+                    let task = $('.task');
+                    let taskTitle = $('.task-title');
+                    let monthDeadlineElem = $('.monthDeadline');
+                    let priorityIndicator = $('.priority-indicator');
+                    let descriptionContent = $('.description-content');
+                    taskTitle[counterOfTasks].innerHTML = renderedTask.title;
+                    taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
+                    descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
+                    let splitedArray = renderedTask.deadline.split('.');
+                    $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
+                    let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                    let todayMonth = splitedArray[1];
+                    for (let k = 0; k < allMonths.length; k++) {
+                        if (todayMonth == k) {
+                            todayMonth = allMonths[k - 1];
+                        }
                     }
+                    monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
+                    priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
+                    $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
+                    // if (renderedTask.timerIsOn == true) {
+                    //     document.getElementsByClassName('priority-indicator')[counterOfTasks].classList.add('active-task-timer');
+                    //     $('.priority-indicator span')[counterOfTasks].innerHTML = '';
+                    // }
+                    (function addAttributesToTask() {
+                        let attributesObj = {
+                            'color-category': renderedTask.colorIndicator,
+                            'taskKey': dataKey,
+                            'dailyTask': renderedTask.dailyTask,
+                            'taskisdone': renderedTask.taskIsDone
+                        };
+                        for (let key in attributesObj) {
+                            task[counterOfTasks].setAttribute(key, attributesObj[key]);
+                        }
+                        ++counterOfTasks;
+                        funcTask.groupTasksByCategory('.task');
+                    }());
                 }
-                monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
-                priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
-                $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
-
-                if (renderedTask.timerIsOn == true){
-                    document.getElementsByClassName('priority-indicator')[counterOfTasks].classList.add('active-task-timer');
-                    $('.priority-indicator span')[counterOfTasks].innerHTML = '';
+                catch (e) {
+                    return false;
                 }
-                let attributesObj = {
-                    'category-name': thisCategory,
-                    'color-category': renderedTask.color_indicator,
-                    'taskKey': dataKey,
-                    'dailyTask': renderedTask.dailyTask,
-                    'taskisdone': renderedTask.taskisdone
-                };
-                for (let key in attributesObj) {
-                    task[counterOfTasks].setAttribute(key, attributesObj[key]);
-                }
-                ++counterOfTasks;
-            }
-            catch (e) {
-                return false;
-            }
-        }
+            }(dataKey));
+        },100)
 
-        setTimeout(function () {
-            fillTaskContainer(dataKey)
-        }, 100);
-
-        setTimeout(function () {
-            funcTask.groupTasksByCategory('.task');
-        }, 60);
-
-        let elementListenerElems = [$('.indicator'), $('.remove-btn-icon'), $('.priority-indicator'), $('.move-task')];
-        let i = 0;
-
-        let elementListenerData = {
-            "0": taskDeletorObj.pushTaskToDelete,
-            "1": taskDeletorObj.givePossibilityToDelete,
-            "2": function (event) {
-                let timerHash = event.target.parentNode.parentNode.getAttribute('taskkey');
-                console.log(timerHash);
-                Timer.showTimer(timerHash);
-            },
-        };
-
-        for (let key in elementListenerData) {
-            ElementsListener.listenToEvents('click', elementListenerElems[i], elementListenerData[key]);
-            i++;
-        }
-        if ($('.add-task-sect')[0]) {
-            $('.add-task-sect')[0].classList.add('non-visible-elem');
-        }
-        $.fn.tooltipSwitcher();
+        ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
+        ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
     }
 
     static createCategoryGroup(category, docTask, indicator, renderedTask) {
-
         try {
             let ul = document.createElement('ul');
             ul.setAttribute('category', category);
@@ -134,7 +123,7 @@ class TaskRenderer extends TaskManager {
             ul.classList.add('categorized-ul');
             ul.appendChild(docTask.getElementsByClassName('task')[0]);
 
-            if (renderedTask.taskisdone == 'false') {
+            if (renderedTask.taskIsDone == false) {
                 document.getElementById('globalTasks').appendChild(ul);
             }
             else {
@@ -145,7 +134,7 @@ class TaskRenderer extends TaskManager {
             ul.setAttribute('color-category', indicator);
             funcTask.addColorsToCategories();
         }
-        catch(e){
+        catch (e) {
             return false;
         }
     }
