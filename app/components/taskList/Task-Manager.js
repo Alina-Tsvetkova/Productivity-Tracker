@@ -12,7 +12,8 @@ class TaskManager {
             taskIsDone: false,
             timerIsOn: false,
             startOfTimer: 0,
-            timerIterations: 0
+            timerIterations: 0,
+            dateOfFinish:null
         };
 
         (function addDefaultData() {

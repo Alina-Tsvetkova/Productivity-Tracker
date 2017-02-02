@@ -46,15 +46,23 @@ class FinishPhase {
     }
 
     sendDataTaskFailed(timerKey) {
+        let today = finishPhase.receiveDateOfTaskFinish();
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
-            taskIsDone: 'failed'
+            taskIsDone: 'failed',
+            dateOfFinish: today
         });
     }
 
     sendDataTaskDone(timerKey) {
+        let today = finishPhase.receiveDateOfTaskFinish();
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
-            taskIsDone: true
+            taskIsDone: true,
+            dateOfFinish: today
         });
+    }
+
+    receiveDateOfTaskFinish(){
+        return new Date().getDate() + '.' + parseInt(new Date().getMonth()+1) + '.' + new Date().getFullYear();
     }
 
     static removeEstimation() {
