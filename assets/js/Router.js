@@ -16,7 +16,6 @@ class Router {
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
         });
-
         ElementsListener.listenToEvents('click', document.getElementsByClassName('tasks-list-icon'), function () {
             counterOfTasks = 0;
             TaskListTransfer.moveToTaskList();
@@ -24,6 +23,7 @@ class Router {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
             loggedUser.logOutWrapper();
         });
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
     }
 }
 
