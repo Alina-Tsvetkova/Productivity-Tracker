@@ -1,5 +1,6 @@
 class WorkPhase {
     static startPomodora() {
+        Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/active-timer.html');
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.timerOver);
@@ -10,7 +11,6 @@ class WorkPhase {
         ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, workPhase.failPomodora);
         timer.addAnimationToTimerComponents();
         timer.addRunningAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
-
         let borderColorIndex = timer.receiveColorIndex(timerKey);
         timer.addBorderColor(document.getElementsByClassName('timer-block')[0], borderColorIndex);
     }
@@ -40,12 +40,23 @@ class WorkPhase {
     }
 
     failPomodora() {
+        console.log(breakTimerAttempts);
         timer.addPausedAnimation(timerElements.timerRotator, timerElements.timerInvader, timerElements.timerDivider);
         timerElements.pomodoroAttempts[breakTimerAttempts].classList.add('fail-pomodoro');
         breakTimerAttempts++;
+        console.log(breakTimerAttempts, timerAttempts);
         if (breakTimerAttempts === timerAttempts) {
-            finishPhase.failTask();
+            FinishPhase.failTask();
         }
+        finishPhase.addStartPomodoraBtn();
+
+        try {
+            document.getElementsByClassName('fail-pomodora-btn')[0].classList.add('non-visible-elem');
+            document.getElementsByClassName('finish-pomodora-btn')[0].classList.add('non-visible-elem');
+        } catch (e) {
+            return 'element is already removed'
+        }
+
     }
 }
 
