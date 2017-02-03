@@ -19,7 +19,6 @@ class UserValidation {
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
         }).catch(function (error) {
-
             for (let k = 0; k < logInFields.length; k++) {
                 classManager.removeClass(logInFields[k], 'no-validate');
             }

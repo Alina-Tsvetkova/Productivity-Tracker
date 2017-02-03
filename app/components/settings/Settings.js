@@ -3,7 +3,7 @@ class Settings {
         Router.addHash("settings-cycle");
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), function () {
             let savedCycle = new CycleModel();
-            savedCycle.saveUserCycle(UserData.getUserDataLocally());
+            savedCycle.saveUserCycle(localStorage.getItem('currentUser'));
         });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
             counterOfTasks = 0;
@@ -13,7 +13,7 @@ class Settings {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('pomodoros-var'), Settings.downloadSettings);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), function () {
             let savedCategories = new Categories();
-            savedCategories.saveCategories(UserData.getUserDataLocally());
+            savedCategories.saveCategories(localStorage.getItem('currentUser'));
         });
         DOMElementsInitializer = {
             settingsVariants: document.getElementsByClassName('settings-variants')[0],

@@ -1,5 +1,4 @@
 class Registration {
-
     checkUserInfo() {
         event.preventDefault();
         let email = document.getElementsByClassName('email')[0].value;
@@ -17,8 +16,6 @@ class Registration {
                 let errorMessage = error.message;
                 console.log(errorCode + ' - ' + errorMessage);
             });
-
-
         } else {
             console.log('fill in both fields');
         }
