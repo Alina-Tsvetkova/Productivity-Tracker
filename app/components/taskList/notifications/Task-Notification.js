@@ -1,5 +1,8 @@
 class TaskNotification {
     wrapNotificationFunctionality(stateNotification) {
+        if (document.getElementsByClassName('bottom-message').length > 0) {
+            return false;
+        }
         let obj = this;
         setTimeout(function () {
             obj.addNotification(stateNotification);

@@ -54,17 +54,24 @@ class TaskManager {
         let updates = {};
         updates.title = document.querySelectorAll('.title-input')[0].value;
         updates.description = document.querySelectorAll('.description-input')[0].value;
-        updates.category = document.querySelector('input.category-input:checked + label + label').innerHTML;
+        updates.category = document.querySelector('input.category-input:checked').value;
         updates.priority = document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML;
         updates.deadline = document.querySelectorAll('.deadline-input')[0].value;
+        if (document.querySelectorAll('.deadline-input')[0].value == '') {
+            let editedToday = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+            updates.deadline = editedToday;
+        }
+
         let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
         for (let j = 0; j < allCategoriesNames.length; j++) {
+            console.log(j);
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
-        updates.colorIndicator = allCategoriesValues.indexOf(updates.category);
+        updates.colorIndicator = allCategoriesValues.indexOf(updates.category)-1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
         counterOfTasks = 0;
+        console.log(updates.category,updates.colorIndicator,allCategoriesValues);
         tasksRenderer.sendEditedData(updates, editedHash);
         tasksRenderer.checkIfTaskListEmpty();
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));

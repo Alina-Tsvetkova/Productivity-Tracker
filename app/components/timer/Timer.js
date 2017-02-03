@@ -21,20 +21,24 @@ class Timer {
     }
 
     addTaskInformation(taskKey) {
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + taskKey).on('value', function (data) {
-            document.getElementsByClassName('task-title-timer')[0].innerHTML = data.val().title;
-            document.getElementsByClassName('task-description-timer')[0].innerHTML = data.val().description;
-            let estimationList = document.getElementsByClassName('pomodoros')[0];
-            timerAttempts = data.val().estimation;
-            for (let j = 0; j < timerAttempts; j++) {
-                let estimationListElem = document.createElement('li');
-                estimationListElem.classList.add('pomodoro');
-                estimationList.appendChild(estimationListElem);
-            }
+        try {
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + taskKey).on('value', function (data) {
+                document.getElementsByClassName('task-title-timer')[0].innerHTML = data.val().title;
+                document.getElementsByClassName('task-description-timer')[0].innerHTML = data.val().description;
+                let estimationList = document.getElementsByClassName('pomodoros')[0];
+                timerAttempts = data.val().estimation;
+                for (let j = 0; j < timerAttempts; j++) {
+                    let estimationListElem = document.createElement('li');
+                    estimationListElem.classList.add('pomodoro');
+                    estimationList.appendChild(estimationListElem);
+                }
 
-            let borderColorIndex = timer.receiveColorIndex(taskKey);
-            timer.addBorderColor(document.getElementsByClassName('intro-slog')[0], borderColorIndex);
-        });
+                let borderColorIndex = timer.receiveColorIndex(taskKey);
+                timer.addBorderColor(document.getElementsByClassName('intro-slog')[0], borderColorIndex);
+            });
+        } catch (e) {
+            return 'unable to send data';
+        }
     }
 
     receiveColorIndex(timerKey) {

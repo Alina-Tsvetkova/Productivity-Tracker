@@ -7,14 +7,13 @@ $.fn.tooltipSwitcher = function (event) {
                     opacity: 'show',
                     top: '45'
                 },
-                'slow');
+                'middle');
             var hoverTexts = $(this).attr('data-tooltip');
             $(this).find('div').text(hoverTexts);
             if ($(this).hasClass('tooltip-right')){
                 $(this).find('.tooltip-small').addClass('small-tooltip-right');
             }
         });
-
     $(this).mouseleave(
         function () {
             $smallTooltip = $(this);
@@ -25,9 +24,9 @@ $.fn.tooltipSwitcher = function (event) {
                 500);
             setTimeout(function () {
                 $smallTooltip.children().remove('.tooltip-small');
-            }, 200)
+            }, 100)
 
         });
-}
+};
 
 

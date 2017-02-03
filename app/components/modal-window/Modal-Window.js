@@ -45,7 +45,6 @@ class ModalWindow {
         let taskContainer = document.querySelectorAll('.task')[index];
         $('.title-input').value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
         $('.description-input').value = taskContainer.getElementsByClassName('description-content')[0].innerHTML;
-        $(' .deadline-input').value = taskContainer.getElementsByClassName('dayDeadline')[0].innerHTML + " " + taskContainer.getElementsByClassName('monthDeadline')[0].innerHTML;
         let taskPriority = $('.priority-indicator')[index];
         let choosedRadioCategory = taskContainer.getAttribute('color-category');
         let choosedRadioPriority;
