@@ -1,5 +1,5 @@
 let counterOfTasks = 0;
-
+let notificationCounter = 0;
 class TaskRenderer extends TaskManager {
     checkIfTaskListEmpty() {
         try {
@@ -139,6 +139,7 @@ class TaskRenderer extends TaskManager {
 
             if (renderedTask.taskIsDone == false) {
                 document.getElementById('globalTasks').appendChild(ul);
+                tasksRenderer.notifyAboutMissedDeadlines(renderedTask.deadline);
             }
             else {
                 document.getElementById('tab2').appendChild(ul);
@@ -156,6 +157,19 @@ class TaskRenderer extends TaskManager {
         }
         catch (e) {
             return false;
+        }
+    }
+
+    notifyAboutMissedDeadlines(deadline) {
+        let tasksMissedDeadlines = deadline.split('.');
+        let thisDate = new Date();
+        thisDate.setDate(thisDate.getDate());
+        let deadlineDate = new Date(tasksMissedDeadlines[2], tasksMissedDeadlines[1] - 1, parseInt(tasksMissedDeadlines[0]) + 1);
+        if (deadlineDate < thisDate) {
+            if (notificationCounter <= 0) {
+                NotificationManager.showNotification("You have missed Deadline!", 'assets/img/tomato-failed.png', 'Productivity Tracker');
+                notificationCounter++;
+            }
         }
     }
 }
