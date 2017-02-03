@@ -49,13 +49,14 @@ class TaskDeletor extends TaskManager {
         for (let selectedTaskHash of selectedTaskHashes) {
             firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + selectedTaskHash).remove();
         }
-
         let deleteTaskModal = $('#modal-w-remove');
         deleteTaskModal.dialogSwitcher('close');
         taskDeletorObj.removeIndicatorOfQuantityDel();
         counterOfTasks = 0;
         tasksRenderer.checkIfTaskListEmpty();
         selectedTaskHashes.clear();
+        let newNotification = new TaskNotification();
+        newNotification.wrapNotificationFunctionality('.message-delete');
     }
 
     removeIndicatorOfQuantityDel() {

@@ -122,6 +122,13 @@ class TaskRenderer extends TaskManager {
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
         ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
+            if(event.target.parentNode.parentNode.classList.contains('done-task')){
+                event.stopImmediatePropagation();
+                console.log(12123);
+                let newNotification = new TaskNotification();
+                newNotification.wrapNotificationFunctionality('.message-error');
+                return false;
+            }
             Timer.showTimer(taskKey);
         });
     }

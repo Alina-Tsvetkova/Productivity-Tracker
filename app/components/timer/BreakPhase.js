@@ -34,6 +34,9 @@ class BreakPhase {
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/break-over-timer.html');
         Timer.clearTimerElements(timerElements.breakTimer, document.getElementsByClassName('timer-break-running')[0]);
         timerElements.breakTimer.insertBefore(receivedElem.getElementsByClassName('timer-break')[0], timerElements.breakButtons);
+        let borderColorIndex = timer.receiveColorIndex(timerKey);
+        timer.addBorderColor(document.getElementsByClassName('intro-completed')[0], borderColorIndex);
+        timer.addBorderColor(document.getElementsByClassName('timer-break-wrapper')[0], borderColorIndex);
         timer.initializeTimerElements();
     }
 }
