@@ -27,12 +27,12 @@ class TaskRenderer extends TaskManager {
         }
     }
 
-    checkIfALLTasksAreDone () {
-        if (document.querySelectorAll('#globalTasks .task').length != 0) {
-            document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
+    checkIfALLTasksAreDone() {
+        if (document.querySelectorAll('#globalTasks .task').length == 0) {
+            classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
         }
         else {
-            classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
+            document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
         }
     }
 

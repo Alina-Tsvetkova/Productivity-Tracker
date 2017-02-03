@@ -10,7 +10,7 @@ class TaskNotification {
 
         setTimeout(function () {
             obj.removeNotification(stateNotification);
-        }, 3000)
+        }, 2000)
     }
 
     addNotification(stateNotification) {
@@ -35,7 +35,7 @@ class TaskNotification {
             catch (e) {
                 return false;
             }
-        }, 1000);
+        }, 500);
         setTimeout(function () {
             try {
                 document.querySelector(stateNotification).remove();
@@ -43,6 +43,6 @@ class TaskNotification {
             catch (e) {
                 return false;
             }
-        }, 2500)
+        }, 1500)
     }
 }
