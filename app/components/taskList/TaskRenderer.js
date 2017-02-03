@@ -27,6 +27,15 @@ class TaskRenderer extends TaskManager {
         }
     }
 
+    checkIfALLTasksAreDone () {
+        if (document.querySelectorAll('#globalTasks .task').length != 0) {
+            document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
+        }
+        else {
+            classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
+        }
+    }
+
     filterDoneTasks() {
         try {
             document.getElementById('globalTasks').innerHTML = '';
@@ -76,6 +85,7 @@ class TaskRenderer extends TaskManager {
 
         setTimeout(function () {
             (function fillTaskContainer(dataKey) {
+                tasksRenderer.checkIfALLTasksAreDone();
                 try {
                     let task = $('.task');
                     let taskTitle = $('.task-title');
@@ -122,7 +132,7 @@ class TaskRenderer extends TaskManager {
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
         ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
-            if(event.target.parentNode.parentNode.classList.contains('done-task')){
+            if (event.target.parentNode.parentNode.classList.contains('done-task')) {
                 event.stopImmediatePropagation();
                 console.log(12123);
                 let newNotification = new TaskNotification();
