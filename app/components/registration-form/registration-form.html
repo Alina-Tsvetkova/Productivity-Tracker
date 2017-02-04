@@ -9,8 +9,14 @@
     <form name="registration-form" class="form-registration">
         <h2>Registration Form</h2>
         <button type="submit" class="modal-functionality close-button close-registration-form"><i class="icon-close"></i></button>
-        <input type="text" class="email registration-field" placeholder="Type your email">
-        <input type="password" class="password registration-field" placeholder="Type your password">
+        <input type="text" class="email registration-field" placeholder="Type your email" required>
+        <div class="fail-validation registration-fail">
+            <span class="false-data">The email address is already in use by another account.</span>
+        </div>
+        <input type="password" class="password registration-field" placeholder="Type your password" required>
+        <div class="fail-validation registration-fail">
+            <span class="false-data">Password should be at least 6 characters</span>
+        </div>
         <input type="text" class="mobile-phone registration-field" placeholder="Type your mobile phone">
         <button type="submit" class="submit-btn sign-up center-btn submit-sign-up">Sign Up</button>
     </form>
