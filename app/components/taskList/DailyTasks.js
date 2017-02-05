@@ -18,10 +18,10 @@ class DailyTasks {
 
     removeDailyBtn(dataKey) {
         let dailyTasks = document.querySelectorAll('.task[dailytask="true"]');
-        console.log(dailyTasks);
         for (let k = 0; k < dailyTasks.length; k++) {
             dailyTasks[k].getElementsByClassName('move-task')[0].classList.add('non-visible-elem');
             dailyTasks[k].getElementsByClassName('edit')[0].classList.add('full-size-btn');
+            dailyTasks[k].getElementsByClassName('date-indicator')[0].innerHTML = 'Today';
         }
         console.log(dataKey);
     }

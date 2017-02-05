@@ -1,7 +1,15 @@
 let counterOfTasks = 0;
 let notificationCounter = 0;
 class TaskRenderer extends TaskManager {
+
+    clearContainers () {
+        document.getElementById('globalTasks').innerHTML = '';
+        document.getElementById('daily-tasks').innerHTML = '';
+        document.getElementById('tab2').innerHTML = '';
+    }
+
     checkIfTaskListEmpty() {
+        tasksRenderer.clearContainers();
         try {
             firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {
                 let tasksTabs = document.getElementById('tasksTabs');
@@ -38,9 +46,6 @@ class TaskRenderer extends TaskManager {
 
     filterDoneTasks() {
         try {
-            document.getElementById('globalTasks').innerHTML = '';
-            document.getElementById('daily-tasks').innerHTML = '';
-            document.getElementById('tab2').innerHTML = '';
             let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
             taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
                 snapshot.forEach(function (childSnapshot) {

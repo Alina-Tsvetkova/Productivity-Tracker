@@ -1,7 +1,6 @@
 class filtrationTask extends TaskManager {
     static filterTasks() {
-        document.getElementById('globalTasks').innerHTML = '';
-        document.getElementById('tab2').innerHTML = '';
+        tasksRenderer.clearContainers();
         counterOfTasks = 0;
         let priorityFilters = document.querySelectorAll('.priority-list button');
 
@@ -19,6 +18,7 @@ class filtrationTask extends TaskManager {
                     tasksRenderer.renderTask(value, child.key, true);
                 }
                 else if (event.target.innerHTML == 'All') {
+                    tasksRenderer.clearContainers();
                     tasksRenderer.filterDoneTasks();
                 }
             });
