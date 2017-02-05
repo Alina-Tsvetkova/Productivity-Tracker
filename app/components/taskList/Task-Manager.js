@@ -14,7 +14,8 @@ class TaskManager {
             timerIsOn: false,
             startOfTimer: 0,
             timerIterations: 0,
-            dateOfFinish:null
+            dateOfFinish:null,
+            dailyTask: false
         };
 
         (function addDefaultData() {

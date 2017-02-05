@@ -39,6 +39,7 @@ class TaskRenderer extends TaskManager {
     filterDoneTasks() {
         try {
             document.getElementById('globalTasks').innerHTML = '';
+            document.getElementById('daily-tasks').innerHTML = '';
             document.getElementById('tab2').innerHTML = '';
             let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
             taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
@@ -46,6 +47,9 @@ class TaskRenderer extends TaskManager {
                     let childData = snapshot.val();
                     let key = childSnapshot.key;
                     tasksRenderer.renderTask(childData, key);
+                    if (childData.dailyTask) {
+                        tasksRenderer.filterDailyTasks();
+                    }
                 });
             });
             tasksRenderer.filterToDoTasks();
@@ -59,6 +63,17 @@ class TaskRenderer extends TaskManager {
     filterToDoTasks() {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
         taskData.orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childData = snapshot.val();
+                let key = childSnapshot.key;
+                tasksRenderer.renderTask(childData, key);
+            });
+        });
+    }
+
+    filterDailyTasks() {
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
+        taskData.orderByChild("dailyTask").equalTo(true).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -108,6 +123,7 @@ class TaskRenderer extends TaskManager {
                     priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                     $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
 
+
                     (function addAttributesToTask() {
                         let attributesObj = {
                             'color-category': renderedTask.colorIndicator,
@@ -120,6 +136,9 @@ class TaskRenderer extends TaskManager {
                         }
                         ++counterOfTasks;
                         funcTask.groupTasksByCategory('.task');
+                        if (renderedTask.dailyTask) {
+                            dailyTask.removeDailyBtn(dataKey);
+                        }
                     }());
                 }
                 catch (e) {
@@ -129,6 +148,7 @@ class TaskRenderer extends TaskManager {
         }, 100);
 
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
+        ElementsListener.listenToEvents('click', $('.move-task'), dailyTask.moveTaskToDaily);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
         ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
@@ -144,6 +164,7 @@ class TaskRenderer extends TaskManager {
     }
 
     static createCategoryGroup(category, docTask, indicator, renderedTask) {
+        console.log('category');
         try {
             let ul = document.createElement('ul');
             ul.setAttribute('category', category);
@@ -154,11 +175,15 @@ class TaskRenderer extends TaskManager {
             ul.classList.add('categorized-ul');
             ul.appendChild(docTask.getElementsByClassName('task')[0]);
 
-            if (renderedTask.taskIsDone == false) {
+            if (renderedTask.dailyTask == true) {
+                console.log('daily true');
+                document.getElementById('daily-tasks').appendChild(ul);
+            }
+            else if (renderedTask.taskIsDone == false && renderedTask.dailyTask == false) {
                 document.getElementById('globalTasks').appendChild(ul);
                 tasksRenderer.notifyAboutMissedDeadlines(renderedTask.deadline);
             }
-            else {
+            else if (renderedTask.taskIsDone == true) {
                 document.getElementById('tab2').appendChild(ul);
                 ul.getElementsByClassName('task')[0].classList.add('done-task');
 

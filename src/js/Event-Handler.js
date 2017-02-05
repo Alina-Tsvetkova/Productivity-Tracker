@@ -9,8 +9,6 @@ class EventHandler {
         if (event.target.classList.contains('edit')) {
             let allRenderedEditButtons = document.querySelectorAll('.edit');
             let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
-            allRenderedEditButtons = document.querySelectorAll('.edit');
-            allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
             index = allRenderedEditButtonsArr.indexOf(event.target);
             let key = document.body.getElementsByClassName('task')[index].getAttribute("taskKey");
             modalWindowObj.showEditModal(index, key);
