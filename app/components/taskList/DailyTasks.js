@@ -1,32 +1,21 @@
 class DailyTasks {
-    moveTaskToDaily() {
-        let allRenderedMoveTaskBtns = document.getElementsByClassName('move-task');
-        let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedMoveTaskBtns);
-        index = allRenderedEditButtonsArr.indexOf(event.target);
-        let key = document.body.getElementsByClassName('task')[index].getAttribute("taskKey");
-        dailyTask.sendDailyData(key);
+    restrictDailyTasks() {
+        let newNotification = new TaskNotification();
+        newNotification.wrapNotificationFunctionality('.message-restricted');
     }
 
-
-    sendDailyData(key) {
+    moveTaskToDaily(key) {
+        if (document.querySelectorAll('#daily-tasks .task').length >= 3) {
+            dailyTask.restrictDailyTasks();
+            return false;
+        }
+        let today = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key).update({
-            "dailyTask": true
+            taskIsDone: "pending",
+            deadline: today
         });
-
         tasksRenderer.checkIfTaskListEmpty();
     }
-
-    removeDailyBtn(dataKey) {
-        let dailyTasks = document.querySelectorAll('.task[dailytask="true"]');
-        for (let k = 0; k < dailyTasks.length; k++) {
-            dailyTasks[k].getElementsByClassName('move-task')[0].classList.add('non-visible-elem');
-            dailyTasks[k].getElementsByClassName('edit')[0].classList.add('full-size-btn');
-            dailyTasks[k].getElementsByClassName('date-indicator')[0].innerHTML = 'Today';
-        }
-        console.log(dataKey);
-    }
-
-
 }
 
 let dailyTask = new DailyTasks();

@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     "expand": true,
-                    "cwd": ["src/js", "app/components/login"],
+                    "cwd": "src/js",
                     "src": ["**/*.js"],
                     "dest": "src/js-compiled/",
                     "ext": "-compiled.js"

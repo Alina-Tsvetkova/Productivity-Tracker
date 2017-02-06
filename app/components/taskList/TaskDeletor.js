@@ -29,6 +29,7 @@ class TaskDeletor extends TaskManager {
     }
 
     pushTaskToDelete() {
+        console.log(selectedTaskHashes);
         let taskListElements = taskListInitiator.initializeTaskListElements();
         if (event.target.classList.contains('indicator')) {
             let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
@@ -52,12 +53,23 @@ class TaskDeletor extends TaskManager {
         let deleteTaskModal = $('#modal-w-remove');
         deleteTaskModal.dialogSwitcher('close');
         taskDeletorObj.removeIndicatorOfQuantityDel();
-        counterOfTasks = 0;
-        tasksRenderer.checkIfTaskListEmpty();
         selectedTaskHashes.clear();
+        tasksRenderer.checkIfTaskListEmpty();
         let newNotification = new TaskNotification();
         newNotification.wrapNotificationFunctionality('.message-delete');
     }
+
+    checkIfToDeleteTasks() {
+        alert('delete them');
+        if (document.querySelector('.quantity-del-tasks').innerHTML > 0) {
+            let deleteTaskModal = $('#modal-w-remove');
+            deleteTaskModal.dialogSwitcher('show');
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('remove-btn'), taskDeletorObj.submitDeleteTask);
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('cancel-btn'), taskDeletorObj.cancelDeletion);
+        }
+        taskDeletorObj.givePossibilityToDelete();
+    }
+
 
     removeIndicatorOfQuantityDel() {
         let taskListElements = taskListInitiator.initializeTaskListElements();
@@ -66,6 +78,9 @@ class TaskDeletor extends TaskManager {
             taskListElements.quantityOfSelectedTasks[j].style.display = 'none';
         }
     }
+
+
 }
+
 
 let taskDeletorObj = new TaskDeletor();

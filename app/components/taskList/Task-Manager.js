@@ -36,8 +36,6 @@ class TaskManager {
         postData.colorIndicator = foundCategory - 1;
 
         tasksRenderer.sendSubmittedData(postData);
-        counterOfTasks = 0;
-
         tasksRenderer.checkIfTaskListEmpty();
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
@@ -59,6 +57,8 @@ class TaskManager {
         updates.category = document.querySelector('input.category-input:checked').value;
         updates.priority = document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML;
         updates.deadline = document.querySelectorAll('.deadline-input')[0].value;
+        updates.estimation = document.querySelectorAll('.tomato-estim:checked').length;
+
         if (document.querySelectorAll('.deadline-input')[0].value == '') {
             let editedToday = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
             updates.deadline = editedToday;
@@ -72,8 +72,6 @@ class TaskManager {
         }
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category)-1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
-        counterOfTasks = 0;
-        console.log(updates.category,updates.colorIndicator,allCategoriesValues);
         tasksRenderer.sendEditedData(updates, editedHash);
         tasksRenderer.checkIfTaskListEmpty();
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));

@@ -10,6 +10,19 @@ class Settings {
             TaskListTransfer.moveToTaskList();
         });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('settings-switcher'), Settings.downloadSettings);
+
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('increment'), function (event) {
+            let target = event.target.parentNode;
+            event.stopPropagation();
+            myCycle.changeCycleData(target);
+        });
+
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('dicrement'), function (event) {
+            let target = event.target.parentNode;
+            event.stopPropagation();
+            myCycle.changeCycleData(target);
+        });
+
         ElementsListener.listenToEvents('click', document.getElementsByClassName('pomodoros-var'), Settings.downloadSettings);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), function () {
             let savedCategories = new Categories();

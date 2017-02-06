@@ -43,18 +43,21 @@ class ModalWindow {
     fillEditModal() {
         ModalWindow.downloadEarlierCategories();
         let taskContainer = document.querySelectorAll('.task')[index];
-        $('.title-input').value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
-        $('.description-input').value = taskContainer.getElementsByClassName('description-content')[0].innerHTML;
+        console.log(index);
+        $('.title-input')[0].value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
+        $('.description-input')[0].value = taskContainer.getElementsByClassName('description-content')[0].innerHTML;
         let taskPriority = $('.priority-indicator')[index];
-        let choosedRadioCategory = taskContainer.getAttribute('color-category');
+        let choosedRadioCategory = taskContainer.getAttribute('category');
         let choosedRadioPriority;
         let allCategoriesNames = $('.categories li label.category-name');
         let allCategoriesNamesArr = Array.prototype.slice.call(allCategoriesNames);
         let allPriorityLevels = $('.priorities li label.priority-name');
         let allPriorityLevelsArr = Array.prototype.slice.call(allPriorityLevels);
+        console.log(taskContainer.parentNode.getAttribute('category'));
         for (let k = 0; k < allCategoriesNamesArr.length; k++) {
-            if (allCategoriesNamesArr[k].innerHTML.toLowerCase() == taskContainer.parentNode.getAttribute('category')) {
+            if (allCategoriesNamesArr[k].innerHTML == taskContainer.parentNode.getAttribute('category')) {
                 choosedRadioCategory = allCategoriesNamesArr.indexOf(allCategoriesNamesArr[k]);
+                console.log(choosedRadioCategory, allCategoriesNamesArr);
             }
         }
         for (let k = 0; k < allPriorityLevelsArr.length; k++) {
@@ -66,12 +69,16 @@ class ModalWindow {
         $("input[name=category-name]")[choosedRadioCategory].checked = true;
         $("input[name=priority-level]")[choosedRadioPriority].checked = true;
         let modalCheckboxes = document.querySelectorAll('#modal-window-elem-edit input[type=checkbox]');
-        let priorityIndicator = document.querySelectorAll('.priority-indicator span')[index].innerHTML // i.e. 2;
+        let priorityIndicator = document.querySelectorAll('.priority-indicator span')[index].innerHTML;
         for (let j = 0; j < priorityIndicator; j++) {
             modalCheckboxes[j].checked = true;
         }
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {
             ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
+        });
+
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('check-button-edit'), function () {
+            productivityManager.saveEditedTask(index)
         });
 
         ModalWindow.moveModalWindow(50);

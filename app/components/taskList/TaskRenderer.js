@@ -2,10 +2,11 @@ let counterOfTasks = 0;
 let notificationCounter = 0;
 class TaskRenderer extends TaskManager {
 
-    clearContainers () {
+    clearContainers() {
         document.getElementById('globalTasks').innerHTML = '';
         document.getElementById('daily-tasks').innerHTML = '';
         document.getElementById('tab2').innerHTML = '';
+        counterOfTasks = 0;
     }
 
     checkIfTaskListEmpty() {
@@ -20,6 +21,8 @@ class TaskRenderer extends TaskManager {
                 }
                 else {
                     classManager.removeClass(tasksTabs, 'non-visible-elem');
+                    tasksRenderer.filterPendingTasks();
+                    tasksRenderer.filterToDoTasks();
                     tasksRenderer.filterDoneTasks();
                     try {
                         addTaskSection.classList.add('non-visible-elem');
@@ -36,7 +39,7 @@ class TaskRenderer extends TaskManager {
     }
 
     checkIfALLTasksAreDone() {
-        if (document.querySelectorAll('#globalTasks .task').length == 0) {
+        if (document.querySelectorAll('#globalTasks .task, #daily-tasks .task').length == 0) {
             classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
         }
         else {
@@ -44,28 +47,19 @@ class TaskRenderer extends TaskManager {
         }
     }
 
-    filterDoneTasks() {
-        try {
-            let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-            taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
-                snapshot.forEach(function (childSnapshot) {
-                    let childData = snapshot.val();
-                    let key = childSnapshot.key;
-                    tasksRenderer.renderTask(childData, key);
-                    if (childData.dailyTask) {
-                        tasksRenderer.filterDailyTasks();
-                    }
-                });
+    filterToDoTasks() {
+        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
+        taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childData = snapshot.val();
+                let key = childSnapshot.key;
+                tasksRenderer.renderTask(childData, key);
             });
-            tasksRenderer.filterToDoTasks();
-            Binder.downloadPlugins();
-        }
-        catch (e) {
-            return;
-        }
+        });
+        Binder.downloadPlugins();
     }
 
-    filterToDoTasks() {
+    filterDoneTasks() {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
         taskData.orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
@@ -76,9 +70,9 @@ class TaskRenderer extends TaskManager {
         });
     }
 
-    filterDailyTasks() {
+    filterPendingTasks() {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("dailyTask").equalTo(true).once("value", function (snapshot) {
+        taskData.orderByChild("taskIsDone").equalTo("pending").once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -101,7 +95,7 @@ class TaskRenderer extends TaskManager {
         }
 
         let thisCategory = renderedTask.category;
-        TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.colorIndicator, renderedTask);
+        TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.colorIndicator, renderedTask, dataKey);
 
         setTimeout(function () {
             (function fillTaskContainer(dataKey) {
@@ -128,22 +122,18 @@ class TaskRenderer extends TaskManager {
                     priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                     $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
 
-
                     (function addAttributesToTask() {
                         let attributesObj = {
                             'color-category': renderedTask.colorIndicator,
                             'taskKey': dataKey,
-                            'dailyTask': renderedTask.dailyTask,
                             'taskisdone': renderedTask.taskIsDone
                         };
                         for (let key in attributesObj) {
+                            console.log(counterOfTasks, task);
                             task[counterOfTasks].setAttribute(key, attributesObj[key]);
                         }
-                        ++counterOfTasks;
                         funcTask.groupTasksByCategory('.task');
-                        if (renderedTask.dailyTask) {
-                            dailyTask.removeDailyBtn(dataKey);
-                        }
+                        counterOfTasks++;
                     }());
                 }
                 catch (e) {
@@ -153,13 +143,12 @@ class TaskRenderer extends TaskManager {
         }, 100);
 
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
-        ElementsListener.listenToEvents('click', $('.move-task'), dailyTask.moveTaskToDaily);
+        //ElementsListener.listenToEvents('click', $('.move-task'), dailyTask.moveTaskToDaily);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
         ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
             if (event.target.parentNode.parentNode.classList.contains('done-task')) {
                 event.stopImmediatePropagation();
-                console.log(12123);
                 let newNotification = new TaskNotification();
                 newNotification.wrapNotificationFunctionality('.message-error');
                 return false;
@@ -169,7 +158,6 @@ class TaskRenderer extends TaskManager {
     }
 
     static createCategoryGroup(category, docTask, indicator, renderedTask) {
-        console.log('category');
         try {
             let ul = document.createElement('ul');
             ul.setAttribute('category', category);
@@ -179,12 +167,7 @@ class TaskRenderer extends TaskManager {
             ul.appendChild(h3);
             ul.classList.add('categorized-ul');
             ul.appendChild(docTask.getElementsByClassName('task')[0]);
-
-            if (renderedTask.dailyTask == true) {
-                console.log('daily true');
-                document.getElementById('daily-tasks').appendChild(ul);
-            }
-            else if (renderedTask.taskIsDone == false && renderedTask.dailyTask == false) {
+            if (renderedTask.taskIsDone == false) {
                 document.getElementById('globalTasks').appendChild(ul);
                 tasksRenderer.notifyAboutMissedDeadlines(renderedTask.deadline);
             }
@@ -197,6 +180,14 @@ class TaskRenderer extends TaskManager {
                     doneTasks[j].getElementsByClassName('edit')[0].style.display = 'none';
                     doneTasks[j].getElementsByClassName('move-task')[0].style.display = 'none';
                 }
+            }
+
+            else if (renderedTask.taskIsDone === 'pending') {
+                ul.getElementsByClassName('task')[0].classList.add('pending-task');
+                document.getElementById('daily-tasks').appendChild(ul);
+                ul.getElementsByClassName('move-task')[0].style.display = 'none';
+                ul.getElementsByClassName('edit')[0].style.height = '90px';
+                ul.getElementsByClassName('edit')[0].style.marginTop = '0px';
             }
 
             ul.setAttribute('color-category', indicator);

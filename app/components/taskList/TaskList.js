@@ -90,6 +90,7 @@ class TaskListTransfer {
         taskBinder.downloadComponent();
         taskListInitiator.initializeTaskListElements();
         taskListInitiator.initModalWindowElements();
+        ElementsListener.listenToEvents('click', document.querySelectorAll('.remove-btn-icon'), taskDeletorObj.checkIfToDeleteTasks);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {

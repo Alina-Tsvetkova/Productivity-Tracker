@@ -36,6 +36,18 @@ class UserValidation {
             }
         });
     }
+
+    downloadSignUp() {
+        event.preventDefault();
+        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
+        let regFom = registrationFormBinder.downloadComponent();
+        document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.checkUserInfo);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
+        setTimeout(function () {
+            document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
+        }, 500);
+    }
 }
 
 
@@ -48,16 +60,7 @@ document.body.onclick = function (event) {
     }
 
     if (event.target == document.getElementsByClassName('sign-up')[0]) {
-        event.preventDefault();
-        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
-        let regFom = registrationFormBinder.downloadComponent();
-        document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.checkUserInfo);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
-        setTimeout(function () {
-            document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
-        }, 500);
-
+        checkLoginPassObj.downloadSignUp();
     }
 };
 

@@ -7,7 +7,7 @@ class FinishPhase {
 
     finishTask(timerKey) {
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
-        timer.downloadCompletedTimer(timerKey);
+        FinishPhase.downloadCompletedTimer(timerKey);
         for (let k = 0; k < timerElements.pomodoroAttempts.length; k++) {
             timerElements.pomodoroAttempts[k].classList.add('finish-pomodoro');
         }
