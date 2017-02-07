@@ -43,4 +43,35 @@ class Settings {
             timePoints: document.getElementsByClassName('time-points')[0]
         }
     }
+
+    static notifyAboutSuccessfulSave() {
+        let modalBinder = new Binder('app/components/settings/save-form.html');
+        let receivedDoc = modalBinder.downloadComponent();
+        document.body.appendChild(receivedDoc.getElementById('save-form-wrapper'));
+        settings.addSaveMessage();
+        setTimeout(function () {
+            document.getElementById('save-form-wrapper').classList.add('save-form-wrapper-appearance');
+        }, 200);
+        setTimeout(function () {
+            Categories.removeNotificationSave();
+        }, 2000);
+    }
+
+    addSaveMessage() {
+        if (event.target.classList.contains('save-btn-categories')) {
+            document.getElementsByClassName('save-form')[0].innerHTML = "Categories were successfully Saved!";
+        }
+        else {
+            document.getElementsByClassName('save-form')[0].innerHTML = "Cycle was successfully Saved!";
+        }
+    }
+
+    static removeNotificationSave() {
+        $('#save-form-wrapper').fadeOut(1500);
+        setTimeout(function () {
+            document.body.removeChild(document.getElementById('save-form-wrapper'));
+        }, 3000);
+    }
 }
+
+let settings = new Settings();

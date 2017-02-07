@@ -1,9 +1,5 @@
-class Categories {
-    constructor(category) {
-        this.category = category;
-    }
-
-    static createCategories(){
+class Categories extends Settings{
+    static createCategories() {
         let savedCategories = new Categories();
         savedCategories.saveCategories(localStorage.getItem('currentUser'));
     }
@@ -17,8 +13,7 @@ class Categories {
         firebase.database().ref('users/' + userId).update({
             categories: possibleCategories
         });
-
+        Categories.notifyAboutSuccessfulSave();
         CategoriesView.renderEarlierSavedCategories();
     };
-
 }

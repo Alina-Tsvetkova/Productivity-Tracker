@@ -35,7 +35,6 @@ class ModalWindow {
         let modalBinder = new Binder('app/components/modal-window/modal-window.html');
         let receivedDoc = modalBinder.downloadComponent();
         document.body.appendChild(receivedDoc.getElementById('modal-window-elem'));
-
         ElementsListener.listenToEvents('click', document.getElementsByClassName('icon-add-task'), productivityManager.submitTask);
         ModalWindow.downloadEarlierCategories();
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {

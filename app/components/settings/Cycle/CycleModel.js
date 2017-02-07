@@ -14,5 +14,8 @@ class CycleModel extends Cycle {
                 "longBreak": this.longBreak
             }
         });
+
+        Categories.notifyAboutSuccessfulSave();
+        CategoriesView.renderEarlierSavedCategories();
     }
 }
