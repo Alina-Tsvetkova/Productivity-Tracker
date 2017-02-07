@@ -1,7 +1,8 @@
 class TaskManager {
-    submitTask() {
 
-        let modalWindowElements = taskListInitiator.initModalWindowElements();
+    submitTask() {
+        let modalWindowElements = ModalWindow.getModalWindowElems;
+
         let postData = {
             title: modalWindowElements.titleInput.value,
             description: modalWindowElements.descriptionInput.value,
@@ -14,17 +15,9 @@ class TaskManager {
             timerIsOn: false,
             startOfTimer: 0,
             timerIterations: 0,
-            dateOfFinish:null,
+            dateOfFinish: null,
             dailyTask: false
         };
-
-        (function addDefaultData() {
-            if (postData.deadline == '') {
-                let today = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
-                postData.deadline = today;
-            }
-        }());
-
 
         let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
@@ -35,15 +28,16 @@ class TaskManager {
 
         postData.colorIndicator = foundCategory - 1;
 
+        if (postData.deadline == '') {
+            postData.deadline = productivityManager.addDefaultData();
+        }
+
         tasksRenderer.sendSubmittedData(postData);
         tasksRenderer.checkIfTaskListEmpty();
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
         }
-
-        funcTask.groupTasksByCategory();
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-success');
+        TaskNotification.createNotification('.message-success');
     }
 
     sendSubmittedData(postData) {
@@ -70,7 +64,7 @@ class TaskManager {
             console.log(j);
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
-        updates.colorIndicator = allCategoriesValues.indexOf(updates.category)-1;
+        updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
         tasksRenderer.sendEditedData(updates, editedHash);
         tasksRenderer.checkIfTaskListEmpty();
@@ -81,6 +75,10 @@ class TaskManager {
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
     }
 
+    addDefaultData() {
+        return new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+
+    };
 }
 
 let productivityManager = new TaskManager();

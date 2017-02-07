@@ -18,7 +18,7 @@ class Router {
         });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('tasks-list-icon'), function () {
             counterOfTasks = 0;
-            TaskListTransfer.moveToTaskList();
+            TaskList.moveToTaskList();
         });
         ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
             loggedUser.logOutWrapper();

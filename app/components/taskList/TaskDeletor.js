@@ -4,17 +4,15 @@ class TaskDeletor extends TaskManager {
         selectedTaskHashes.clear();
         taskDeletorObj.removeIndicatorOfQuantityDel();
         ModalWindow.closeModalWindow(document.getElementById('modal-w-remove'));
-        for (var j = 0; j < document.getElementsByClassName('indicator').length; j++) {
+        for (let j = 0; j < document.getElementsByClassName('indicator').length; j++) {
             document.getElementsByClassName('indicator')[j].classList.remove('for-delete', 'for-delete-bg');
             document.getElementsByClassName('indicator')[j].classList.add('canceled-delete');
         }
-
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-info');
+        TaskNotification.createNotification('.message-info');
     }
 
     givePossibilityToDelete() {
-        let taskListElements = taskListInitiator.initializeTaskListElements();
+        let taskListElements = TaskList.getTaskListElements;
         let allTrashViews = document.getElementsByClassName('indicator');
         for (let l = 0; l < allTrashViews.length; l++) {
             document.getElementsByClassName('indicator')[l].classList.remove('canceled-delete');
@@ -30,7 +28,7 @@ class TaskDeletor extends TaskManager {
 
     pushTaskToDelete() {
         console.log(selectedTaskHashes);
-        let taskListElements = taskListInitiator.initializeTaskListElements();
+        let taskListElements = TaskList.getTaskListElements;
         if (event.target.classList.contains('indicator')) {
             let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
             event.target.classList.add('for-delete-bg');
@@ -41,9 +39,7 @@ class TaskDeletor extends TaskManager {
                 taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
             }
         }
-
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-warn');
+        TaskNotification.createNotification('.message-warn');
     }
 
     submitDeleteTask() {
@@ -55,8 +51,7 @@ class TaskDeletor extends TaskManager {
         taskDeletorObj.removeIndicatorOfQuantityDel();
         selectedTaskHashes.clear();
         tasksRenderer.checkIfTaskListEmpty();
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-delete');
+        TaskNotification.createNotification('.message-delete');
     }
 
     checkIfToDeleteTasks() {
@@ -72,14 +67,12 @@ class TaskDeletor extends TaskManager {
 
 
     removeIndicatorOfQuantityDel() {
-        let taskListElements = taskListInitiator.initializeTaskListElements();
+        let taskListElements = TaskList.getTaskListElements;
         for (let j = 0; j < taskListElements.quantityOfSelectedTasks.length; j++) {
             taskListElements.quantityOfSelectedTasks[j].innerHTML = 0;
             taskListElements.quantityOfSelectedTasks[j].style.display = 'none';
         }
     }
-
-
 }
 
 

@@ -7,7 +7,7 @@ $.fn.tooltipSwitcher = function (event) {
                     opacity: 'show',
                     top: '45'
                 },
-                'middle');
+                'fast');
             var hoverTexts = $(this).attr('data-tooltip');
             $(this).find('div').text(hoverTexts);
             if ($(this).hasClass('tooltip-right')){
@@ -21,11 +21,10 @@ $.fn.tooltipSwitcher = function (event) {
                     opacity: 'hide',
                     top: '-45'
                 },
-                500);
+                300);
             setTimeout(function () {
                 $smallTooltip.children().remove('.tooltip-small');
-            }, 100)
-
+            }, 10)
         });
 };
 

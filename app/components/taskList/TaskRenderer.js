@@ -1,5 +1,6 @@
 let counterOfTasks = 0;
 let notificationCounter = 0;
+
 class TaskRenderer extends TaskManager {
 
     clearContainers() {
@@ -21,9 +22,9 @@ class TaskRenderer extends TaskManager {
                 }
                 else {
                     classManager.removeClass(tasksTabs, 'non-visible-elem');
-                    tasksRenderer.filterPendingTasks();
-                    tasksRenderer.filterToDoTasks();
-                    tasksRenderer.filterDoneTasks();
+                    taskDataObj.filterPendingTasks();
+                    taskDataObj.filterToDoTasks();
+                    taskDataObj.filterDoneTasks();
                     try {
                         addTaskSection.classList.add('non-visible-elem');
                     }
@@ -45,40 +46,6 @@ class TaskRenderer extends TaskManager {
         else {
             document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
         }
-    }
-
-    filterToDoTasks() {
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
-            });
-        });
-        Binder.downloadPlugins();
-    }
-
-    filterDoneTasks() {
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
-            });
-        });
-    }
-
-    filterPendingTasks() {
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo("pending").once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
-            });
-        });
     }
 
     renderTask(data, dataKey, bool) {
@@ -129,10 +96,8 @@ class TaskRenderer extends TaskManager {
                             'taskisdone': renderedTask.taskIsDone
                         };
                         for (let key in attributesObj) {
-                            console.log(counterOfTasks, task);
                             task[counterOfTasks].setAttribute(key, attributesObj[key]);
                         }
-                        funcTask.groupTasksByCategory('.task');
                         counterOfTasks++;
                     }());
                 }
@@ -142,15 +107,16 @@ class TaskRenderer extends TaskManager {
             }(dataKey));
         }, 100);
 
+
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('edit'), TaskList.getIndexOfTask);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('move-task'), TaskList.getIndexOfMovableTasks);
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
-        //ElementsListener.listenToEvents('click', $('.move-task'), dailyTask.moveTaskToDaily);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
         ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
             if (event.target.parentNode.parentNode.classList.contains('done-task')) {
                 event.stopImmediatePropagation();
-                let newNotification = new TaskNotification();
-                newNotification.wrapNotificationFunctionality('.message-error');
+                TaskNotification.createNotification('.message-error');
                 return false;
             }
             Timer.showTimer(taskKey);
@@ -167,35 +133,50 @@ class TaskRenderer extends TaskManager {
             ul.appendChild(h3);
             ul.classList.add('categorized-ul');
             ul.appendChild(docTask.getElementsByClassName('task')[0]);
+
             if (renderedTask.taskIsDone == false) {
-                document.getElementById('globalTasks').appendChild(ul);
+                tasksRenderer.appendTask('globalTasks', ul);
                 tasksRenderer.notifyAboutMissedDeadlines(renderedTask.deadline);
             }
             else if (renderedTask.taskIsDone == true) {
-                document.getElementById('tab2').appendChild(ul);
-                ul.getElementsByClassName('task')[0].classList.add('done-task');
-
-                let doneTasks = document.getElementsByClassName('done-task');
-                for (let j = 0; j < doneTasks.length; j++) {
-                    doneTasks[j].getElementsByClassName('edit')[0].style.display = 'none';
-                    doneTasks[j].getElementsByClassName('move-task')[0].style.display = 'none';
-                }
+                tasksRenderer.addDoneClasses(ul);
             }
 
             else if (renderedTask.taskIsDone === 'pending') {
-                ul.getElementsByClassName('task')[0].classList.add('pending-task');
-                document.getElementById('daily-tasks').appendChild(ul);
-                ul.getElementsByClassName('move-task')[0].style.display = 'none';
-                ul.getElementsByClassName('edit')[0].style.height = '90px';
-                ul.getElementsByClassName('edit')[0].style.marginTop = '0px';
+                tasksRenderer.addPendingClasses(ul);
             }
 
             ul.setAttribute('color-category', indicator);
-            funcTask.addColorsToCategories();
+            TaskRenderer.addColorsToCategories();
         }
         catch (e) {
             return false;
         }
+    }
+
+    addDoneClasses(ul) {
+        tasksRenderer.appendTask('tab2', ul);
+        ul.getElementsByClassName('task')[0].classList.add('done-task');
+        let doneTasks = document.getElementsByClassName('done-task');
+        for (let j = 0; j < doneTasks.length; j++) {
+            doneTasks[j].getElementsByClassName('edit')[0].style.display = 'none';
+            tasksRenderer.removeMoveTaskBtn(ul);
+        }
+    }
+
+    addPendingClasses(ul) {
+        ul.getElementsByClassName('task')[0].classList.add('pending-task');
+        tasksRenderer.appendTask('daily-tasks', ul);
+        tasksRenderer.removeMoveTaskBtn(ul);
+        ul.getElementsByClassName('edit')[0].classList.add('edit-daily-task');
+    }
+
+    appendTask(container, ul) {
+        document.getElementById(container).appendChild(ul);
+    }
+
+    removeMoveTaskBtn(ul) {
+        ul.getElementsByClassName('move-task')[0].classList.add('non-visible-elem');
     }
 
     notifyAboutMissedDeadlines(deadline) {
@@ -209,6 +190,49 @@ class TaskRenderer extends TaskManager {
                 notificationCounter++;
             }
         }
+    }
+
+    static addColorsToCategories() {
+        let allCategories = document.querySelectorAll('.categorized-ul');
+
+        let mapCategoriesTitles = {
+            0: 'work-group-title',
+            1: 'education-group-title',
+            2: 'hobby-group-title',
+            3: 'sport',
+            4: 'other'
+        };
+
+        for (let j = 0; j < allCategories.length; j++) {
+            if (allCategories[j].getAttribute('color-category') == 0) {
+                allCategories[j].classList.add('work-group');
+                allCategories[j].getElementsByClassName('categorized-ul-title')[0].classList.add('work-group-title');
+            }
+            else if (allCategories[j].getAttribute('color-category') == 1) {
+                allCategories[j].classList.add('education-group');
+                allCategories[j].getElementsByClassName('categorized-ul-title')[0].classList.add('education-group-title');
+            }
+            else if (allCategories[j].getAttribute('color-category') == 2) {
+                allCategories[j].classList.add('hobby-group');
+                allCategories[j].getElementsByClassName('categorized-ul-title')[0].classList.add('hobby-group-title');
+            }
+            else if (allCategories[j].getAttribute('color-category') == 3) {
+                allCategories[j].classList.add('sport-group');
+                allCategories[j].getElementsByClassName('categorized-ul-title')[0].classList.add('sport-group-title');
+            }
+
+            else if (allCategories[j].getAttribute('color-category') == 4) {
+                allCategories[j].classList.add('other-group');
+                allCategories[j].getElementsByClassName('categorized-ul-title')[0].classList.add('other-group-title');
+            }
+        }
+    }
+
+    static addActiveClassSelector(elem) {
+        for (let k = 0; k < document.querySelectorAll('.opportunity-select button').length; k++) {
+            document.querySelectorAll('.opportunity-select button')[k].style.color = '#8da5b8';
+        }
+        elem.style.color = 'white';
     }
 }
 

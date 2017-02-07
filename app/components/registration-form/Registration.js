@@ -1,38 +1,67 @@
 class Registration {
-    checkUserInfo() {
-        let signUpValidator = {
+    static get getSignUpValidator() {
+        return {
             loginField: document.getElementsByClassName('email')[0],
             passwordField: document.getElementsByClassName('password')[0],
-            inputGroups: document.getElementsByClassName('registration-field')
-        };
+            inputGroups: document.getElementsByClassName('registration-field'),
+            failBlocks: document.getElementsByClassName('registration-fail')
+        }
+    }
+
+    checkUserInfo() {
         event.preventDefault();
-        let email = document.getElementsByClassName('email')[0].value;
-        let password = document.getElementsByClassName('password')[0].value;
-        if (email != '' && password != '') {
-            firebase.auth().createUserWithEmailAndPassword(email, password).then(function (user) {
+        let signUpValidator = Registration.getSignUpValidator;
+        console.log(signUpValidator);
+        if (signUpValidator.loginField.value != '' && signUpValidator.passwordField.value != '') {
+            firebase.auth().createUserWithEmailAndPassword(signUpValidator.loginField.value, signUpValidator.passwordField.value).then(function (user) {
                 let userNew = new UserData(user.uid, user.email);
                 userNew.writeUserData();
                 classManager.removeClass(document.getElementsByClassName('form-registration')[0], 'form-registration-appearance');
                 userRegistration.downloadCompleteSignUp();
             }).catch(function (error) {
-                for (let k = 0; k < document.getElementsByClassName('registration-fail').length; k++) {
-                    classManager.removeClass(document.getElementsByClassName('registration-fail')[k], 'no-validate');
-                }
-                classManager.removeClass(signUpValidator.passwordField, 'invalid-field');
-                classManager.removeClass(signUpValidator.loginField, 'invalid-field');
                 let errorCode = error.code;
-                if (errorCode == 'auth/email-already-in-use') {
-                    document.getElementsByClassName('registration-fail')[0].classList.add('no-validate');
-                    document.getElementsByClassName('email')[0].classList.add('invalid-field');
-                }
-                if (errorCode == 'auth/weak-password') {
-                    document.getElementsByClassName('registration-fail')[1].classList.add('no-validate');
-                    document.getElementsByClassName('password')[0].classList.add('invalid-field');
-                }
+                userRegistration.proceedRegistrationErrors(errorCode);
                 return false;
             });
         } else {
-            console.log('fill in both fields');
+            for (let k = 0; k < signUpValidator.failBlocks.length; k++) {
+                Registration.addInvalidField(signUpValidator.loginField, signUpValidator.passwordField);
+                signUpValidator.failBlocks[k].classList.add('no-validate');
+                signUpValidator.failBlocks[k].innerHTML = 'Fill in both values';
+            }
+        }
+    }
+
+    proceedRegistrationErrors(errorCode) {
+        let signUpValidator = Registration.getSignUpValidator;
+        for (let k = 0; k < signUpValidator.failBlocks.length; k++) {
+            classManager.removeClass(signUpValidator.failBlocks[k], 'no-validate');
+        }
+        classManager.removeClass(signUpValidator.passwordField, 'invalid-field');
+        classManager.removeClass(signUpValidator.loginField, 'invalid-field');
+
+        if (errorCode == 'auth/email-already-in-use') {
+            Registration.addBorderToInvalidInput('registration-fail', 0, signUpValidator.failBlocks, "The email address is already in use by another account");
+            Registration.addInvalidField(signUpValidator.loginField);
+        }
+        if (errorCode == 'auth/weak-password') {
+            Registration.addBorderToInvalidInput('registration-fail', 1, signUpValidator.failBlocks, "Password should be at least 6 characters");
+            Registration.addInvalidField(signUpValidator.passwordField);
+        }
+    }
+
+    static addBorderToInvalidInput(element, index, elem2, str) {
+        try {
+            document.getElementsByClassName(element)[index].classList.add('no-validate');
+            elem2[index].innerHTML = str;
+        } catch (e){
+            return 'no element on the page';
+        }
+    }
+
+    static addInvalidField(element) {
+        for (let k = 0; k < arguments.length; k++) {
+            arguments[k].classList.add('invalid-field');
         }
     }
 

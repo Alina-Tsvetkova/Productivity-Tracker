@@ -1,4 +1,8 @@
 class CycleModel extends Cycle {
+    static createCycle() {
+        let savedCycle = new CycleModel();
+        savedCycle.saveUserCycle(localStorage.getItem('currentUser'));
+    }
 
     saveUserCycle(userId) {
         this.getDataForCycle();

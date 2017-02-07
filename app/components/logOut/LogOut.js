@@ -5,7 +5,7 @@ class LogOut {
             localStorage.removeItem('currentUser');
             location.reload();
         }, function (error) {
-            console.log('An error occured!');
+            return 'An error occured!';
         });
     };
 

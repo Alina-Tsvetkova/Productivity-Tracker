@@ -1,6 +1,6 @@
 class SelectionManager {
     static selectAll(elements) {
-        let taskListElements = taskListInitiator.initializeTaskListElements();
+        let taskListElements = TaskList.getTaskListElements;
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.pushHashesToDeleteSet(taskHashes);
         let selectedSize = selectedTaskHashes.size;
@@ -11,8 +11,7 @@ class SelectionManager {
             taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
         }
         taskDeletorObj.pushTaskToDelete();
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-warn');
+        TaskNotification.createNotification('.message-warn');
     }
 
     static pushHashesToDeleteSet(taskHashes) {
@@ -34,7 +33,7 @@ class SelectionManager {
     }
 
     static deselectAllSelectedTasks(elements) {
-        let taskListElements = taskListInitiator.initializeTaskListElements();
+        let taskListElements = TaskList.getTaskListElements;
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.removeHashesToDeselect(taskHashes);
         let selectedSize = selectedTaskHashes.size;

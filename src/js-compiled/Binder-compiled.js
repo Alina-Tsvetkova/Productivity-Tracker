@@ -24,6 +24,7 @@ var Binder = function () {
                 this.parent.innerHTML = doc.body.innerHTML;
             }
             Router.listenToHashChanges();
+            componentRequest = null;
             return doc;
         }
     }], [{

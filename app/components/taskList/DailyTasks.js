@@ -1,18 +1,22 @@
 class DailyTasks {
     restrictDailyTasks() {
-        let newNotification = new TaskNotification();
-        newNotification.wrapNotificationFunctionality('.message-restricted');
+        TaskNotification.createNotification('.message-restricted');
     }
 
     moveTaskToDaily(key) {
+        console.log(key);
         if (document.querySelectorAll('#daily-tasks .task').length >= 3) {
             dailyTask.restrictDailyTasks();
             return false;
         }
-        let today = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+        dailyTask.sendDailyTaskData(key,productivityManager.addDefaultData());
+    }
+
+    sendDailyTaskData(key,date) {
+        console.log(key);
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key).update({
             taskIsDone: "pending",
-            deadline: today
+            deadline: date
         });
         tasksRenderer.checkIfTaskListEmpty();
     }

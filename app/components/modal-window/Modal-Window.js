@@ -1,4 +1,16 @@
 class ModalWindow {
+
+    static get getModalWindowElems() {
+        return {
+            titleInput: document.getElementsByClassName('title-input')[0],
+            descriptionInput: document.getElementsByClassName('description-input')[0],
+            categoryRadioBtn: document.querySelector('input.category-input:checked + label + label'),
+            deadlineInput: document.getElementsByClassName('deadline-input')[0],
+            estimationCheckboxes: document.querySelectorAll('input[type="checkbox"]:checked').length,
+            priorityRadioBtn: document.querySelector('input[name="priority-level"]:checked + label + label')
+        }
+    }
+
     static downloadEarlierCategories() {
         let categoryTitles = document.querySelectorAll('.categories-names .category-input');
         let categoryLabels = document.querySelectorAll('.categories-names .category-title');
@@ -6,11 +18,16 @@ class ModalWindow {
         let userId = localStorage.getItem('currentUser');
         let categoriesReceiver = firebase.database().ref('users/' + userId + '/categories');
         categoriesReceiver.on('value', function (data) {
-            for (let k = 0; k < categoryTitles.length; k++) {
-                categoryTitles[k].value = data.val()[i];
-                categoryLabels[i].innerHTML = categoryTitles[k].value;
-                i++;
+            try {
+                for (let k = 0; k < categoryTitles.length; k++) {
+                    categoryTitles[k].value = data.val()[i];
+                    categoryLabels[i].innerHTML = categoryTitles[k].value;
+                    i++;
+                }
+            } catch (e) {
+                return 'modal window is not created';
             }
+
         });
     }
 
@@ -25,10 +42,7 @@ class ModalWindow {
             ModalWindow.closeModalWindow(document.getElementById('modal-window-elem'));
         });
 
-        setTimeout(function () {
-            document.getElementsByClassName('add-task-modal')[0].style.top = '50%';
-        }, 100);
-
+        ModalWindow.moveModalWindow(50);
         ModalWindow.attachDatePicker();
     }
 
@@ -43,7 +57,6 @@ class ModalWindow {
     fillEditModal() {
         ModalWindow.downloadEarlierCategories();
         let taskContainer = document.querySelectorAll('.task')[index];
-        console.log(index);
         $('.title-input')[0].value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
         $('.description-input')[0].value = taskContainer.getElementsByClassName('description-content')[0].innerHTML;
         let taskPriority = $('.priority-indicator')[index];
@@ -53,12 +66,16 @@ class ModalWindow {
         let allCategoriesNamesArr = Array.prototype.slice.call(allCategoriesNames);
         let allPriorityLevels = $('.priorities li label.priority-name');
         let allPriorityLevelsArr = Array.prototype.slice.call(allPriorityLevels);
-        console.log(taskContainer.parentNode.getAttribute('category'));
+
         for (let k = 0; k < allCategoriesNamesArr.length; k++) {
             if (allCategoriesNamesArr[k].innerHTML == taskContainer.parentNode.getAttribute('category')) {
                 choosedRadioCategory = allCategoriesNamesArr.indexOf(allCategoriesNamesArr[k]);
-                console.log(choosedRadioCategory, allCategoriesNamesArr);
             }
+
+            else if (choosedRadioCategory == null) {
+                choosedRadioCategory = 0;
+            }
+
         }
         for (let k = 0; k < allPriorityLevelsArr.length; k++) {
             if (allPriorityLevelsArr[k].innerHTML.toLowerCase() == taskPriority.classList[1]) {

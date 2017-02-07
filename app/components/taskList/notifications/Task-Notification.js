@@ -1,4 +1,10 @@
 class TaskNotification {
+
+    static createNotification(params) {
+        let newNotification = new TaskNotification();
+        newNotification.wrapNotificationFunctionality(params);
+    }
+
     wrapNotificationFunctionality(stateNotification) {
         if (document.getElementsByClassName('bottom-message').length > 0) {
             return false;

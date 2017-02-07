@@ -5,7 +5,8 @@ class AppStarter {
         Router.addHash("");
 
         let userId = localStorage.getItem('currentUser');
-
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-in'), checkLoginPassObj.checkLoginPass);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), checkLoginPassObj.downloadSignUp);
         if (userId != null) {
             let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
             settingsBinder.downloadComponent();

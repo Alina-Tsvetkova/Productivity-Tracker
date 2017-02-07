@@ -4,37 +4,45 @@ class UserValidation {
         this.password = password;
     }
 
-    checkLoginPass(event) {
-        let loginValidator = {
+    static get getLogInObject() {
+        return {
             loginField: document.getElementsByClassName('for-username')[0],
             passwordField: document.getElementsByClassName('for-password')[0],
-            inputGroups: document.getElementsByClassName('input-groups')
-        };
+            inputGroups: document.getElementsByClassName('input-groups'),
+            logInFields: document.getElementsByClassName('fail-validation')
+        }
+    }
 
-        let logInFields = document.getElementsByClassName('fail-validation');
-        firebase.auth().signInWithEmailAndPassword(loginValidator.loginField.value, loginValidator.passwordField.value).then(function (user) {
+    checkLoginPass() {
+        event.preventDefault();
+        let loginObject = UserValidation.getLogInObject;
+        firebase.auth().signInWithEmailAndPassword(loginObject.loginField.value, loginObject.passwordField.value).then(function (user) {
             let userNew = new UserData(user.uid, user.email);
             userNew.saveUserDataLocally();
             let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
         }).catch(function (error) {
-            for (let k = 0; k < logInFields.length; k++) {
-                classManager.removeClass(logInFields[k], 'no-validate');
-            }
-            classManager.removeClass(loginValidator.passwordField, 'invalid-field');
-            classManager.removeClass(loginValidator.loginField, 'invalid-field');
-
-            if (error.code == 'auth/wrong-password') {
-                document.getElementsByClassName('fail-validation')[1].classList.add('no-validate');
-                loginValidator.passwordField.classList.add('invalid-field');
-
-            }
-            if (error.code == 'auth/user-not-found') {
-                document.getElementsByClassName('fail-validation')[0].classList.add('no-validate');
-                loginValidator.loginField.classList.add('invalid-field');
-            }
+            checkLoginPassObj.proceedSignInErrors(error.code);
         });
+    }
+
+    proceedSignInErrors(errorCode) {
+        let loginObject = UserValidation.getLogInObject;
+        for (let k = 0; k < loginObject.logInFields.length; k++) {
+            classManager.removeClass(loginObject.logInFields[k], 'no-validate');
+        }
+        classManager.removeClass(loginObject.passwordField, 'invalid-field');
+        classManager.removeClass(loginObject.loginField, 'invalid-field');
+
+        if (errorCode == 'auth/wrong-password') {
+            Registration.addBorderToInvalidInput('fail-validation', 1);
+            Registration.addInvalidField(loginObject.passwordField);
+        }
+        if (errorCode == 'auth/user-not-found') {
+            Registration.addBorderToInvalidInput('fail-validation', 0);
+            Registration.addInvalidField(loginObject.loginField);
+        }
     }
 
     downloadSignUp() {
@@ -51,18 +59,7 @@ class UserValidation {
 }
 
 
-let checkLoginPassObj = new UserValidation('test@mail.ua', '123456');
-
-document.body.onclick = function (event) {
-    if (event.target == document.getElementsByClassName('sign-in')[0]) {
-        event.preventDefault();
-        checkLoginPassObj.checkLoginPass();
-    }
-
-    if (event.target == document.getElementsByClassName('sign-up')[0]) {
-        checkLoginPassObj.downloadSignUp();
-    }
-};
+let checkLoginPassObj = new UserValidation();
 
 
 
