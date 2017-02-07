@@ -77,7 +77,6 @@ class TaskManager {
 
     addDefaultData() {
         return new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
-
     };
 }
 
