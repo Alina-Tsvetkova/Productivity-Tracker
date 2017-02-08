@@ -24,6 +24,7 @@ class TaskList {
     }
 
     static moveToTaskList() {
+        Router.addHash("task-list");
         let taskBinder = new Binder('app/components/taskList/task-list.html', document.body);
         taskBinder.downloadComponent();
         TaskList.getTaskListElements;

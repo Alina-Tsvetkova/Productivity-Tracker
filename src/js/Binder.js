@@ -13,7 +13,6 @@ class Binder {
         if (this.parent) {
             this.parent.innerHTML = doc.body.innerHTML;
         }
-        Router.listenToHashChanges();
         componentRequest = null;
         return doc;
     }

@@ -17,7 +17,6 @@ class MonthReport {
     initializeMonthCounter() {
         for (let key in monthAndCounterBinding) {
             for (let l = 0; l <= 30; l++) {
-                console.log(monthAndCounterBinding[key].length);
                 monthAndCounterBinding[key][l] = 0;
             }
         }
@@ -89,7 +88,6 @@ class MonthReport {
                 difference = 31 + difference + 1;
             }
             indexReport = 30 - difference;
-            console.log(monthAndCounterBinding);
             try {
                 for (let key in monthAndCounterBinding) {
                     if (priority == key) {

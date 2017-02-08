@@ -2,8 +2,823 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/build/all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js-compiled/script-compiled.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js-compiled/script-compiled.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/MonthReport.js" afterPath="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/Reports.js" afterPath="$PROJECT_DIR$/app/components/reports/Reports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" afterPath="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskList.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/Timer.js" afterPath="$PROJECT_DIR$/app/components/timer/Timer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/timer.html" afterPath="$PROJECT_DIR$/app/components/timer/timer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/timer.less" afterPath="$PROJECT_DIR$/assets/less/timer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/lessc" afterPath="$PROJECT_DIR$/node_modules/.bin/lessc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/.jscsrc" afterPath="$PROJECT_DIR$/node_modules/less/.jscsrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/.jshintrc" afterPath="$PROJECT_DIR$/node_modules/less/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/.npmignore" afterPath="$PROJECT_DIR$/node_modules/less/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/less/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/less/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node_modules/less/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/Gruntfile.js" afterPath="$PROJECT_DIR$/node_modules/less/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/LICENSE" afterPath="$PROJECT_DIR$/node_modules/less/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/README.md" afterPath="$PROJECT_DIR$/node_modules/less/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/appveyor.yml" afterPath="$PROJECT_DIR$/node_modules/less/appveyor.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/bin/lessc" afterPath="$PROJECT_DIR$/node_modules/less/bin/lessc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/bower.json" afterPath="$PROJECT_DIR$/node_modules/less/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/browser.js" afterPath="$PROJECT_DIR$/node_modules/less/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/build.gradle" afterPath="$PROJECT_DIR$/node_modules/less/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/dist/less.js" afterPath="$PROJECT_DIR$/node_modules/less/dist/less.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/dist/less.min.js" afterPath="$PROJECT_DIR$/node_modules/less/dist/less.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/gradlew" afterPath="$PROJECT_DIR$/node_modules/less/gradlew" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/index.js" afterPath="$PROJECT_DIR$/node_modules/less/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/add-default-options.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/add-default-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/bootstrap.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/browser.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/cache.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/cache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/error-reporting.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/error-reporting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/file-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/file-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/image-size.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/image-size.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/log-listener.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/log-listener.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-browser/utils.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-browser/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/environment.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/environment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/file-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/file-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/fs.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/image-size.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/image-size.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/lessc-helper.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/lessc-helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/plugin-loader.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/plugin-loader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-node/url-file-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-node/url-file-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less-rhino/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less-rhino/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/contexts.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/contexts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/data/colors.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/colors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/data/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/data/unit-conversions.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/data/unit-conversions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/environment/abstract-file-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/abstract-file-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment-api.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/environment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/environment/file-manager-api.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/environment/file-manager-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color-blending.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color-blending.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/data-uri.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/data-uri.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/default.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-caller.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-caller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-registry.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/function-registry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math-helper.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math-helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/math.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/number.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/number.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/string.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/svg.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/svg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/functions/types.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/functions/types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/import-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/import-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/less-error.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/less-error.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/logger.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/parse-tree.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parse-tree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/parse.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/parser/chunker.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/chunker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser-input.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser-input.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/parser/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/plugin-manager.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/plugin-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/plugins/function-importer.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/plugins/function-importer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/render.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/render.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-builder.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-builder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-output.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/source-map-output.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/transform-tree.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/transform-tree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/alpha.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/alpha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/anonymous.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/anonymous.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/assignment.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/assignment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/attribute.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/attribute.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/call.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/call.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/color.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/combinator.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/combinator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/comment.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/comment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/condition.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/condition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/debug-info.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/debug-info.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/detached-ruleset.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/detached-ruleset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/dimension.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/dimension.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/directive.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/element.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/element.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/expression.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/expression.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/extend.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/extend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/import.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/import.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/javascript.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/js-eval-node.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/js-eval-node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/keyword.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/keyword.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/media.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/media.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-call.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-call.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-definition.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/mixin-definition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/negative.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/negative.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/node.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/operation.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/operation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/paren.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/paren.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/quoted.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/quoted.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/rule.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/rule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/ruleset-call.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/ruleset-call.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/ruleset.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/ruleset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/selector.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unicode-descriptor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unicode-descriptor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unit.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/unit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/url.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/url.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/value.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/value.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/tree/variable.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/tree/variable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/utils.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/extend-visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/extend-visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-sequencer.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-sequencer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/import-visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/index.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/join-selector-visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/join-selector-visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/set-tree-visibility-visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/set-tree-visibility-visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/to-css-visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/to-css-visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/visitor.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/less/visitors/visitor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-0.1.31.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-0.1.31.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-footer.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-footer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-header.js" afterPath="$PROJECT_DIR$/node_modules/less/lib/source-map/source-map-header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/package.json" afterPath="$PROJECT_DIR$/node_modules/less/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/common.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/global-vars/simple.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/global-vars/simple.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/modify-vars/simple.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/modify-vars/simple.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/postProcessor/postProcessor.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/postProcessor/postProcessor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/relative-urls/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/relative-urls/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/rootpath-relative/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/rootpath-relative/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/rootpath/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/rootpath/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/css/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/css/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/jasmine-jsreporter.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/jasmine-jsreporter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/console-errors/test-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/console-errors/test-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/console-errors/test-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/console-errors/test-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-height-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-height-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-height-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-height-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-size-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-size-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-size-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-size-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-width-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-width-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-width-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/errors/image-width-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/global-vars/simple.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/global-vars/simple.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/imports/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/imports/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/imports/urls2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/imports/urls2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/modify-vars/imports/simple2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/modify-vars/imports/simple2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/modify-vars/simple.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/modify-vars/simple.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/nested-gradient-with-svg-gradient/mixin-consumer.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/nested-gradient-with-svg-gradient/mixin-consumer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/postProcessor/postProcessor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/postProcessor/postProcessor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/relative-urls/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/relative-urls/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/rootpath-relative/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/rootpath-relative/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/rootpath/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/rootpath/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/less/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/less/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-VisitorPlugin-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-VisitorPlugin-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-VisitorPlugin.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-VisitorPlugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-browser-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-browser-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-browser-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-browser-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-console-errors.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-console-errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-errors-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-errors-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-errors-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-errors-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-filemanagerPlugin-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-filemanagerPlugin-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-filemanagerPlugin.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-filemanagerPlugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-global-vars-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-global-vars-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-global-vars-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-global-vars-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-legacy-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-legacy-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-legacy-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-legacy-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-main-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-main-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-main-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-main-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-modify-vars-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-modify-vars-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-modify-vars-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-modify-vars-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-no-js-errors-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-no-js-errors-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-no-js-errors-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-no-js-errors-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessor-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessor-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessor.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessorPlugin-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessorPlugin-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessorPlugin.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-postProcessorPlugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-preProcessorPlugin-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-preProcessorPlugin-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-preProcessorPlugin.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-preProcessorPlugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-production-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-production-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-production-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-production-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-relative-urls-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-relative-urls-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-relative-urls-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-relative-urls-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-relative-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-relative-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-relative-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-relative-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-rootpath-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-strict-units-options.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-strict-units-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/runner-strict-units-spec.js" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/runner-strict-units-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/browser/test-runner-template.tmpl" afterPath="$PROJECT_DIR$/node_modules/less/test/browser/test-runner-template.tmpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/copy-bom.js" afterPath="$PROJECT_DIR$/node_modules/less/test/copy-bom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/charsets.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/charsets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/colors.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/colors.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/comments.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/comments.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/comments2.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/comments2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/compression/compression.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/compression/compression.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/css-3.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/css-3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/css-escapes.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/css-escapes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/css-guards.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/css-guards.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/css.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-all.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-comments.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-comments.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-mediaquery.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/debug/linenumbers-mediaquery.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/detached-rulesets.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/detached-rulesets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/directives-bubling.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/directives-bubling.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-chaining.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-chaining.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-clearfix.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-clearfix.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-exact.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-exact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-media.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-nest.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-nest.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend-selector.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend-selector.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extend.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extend.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/extract-and-length.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/extract-and-length.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/filemanagerPlugin/filemanager.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/filemanagerPlugin/filemanager.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/functions.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/functions.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/globalVars/extended.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/globalVars/extended.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/globalVars/simple.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/globalVars/simple.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/ie-filters.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/ie-filters.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import-inline.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import-inline.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import-interpolation.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import-interpolation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import-once.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import-once.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import-reference-issues.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import-reference-issues.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import-reference.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import-reference.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/import.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/import.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/include-path-string/include-path-string.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/include-path-string/include-path-string.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/include-path/include-path.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/include-path/include-path.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/javascript.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/javascript.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/lazy-eval.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/lazy-eval.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/legacy/legacy.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/legacy/legacy.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/media.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/merge.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/merge.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-args.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-args.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-closure.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-closure.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-guards-default-func.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-guards-default-func.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-guards.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-guards.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-important.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-important.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-interpolated.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-interpolated.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-named-args.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-named-args.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-nested.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-nested.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins-pattern.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins-pattern.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/mixins.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/mixins.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/modifyVars/extended.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/modifyVars/extended.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/no-strict-math/mixins-guards.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/no-strict-math/mixins-guards.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/no-strict-math/no-sm-operations.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/no-strict-math/no-sm-operations.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/operations.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/operations.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/parens.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/parens.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/plugin.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/plugin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/postProcessorPlugin/postProcessor.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/postProcessorPlugin/postProcessor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/preProcessorPlugin/preProcessor.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/preProcessorPlugin/preProcessor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/property-name-interp.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/property-name-interp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/rulesets.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/rulesets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/scope.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/scope.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/selectors.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/selectors.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/static-urls/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/static-urls/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/strict-units/strict-units.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/strict-units/strict-units.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/strings.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/strings.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/url-args/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/url-args/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/urls.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/urls.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/variables-in-at-rules.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/variables-in-at-rules.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/variables.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/variables.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/visitorPlugin/visitor.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/visitorPlugin/visitor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/css/whitespace.css" afterPath="$PROJECT_DIR$/node_modules/less/test/css/whitespace.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/data/image.svg" afterPath="$PROJECT_DIR$/node_modules/less/test/data/image.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/data/page.html" afterPath="$PROJECT_DIR$/node_modules/less/test/data/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/index.js" afterPath="$PROJECT_DIR$/node_modules/less/test/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/charsets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/charsets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/colors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/colors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/comments.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/comments.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/comments2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/comments2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/compression/compression.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/compression/compression.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-escapes.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-escapes.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/css-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/css.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/css.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/debug/import/test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/debug/import/test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/debug/linenumbers.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/debug/linenumbers.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/detached-rulesets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/detached-rulesets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/directives-bubling.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/directives-bubling.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/add-mixed-units2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/at-rules-undefined-var.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/at-rules-undefined-var.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/at-rules-undefined-var.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/at-rules-undefined-var.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/bad-variable-declaration1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/bad-variable-declaration1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-func-invalid-color.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-func-invalid-color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-func-invalid-color.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-func-invalid-color.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/color-invalid-hex-code2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/css-guard-default-func.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/css-guard-default-func.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/css-guard-default-func.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/css-guard-default-func.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-5.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-5.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-5.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-6.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-6.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-6.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/detached-ruleset-6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/divide-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/divide-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/divide-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/divide-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-no-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-no-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-no-selector.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-no-selector.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-not-at-end.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-not-at-end.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-not-at-end.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/extend-not-at-end.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-10-keyword.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-10-keyword.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-10-keyword.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-10-keyword.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-11-operation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-11-operation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-11-operation.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-11-operation.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-12-quoted.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-12-quoted.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-12-quoted.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-12-quoted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-13-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-13-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-13-selector.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-13-selector.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-14-url.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-14-url.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-14-url.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-14-url.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-15-value.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-15-value.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-15-value.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-15-value.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-2-alpha.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-2-alpha.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-2-alpha.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-2-alpha.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-3-assignment.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-3-assignment.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-3-assignment.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-3-assignment.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-4-call.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-4-call.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-4-call.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-4-call.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-5-color.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-6-condition.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-6-condition.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-6-condition.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-6-condition.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-7-dimension.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-7-dimension.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-7-dimension.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-7-dimension.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-8-element.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-8-element.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-8-element.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-8-element.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-9-expression.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-9-expression.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-9-expression.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/functions-9-expression.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-malformed.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-malformed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-malformed.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-malformed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-missing.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-missing.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-missing.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-missing.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-no-semi.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-no-semi.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-subfolder1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-subfolder1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-subfolder2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/import-subfolder2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/imports/import-test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/imports/import-test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-undefined-var.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-undefined-var.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-undefined-var.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/javascript-undefined-var.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixed-mixin-definition-args-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-defined.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-defined.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-defined.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-defined.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-matched2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-visible-in-scope-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-visible-in-scope-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-visible-in-scope-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixin-not-visible-in-scope-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/mixins-guards-default-func-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiple-guards-on-css-selectors2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiply-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiply-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiply-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/multiply-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parens-error-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-curly-bracket.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-curly-bracket.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-curly-bracket.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-curly-bracket.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-media-no-block-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-bracket.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-bracket.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-bracket.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-bracket.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-parens.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-parens.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-parens.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-missing-parens.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-with-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-with-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-with-import.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/parse-error-with-import.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-missing-space.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-missing-space.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-missing-space.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-missing-space.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-non-number-argument.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-non-number-argument.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-non-number-argument.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/percentage-non-number-argument.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-asterisk-only-name.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-asterisk-only-name.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-asterisk-only-name.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-asterisk-only-name.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-ie5-hack.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-ie5-hack.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-ie5-hack.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-ie5-hack.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-in-root3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-interp-not-defined.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/property-interp-not-defined.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/recursive-variable.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/recursive-variable.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/root-func-undefined-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/single-character.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/single-character.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient4.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient4.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient4.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient5.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient5.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient5.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient6.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient6.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient6.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/svg-gradient6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/unit-function.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/unit-function.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/unit-function.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/errors/unit-function.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-chaining.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-chaining.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-clearfix.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-clearfix.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-exact.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-exact.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-media.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-nest.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-nest.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extend.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/extract-and-length.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/extract-and-length.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/filemanagerPlugin/colors.test" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/filemanagerPlugin/colors.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/filemanagerPlugin/filemanager.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/filemanagerPlugin/filemanager.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/functions.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/functions.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/extended.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/extended.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/extended.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/extended.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/simple.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/simple.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/simple.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/globalVars/simple.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/ie-filters.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/ie-filters.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-inline.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-inline.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-interpolation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-interpolation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-once.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-once.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/appender-reference-1968.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/appender-reference-1968.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/global-scope-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/global-scope-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/global-scope-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/global-scope-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/mixin-1968.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/mixin-1968.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/multiple-import-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/multiple-import-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/multiple-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/multiple-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/simple-mixin.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/simple-mixin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/simple-ruleset-2162.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference-issues/simple-ruleset-2162.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import-reference.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/css-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/css-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/deeper/deeper-2/url-import-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/deeper/deeper-2/url-import-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-and-relative-paths-test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-and-relative-paths-test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-interpolation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-interpolation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-interpolation2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-interpolation2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-once-test-c.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-once-test-c.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-reference.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-reference.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-a.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-a.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-b.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-b.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-c.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-c.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-d.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-d.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-e.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-e.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-f.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/import-test-f.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/imports/font.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/imports/font.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/imports/logo.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/imports/logo.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/interpolation-vars.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/interpolation-vars.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/import/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/include-path-string/include-path-string.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/include-path-string/include-path-string.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/include-path/include-path.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/include-path/include-path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/javascript.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/javascript.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/lazy-eval.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/lazy-eval.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/legacy/legacy.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/legacy/legacy.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/media.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/merge.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/merge.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-args.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-args.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-closure.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-closure.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-guards-default-func.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-guards-default-func.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-important.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-important.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-interpolated.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-interpolated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-named-args.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-named-args.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-pattern.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins-pattern.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/modifyVars/extended.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/modifyVars/extended.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/modifyVars/extended.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/modifyVars/extended.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/nested-gradient-with-svg-gradient/mixin-consumer.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/nested-gradient-with-svg-gradient/mixin-consumer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-js-errors/no-js-errors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-js-errors/no-js-errors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-js-errors/no-js-errors.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-js-errors/no-js-errors.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-output.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-output.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-strict-math/mixins-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-strict-math/mixins-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-strict-math/no-sm-operations.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/no-strict-math/no-sm-operations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/operations.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/operations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/parens.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/parens.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-global.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-local.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-local.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-transitive.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-transitive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-transitive.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-transitive.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-tree-nodes.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/plugin/plugin-tree-nodes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/postProcessorPlugin/postProcessor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/postProcessorPlugin/postProcessor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/preProcessorPlugin/preProcessor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/preProcessorPlugin/preProcessor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/property-name-interp.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/property-name-interp.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/rulesets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/rulesets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/scope.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/scope.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/selectors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/selectors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/basic.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/basic.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/basic.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/basic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/imported.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/sourcemaps/imported.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/static-urls/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/static-urls/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/strict-units/strict-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/strict-units/strict-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/strings.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/strings.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/url-args/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/url-args/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/variables-in-at-rules.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/variables-in-at-rules.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/variables.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/visitorPlugin/visitor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/visitorPlugin/visitor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-bom/whitespace.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less-bom/whitespace.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less-test.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less-test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/charsets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/charsets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/colors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/colors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/comments.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/comments.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/comments2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/comments2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/compression/compression.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/compression/compression.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/css-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/css-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/css-escapes.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/css-escapes.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/css-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/css-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/css.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/css.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/debug/import/test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/debug/import/test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/debug/linenumbers.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/debug/linenumbers.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/detached-rulesets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/detached-rulesets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/directives-bubling.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/directives-bubling.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/add-mixed-units2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/at-rules-undefined-var.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/at-rules-undefined-var.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/at-rules-undefined-var.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/at-rules-undefined-var.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/bad-variable-declaration1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/bad-variable-declaration1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-func-invalid-color.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-func-invalid-color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-func-invalid-color.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-func-invalid-color.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/color-invalid-hex-code2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/css-guard-default-func.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/css-guard-default-func.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/css-guard-default-func.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/css-guard-default-func.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-5.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-5.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-5.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-6.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-6.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-6.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/detached-ruleset-6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/divide-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/divide-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/divide-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/divide-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-no-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-no-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-no-selector.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-no-selector.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-not-at-end.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-not-at-end.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-not-at-end.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/extend-not-at-end.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-10-keyword.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-10-keyword.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-10-keyword.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-10-keyword.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-11-operation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-11-operation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-11-operation.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-11-operation.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-12-quoted.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-12-quoted.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-12-quoted.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-12-quoted.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-13-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-13-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-13-selector.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-13-selector.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-14-url.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-14-url.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-14-url.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-14-url.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-15-value.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-15-value.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-15-value.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-15-value.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-2-alpha.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-2-alpha.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-2-alpha.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-2-alpha.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-3-assignment.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-3-assignment.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-3-assignment.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-3-assignment.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-4-call.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-4-call.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-4-call.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-4-call.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-5-color.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-6-condition.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-6-condition.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-6-condition.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-6-condition.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-7-dimension.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-7-dimension.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-7-dimension.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-7-dimension.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-8-element.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-8-element.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-8-element.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-8-element.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-9-expression.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-9-expression.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-9-expression.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/functions-9-expression.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-malformed.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-malformed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-malformed.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-malformed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-missing.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-missing.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-missing.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-missing.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-no-semi.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-no-semi.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-subfolder1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-subfolder1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-subfolder2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/import-subfolder2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/imports/import-test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/imports/import-test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-error.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-error.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-error.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-error.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-undefined-var.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-undefined-var.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-undefined-var.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/javascript-undefined-var.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixed-mixin-definition-args-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-defined.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-defined.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-defined.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-defined.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-matched2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-visible-in-scope-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-visible-in-scope-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-visible-in-scope-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixin-not-visible-in-scope-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/mixins-guards-default-func-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiple-guards-on-css-selectors2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiply-mixed-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiply-mixed-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiply-mixed-units.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/multiply-mixed-units.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parens-error-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-curly-bracket.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-curly-bracket.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-curly-bracket.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-curly-bracket.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-media-no-block-3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-bracket.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-bracket.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-bracket.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-bracket.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-parens.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-parens.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-parens.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-missing-parens.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-with-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-with-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-with-import.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/parse-error-with-import.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-missing-space.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-missing-space.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-missing-space.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-missing-space.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-non-number-argument.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-non-number-argument.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-non-number-argument.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/percentage-non-number-argument.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-asterisk-only-name.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-asterisk-only-name.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-asterisk-only-name.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-asterisk-only-name.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-ie5-hack.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-ie5-hack.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-ie5-hack.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-ie5-hack.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-in-root3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-interp-not-defined.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/property-interp-not-defined.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/recursive-variable.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/recursive-variable.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/root-func-undefined-2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/single-character.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/single-character.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient1.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient1.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient1.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient2.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient3.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient3.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient3.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient4.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient4.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient4.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient5.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient5.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient5.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient6.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient6.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient6.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/svg-gradient6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/unit-function.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/unit-function.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/errors/unit-function.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/errors/unit-function.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-chaining.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-chaining.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-clearfix.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-clearfix.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-exact.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-exact.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-media.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-nest.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-nest.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend-selector.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend-selector.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extend.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extend.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/extract-and-length.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/extract-and-length.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/filemanagerPlugin/colors.test" afterPath="$PROJECT_DIR$/node_modules/less/test/less/filemanagerPlugin/colors.test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/filemanagerPlugin/filemanager.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/filemanagerPlugin/filemanager.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/functions.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/functions.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/extended.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/extended.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/extended.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/extended.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/simple.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/simple.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/simple.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/globalVars/simple.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/ie-filters.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/ie-filters.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-inline.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-inline.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-interpolation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-interpolation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-once.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-once.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/appender-reference-1968.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/appender-reference-1968.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/global-scope-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/global-scope-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/global-scope-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/global-scope-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/mixin-1968.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/mixin-1968.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/multiple-import-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/multiple-import-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/multiple-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/multiple-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/simple-mixin.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/simple-mixin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/simple-ruleset-2162.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference-issues/simple-ruleset-2162.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import-reference.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import-reference.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/css-import.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/css-import.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/deeper/deeper-2/url-import-2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/deeper/deeper-2/url-import-2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-and-relative-paths-test.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-and-relative-paths-test.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-interpolation.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-interpolation.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-interpolation2.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-interpolation2.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-once-test-c.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-once-test-c.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-reference.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-reference.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-a.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-a.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-b.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-b.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-c.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-c.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-d.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-d.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-e.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-e.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-f.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/import-test-f.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/imports/font.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/imports/font.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/imports/logo.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/imports/logo.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/interpolation-vars.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/interpolation-vars.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/import/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/import/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/include-path-string/include-path-string.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/include-path-string/include-path-string.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/include-path/include-path.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/include-path/include-path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/javascript.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/javascript.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/lazy-eval.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/lazy-eval.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/legacy/legacy.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/legacy/legacy.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/media.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/merge.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/merge.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-args.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-args.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-closure.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-closure.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-guards-default-func.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-guards-default-func.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-important.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-important.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-interpolated.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-interpolated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-named-args.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-named-args.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-nested.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-nested.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins-pattern.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins-pattern.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/mixins.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/modifyVars/extended.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less/modifyVars/extended.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/modifyVars/extended.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/modifyVars/extended.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/nested-gradient-with-svg-gradient/mixin-consumer.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/nested-gradient-with-svg-gradient/mixin-consumer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/nested-gradient-with-svg-gradient/svg-gradient-mixin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/no-js-errors/no-js-errors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/no-js-errors/no-js-errors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/no-js-errors/no-js-errors.txt" afterPath="$PROJECT_DIR$/node_modules/less/test/less/no-js-errors/no-js-errors.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/no-output.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/no-output.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/no-strict-math/mixins-guards.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/no-strict-math/mixins-guards.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/no-strict-math/no-sm-operations.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/no-strict-math/no-sm-operations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/operations.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/operations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/parens.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/parens.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-global.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-local.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-local.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-transitive.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-transitive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-transitive.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-transitive.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-tree-nodes.js" afterPath="$PROJECT_DIR$/node_modules/less/test/less/plugin/plugin-tree-nodes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/postProcessorPlugin/postProcessor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/postProcessorPlugin/postProcessor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/preProcessorPlugin/preProcessor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/preProcessorPlugin/preProcessor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/property-name-interp.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/property-name-interp.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/rulesets.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/rulesets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/scope.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/scope.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/selectors.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/selectors.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/basic.json" afterPath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/basic.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/basic.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/basic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/imported.css" afterPath="$PROJECT_DIR$/node_modules/less/test/less/sourcemaps/imported.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/static-urls/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/static-urls/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/strict-units/strict-units.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/strict-units/strict-units.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/strings.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/strings.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/url-args/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/url-args/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/urls.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/urls.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/variables-in-at-rules.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/variables-in-at-rules.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/variables.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/visitorPlugin/visitor.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/visitorPlugin/visitor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/less/whitespace.less" afterPath="$PROJECT_DIR$/node_modules/less/test/less/whitespace.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/modify-vars.js" afterPath="$PROJECT_DIR$/node_modules/less/test/modify-vars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/plugins/filemanager/index.js" afterPath="$PROJECT_DIR$/node_modules/less/test/plugins/filemanager/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/plugins/postprocess/index.js" afterPath="$PROJECT_DIR$/node_modules/less/test/plugins/postprocess/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/plugins/preprocess/index.js" afterPath="$PROJECT_DIR$/node_modules/less/test/plugins/preprocess/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/plugins/visitor/index.js" afterPath="$PROJECT_DIR$/node_modules/less/test/plugins/visitor/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/rhino/test-header.js" afterPath="$PROJECT_DIR$/node_modules/less/test/rhino/test-header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/less/test/sourcemaps/index.html" afterPath="$PROJECT_DIR$/node_modules/less/test/sourcemaps/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/sourceMap.map" afterPath="$PROJECT_DIR$/src/build/sourceMap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Binder-compiled.js" afterPath="$PROJECT_DIR$/src/js-compiled/Binder-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Binder-compiled.js.map" afterPath="$PROJECT_DIR$/src/js-compiled/Binder-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Binder.js" afterPath="$PROJECT_DIR$/src/js/Binder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Router.js" afterPath="$PROJECT_DIR$/src/js/Router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/script.js" afterPath="$PROJECT_DIR$/src/js/script.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,51 +846,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reports.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="170">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DailyTasks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/taskList/DailyTasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DayReport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MonthReport.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
+      <file leaf-file-name="Timer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/timer/Timer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/Router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,9 +888,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ini</find>
-      <find>modalWindowElements</find>
-      <find>init</find>
       <find>addActiveClassSelector</find>
       <find>INIT</find>
       <find>input</find>
@@ -112,9 +904,7 @@
       <find>Bi</find>
       <find>DOMElementsInitializer</find>
       <find>GROUP</find>
-      <find>alert</find>
       <find>createCategoryGroup</find>
-      <find>conso</find>
       <find>chartCategories</find>
       <find>consol</find>
       <find>day</find>
@@ -123,6 +913,11 @@
       <find>m</find>
       <find>receiveDurationOfTimer</find>
       <find>counter</find>
+      <find>conso</find>
+      <find>prev</find>
+      <find>arrow</find>
+      <find>ale</find>
+      <find>alert</find>
     </findStrings>
     <replaceStrings>
       <replace>light_azure</replace>
@@ -144,9 +939,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
-        <option value="$PROJECT_DIR$/assets/plugins/accordion-plugin/accordion-plugin.js" />
-        <option value="$PROJECT_DIR$/assets/less/modal-window.less" />
         <option value="$PROJECT_DIR$/src/js/Notification-Manager.js" />
         <option value="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
         <option value="$PROJECT_DIR$/assets/less/notifications.less" />
@@ -160,12 +952,10 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/notifications/bottom-notifications.html" />
         <option value="$PROJECT_DIR$/assets/plugins/tooltip-plugin/tooltip-plugin.js" />
-        <option value="$PROJECT_DIR$/src/js/Binder.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/notifications/Task-Notification.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/components/taskList/Selection-Manager.js" />
         <option value="$PROJECT_DIR$/assets/less/common.less" />
-        <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
         <option value="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
         <option value="$PROJECT_DIR$/app/components/registration-form/registration-form.html" />
         <option value="$PROJECT_DIR$/assets/less/login.less" />
@@ -184,17 +974,22 @@
         <option value="$PROJECT_DIR$/app/components/reports/WeekReport.js" />
         <option value="$PROJECT_DIR$/app/components/reports/DayReport.js" />
         <option value="$PROJECT_DIR$/assets/less/task.less" />
-        <option value="$PROJECT_DIR$/src/js/Router.js" />
         <option value="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
-        <option value="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
-        <option value="$PROJECT_DIR$/src/js/script.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" />
         <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
-        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
         <option value="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/timer.html" />
+        <option value="$PROJECT_DIR$/assets/less/timer.less" />
+        <option value="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
+        <option value="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
+        <option value="$PROJECT_DIR$/src/js/Binder.js" />
+        <option value="$PROJECT_DIR$/src/js/script.js" />
+        <option value="$PROJECT_DIR$/src/js/Router.js" />
       </list>
     </option>
   </component>
@@ -258,7 +1053,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,7 +1093,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reports" />
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,12 +1248,12 @@
       <workItem from="1486490245276" duration="689000" />
       <workItem from="1486495267292" duration="3221000" />
       <workItem from="1486543929973" duration="4717000" />
-      <workItem from="1486548708745" duration="15547000" />
+      <workItem from="1486548708745" duration="18690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254508000" />
+    <option name="totallyTimeSpent" value="257651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -473,34 +1290,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/less/cycle.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/plugins/dialog-plugin/dialog-plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/task-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/notifications/bottom-notifications.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -629,14 +1418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="207" column="26" lean-forward="false" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/settings/Cycle/CycleModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -689,26 +1470,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/Timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -721,22 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="42" column="62" lean-forward="true" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskDeletor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -745,34 +1494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/Binder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/login/UserValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="12" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -801,18 +1526,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/DailyTasks.js">
+    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="175">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -833,18 +1550,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/DailyTasks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
+    <entry file="file://$PROJECT_DIR$/assets/less/timer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="230" column="9" lean-forward="false" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/timer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-458">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/login/UserValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="42" column="62" lean-forward="true" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Binder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/Timer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>

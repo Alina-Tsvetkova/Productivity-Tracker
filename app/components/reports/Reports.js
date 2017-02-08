@@ -7,6 +7,7 @@ class Reports {
     }
 
     static downloadReports() {
+        Router.addHash("reports");
         let reportsBinder = new Binder('app/components/reports/reports.html');
         let reportsDoc = reportsBinder.downloadComponent();
         document.body.innerHTML = '';

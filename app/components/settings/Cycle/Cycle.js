@@ -8,16 +8,18 @@ class Cycle {
 
     renderSavedCycleSettings() {
         let userId = localStorage.getItem('currentUser');
-        let i = 0;
-        let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
-        cycleReceiver.on('value', function (data) {
-            document.getElementsByClassName('counter-long-time')[0].value = data.val().longBreak + " min";
-            document.getElementsByClassName('counter-short-break')[0].value = data.val().shortBreak + " min";
-            document.getElementsByClassName('counter-work-iteration')[0].value = data.val().workIteration;
-            document.getElementsByClassName('counter-work-time')[0].value = data.val().workTime + " min";
-            myCycle.getDataForCycle();
-        });
-
+        try {
+            let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
+            cycleReceiver.on('value', function (data) {
+                document.getElementsByClassName('counter-long-time')[0].value = data.val().longBreak + " min";
+                document.getElementsByClassName('counter-short-break')[0].value = data.val().shortBreak + " min";
+                document.getElementsByClassName('counter-work-iteration')[0].value = data.val().workIteration;
+                document.getElementsByClassName('counter-work-time')[0].value = data.val().workTime + " min";
+                myCycle.getDataForCycle();
+            });
+        } catch (e) {
+            return 'element is already remove from DOM';
+        }
     }
 
     getDataForCycle() { // this function is needful to transfer data from document inputs to cycle object

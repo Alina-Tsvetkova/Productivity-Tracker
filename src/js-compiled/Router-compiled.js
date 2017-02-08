@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -10,29 +10,44 @@ var Router = function () {
     }
 
     _createClass(Router, null, [{
-        key: 'listenToHashChanges',
-        value: function listenToHashChanges() {}
+        key: "listenToHashChanges",
+        value: function listenToHashChanges() {
+            $(window).on('popstate', function (e) {
+                if (window.location.hash == "#reports") {
+                    Reports.downloadReports();
+                } else if (window.location.hash == "#settings-cycle") {
+                    var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
+                    settingsBinder.downloadComponent();
+                    Settings.downloadSettings();
+                }
+            });
+        }
     }, {
-        key: 'addHash',
+        key: "addHash",
         value: function addHash(hash) {
             window.location.hash = hash;
         }
     }, {
-        key: 'iconLinksBinder',
+        key: "iconLinksBinder",
         value: function iconLinksBinder() {
             ElementsListener.listenToEvents('click', document.getElementsByClassName('settings-switcher'), function () {
                 var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
                 settingsBinder.downloadComponent();
                 Settings.downloadSettings();
+                Router.listenToHashChanges();
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('tasks-list-icon'), function () {
                 counterOfTasks = 0;
                 TaskList.moveToTaskList();
+                Router.listenToHashChanges();
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
                 loggedUser.logOutWrapper();
             });
-            ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), function () {
+                Reports.downloadReports();
+                Router.listenToHashChanges();
+            });
         }
     }]);
 
