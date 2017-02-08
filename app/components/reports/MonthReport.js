@@ -23,8 +23,8 @@ class MonthReport {
     }
 
     receiveReportsData() {
-        let reportsData = firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports');
-        reportsData.on("value", function (snapshot) {
+        let quantityOfAllTasks = 0;
+        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports').on("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -32,6 +32,21 @@ class MonthReport {
                     for (let j in childData) {
                         if (j == monthChartData.chartData[i].name) {
                             monthChartData.chartData[i].data = childData[j];
+                        }
+                    }
+                    for (let k in childData) {
+                        for (let i = 0; i < childData[k].length; i++) {
+                            quantityOfAllTasks += childData[k][i];
+                        }
+                    }
+                    if (quantityOfAllTasks == 0) {
+                        try {
+                            document.getElementsByClassName('charts')[0].classList.add('non-visible-elem');
+                            document.getElementsByClassName('gap-variants')[0].classList.add('non-visible-elem');
+                            document.getElementsByClassName('tabs-reports')[0].classList.add('non-visible-elem');
+                            document.getElementsByClassName('no-reports-info-wrapper')[0].style.display = 'block';
+                        } catch (e) {
+                            return "element is already removed";
                         }
                     }
                 }
@@ -50,7 +65,6 @@ class MonthReport {
                 monthChartData.countPositionFromToday(finishDate, priority);
             });
         });
-
 
         firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo("failed").once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
@@ -126,7 +140,6 @@ let monthChartData = new MonthReport('container-month-report', [{
     ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
         '25', '26', '27', '28', '29', '30', '31'
     ], 10);
-
 
 
 monthChartData.initializeMonthCounter();

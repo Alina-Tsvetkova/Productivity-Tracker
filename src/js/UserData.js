@@ -5,6 +5,22 @@ class UserData {
     }
 
     writeUserData() {
+
+        let monthAndCounterBinding = {
+            'Urgent': new Array(30),
+            'Middle': new Array(30),
+            'High': new Array(30),
+            'Low': new Array(30),
+            'Failed': new Array(30)
+        };
+
+
+        for (let key in monthAndCounterBinding) {
+            for (let l = 0; l <= 30; l++) {
+                monthAndCounterBinding[key][l] = 0;
+            }
+        }
+
         firebase.database().ref('users/' + this.userId).set({
             username: this.email,
             categories: ['Work', 'Education', 'Hobby', 'Sport', 'Other'],
@@ -14,14 +30,8 @@ class UserData {
                 "shortBreak": 5,
                 "longBreak": 45
             },
-            reports: {
-                "Urgent": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                "High": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                "Middle": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                "Low": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                "Other": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                "Failed": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-            }
+            reports: monthAndCounterBinding,
+            pomodoros: monthAndCounterBinding
         });
     }
 

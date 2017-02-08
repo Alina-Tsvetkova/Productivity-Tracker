@@ -6,7 +6,6 @@ let timerAttempts;
 
 class Timer {
     static showTimer(taskKey) {
-        Router.addHash("timer");
         timerKey = taskKey;
         let timerBinder = new Binder('app/components/timer/timer.html', document.body);
         timerBinder.downloadComponent();
