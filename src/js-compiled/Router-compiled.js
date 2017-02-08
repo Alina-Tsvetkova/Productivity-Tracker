@@ -19,6 +19,10 @@ var Router = function () {
                     var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
                     settingsBinder.downloadComponent();
                     Settings.downloadSettings();
+                } else if (window.location.hash == "#task-list") {
+                    counterOfTasks = 0;
+                    TaskList.moveToTaskList();
+                    Router.listenToHashChanges();
                 }
             });
         }
@@ -31,22 +35,22 @@ var Router = function () {
         key: "iconLinksBinder",
         value: function iconLinksBinder() {
             ElementsListener.listenToEvents('click', document.getElementsByClassName('settings-switcher'), function () {
-                var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
-                settingsBinder.downloadComponent();
-                Settings.downloadSettings();
-                Router.listenToHashChanges();
+                Router.addHash("settings-cycle");
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('tasks-list-icon'), function () {
-                counterOfTasks = 0;
-                TaskList.moveToTaskList();
-                Router.listenToHashChanges();
+                Router.addHash("task-list");
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('log-out'), function () {
                 loggedUser.logOutWrapper();
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), function () {
-                Reports.downloadReports();
-                Router.listenToHashChanges();
+                Router.addHash("reports");
+            });
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('prev-btn'), function () {
+                Router.addHash("task-list");
+            });
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('next-arrow'), function () {
+                Router.addHash("reports");
             });
         }
     }]);

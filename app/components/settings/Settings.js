@@ -6,7 +6,6 @@ class Settings {
             counterOfTasks = 0;
             TaskList.moveToTaskList();
         });
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('settings-switcher'), Settings.downloadSettings);
 
         ElementsListener.listenToEvents('click', document.getElementsByClassName('increment'), function (event) {
             let target = event.target.parentNode;
@@ -20,7 +19,6 @@ class Settings {
             myCycle.changeCycleData(target);
         });
 
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('pomodoros-var'), Settings.downloadSettings);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
         DOMElementsInitializer = Settings.settingsObj;
         CategoriesView.renderEarlierSavedCategories();

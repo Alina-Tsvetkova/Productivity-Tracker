@@ -16,8 +16,6 @@ class Timer {
         let receivedDocIntroTimer = timerIntroBinder.downloadComponent();
         document.getElementsByClassName('timer-content')[0].appendChild(receivedDocIntroTimer.getElementById('intro-timer'));
         ElementsListener.listenToEvents('click', document.getElementsByClassName('start-timer'), timer.startTimer);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('prev-btn'), TaskList.moveToTaskList);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('next-arrow'), Reports.downloadReports);
         timer.initializeTimerElements();
         timer.addTaskInformation(timerKey);
         Router.iconLinksBinder();
