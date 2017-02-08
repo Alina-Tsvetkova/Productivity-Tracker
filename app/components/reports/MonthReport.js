@@ -1,12 +1,10 @@
 let monthAndCounterBinding = {
-    'Urgent': 0,
-    'Middle': 0,
-    'High': 0,
-    'Low': 0,
-    'Failed': 0
+    'Urgent': new Array(30),
+    'Middle': new Array(30),
+    'High': new Array(30),
+    'Low': new Array(30),
+    'Failed': new Array(30)
 };
-
-let counterIterations = 0;
 
 class MonthReport {
     constructor(id, chartData, chartCategories, columnWidth) {
@@ -14,6 +12,15 @@ class MonthReport {
         this.chartData = chartData;
         this.chartCategories = chartCategories;
         this.columnWidth = columnWidth;
+    }
+
+    initializeMonthCounter() {
+        for (let key in monthAndCounterBinding) {
+            for (let l = 0; l <= 30; l++) {
+                console.log(monthAndCounterBinding[key].length);
+                monthAndCounterBinding[key][l] = 0;
+            }
+        }
     }
 
     receiveReportsData() {
@@ -64,35 +71,36 @@ class MonthReport {
         let indexReport;
         if (parsedDate - parsedFinishedDate == 0) {
             indexReport = 30;
-            for (let key in monthAndCounterBinding) {
-                if (priority == key) {
-                    monthAndCounterBinding[key]++;
-                    monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key], priority);
+
+            try {
+                for (let key in monthAndCounterBinding) {
+                    if (priority == key) {
+                        monthAndCounterBinding[key][indexReport]++;
+                        monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
+                    }
                 }
+            } catch (e) {
+                return "can not create property";
             }
         }
         else {
             let difference = parsedDate - parsedFinishedDate;
             if (difference < 0) {
-                difference = 31 + difference;
+                difference = 31 + difference + 1;
             }
             indexReport = 30 - difference;
-
-            for (let key in monthAndCounterBinding) {
-                if (priority == key) {
-                    monthAndCounterBinding[key]++;
-                    monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key], priority);
+            console.log(monthAndCounterBinding);
+            try {
+                for (let key in monthAndCounterBinding) {
+                    if (priority == key) {
+                        monthAndCounterBinding[key][indexReport]++;
+                        monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
+                    }
                 }
+            } catch (e) {
+                return "can not create property";
             }
 
-            console.log(finishDate);
-            // if (indexReport != 30) {
-            //     counterIterations++;
-            //         for (let key in monthAndCounterBinding) {
-            //             monthAndCounterBinding[key] = 0;
-            //         }
-            //     console.log(counterIterations);
-            // }
         }
     }
 
@@ -121,5 +129,8 @@ let monthChartData = new MonthReport('container-month-report', [{
         '25', '26', '27', '28', '29', '30', '31'
     ], 10);
 
+
+
+monthChartData.initializeMonthCounter();
 monthChartData.generateReportsData();
 monthChartData.receiveReportsData();

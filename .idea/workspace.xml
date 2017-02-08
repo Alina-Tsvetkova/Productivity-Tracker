@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/DayReport.js" afterPath="$PROJECT_DIR$/app/components/reports/DayReport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/MonthReport.js" afterPath="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/Reports.js" afterPath="$PROJECT_DIR$/app/components/reports/Reports.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/WeekReport.js" afterPath="$PROJECT_DIR$/app/components/reports/WeekReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" afterPath="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/FinishPhase.js" afterPath="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/task.less" afterPath="$PROJECT_DIR$/assets/less/task.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/all.min.js" afterPath="$PROJECT_DIR$/src/build/all.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/sourceMap.map" afterPath="$PROJECT_DIR$/src/build/sourceMap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Router.js" afterPath="$PROJECT_DIR$/src/js/Router.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +34,8 @@
       <file leaf-file-name="Reports.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="34">
+              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -74,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DayReport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DayReport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -84,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonthReport.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MonthReport.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+            <state relative-caret-position="136">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -205,9 +192,9 @@
         <option value="$PROJECT_DIR$/src/js/script.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" />
         <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
-        <option value="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
-        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
       </list>
     </option>
   </component>
@@ -271,6 +258,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -321,19 +322,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\REPOSITORY\Productivity-Tracker\src\js" />
-      <recent name="E:\REPOSITORY\Productivity-Tracker\assets\js" />
-      <recent name="E:\REPOSITORY\Productivity-Tracker" />
-      <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\timer" />
-      <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\settings\Categories" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\REPOSITORY\Productivity-Tracker\src\js" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\assets\img" />
       <recent name="E:\REPOSITORY\Productivity-Tracker" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\assets\plugins" />
       <recent name="E:\REPOSITORY\Productivity-Tracker\app\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\REPOSITORY\Productivity-Tracker\src\js" />
+      <recent name="E:\REPOSITORY\Productivity-Tracker\assets\js" />
+      <recent name="E:\REPOSITORY\Productivity-Tracker" />
+      <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\timer" />
+      <recent name="E:\REPOSITORY\Productivity-Tracker\app\components\settings\Categories" />
     </key>
   </component>
   <component name="RunManager">
@@ -430,12 +431,12 @@
       <workItem from="1486490245276" duration="689000" />
       <workItem from="1486495267292" duration="3221000" />
       <workItem from="1486543929973" duration="4717000" />
-      <workItem from="1486548708745" duration="11103000" />
+      <workItem from="1486548708745" duration="15547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250064000" />
+    <option name="totallyTimeSpent" value="254508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -808,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="53" column="55" lean-forward="false" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -824,10 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
+    <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="272">
+          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -840,10 +833,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
+    <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+        <state relative-caret-position="34">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>

@@ -1,11 +1,7 @@
 class Reports {
 
     clearReportsStatistics(){
-        monthAndCounterBinding['Urgent'] = 0;
-        monthAndCounterBinding['Middle'] = 0;
-        monthAndCounterBinding['High'] = 0;
-        monthAndCounterBinding['Low'] = 0;
-        monthAndCounterBinding['Failed'] = 0;
+        monthChartData.initializeMonthCounter();
         monthChartData.generateReportsData();
         monthChartData.receiveReportsData();
     }
