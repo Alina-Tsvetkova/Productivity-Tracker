@@ -1,3 +1,13 @@
+let monthAndCounterBinding = {
+    'Urgent': 0,
+    'Middle': 0,
+    'High': 0,
+    'Low': 0,
+    'Failed': 0
+};
+
+let counterIterations = 0;
+
 class MonthReport {
     constructor(id, chartData, chartCategories, columnWidth) {
         this.id = id;
@@ -16,7 +26,6 @@ class MonthReport {
                     for (let j in childData) {
                         if (j == monthChartData.chartData[i].name) {
                             monthChartData.chartData[i].data = childData[j];
-                            console.log(monthChartData.chartData[i].data);
                         }
                     }
                 }
@@ -35,27 +44,60 @@ class MonthReport {
                 monthChartData.countPositionFromToday(finishDate, priority);
             });
         });
+
+
+        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo("failed").once("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childData = snapshot.val();
+                let key = childSnapshot.key;
+                let finishDate = childData[key].dateOfFinish;
+                let priority = childData[key].priority;
+                monthChartData.countPositionFromToday(finishDate, priority);
+            });
+        });
     }
 
     countPositionFromToday(finishDate, priority) {
-        let reportsData = firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports');
-        reportsData.on("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let reportsKey = childSnapshot.key;
-                let dataArr = childData[reportsKey][priority]; //array by priority
-                let today = productivityManager.addDefaultData(); // i.e 7.2.2017
-                // let lastDay = dataArr.length;
-                // let lastDayData = dataArr[[lastDay] - 1];
-                // let counter = 0;
-                // if (today == finishDate) {
-                //     console.log('equal dates', dataArr[[dataArr.length] - 1]);
-                // }
-                // firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports/' + reportsKey + '/' + priority).update({
-                //     [lastDay]: lastDayData
-                // });
-            })
-        });
+        let today = productivityManager.addDefaultData(); // i.e 7.2.2017
+        let parsedDate = today.split('.')[0];
+        let parsedFinishedDate = finishDate.split('.')[0];
+        let indexReport;
+        if (parsedDate - parsedFinishedDate == 0) {
+            indexReport = 30;
+            for (let key in monthAndCounterBinding) {
+                if (priority == key) {
+                    monthAndCounterBinding[key]++;
+                    monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key], priority);
+                }
+            }
+        }
+        else {
+            let difference = parsedDate - parsedFinishedDate;
+            if (difference < 0) {
+                difference = 31 + difference;
+            }
+            indexReport = 30 - difference;
+
+            for (let key in monthAndCounterBinding) {
+                if (priority == key) {
+                    monthAndCounterBinding[key]++;
+                    monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key], priority);
+                }
+            }
+
+            console.log(finishDate);
+            // if (indexReport != 30) {
+            //     counterIterations++;
+            //         for (let key in monthAndCounterBinding) {
+            //             monthAndCounterBinding[key] = 0;
+            //         }
+            //     console.log(counterIterations);
+            // }
+        }
+    }
+
+    sendUpdatedReportsData(indexReport, counterReports, priority) {
+        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports/' + priority + '/' + indexReport).set(counterReports);
     }
 }
 

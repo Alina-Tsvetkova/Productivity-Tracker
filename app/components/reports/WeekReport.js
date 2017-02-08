@@ -1,9 +1,10 @@
 let k = 0;
 
 class WeekReport {
-    constructor(id, chartData, columnWidth) {
+    constructor(id, chartData,chartCategories, columnWidth) {
         this.id = id;
         this.chartData = chartData;
+        this.chartCategories = chartCategories;
         this.columnWidth = columnWidth;
     }
 
@@ -14,7 +15,7 @@ class WeekReport {
             objWeekData.data = []; // clean array if click one more time
             let lastDayData = objMonthData.data.length;
             objWeekData.name = objMonthData.name;
-            for (let k = lastDayData - 5; k < lastDayData; k++) {
+            for (let k = lastDayData - 7; k <= lastDayData; k++) {
                 objWeekData.data.push(objMonthData.data[k]);
             }
         }
@@ -31,5 +32,5 @@ let weekChartData = new WeekReport('container-week-report', [{
     stack: 'made'
 }, {
     stack: 'failed'
-}], 27);
+}],['1', '2', '3', '4', '5', '6', '7'], 27);
 

@@ -11,9 +11,7 @@ var Router = function () {
 
     _createClass(Router, null, [{
         key: 'listenToHashChanges',
-        value: function listenToHashChanges() {
-            if (window.location.hash === '#settings-cycle') {}
-        }
+        value: function listenToHashChanges() {}
     }, {
         key: 'addHash',
         value: function addHash(hash) {

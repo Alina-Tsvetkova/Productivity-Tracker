@@ -4,6 +4,7 @@ let notificationCounter = 0;
 class TaskRenderer extends TaskManager {
 
     clearContainers() {
+        reports.clearReportsStatistics();
         document.getElementById('globalTasks').innerHTML = '';
         document.getElementById('daily-tasks').innerHTML = '';
         document.getElementById('tab2').innerHTML = '';
@@ -60,7 +61,6 @@ class TaskRenderer extends TaskManager {
         else if (bool) {
             renderedTask = data;
         }
-
         let thisCategory = renderedTask.category;
         TaskRenderer.createCategoryGroup(thisCategory, docTask, renderedTask.colorIndicator, renderedTask, dataKey);
 
@@ -77,14 +77,10 @@ class TaskRenderer extends TaskManager {
                     taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
                     descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
                     let splitedArray = renderedTask.deadline.split('.');
-                    $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
-                    let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-                    let todayMonth = splitedArray[1];
-                    for (let k = 0; k < allMonths.length; k++) {
-                        if (todayMonth == k) {
-                            todayMonth = allMonths[k - 1];
-                        }
-                    }
+
+                    tasksRenderer.trimDateDeadline(splitedArray);
+                    let todayMonth = tasksRenderer.generateWordMonth(splitedArray);
+
                     monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
                     priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                     $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
@@ -107,7 +103,6 @@ class TaskRenderer extends TaskManager {
             }(dataKey));
         }, 100);
 
-
         ElementsListener.listenToEvents('click', document.getElementsByClassName('edit'), TaskList.getIndexOfTask);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('move-task'), TaskList.getIndexOfMovableTasks);
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
@@ -121,6 +116,27 @@ class TaskRenderer extends TaskManager {
             }
             Timer.showTimer(taskKey);
         });
+    }
+
+    trimDateDeadline(splitedArray) {
+        let zeroDelete = splitedArray[0].split('');
+        if (zeroDelete[0] == 0) {
+            $('.dayDeadline')[counterOfTasks].innerHTML = zeroDelete[1];
+        }
+        else {
+            $('.dayDeadline')[counterOfTasks].innerHTML = splitedArray[0];
+        }
+    }
+
+    generateWordMonth(splitedArray) {
+        let allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let todayMonth = splitedArray[1];
+        for (let k = 0; k < allMonths.length; k++) {
+            if (todayMonth == k) {
+                todayMonth = allMonths[k - 1];
+            }
+        }
+        return todayMonth;
     }
 
     static createCategoryGroup(category, docTask, indicator, renderedTask) {

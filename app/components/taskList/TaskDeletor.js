@@ -55,7 +55,6 @@ class TaskDeletor extends TaskManager {
     }
 
     checkIfToDeleteTasks() {
-        alert('delete them');
         if (document.querySelector('.quantity-del-tasks').innerHTML > 0) {
             let deleteTaskModal = $('#modal-w-remove');
             deleteTaskModal.dialogSwitcher('show');

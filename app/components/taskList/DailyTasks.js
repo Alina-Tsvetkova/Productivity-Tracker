@@ -9,10 +9,10 @@ class DailyTasks {
             dailyTask.restrictDailyTasks();
             return false;
         }
-        dailyTask.sendDailyTaskData(key,productivityManager.addDefaultData());
+        dailyTask.sendDailyTaskData(key, productivityManager.addDefaultData());
     }
 
-    sendDailyTaskData(key,date) {
+    sendDailyTaskData(key, date) {
         console.log(key);
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key).update({
             taskIsDone: "pending",

@@ -49,7 +49,8 @@ class FinishPhase {
         let today = finishPhase.receiveDateOfTaskFinish();
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
             taskIsDone: 'failed',
-            dateOfFinish: today
+            priority: 'Failed',
+            dateOfFinish: today,
         });
     }
 
@@ -61,8 +62,8 @@ class FinishPhase {
         });
     }
 
-    receiveDateOfTaskFinish(){
-        return new Date().getDate() + '.' + parseInt(new Date().getMonth()+1) + '.' + new Date().getFullYear();
+    receiveDateOfTaskFinish() {
+        return new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
     }
 
     static removeEstimation() {

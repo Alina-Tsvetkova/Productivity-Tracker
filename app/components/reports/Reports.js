@@ -1,9 +1,21 @@
 class Reports {
+
+    clearReportsStatistics(){
+        monthAndCounterBinding['Urgent'] = 0;
+        monthAndCounterBinding['Middle'] = 0;
+        monthAndCounterBinding['High'] = 0;
+        monthAndCounterBinding['Low'] = 0;
+        monthAndCounterBinding['Failed'] = 0;
+        monthChartData.generateReportsData();
+        monthChartData.receiveReportsData();
+    }
+
     static downloadReports() {
         let reportsBinder = new Binder('app/components/reports/reports.html');
         let reportsDoc = reportsBinder.downloadComponent();
         document.body.innerHTML = '';
         document.body.appendChild(reportsDoc.getElementById('wrapper'));
+        reports.clearReportsStatistics();
         reports.downloadDefaultDayChart();
         let tooltips = $('.tooltip');
         tooltips.tooltipSwitcher();
