@@ -6,6 +6,7 @@ The application has a reports page to facilitate of analyze previous user’s re
 For data storage is used an open-source service - Firebase (https://firebase.google.com/).
 
 MAIN FEATURES
+
 1. User can sign in or sign up and log out.
 2. User can chooses necessary settings for pomodoros on page with settings-cycle. Also user can see his cycle on the graph.
 User can create own categories by click on the toggle switcher Pomodoros | Categories.
@@ -19,8 +20,8 @@ New screen appears with timer. User has ability start, break or cancel the task.
 page with the settings, or log out from the application.
 
 7.Reports – can have 3 view: Daily/Week/Month.
-  Each preview has switcher to charts based on tasks.
-  Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
-  Charts divides onto parts by priorities (urgent, high, medium, low) and number of failed tasks.
-  Weekly charts based on bar chart with same parts but in another view (see screen) and shows results based on day 1
-  Monthly chart has same view divided by last 31 days before today Date.
+Each preview has switcher to charts based on tasks.
+Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
+Charts divides onto parts by priorities (urgent, high, medium, low) and number of failed tasks.
+Weekly charts based on bar chart with same parts but in another view (see screen) and shows results based on day 1
+Monthly chart has same view divided by last 31 days before today Date.
