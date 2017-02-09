@@ -7,7 +7,7 @@ class TaskList {
         }
     }
 
-    static getIndexOfTask() {
+    static getIndexOfTask(event) {
         let allRenderedEditButtons = document.querySelectorAll('.edit');
         let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
         index = allRenderedEditButtonsArr.indexOf(event.target);
@@ -15,7 +15,7 @@ class TaskList {
         modalWindowObj.showEditModal(index, key);
     }
 
-    static getIndexOfMovableTasks() {
+    static getIndexOfMovableTasks(event) {
         let allRenderedMoveButtons = document.querySelectorAll('.move-task');
         let allRenderedMoveButtonsArr = Array.prototype.slice.call(allRenderedMoveButtons);
         index = allRenderedMoveButtonsArr.indexOf(event.target);

@@ -40,7 +40,8 @@ class Cycle {
 
     changeCycleData(target) {
         let element = DOMElementsInitializer.counters[DOMElementsInitializer.buttonsArr.indexOf(target)];
-        if (target.classList.contains('dicrement')) {
+        console.log(DOMElementsInitializer.buttonsArr, target.parentNode);
+        if (target.classList.contains('dicrement') || target.parentNode.classList.contains('dicrement')) {
             element = DOMElementsInitializer.counters[DOMElementsInitializer.buttonsArr.indexOf(target) % 4];
         }
         let modifiedElement = target.parentNode.getElementsByClassName('field')[0];

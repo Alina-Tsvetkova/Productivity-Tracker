@@ -11,12 +11,18 @@ class Settings {
 
         ElementsListener.listenToEvents('click', document.getElementsByClassName('increment'), function (event) {
             let target = event.target.parentNode;
+            if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
+                target = event.target;
+            }
             event.stopPropagation();
             myCycle.changeCycleData(target);
         });
 
         ElementsListener.listenToEvents('click', document.getElementsByClassName('dicrement'), function (event) {
             let target = event.target.parentNode;
+            if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
+                target = event.target;
+            }
             event.stopPropagation();
             myCycle.changeCycleData(target);
         });
@@ -43,11 +49,11 @@ class Settings {
         }
     }
 
-    static notifyAboutSuccessfulSave() {
+    static notifyAboutSuccessfulSave(event) {
         let modalBinder = new Binder('app/components/settings/save-form.html');
         let receivedDoc = modalBinder.downloadComponent();
         document.body.appendChild(receivedDoc.getElementById('save-form-wrapper'));
-        settings.addSaveMessage();
+        settings.addSaveMessage(event);
         setTimeout(function () {
             document.getElementById('save-form-wrapper').classList.add('save-form-wrapper-appearance');
         }, 200);
@@ -56,7 +62,7 @@ class Settings {
         }, 2000);
     }
 
-    addSaveMessage() {
+    addSaveMessage(event) {
         if (event.target.classList.contains('save-btn-categories')) {
             document.getElementsByClassName('save-form')[0].innerHTML = "Categories were successfully Saved!";
         }

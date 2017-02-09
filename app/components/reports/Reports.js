@@ -40,7 +40,8 @@ class Reports {
         }
     }
 
-    toggleCharts() { // posiibility to generate different charts according to the selected tab (gap)
+    toggleCharts(event) { // posiibility to generate different charts according to the selected tab (gap)
+        console.log(event);
         let reportsElements = reports.initializeReportsObject;
         if (event.target.classList.contains('week-chart-visualizer')) {
             reportsElements.chartContainer.id = 'container-week-report';
@@ -77,7 +78,7 @@ class Reports {
         dayChartData.createDayChart();
         reportsElements.gapVariantsContainer.onclick = function (event) { // listen if we click on tab (day/ week/ month)
             if (event.target.classList.contains('gap-variant')) {
-                reports.toggleCharts();
+                reports.toggleCharts(event);
             }
         }
     }

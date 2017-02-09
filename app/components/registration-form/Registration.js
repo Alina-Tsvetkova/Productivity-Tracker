@@ -75,7 +75,7 @@ class Registration {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up-complete-btn')[0], userRegistration.submitCompleteSignUp);
     }
 
-    cancelRegistration() {
+    cancelRegistration(event) {
         event.preventDefault();
         classManager.removeClass(document.getElementsByClassName('form-registration')[0], 'form-registration-appearance');
     }

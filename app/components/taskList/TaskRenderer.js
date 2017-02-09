@@ -111,7 +111,7 @@ class TaskRenderer extends TaskManager {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('move-task'), TaskList.getIndexOfMovableTasks);
         ElementsListener.listenToEvents('click', $('.indicator'), taskDeletorObj.pushTaskToDelete);
         ElementsListener.listenToEvents('click', $('.remove-btn-icon'), taskDeletorObj.givePossibilityToDelete);
-        ElementsListener.listenToEvents('click', $('.priority-indicator'), function () {
+        ElementsListener.listenToEvents('click', $('.priority-indicator'), function (event) {
             let taskKey = event.target.parentNode.parentNode.getAttribute('taskkey');
             if (event.target.parentNode.parentNode.classList.contains('done-task')) {
                 event.stopImmediatePropagation();

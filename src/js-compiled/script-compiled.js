@@ -15,7 +15,6 @@ var AppStarter = function () {
             var loginBinder = new Binder('app/components/login/login.html', document.body);
             loginBinder.downloadComponent();
             Router.addHash("");
-
             var userId = localStorage.getItem('currentUser');
             ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-in'), checkLoginPassObj.checkLoginPass);
             ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), checkLoginPassObj.downloadSignUp);

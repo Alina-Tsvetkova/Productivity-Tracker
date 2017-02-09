@@ -1,10 +1,10 @@
 class CycleModel extends Cycle {
-    static createCycle() {
+    static createCycle(event) {
         let savedCycle = new CycleModel();
-        savedCycle.saveUserCycle(localStorage.getItem('currentUser'));
+        savedCycle.saveUserCycle(localStorage.getItem('currentUser'),event);
     }
 
-    saveUserCycle(userId) {
+    saveUserCycle(userId,event) {
         this.getDataForCycle();
         firebase.database().ref('users/' + userId).update({
             cycle: {
@@ -15,7 +15,7 @@ class CycleModel extends Cycle {
             }
         });
 
-        Categories.notifyAboutSuccessfulSave();
+        Categories.notifyAboutSuccessfulSave(event);
         CategoriesView.renderEarlierSavedCategories();
     }
 

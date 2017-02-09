@@ -13,7 +13,7 @@ class UserValidation {
         }
     }
 
-    checkLoginPass() {
+    checkLoginPass(event) {
         event.preventDefault();
         let loginObject = UserValidation.getLogInObject;
         firebase.auth().signInWithEmailAndPassword(loginObject.loginField.value, loginObject.passwordField.value).then(function (user) {
@@ -45,7 +45,7 @@ class UserValidation {
         }
     }
 
-    downloadSignUp() {
+    downloadSignUp(event) {
         event.preventDefault();
         let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
         let regFom = registrationFormBinder.downloadComponent();
