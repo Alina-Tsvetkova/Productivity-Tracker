@@ -78,6 +78,7 @@ class TaskRenderer extends TaskManager {
         setTimeout(function () {
             (function fillTaskContainer(dataKey) {
                 tasksRenderer.checkIfALLTasksAreDone();
+                console.log(counterOfTasks);
                 try {
                     let taskObj = TaskRenderer.taskElementsObj;
                     taskObj.taskTitle[counterOfTasks].innerHTML = renderedTask.title;
@@ -85,8 +86,7 @@ class TaskRenderer extends TaskManager {
                     taskObj.descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
                     let splitedArray = renderedTask.deadline.split('.');
                     tasksRenderer.trimDateDeadline(splitedArray);
-                    let todayMonth = tasksRenderer.generateWordMonth(splitedArray);
-                    taskObj.monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
+                    taskObj.monthDeadlineElem[counterOfTasks].innerHTML = tasksRenderer.generateWordMonth(splitedArray);
                     taskObj.priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
                     taskObj.priorityIndicatorSpan[counterOfTasks].innerHTML = renderedTask.estimation;
 

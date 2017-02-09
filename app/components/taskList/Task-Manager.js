@@ -33,9 +33,6 @@ class TaskManager {
         }
 
         tasksRenderer.sendSubmittedData(postData);
-
-        tasksRenderer.checkIfTaskListEmpty();
-
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
         }
@@ -44,6 +41,7 @@ class TaskManager {
 
     sendSubmittedData(postData) {
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
+        tasksRenderer.checkIfTaskListEmpty();
     }
 
     saveEditedTask(index) {
@@ -69,12 +67,12 @@ class TaskManager {
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
         tasksRenderer.sendEditedData(updates, editedHash);
-        tasksRenderer.checkIfTaskListEmpty();
         ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 
     sendEditedData(updates, editedHash) {
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
+        tasksRenderer.checkIfTaskListEmpty();
     }
 
     addDefaultData() {
