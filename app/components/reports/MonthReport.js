@@ -40,14 +40,7 @@ class MonthReport {
                         }
                     }
                     if (quantityOfAllTasks == 0) {
-                        try {
-                            document.getElementsByClassName('charts')[0].classList.add('non-visible-elem');
-                            document.getElementsByClassName('gap-variants')[0].classList.add('non-visible-elem');
-                            document.getElementsByClassName('tabs-reports')[0].classList.add('non-visible-elem');
-                            document.getElementsByClassName('no-reports-info-wrapper')[0].style.display = 'block';
-                        } catch (e) {
-                            return "element is already removed";
-                        }
+                        reports.removeReportsContainers();
                     }
                 }
                 return key;
@@ -84,7 +77,6 @@ class MonthReport {
         let indexReport;
         if (parsedDate - parsedFinishedDate == 0) {
             indexReport = 30;
-
             try {
                 for (let key in monthAndCounterBinding) {
                     if (priority == key) {
@@ -97,6 +89,7 @@ class MonthReport {
             }
         }
         else {
+
             let difference = parsedDate - parsedFinishedDate;
             if (difference < 0) {
                 difference = 31 + difference + 1;
@@ -112,8 +105,20 @@ class MonthReport {
             } catch (e) {
                 return "can not create property";
             }
-
         }
+    }
+
+    clearReportsBeforeFill() {
+        for (let key in monthAndCounterBinding) {
+            for (let l = 0; l <= 30; l++) {
+                monthAndCounterBinding[key][l] = 0;
+            }
+        }
+
+        firebase.database().ref('users/' + localStorage.getItem('currentUser')).update({
+            reports: monthAndCounterBinding,
+            pomodoros: monthAndCounterBinding
+        });
     }
 
     sendUpdatedReportsData(indexReport, counterReports, priority) {
@@ -142,6 +147,5 @@ let monthChartData = new MonthReport('container-month-report', [{
     ], 10);
 
 
-monthChartData.initializeMonthCounter();
-monthChartData.generateReportsData();
-monthChartData.receiveReportsData();
+monthChartData.clearReportsBeforeFill();
+reports.receiveReportsStatistics();

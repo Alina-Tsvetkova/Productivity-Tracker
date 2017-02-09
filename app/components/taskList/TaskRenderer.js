@@ -4,7 +4,7 @@ let notificationCounter = 0;
 class TaskRenderer extends TaskManager {
 
     clearContainers() {
-        reports.clearReportsStatistics();
+        reports.receiveReportsStatistics();
         document.getElementById('globalTasks').innerHTML = '';
         document.getElementById('daily-tasks').innerHTML = '';
         document.getElementById('tab2').innerHTML = '';
@@ -176,6 +176,7 @@ class TaskRenderer extends TaskManager {
         let doneTasks = document.getElementsByClassName('done-task');
         for (let j = 0; j < doneTasks.length; j++) {
             doneTasks[j].getElementsByClassName('edit')[0].style.display = 'none';
+            doneTasks[j].getElementsByClassName('indicator-wrapper')[0].style.display = 'none';
             tasksRenderer.removeMoveTaskBtn(ul);
         }
     }

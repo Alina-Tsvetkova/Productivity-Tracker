@@ -30,7 +30,18 @@ class DayReports {
         dayChartData.chartData = [];
     }
 
+    removeLegendThatIsAbsent() {
+        for (let key of dayChartData.chartData) {
+            for (let x in key) {
+                if (key[x] == 0) {
+                    key.name = '';
+                }
+            }
+        }
+    }
+
     createDayChart() {
+        dayChartData.removeLegendThatIsAbsent();
         Highcharts.chart('container-day-report', {
             chart: {
                 plotBackgroundColor: null,

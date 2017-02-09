@@ -4,7 +4,6 @@ class DailyTasks {
     }
 
     moveTaskToDaily(key) {
-        console.log(key);
         if (document.querySelectorAll('#daily-tasks .task').length >= 3) {
             dailyTask.restrictDailyTasks();
             return false;
@@ -13,12 +12,15 @@ class DailyTasks {
     }
 
     sendDailyTaskData(key, date) {
-        console.log(key);
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + key).update({
             taskIsDone: "pending",
             deadline: date
         });
-        tasksRenderer.checkIfTaskListEmpty();
+
+        setTimeout(function () {
+            tasksRenderer.checkIfTaskListEmpty();
+        }, 100);
+
     }
 }
 
