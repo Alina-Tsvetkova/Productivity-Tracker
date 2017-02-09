@@ -1,4 +1,4 @@
-The “Productivity” application gives a tool for time management based on the Pomodoro technique.
+The “Productivity Tracker” application gives a tool for time management based on the Pomodoro technique.
 User can use the app to create a task list, adding a short description and the estimated number of Pomodoros needed for the task.
 Also, user can start, stop and reset the timer for your Productivity, short and long break, and in the settings user can
 alter the lengths of each time period.
@@ -18,7 +18,6 @@ Tasks go to global tasks by default. But user has ability to move 3 tasks to Dai
 6.User has ability to start work on the task. User presses button with Tomato icon near necessary task.
 New screen appears with timer. User has ability start, break or cancel the task. Also it is available the option to go to a
 page with the settings, or log out from the application.
-
 7.Reports – can have 3 view: Daily/Week/Month.
 Each preview has switcher to charts based on tasks.
 Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
