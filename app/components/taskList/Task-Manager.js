@@ -33,9 +33,9 @@ class TaskManager {
         }
 
         tasksRenderer.sendSubmittedData(postData);
-        setTimeout(function () {
-            tasksRenderer.checkIfTaskListEmpty();
-        }, 100);
+
+        tasksRenderer.checkIfTaskListEmpty();
+
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
         }

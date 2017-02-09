@@ -11,6 +11,7 @@ class Reports {
         let reportsDoc = reportsBinder.downloadComponent();
         document.body.innerHTML = '';
         document.body.appendChild(reportsDoc.getElementById('wrapper'));
+        Icons.downloadMainIcons();
         reports.receiveReportsStatistics();
         reports.downloadDefaultDayChart();
         let tooltips = $('.tooltip');

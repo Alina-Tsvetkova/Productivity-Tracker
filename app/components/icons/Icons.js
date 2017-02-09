@@ -31,4 +31,10 @@ class Icons {
             Router.addHash("reports");
         });
     }
+
+    static downloadMainIcons() {
+        let iconsBinder = new Binder('app/components/icons/icons.html');
+        let iconsDoc = iconsBinder.downloadComponent();
+        document.getElementsByClassName('icons')[0].appendChild(iconsDoc.getElementsByClassName('main-icons')[0]);
+    }
 }

@@ -106,7 +106,7 @@ class TaskRenderer extends TaskManager {
                     return false;
                 }
             }(dataKey));
-        }, 100);
+        }, 50);
 
         ElementsListener.listenToEvents('click', document.getElementsByClassName('edit'), TaskList.getIndexOfTask);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('move-task'), TaskList.getIndexOfMovableTasks);

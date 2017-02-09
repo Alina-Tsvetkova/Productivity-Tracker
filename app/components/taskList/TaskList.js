@@ -29,6 +29,10 @@ class TaskList {
         let taskBinder = new Binder('app/components/taskList/task-list.html', document.body);
         taskBinder.downloadComponent();
         TaskList.getTaskListElements;
+        Icons.downloadMainIcons();
+        let headerBinder = new Binder('app/components/fixed-logo/fixed-logo.html');
+        let headerDoc = headerBinder.downloadComponent();
+        document.body.appendChild(headerDoc.getElementsByClassName('fixed-logo')[0]);
         let modalWindowElements = ModalWindow.getModalWindowElems;
         ElementsListener.listenToEvents('click', document.querySelectorAll('.remove-btn-icon'), taskDeletorObj.checkIfToDeleteTasks);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);

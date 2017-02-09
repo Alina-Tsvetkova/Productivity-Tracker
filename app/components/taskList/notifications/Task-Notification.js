@@ -25,7 +25,8 @@ class TaskNotification {
             let receiveNotification = taskNotification.downloadComponent();
             wrapper.appendChild(receiveNotification.querySelector(stateNotification));
             setTimeout(function () {
-                document.querySelector(stateNotification).style.marginTop = '10px';
+                document.querySelector(stateNotification).classList.remove('removable-notification');
+                document.querySelector(stateNotification).classList.add('added-notification');
             }, 100);
         }
         catch (e) {
@@ -36,7 +37,8 @@ class TaskNotification {
     removeNotification(stateNotification) {
         setTimeout(function () {
             try {
-                document.querySelector(stateNotification).style.marginTop = '-70px';
+                document.querySelector(stateNotification).classList.remove('added-notification');
+                document.querySelector(stateNotification).classList.add('removable-notification');
             }
             catch (e) {
                 return false;

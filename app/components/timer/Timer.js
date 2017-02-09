@@ -16,6 +16,7 @@ class Timer {
         document.getElementsByClassName('timer-content')[0].appendChild(receivedDocIntroTimer.getElementById('intro-timer'));
         ElementsListener.listenToEvents('click', document.getElementsByClassName('start-timer'), timer.startTimer);
         timer.addTaskInformation(timerKey);
+        Icons.downloadMainIcons();
         Icons.iconLinksBinder();
     }
 
