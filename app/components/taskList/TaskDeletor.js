@@ -39,7 +39,6 @@ class TaskDeletor extends TaskManager {
                 taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
             }
         }
-        TaskNotification.createNotification('.message-warn');
     }
 
     submitDeleteTask() {

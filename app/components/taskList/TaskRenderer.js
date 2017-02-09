@@ -78,7 +78,6 @@ class TaskRenderer extends TaskManager {
         setTimeout(function () {
             (function fillTaskContainer(dataKey) {
                 tasksRenderer.checkIfALLTasksAreDone();
-                console.log(counterOfTasks);
                 try {
                     let taskObj = TaskRenderer.taskElementsObj;
                     taskObj.taskTitle[counterOfTasks].innerHTML = renderedTask.title;

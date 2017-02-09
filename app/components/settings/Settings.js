@@ -26,8 +26,7 @@ class Settings {
         CategoriesView.renderEarlierSavedCategories();
 
         Binder.downloadPlugins();
-
-        myCycle.renderSavedCycleSettings();
+        CycleModel.receiveCycleData();
         Icons.iconLinksBinder();
     }
 

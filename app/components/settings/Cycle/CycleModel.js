@@ -18,4 +18,12 @@ class CycleModel extends Cycle {
         Categories.notifyAboutSuccessfulSave();
         CategoriesView.renderEarlierSavedCategories();
     }
+
+    static receiveCycleData() {
+        let userId = localStorage.getItem('currentUser');
+        let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
+        cycleReceiver.on('value', function (data) {
+            myCycle.renderSavedCycleSettings(data.val());
+        });
+    }
 }

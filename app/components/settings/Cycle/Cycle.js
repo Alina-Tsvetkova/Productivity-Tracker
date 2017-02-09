@@ -6,27 +6,35 @@ class Cycle {
         this.longBreak = +longBreak;
     }
 
-    renderSavedCycleSettings() {
-        let userId = localStorage.getItem('currentUser');
+    get initializeCycleElements() {
+        return {
+            longBreak: document.getElementsByClassName('counter-long-time')[0],
+            shortBreak: document.getElementsByClassName('counter-short-break')[0],
+            workIteration: document.getElementsByClassName('counter-work-iteration')[0],
+            workTime: document.getElementsByClassName('counter-work-time')[0]
+        }
+    }
+
+    renderSavedCycleSettings(cycleValue) {
+        let cycleElements = myCycle.initializeCycleElements;
         try {
-            let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
-            cycleReceiver.on('value', function (data) {
-                document.getElementsByClassName('counter-long-time')[0].value = data.val().longBreak + " min";
-                document.getElementsByClassName('counter-short-break')[0].value = data.val().shortBreak + " min";
-                document.getElementsByClassName('counter-work-iteration')[0].value = data.val().workIteration;
-                document.getElementsByClassName('counter-work-time')[0].value = data.val().workTime + " min";
-                myCycle.getDataForCycle();
-            });
+            cycleElements.longBreak.value =cycleValue.longBreak + " min";
+            cycleElements.shortBreak.value = cycleValue.shortBreak + " min";
+            cycleElements.workIteration.value =cycleValue.workIteration;
+            cycleElements.workTime.value = cycleValue.workTime + " min";
+            myCycle.getDataForCycle();
+
         } catch (e) {
-            return 'element is already remove from DOM';
+            return 'element is already removed from DOM';
         }
     }
 
     getDataForCycle() { // this function is needful to transfer data from document inputs to cycle object
-        this.workTime = parseInt(document.getElementsByClassName('counter-work-time')[0].value);
-        this.workIteration = parseInt(document.getElementsByClassName('counter-work-iteration')[0].value);
-        this.shortBreak = parseInt(document.getElementsByClassName('counter-short-break')[0].value);
-        this.longBreak = parseInt(document.getElementsByClassName('counter-long-time')[0].value);
+        let cycleElements = myCycle.initializeCycleElements;
+        this.workTime = parseInt(cycleElements.workTime.value);
+        this.workIteration = parseInt(cycleElements.workIteration.value);
+        this.shortBreak = parseInt(cycleElements.shortBreak.value);
+        this.longBreak = parseInt(cycleElements.longBreak.value);
         this.createWorkTime();
     }
 

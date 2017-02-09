@@ -37,10 +37,10 @@ class Timer {
             breakButtons: document.getElementsByClassName('break-buttons')[0],
             timerBlock: document.getElementsByClassName('timer-block'),
             introCompleted: document.getElementsByClassName('intro-completed'),
-            introCompletedWrap:document.getElementsByClassName('timer-completed-wrapper'),
-            failedWrap:document.getElementsByClassName('timer-failed-wrapper'),
-            breakWrap:document.getElementsByClassName('timer-break-wrapper'),
-            timerMinutes:document.getElementsByClassName('q-minutes')[0]
+            introCompletedWrap: document.getElementsByClassName('timer-completed-wrapper'),
+            failedWrap: document.getElementsByClassName('timer-failed-wrapper'),
+            breakWrap: document.getElementsByClassName('timer-break-wrapper'),
+            timerMinutes: document.getElementsByClassName('q-minutes')[0]
         }
     }
 
@@ -68,11 +68,15 @@ class Timer {
     }
 
     receiveColorIndex(timerKey) {
-        let borderColorIndex;
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
-            borderColorIndex = data.val().colorIndicator;
-        });
-        return borderColorIndex;
+        try {
+            let borderColorIndex;
+            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
+                borderColorIndex = data.val().colorIndicator;
+            });
+            return borderColorIndex;
+        } catch (e) {
+            return "element is already null";
+        }
     }
 
     addBorderColor(element, value) {

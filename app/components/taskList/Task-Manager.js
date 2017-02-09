@@ -61,7 +61,6 @@ class TaskManager {
         let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
         for (let j = 0; j < allCategoriesNames.length; j++) {
-            console.log(j);
             allCategoriesValues.push(allCategoriesNames[j].value);
         }
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
