@@ -5,7 +5,7 @@ alter the lengths of each time period.
 The application has a reports page to facilitate of analyze previous user’s results.
 For data storage is used an open-source service - Firebase (https://firebase.google.com/).
 
-1.	MAIN FEATURES
+MAIN FEATURES
 1. User can sign in or sign up and log out.
 2. User can chooses necessary settings for pomodoros on page with settings-cycle. Also user can see his cycle on the graph.
 User can create own categories by click on the toggle switcher Pomodoros | Categories.
@@ -17,6 +17,7 @@ Tasks go to global tasks by default. But user has ability to move 3 tasks to Dai
 6.User has ability to start work on the task. User presses button with Tomato icon near necessary task.
 New screen appears with timer. User has ability start, break or cancel the task. Also it is available the option to go to a
 page with the settings, or log out from the application.
+
 7.Reports – can have 3 view: Daily/Week/Month.
   Each preview has switcher to charts based on tasks.
   Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
