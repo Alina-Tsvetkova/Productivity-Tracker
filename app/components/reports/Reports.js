@@ -15,7 +15,7 @@ class Reports {
         reports.downloadDefaultDayChart();
         let tooltips = $('.tooltip');
         tooltips.tooltipSwitcher();
-        Router.iconLinksBinder();
+        Icons.iconLinksBinder();
         dayChartData.deleteDayReportInfo();
     }
 
@@ -175,8 +175,8 @@ class Reports {
             colors: ['#f15a4a', '#fea741', '#fddc43', '#1abb9b', '#8da5b8'],
             series: chartObj.chartData,
         });
-
     }
+
 }
 
 

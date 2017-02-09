@@ -1,6 +1,8 @@
 class Settings {
     static downloadSettings() {
         Router.addHash("settings-cycle");
+        let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
+        settingsBinder.downloadComponent();
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), CycleModel.createCycle);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
             counterOfTasks = 0;
@@ -26,7 +28,7 @@ class Settings {
         Binder.downloadPlugins();
 
         myCycle.renderSavedCycleSettings();
-        Router.iconLinksBinder();
+        Icons.iconLinksBinder();
     }
 
     static get settingsObj() {

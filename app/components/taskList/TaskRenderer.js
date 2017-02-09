@@ -3,6 +3,17 @@ let notificationCounter = 0;
 
 class TaskRenderer extends TaskManager {
 
+    static  get taskElementsObj() {
+        return {
+            task: $('.task'),
+            taskTitle: $('.task-title'),
+            monthDeadlineElem: $('.monthDeadline'),
+            priorityIndicator: $('.priority-indicator'),
+            descriptionContent: $('.description-content'),
+            priorityIndicatorSpan: $('.priority-indicator span')
+        }
+    }
+
     clearContainers() {
         reports.receiveReportsStatistics();
         document.getElementById('globalTasks').innerHTML = '';
@@ -68,22 +79,16 @@ class TaskRenderer extends TaskManager {
             (function fillTaskContainer(dataKey) {
                 tasksRenderer.checkIfALLTasksAreDone();
                 try {
-                    let task = $('.task');
-                    let taskTitle = $('.task-title');
-                    let monthDeadlineElem = $('.monthDeadline');
-                    let priorityIndicator = $('.priority-indicator');
-                    let descriptionContent = $('.description-content');
-                    taskTitle[counterOfTasks].innerHTML = renderedTask.title;
-                    taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
-                    descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
+                    let taskObj = TaskRenderer.taskElementsObj;
+                    taskObj.taskTitle[counterOfTasks].innerHTML = renderedTask.title;
+                    taskObj.taskTitle[counterOfTasks].classList.add(renderedTask.priority.toLowerCase() + '-sign');
+                    taskObj.descriptionContent[counterOfTasks].innerHTML = renderedTask.description;
                     let splitedArray = renderedTask.deadline.split('.');
-
                     tasksRenderer.trimDateDeadline(splitedArray);
                     let todayMonth = tasksRenderer.generateWordMonth(splitedArray);
-
-                    monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
-                    priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
-                    $('.priority-indicator span')[counterOfTasks].innerHTML = renderedTask.estimation;
+                    taskObj.monthDeadlineElem[counterOfTasks].innerHTML = todayMonth;
+                    taskObj.priorityIndicator[counterOfTasks].classList.add(renderedTask.priority.toLowerCase());
+                    taskObj.priorityIndicatorSpan[counterOfTasks].innerHTML = renderedTask.estimation;
 
                     (function addAttributesToTask() {
                         let attributesObj = {
@@ -92,7 +97,7 @@ class TaskRenderer extends TaskManager {
                             'taskisdone': renderedTask.taskIsDone
                         };
                         for (let key in attributesObj) {
-                            task[counterOfTasks].setAttribute(key, attributesObj[key]);
+                            taskObj.task[counterOfTasks].setAttribute(key, attributesObj[key]);
                         }
                         counterOfTasks++;
                     }());
@@ -211,15 +216,6 @@ class TaskRenderer extends TaskManager {
 
     static addColorsToCategories() {
         let allCategories = document.querySelectorAll('.categorized-ul');
-
-        let mapCategoriesTitles = {
-            0: 'work-group-title',
-            1: 'education-group-title',
-            2: 'hobby-group-title',
-            3: 'sport',
-            4: 'other'
-        };
-
         for (let j = 0; j < allCategories.length; j++) {
             if (allCategories[j].getAttribute('color-category') == 0) {
                 allCategories[j].classList.add('work-group');

@@ -25,6 +25,7 @@ class TaskList {
 
     static moveToTaskList() {
         Router.addHash("task-list");
+        counterOfTasks = 0;
         let taskBinder = new Binder('app/components/taskList/task-list.html', document.body);
         taskBinder.downloadComponent();
         TaskList.getTaskListElements;
@@ -62,7 +63,8 @@ class TaskList {
                 }
             }
         };
-        Router.iconLinksBinder();
+        Icons.iconLinksBinder();
+        Router.listenToHashChanges();
     }
 }
 

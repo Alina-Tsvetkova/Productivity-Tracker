@@ -116,8 +116,7 @@ class MonthReport {
         }
 
         firebase.database().ref('users/' + localStorage.getItem('currentUser')).update({
-            reports: monthAndCounterBinding,
-            pomodoros: monthAndCounterBinding
+            reports: monthAndCounterBinding
         });
     }
 

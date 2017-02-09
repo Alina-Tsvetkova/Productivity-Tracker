@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/reports/pomodoroReports/PomodoroReport.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/DayReport.js" afterPath="$PROJECT_DIR$/app/components/reports/DayReport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/MonthReport.js" afterPath="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/Reports.js" afterPath="$PROJECT_DIR$/app/components/reports/Reports.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/reports/reports.html" afterPath="$PROJECT_DIR$/app/components/reports/reports.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" afterPath="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" afterPath="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Settings.js" afterPath="$PROJECT_DIR$/app/components/settings/Settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskList.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/BreakPhase.js" afterPath="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/FinishPhase.js" afterPath="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/Timer.js" afterPath="$PROJECT_DIR$/app/components/timer/Timer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/timer/WorkPhase.js" afterPath="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/less/task.less" afterPath="$PROJECT_DIR$/assets/less/task.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/all.min.js" afterPath="$PROJECT_DIR$/src/build/all.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/sourceMap.map" afterPath="$PROJECT_DIR$/src/build/sourceMap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" afterPath="$PROJECT_DIR$/src/js-compiled/Router-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/Router.js" afterPath="$PROJECT_DIR$/src/js/Router.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,48 +39,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="54" column="61" lean-forward="false" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+            <state relative-caret-position="104">
+              <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reports.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/Router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MonthReport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="150" column="32" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskRenderer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3367">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DayReport.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -91,36 +68,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pushTaskToDelete</find>
-      <find>log</find>
-      <find>log-o</find>
-      <find>checkLoginPassObj</find>
-      <find>defa</find>
-      <find>addDefaultData</find>
-      <find>reporstKey</find>
-      <find>objMonthData</find>
-      <find>Bi</find>
-      <find>DOMElementsInitializer</find>
-      <find>GROUP</find>
-      <find>createCategoryGroup</find>
-      <find>chartCategories</find>
-      <find>consol</find>
-      <find>day</find>
-      <find>coun</find>
-      <find>pr</find>
-      <find>m</find>
-      <find>receiveDurationOfTimer</find>
-      <find>counter</find>
-      <find>conso</find>
-      <find>prev</find>
       <find>arrow</find>
       <find>alert</find>
       <find>pomodoros-var</find>
       <find>ale</find>
-      <find>tasksQuantity</find>
       <find>initializeReportsObject</find>
-      <find>clear</find>
+      <find>monthAnd</find>
       <find>clea</find>
+      <find>initializeMonthCounter</find>
+      <find>counterReports</find>
+      <find>console</find>
+      <find>clear</find>
+      <find>monthChart</find>
+      <find>consol</find>
+      <find>tasksQuantity</find>
+      <find>downloadDefaultDayChart</find>
+      <find>icon</find>
+      <find>icons</find>
+      <find>cons</find>
+      <find>initia</find>
+      <find>initializeTimerElements</find>
+      <find>timer-block</find>
+      <find>receiveDu</find>
+      <find>activeT</find>
+      <find>timerContainer</find>
+      <find>intro-completed</find>
+      <find>timer-completed-wrapper</find>
+      <find>timer-break-wrapper</find>
+      <find>q-minutes</find>
+      <find>initializeTimerElements()</find>
+      <find>q</find>
     </findStrings>
     <replaceStrings>
       <replace>light_azure</replace>
@@ -142,9 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/less/task-list.less" />
-        <option value="$PROJECT_DIR$/app/components/login/login.html" />
-        <option value="$PROJECT_DIR$/app/components/registration-form/registration-complete.html" />
         <option value="$PROJECT_DIR$/app/components/taskList/task/task.html" />
         <option value="$PROJECT_DIR$/app/components/login/App-Validation.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Filter.js" />
@@ -169,30 +143,33 @@
         <option value="$PROJECT_DIR$/assets/less/categories.less" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskData.js" />
         <option value="$PROJECT_DIR$/app/components/reports/WeekReport.js" />
-        <option value="$PROJECT_DIR$/assets/less/task.less" />
-        <option value="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
-        <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
         <option value="$PROJECT_DIR$/app/components/timer/timer.html" />
         <option value="$PROJECT_DIR$/assets/less/timer.less" />
         <option value="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
-        <option value="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
         <option value="$PROJECT_DIR$/src/js/Binder.js" />
         <option value="$PROJECT_DIR$/src/js/script.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
-        <option value="$PROJECT_DIR$/src/js/Router.js" />
         <option value="$PROJECT_DIR$/app/components/reports/pomodoroReports/PomodoroReport.js" />
-        <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
         <option value="$PROJECT_DIR$/src/js/UserData.js" />
         <option value="$PROJECT_DIR$/assets/less/reports.less" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/components/reports/reports.html" />
         <option value="$PROJECT_DIR$/app/components/taskList/DailyTasks.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/Task-Manager.js" />
         <option value="$PROJECT_DIR$/app/components/reports/DayReport.js" />
-        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
         <option value="$PROJECT_DIR$/app/components/reports/MonthReport.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/pomodoros/PomodoroReports.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/reports.html" />
+        <option value="$PROJECT_DIR$/assets/less/task.less" />
+        <option value="$PROJECT_DIR$/src/js/Router.js" />
+        <option value="$PROJECT_DIR$/app/components/taskList/TaskList.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
+        <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/components/icons/Icons.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
+        <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
       </list>
     </option>
   </component>
@@ -254,20 +231,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Productivity-Tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Productivity-Tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -289,6 +252,10 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -305,10 +272,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taskList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,12 +407,12 @@
       <workItem from="1486495267292" duration="3221000" />
       <workItem from="1486543929973" duration="4717000" />
       <workItem from="1486548708745" duration="24522000" />
-      <workItem from="1486632638786" duration="3843000" />
+      <workItem from="1486632638786" duration="11489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267326000" />
+    <option name="totallyTimeSpent" value="274972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -504,27 +467,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/Elements-Listener.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/Task-Filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/common.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -655,26 +597,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/less/task.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/WorkPhase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -694,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/FinishPhase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/less/timer.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -714,6 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -721,6 +640,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -757,20 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -791,34 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/timer/Timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/reports/pomodoroReports/PomodoroReport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="54" column="61" lean-forward="false" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -839,10 +721,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/pomodoros/PomodoroReports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="139" column="11" lean-forward="false" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/less/task.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="373">
+          <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -850,31 +780,71 @@
     <entry file="file://$PROJECT_DIR$/app/components/reports/Reports.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/MonthReport.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="150" column="32" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="32" />
+        <state relative-caret-position="104">
+          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3367">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="325">
+          <caret line="243" column="41" lean-forward="false" selection-start-line="243" selection-start-column="41" selection-end-line="243" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/reports/DayReport.js">
+    <entry file="file://$PROJECT_DIR$/app/components/icons/Icons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state relative-caret-position="153">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/Timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/BreakPhase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="65" lean-forward="true" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/FinishPhase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/timer/WorkPhase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
