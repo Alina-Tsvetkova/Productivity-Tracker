@@ -20,11 +20,11 @@ Tasks go to global tasks by default. But user has ability to move 3 tasks to Dai
 
 5. The timer provides an opportunity to measure time intervals and if it necessary set pause or break task execution.
 
-6.User has ability to start work on the task. User presses button with Tomato icon near necessary task.
+6. User has ability to start work on the task. User presses button with Tomato icon near necessary task.
 New screen appears with timer. User has ability start, break or cancel the task. Also it is available the option to go to a
 page with the settings, or log out from the application.
 
-7.Reports – can have 3 view: Daily/Week/Month.
+7. Reports – can have 3 view: Daily/Week/Month.
 Each preview has switcher to charts based on tasks.
 Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
 Charts divides onto parts by priorities (urgent, high, medium, low) and number of failed tasks.
