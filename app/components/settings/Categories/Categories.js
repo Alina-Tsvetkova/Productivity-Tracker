@@ -1,11 +1,11 @@
 class Categories extends Settings{
-    static createCategories() {
+    static createCategories(event) {
         let savedCategories = new Categories();
         savedCategories.saveCategories(localStorage.getItem('currentUser'));
     }
 
-    saveCategories(userId) {
-        let possibleCategories = new Array();
+    saveCategories(event,userId) {
+        let possibleCategories = [];
         let allPossibleCategories = document.getElementsByClassName('possible-category');
         for (let i = 0; i < allPossibleCategories.length; i++) {
             possibleCategories.push(allPossibleCategories[i].value);
@@ -13,7 +13,7 @@ class Categories extends Settings{
         firebase.database().ref('users/' + userId).update({
             categories: possibleCategories
         });
-        Categories.notifyAboutSuccessfulSave();
+        Categories.notifyAboutSuccessfulSave(event);
         CategoriesView.renderEarlierSavedCategories();
     };
 }

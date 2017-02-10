@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/logOut/LogOut.js" afterPath="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/login/UserValidation.js" afterPath="$PROJECT_DIR$/app/components/login/UserValidation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/registration-form/Registration.js" afterPath="$PROJECT_DIR$/app/components/registration-form/Registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/registration-form/registration-complete.html" afterPath="$PROJECT_DIR$/app/components/registration-form/registration-complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" afterPath="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Settings.js" afterPath="$PROJECT_DIR$/app/components/settings/Settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskData.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" afterPath="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/all.min.js" afterPath="$PROJECT_DIR$/src/build/all.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/build/sourceMap.map" afterPath="$PROJECT_DIR$/src/build/sourceMap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/script-compiled.js" afterPath="$PROJECT_DIR$/src/js-compiled/script-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js-compiled/script-compiled.js.map" afterPath="$PROJECT_DIR$/src/js-compiled/script-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/script.js" afterPath="$PROJECT_DIR$/src/js/script.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +24,61 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Categories.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/Categories.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogOut.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -55,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon</find>
       <find>icons</find>
       <find>cons</find>
       <find>initia</find>
@@ -83,8 +123,9 @@
       <find>changeCycleData</find>
       <find>toggleCharts</find>
       <find>saveUserCycle</find>
-      <find>notifyAboutSuccessfulSave</find>
       <find>logOutWrapper</find>
+      <find>saveCategories</find>
+      <find>notifyAboutSuccessfulSave</find>
     </findStrings>
     <replaceStrings>
       <replace>light_azure</replace>
@@ -137,7 +178,6 @@
         <option value="$PROJECT_DIR$/app/components/taskList/TaskDeletor.js" />
         <option value="$PROJECT_DIR$/assets/less/notifications.less" />
         <option value="$PROJECT_DIR$/app/components/timer/Timer.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
         <option value="$PROJECT_DIR$/readME.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/components/reports/Reports.js" />
@@ -147,16 +187,17 @@
         <option value="$PROJECT_DIR$/app/components/taskList/TaskData.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
         <option value="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
         <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
         <option value="$PROJECT_DIR$/app/components/login/UserValidation.js" />
         <option value="$PROJECT_DIR$/app/components/icons/Icons.js" />
         <option value="$PROJECT_DIR$/src/js/Router.js" />
-        <option value="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
         <option value="$PROJECT_DIR$/src/js/script.js" />
         <option value="$PROJECT_DIR$/app/components/registration-form/registration-complete.html" />
         <option value="$PROJECT_DIR$/app/components/registration-form/Registration.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
+        <option value="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
       </list>
     </option>
   </component>
@@ -219,6 +260,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modal-window" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,18 +446,18 @@
       <workItem from="1486632638786" duration="14512000" />
       <workItem from="1486650731242" duration="5571000" />
       <workItem from="1486658361385" duration="5745000" />
-      <workItem from="1486735187725" duration="3340000" />
+      <workItem from="1486735187725" duration="4717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292651000" />
+    <option name="totallyTimeSpent" value="294028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -538,6 +627,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,42 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/Categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/UserData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -753,14 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/registration-form/Registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -781,6 +831,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/Categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
           <folding />
         </state>
       </provider>
