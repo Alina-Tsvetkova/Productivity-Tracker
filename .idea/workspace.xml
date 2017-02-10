@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a36879df-b32f-4191-8239-090fd692d46b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/logOut/LogOut.js" afterPath="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/settings/Settings.js" afterPath="$PROJECT_DIR$/app/components/settings/Settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" afterPath="$PROJECT_DIR$/app/components/settings/Categories/CategoriesModel.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="313">
+              <caret line="59" column="82" lean-forward="false" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -37,28 +38,18 @@
       <file leaf-file-name="Settings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+            <state relative-caret-position="540">
+              <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Categories.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/Categories.js">
+      <file leaf-file-name="CategoriesModel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogOut.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
+            <state relative-caret-position="221">
+              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -68,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="117" lean-forward="false" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -77,8 +68,8 @@
       <file leaf-file-name="CategoriesView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="102" lean-forward="false" selection-start-line="0" selection-start-column="102" selection-end-line="0" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -96,12 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icons</find>
-      <find>cons</find>
-      <find>initia</find>
-      <find>initializeTimerElements</find>
-      <find>timer-block</find>
-      <find>receiveDu</find>
       <find>activeT</find>
       <find>timerContainer</find>
       <find>intro-completed</find>
@@ -124,8 +109,14 @@
       <find>toggleCharts</find>
       <find>saveUserCycle</find>
       <find>logOutWrapper</find>
-      <find>saveCategories</find>
       <find>notifyAboutSuccessfulSave</find>
+      <find>cate</find>
+      <find>saveCategories</find>
+      <find>rende</find>
+      <find>sendSavedCategories</find>
+      <find>Categories</find>
+      <find>transitCategoriesToView</find>
+      <find>getSavedCategories</find>
     </findStrings>
     <replaceStrings>
       <replace>light_azure</replace>
@@ -147,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/components/modal-window/Modal-Window.js" />
         <option value="$PROJECT_DIR$/app/components/settings/save-form.html" />
         <option value="$PROJECT_DIR$/assets/less/categories.less" />
         <option value="$PROJECT_DIR$/app/components/reports/WeekReport.js" />
@@ -160,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/components/reports/DayReport.js" />
         <option value="$PROJECT_DIR$/app/components/reports/pomodoros/PomodoroReports.js" />
         <option value="$PROJECT_DIR$/assets/less/task.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/components/timer/FinishPhase.js" />
         <option value="$PROJECT_DIR$/app/components/timer/BreakPhase.js" />
         <option value="$PROJECT_DIR$/app/components/timer/WorkPhase.js" />
@@ -187,17 +176,19 @@
         <option value="$PROJECT_DIR$/app/components/taskList/TaskData.js" />
         <option value="$PROJECT_DIR$/app/components/taskList/TaskRenderer.js" />
         <option value="$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
         <option value="$PROJECT_DIR$/app/components/login/UserValidation.js" />
         <option value="$PROJECT_DIR$/app/components/icons/Icons.js" />
         <option value="$PROJECT_DIR$/src/js/Router.js" />
         <option value="$PROJECT_DIR$/src/js/script.js" />
         <option value="$PROJECT_DIR$/app/components/registration-form/registration-complete.html" />
         <option value="$PROJECT_DIR$/app/components/registration-form/Registration.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
-        <option value="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
         <option value="$PROJECT_DIR$/app/components/logOut/LogOut.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/Categories.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/components/settings/Settings.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesModel.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js" />
+        <option value="$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js" />
       </list>
     </option>
   </component>
@@ -285,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modal-window" />
+              <option name="myItemId" value="taskList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +298,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logOut" />
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Productivity-Tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Categories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,15 +463,15 @@
       <workItem from="1486632638786" duration="14512000" />
       <workItem from="1486650731242" duration="5571000" />
       <workItem from="1486658361385" duration="5745000" />
-      <workItem from="1486735187725" duration="4717000" />
+      <workItem from="1486735187725" duration="7187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294028000" />
+    <option name="totallyTimeSpent" value="296498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -747,22 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="118" lean-forward="true" selection-start-line="27" selection-start-column="118" selection-end-line="27" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/settings/Cycle/Cycle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -827,10 +828,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="27" column="118" lean-forward="true" selection-start-line="27" selection-start-column="118" selection-end-line="27" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/taskList/TaskData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        <state relative-caret-position="313">
+          <caret line="59" column="82" lean-forward="false" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="102" lean-forward="false" selection-start-line="0" selection-start-column="102" selection-end-line="0" selection-end-column="102" />
           <folding />
         </state>
       </provider>
@@ -838,39 +879,15 @@
     <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="117" lean-forward="false" selection-start-line="0" selection-start-column="117" selection-end-line="0" selection-end-column="117" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesView.js">
+    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/CategoriesModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/settings/Categories/Categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/logOut/LogOut.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="119" lean-forward="false" selection-start-line="23" selection-start-column="119" selection-end-line="23" selection-end-column="119" />
+        <state relative-caret-position="221">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding />
         </state>
       </provider>

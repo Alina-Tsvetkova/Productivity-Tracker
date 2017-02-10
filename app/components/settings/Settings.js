@@ -29,7 +29,7 @@ class Settings {
 
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
         DOMElementsInitializer = Settings.settingsObj;
-        CategoriesView.renderEarlierSavedCategories();
+        categoriesController.orderToGetCategories();
 
         Binder.downloadPlugins();
         CycleModel.receiveCycleData();
