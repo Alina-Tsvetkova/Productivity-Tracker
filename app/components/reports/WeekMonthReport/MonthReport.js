@@ -146,5 +146,5 @@ let monthChartData = new MonthReport('container-month-report', [{
     ], 10);
 
 
-monthChartData.clearReportsBeforeFill();
-reports.receiveReportsStatistics();
+//monthChartData.clearReportsBeforeFill();
+//reports.receiveReportsStatistics();

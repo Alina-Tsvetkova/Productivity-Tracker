@@ -1,5 +1,4 @@
 class RegistrationModel {
-
     createUserInDB() {
         let signUpValidator = registrationController.getSignUpValidator;
         firebase.auth().createUserWithEmailAndPassword(signUpValidator.loginField.value, signUpValidator.passwordField.value).then(function (user) {

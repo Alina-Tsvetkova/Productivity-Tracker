@@ -16,8 +16,8 @@ var AppStarter = function () {
             loginBinder.downloadComponent();
             Router.addHash("");
             var userId = localStorage.getItem('currentUser');
-            ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-in'), checkLoginPassObj.checkLoginPass);
-            ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), checkLoginPassObj.downloadSignUp);
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-in'), userValidationController.checkLoginAndPass);
+            ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), userValidationView.downloadSignUp);
             if (userId != null) {
                 var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
                 settingsBinder.downloadComponent();
