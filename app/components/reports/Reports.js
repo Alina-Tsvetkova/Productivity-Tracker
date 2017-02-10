@@ -13,11 +13,16 @@ class Reports {
         document.body.appendChild(reportsDoc.getElementById('wrapper'));
         Icons.downloadMainIcons();
         reports.receiveReportsStatistics();
-        reports.downloadDefaultDayChart();
+        reports.downloadDayChart();
         let tooltips = $('.tooltip');
         tooltips.tooltipSwitcher();
         Icons.iconLinksBinder();
-        dayChartData.deleteDayReportInfo();
+        dayReportController.deleteDayReportInfo(dayChartData);
+
+        document.getElementsByClassName('week-chart-visualizer')[0].addEventListener('click', reports.downloadWeekChart);
+        document.getElementsByClassName('day-chart-visualizer')[0].addEventListener('click', reports.downloadDayChart);
+        document.getElementsByClassName('month-chart-visualizer')[0].addEventListener('click', reports.downloadMonthChart);
+
     }
 
     get initializeReportsObject() {
@@ -40,26 +45,28 @@ class Reports {
         }
     }
 
-    toggleCharts(event) { // posiibility to generate different charts according to the selected tab (gap)
-        console.log(event);
+    downloadWeekChart(){
         let reportsElements = reports.initializeReportsObject;
-        if (event.target.classList.contains('week-chart-visualizer')) {
-            reportsElements.chartContainer.id = 'container-week-report';
-            weekChartData.transferDataToWeekChart();
-            Reports.createWeekOrMonthChart(weekChartData);
-            dayChartData.deleteDayReportInfo();
-        } else if (event.target.classList.contains('day-chart-visualizer')) {
-            reportsElements.chartContainer.id = 'container-day-report';
-            Reports.changeGapColor(reportsElements.gapVariants[0]);
-            dayChartData.transferDataToDayChart();
-            dayChartData.createDayChart();
-            dayChartData.deleteDayReportInfo();
-        } else {
-            reportsElements.chartContainer.id = 'container-month-report';
-            Reports.createWeekOrMonthChart(monthChartData);
-            dayChartData.deleteDayReportInfo();
-        }
-        Reports.changeGapColor(event.target);
+        reportsElements.chartContainer.id = 'container-week-report';
+        weekChartData.transferDataToWeekChart();
+        Reports.createWeekOrMonthChart(weekChartData);
+        dayReportController.deleteDayReportInfo(dayChartData);
+    }
+
+    downloadDayChart(){
+        let reportsElements = reports.initializeReportsObject;
+        reportsElements.chartContainer.id = 'container-day-report';
+        Reports.changeGapColor(reportsElements.gapVariants[0]);
+        dayReportModel.transferDataToDayChart(dayChartData);
+        dayReportView.createDayChart(dayChartData);
+        dayReportController.deleteDayReportInfo(dayChartData);
+    }
+
+    downloadMonthChart(){
+        let reportsElements = reports.initializeReportsObject;
+        reportsElements.chartContainer.id = 'container-month-report';
+        Reports.createWeekOrMonthChart(monthChartData);
+        dayReportController.deleteDayReportInfo(dayChartData);
     }
 
     static changeGapColor(target) { // change color of selected tab (gap)
@@ -70,18 +77,6 @@ class Reports {
         target.classList.add("selectedTab");
     }
 
-    downloadDefaultDayChart() {  // default day chart is downloaded
-        let reportsElements = reports.initializeReportsObject;
-        reportsElements.chartContainer.id = 'container-day-report';
-        Reports.changeGapColor(reportsElements.gapVariants[0]);
-        dayChartData.transferDataToDayChart();
-        dayChartData.createDayChart();
-        reportsElements.gapVariantsContainer.onclick = function (event) { // listen if we click on tab (day/ week/ month)
-            if (event.target.classList.contains('gap-variant')) {
-                reports.toggleCharts(event);
-            }
-        }
-    }
 
     static createWeekOrMonthChart(chartObj) {
         Highcharts.chart(chartObj.id, {

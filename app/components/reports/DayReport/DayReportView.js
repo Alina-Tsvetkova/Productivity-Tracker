@@ -1,47 +1,6 @@
-class DayReports {
-    constructor(tasksQuantity, index, chartData) {
-        this.tasksQuantity = tasksQuantity;
-        this.index = index;
-        this.chartData = chartData;
-    }
-
-    countTotalDayTasks() { // method counts total tasks of the day
-        for (let j = 0; j < dayChartData.chartData.length; j++) {
-            dayChartData.tasksQuantity += dayChartData.chartData[dayChartData.index].y;
-            dayChartData.index++;
-        }
-    }
-
-    transferDataToDayChart() { // we take the last day data from the month object and create donut graph
-        for (let j = 0; j < monthChartData.chartData.length; j++) { // 5 iterarions
-            let objMonthData = monthChartData.chartData[j];
-            let objDayData = dayChartData.chartData;
-            let lastDayData = objMonthData.data.length; // the meaning of the last month day data : lines 5,8,11,14,17
-            objDayData.push({}); // push object for saving our data for every category
-            objDayData[j].name = objMonthData.name;
-            objDayData[j].y = objMonthData.data[lastDayData - 1];
-        }
-        dayChartData.countTotalDayTasks();
-    }
-
-    deleteDayReportInfo() {
-        dayChartData.index = 0;
-        dayChartData.tasksQuantity = 0;
-        dayChartData.chartData = [];
-    }
-
-    removeLegendThatIsAbsent() {
-        for (let key of dayChartData.chartData) {
-            for (let x in key) {
-                if (key[x] == 0) {
-                    key.name = '';
-                }
-            }
-        }
-    }
-
-    createDayChart() {
-        dayChartData.removeLegendThatIsAbsent();
+class DayReportView {
+    createDayChart(dayObjReport) {
+        dayReportView.removeLegendThatIsAbsent(dayObjReport);
         Highcharts.chart('container-day-report', {
             chart: {
                 plotBackgroundColor: null,
@@ -60,7 +19,7 @@ class DayReports {
             },
 
             title: {
-                text: dayChartData.tasksQuantity,
+                text: dayObjReport.tasksQuantity,
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 15,
@@ -138,12 +97,20 @@ class DayReports {
             colors: ['#f15a4a', '#fea741', '#fddc43', '#1abb9b', '#8da5b8'],
             series: [{
                 innerSize: '50%',
-                data: dayChartData.chartData,
+                data: dayObjReport.chartData,
             }],
         });
     }
 
-
+    removeLegendThatIsAbsent(dayObjReport) {
+        for (let key of dayObjReport.chartData) {
+            for (let x in key) {
+                if (key[x] == 0) {
+                    key.name = '';
+                }
+            }
+        }
+    }
 }
 
-let dayChartData = new DayReports(0, 0, []);// container for day data;
+let dayReportView = new DayReportView();
