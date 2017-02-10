@@ -45,6 +45,9 @@ class Cycle {
         }
         let modifiedElement = target.parentNode.getElementsByClassName('field')[0];
         let regTakeInt = /[0-9]+/g;
+        if(!(element)){
+            return;
+        }
         let changedSum = element.value;
         changedSum = parseInt(changedSum.match(regTakeInt));
 

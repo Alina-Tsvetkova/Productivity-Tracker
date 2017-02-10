@@ -16,7 +16,6 @@ class CycleModel extends Cycle {
         });
 
         Categories.notifyAboutSuccessfulSave(event);
-        CategoriesView.renderEarlierSavedCategories();
     }
 
     static receiveCycleData() {

@@ -27,7 +27,6 @@ class Settings {
             myCycle.changeCycleData(target);
         });
 
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
         DOMElementsInitializer = Settings.settingsObj;
         categoriesController.orderToGetCategories();
 

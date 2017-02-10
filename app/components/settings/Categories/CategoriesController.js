@@ -16,8 +16,14 @@ class CategoriesController { // mediator between categories module and categorie
         categoriesView.renderEarlierSavedCategories(data, k);
     }
 
+    subscribeOnCategories() {
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
+    }
+
     orderToGetCategories() { //get earlier saved categories from data base or default
+        categoriesController.subscribeOnCategories();
         categoriesModel.getSavedCategories();
+
     }
 }
 
