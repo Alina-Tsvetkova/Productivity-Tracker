@@ -24,6 +24,7 @@ class UserValidation {
             Settings.downloadSettings();
         }).catch(function (error) {
             checkLoginPassObj.proceedSignInErrors(error.code);
+            return false;
         });
     }
 

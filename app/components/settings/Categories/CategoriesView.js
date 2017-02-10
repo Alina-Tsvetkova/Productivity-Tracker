@@ -1,5 +1,4 @@
 class CategoriesView extends Categories {
-
     static renderEarlierSavedCategories() {
         let choosedEarlierInputs = document.getElementsByClassName('possible-category');
         let i = 0;

@@ -81,8 +81,8 @@ class Registration {
     }
 
     submitCompleteSignUp() {
-        event.preventDefault();
         classManager.removeClass(document.getElementsByClassName('sign-up-complete-wrapper')[0], 'sign-up-complete-appearance');
+        location.reload();
     }
 }
 

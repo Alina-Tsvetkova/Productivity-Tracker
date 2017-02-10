@@ -3,13 +3,14 @@ class Settings {
         Router.addHash("settings-cycle");
         let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
         settingsBinder.downloadComponent();
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), CycleModel.createCycle);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
+        DOMElementsInitializer = Settings.settingsObj;
+        ElementsListener.listenToEvents('click', DOMElementsInitializer.saveCycleBtn, CycleModel.createCycle);
+        ElementsListener.listenToEvents('click', DOMElementsInitializer.nextBtn, function () {
             counterOfTasks = 0;
             TaskList.moveToTaskList();
         });
 
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('increment'), function (event) {
+        ElementsListener.listenToEvents('click', DOMElementsInitializer.increaseButtons, function (event) {
             let target = event.target.parentNode;
             if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
                 target = event.target;
@@ -18,7 +19,7 @@ class Settings {
             myCycle.changeCycleData(target);
         });
 
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('dicrement'), function (event) {
+        ElementsListener.listenToEvents('click', DOMElementsInitializer.decreaseButtons, function (event) {
             let target = event.target.parentNode;
             if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
                 target = event.target;
@@ -27,8 +28,8 @@ class Settings {
             myCycle.changeCycleData(target);
         });
 
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
-        DOMElementsInitializer = Settings.settingsObj;
+        ElementsListener.listenToEvents('click', DOMElementsInitializer.saveCategoriesBtn, Categories.createCategories);
+
         CategoriesView.renderEarlierSavedCategories();
 
         Binder.downloadPlugins();
@@ -45,7 +46,10 @@ class Settings {
             counters: document.getElementsByClassName('field'),
             countersArr: Array.prototype.slice.call(document.getElementsByClassName('field')),
             buttonsArr: Array.prototype.slice.call(document.getElementsByClassName('increment')).concat(Array.prototype.slice.call(document.getElementsByClassName('dicrement'))),
-            timePoints: document.getElementsByClassName('time-points')[0]
+            timePoints: document.getElementsByClassName('time-points')[0],
+            saveCycleBtn: document.getElementsByClassName('save-cycle-btn')[0],
+            nextBtn:document.getElementsByClassName('next-btn')[0],
+            saveCategoriesBtn:document.getElementsByClassName('save-btn-categories')[0]
         }
     }
 

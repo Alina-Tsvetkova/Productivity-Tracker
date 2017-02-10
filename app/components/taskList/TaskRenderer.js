@@ -34,9 +34,9 @@ class TaskRenderer extends TaskManager {
                 }
                 else {
                     classManager.removeClass(tasksTabs, 'non-visible-elem');
-                    taskDataObj.filterPendingTasks();
-                    taskDataObj.filterToDoTasks();
-                    taskDataObj.filterDoneTasks();
+                    taskDataObj.filterTasks("taskIsDone","pending");
+                    taskDataObj.filterTasks("taskIsDone",false);
+                    taskDataObj.filterTasks("taskIsDone",true);
                     try {
                         addTaskSection.classList.add('non-visible-elem');
                     }

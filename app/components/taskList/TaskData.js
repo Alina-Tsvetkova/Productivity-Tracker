@@ -1,7 +1,7 @@
 class TaskData {
-    filterToDoTasks() {
+    filterTasks(field, value) {
         let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo(false).once("value", function (snapshot) {
+        taskData.orderByChild(field).equalTo(value).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -9,28 +9,6 @@ class TaskData {
             });
         });
         Binder.downloadPlugins();
-    }
-
-    filterDoneTasks() {
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
-            });
-        });
-    }
-
-    filterPendingTasks() {
-        let taskData = firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').limitToLast(5);
-        taskData.orderByChild("taskIsDone").equalTo("pending").once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                tasksRenderer.renderTask(childData, key);
-            });
-        });
     }
 }
 

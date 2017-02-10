@@ -2,13 +2,13 @@ class LogOut {
     logOutUser() {
         firebase.auth().signOut().then(function () {
             localStorage.removeItem('currentUser');
-            location.reload();
+            appStarter.downloadLoginPage();
         }, function (error) {
-            return 'An error occured!';
+            return 'An error has occured!';
         });
     };
 
-    cancelLogOut(event) {
+    cancelLogOut() {
         event.preventDefault();
         console.log('canceled');
         classManager.removeClass(document.getElementsByClassName('log-out-form-wrapper')[0], 'log-out-form-wrapper-appearance');
@@ -22,7 +22,7 @@ class LogOut {
         let logOutElem = logOutBinder.downloadComponent();
         document.getElementById('wrapper').appendChild(logOutElem.getElementsByClassName('log-out-form-wrapper')[0]);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-log-out-form'), function () {
-            loggedUser.cancelLogOut(event);
+            loggedUser.cancelLogOut();
         });
         setTimeout(function () {
             document.getElementsByClassName('log-out-form-wrapper')[0].classList.add('log-out-form-wrapper-appearance');

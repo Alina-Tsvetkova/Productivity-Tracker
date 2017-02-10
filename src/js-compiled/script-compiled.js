@@ -22,7 +22,7 @@ var AppStarter = function () {
                 var settingsBinder = new Binder('app/components/settings/settings.html', document.body);
                 settingsBinder.downloadComponent();
                 Settings.downloadSettings();
-            }
+            } else if (userId == null) return false;
         }
     }]);
 

@@ -11,6 +11,7 @@ class AppStarter {
             settingsBinder.downloadComponent();
             Settings.downloadSettings();
         }
+        else if (userId == null) return false;
     }
 }
 
