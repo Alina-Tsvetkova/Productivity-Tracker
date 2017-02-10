@@ -1,4 +1,4 @@
-class CycleView extends CycleController {
+class CycleView  {
     renderSavedCycleSettings(cycleValue) {
         let cycleElements = cycleController.initializeCycleElements;
         try {

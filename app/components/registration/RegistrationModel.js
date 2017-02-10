@@ -1,11 +1,19 @@
-class UserData {
-    constructor(userId, email) {
-        this.userId = userId;
-        this.email = email;
+class RegistrationModel {
+
+    createUserInDB() {
+        let signUpValidator = registrationController.getSignUpValidator;
+        firebase.auth().createUserWithEmailAndPassword(signUpValidator.loginField.value, signUpValidator.passwordField.value).then(function (user) {
+            let userNew = new UserData(user.uid, user.email);
+            registrationModel.writeDefaultUserData.call(userNew);
+            registrationController.successUserCreation();
+        }).catch(function (error) {
+            let errorCode = error.code;
+            registrationController.proceedRegistrationErrors(errorCode);
+            return false;
+        });
     }
 
-    writeUserData() {
-
+    writeDefaultUserData() {
         let monthAndCounterBinding = {
             'Urgent': new Array(30),
             'Middle': new Array(30),
@@ -43,3 +51,5 @@ class UserData {
         return localStorage.getItem('currentUser');
     }
 }
+
+let registrationModel = new RegistrationModel();

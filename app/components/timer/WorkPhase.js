@@ -3,8 +3,7 @@ class WorkPhase {
         let timerElements = Timer.initializeTimerElements;
         Timer.clearTimerElements(timerElements.timerContainer, timerElements.activeTimer);
         let receivedElem = timer.downloadTimerComponents('app/components/timer/timer-states/active-timer.html');
-        Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer);
-        Timer.clearTimerElements(timerElements.timerContainer, timerElements.timerOver);
+        Timer.clearTimerElements(timerElements.timerContainer, timerElements.breakTimer, timerElements.timerOver);
         timerElements.timerContainer.appendChild(receivedElem.getElementsByClassName('active-timer')[0]);
         ElementsListener.listenToEvents('click', timerElements.finishPomodoraButton, workPhase.finishPomodora);
         ElementsListener.listenToEvents('click', timerElements.failPomodoraButton, workPhase.failPomodora);

@@ -1,4 +1,4 @@
-class CycleModel extends CycleController {
+class CycleModel {
     static createCycle(event) {
         let savedCycle = new CycleModel();
         savedCycle.saveUserCycle(localStorage.getItem('currentUser'),event);

@@ -48,6 +48,7 @@ class Reports {
     downloadWeekChart(){
         let reportsElements = reports.initializeReportsObject;
         reportsElements.chartContainer.id = 'container-week-report';
+        Reports.changeGapColor(reportsElements.gapVariants[1]);
         weekChartData.transferDataToWeekChart();
         Reports.createWeekOrMonthChart(weekChartData);
         dayReportController.deleteDayReportInfo(dayChartData);
@@ -65,6 +66,7 @@ class Reports {
     downloadMonthChart(){
         let reportsElements = reports.initializeReportsObject;
         reportsElements.chartContainer.id = 'container-month-report';
+        Reports.changeGapColor(reportsElements.gapVariants[2]);
         Reports.createWeekOrMonthChart(monthChartData);
         dayReportController.deleteDayReportInfo(dayChartData);
     }

@@ -37,22 +37,22 @@ class UserValidation {
         classManager.removeClass(loginObject.loginField, 'invalid-field');
 
         if (errorCode == 'auth/wrong-password') {
-            Registration.addBorderToInvalidInput('fail-validation', 1);
-            Registration.addInvalidField(loginObject.passwordField);
+            registrationView.addBorderToInvalidInput('fail-validation', 1);
+            registrationView.addInvalidField(loginObject.passwordField);
         }
         if (errorCode == 'auth/user-not-found') {
-            Registration.addBorderToInvalidInput('fail-validation', 0);
-            Registration.addInvalidField(loginObject.loginField);
+            registrationView.addBorderToInvalidInput('fail-validation', 0);
+            registrationView.addInvalidField(loginObject.loginField);
         }
     }
 
     downloadSignUp(event) {
         event.preventDefault();
-        let registrationFormBinder = new Binder('app/components/registration-form/registration-form.html');
+        let registrationFormBinder = new Binder('app/components/registration/registration.html');
         let regFom = registrationFormBinder.downloadComponent();
         document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), userRegistration.checkUserInfo);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), userRegistration.cancelRegistration);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('submit-sign-up'), registrationController.checkUserInfo);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-registration-form'), registrationController.cancelRegistration);
         setTimeout(function () {
             document.getElementsByClassName('form-registration')[0].classList.add('form-registration-appearance');
         }, 500);
