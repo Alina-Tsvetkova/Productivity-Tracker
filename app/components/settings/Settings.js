@@ -3,35 +3,10 @@ class Settings {
         Router.addHash("settings-cycle");
         let settingsBinder = new Binder('app/components/settings/settings.html', document.body);
         settingsBinder.downloadComponent();
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), CycleModel.createCycle);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
-            counterOfTasks = 0;
-            TaskList.moveToTaskList();
-        });
-
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('increment'), function (event) {
-            let target = event.target.parentNode;
-            if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
-                target = event.target;
-            }
-            event.stopPropagation();
-            myCycle.changeCycleData(target);
-        });
-
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('dicrement'), function (event) {
-            let target = event.target.parentNode;
-            if (navigator.userAgent == 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0') {
-                target = event.target;
-            }
-            event.stopPropagation();
-            myCycle.changeCycleData(target);
-        });
-
         DOMElementsInitializer = Settings.settingsObj;
-        categoriesController.orderToGetCategories();
-
+        categoriesController.runCategories(); // plug in categories module
         Binder.downloadPlugins();
-        CycleModel.receiveCycleData();
+        cycleController.runCycle();
         Icons.iconLinksBinder();
     }
 

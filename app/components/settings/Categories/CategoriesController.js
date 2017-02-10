@@ -1,4 +1,10 @@
 class CategoriesController { // mediator between categories module and categories view, core of the categories module
+
+    runCategories () {//get earlier saved categories from data base or default
+        categoriesController.subscribeOnCategories();
+        categoriesModel.getSavedCategories();
+    }
+
     saveCategories(event, userId) {
         let possibleCategories = [];
         let allPossibleCategories = document.getElementsByClassName('possible-category');
@@ -18,12 +24,6 @@ class CategoriesController { // mediator between categories module and categorie
 
     subscribeOnCategories() {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-btn-categories'), Categories.createCategories);
-    }
-
-    orderToGetCategories() { //get earlier saved categories from data base or default
-        categoriesController.subscribeOnCategories();
-        categoriesModel.getSavedCategories();
-
     }
 }
 

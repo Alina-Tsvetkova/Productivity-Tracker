@@ -1,4 +1,4 @@
-class CycleModel extends Cycle {
+class CycleModel extends CycleController {
     static createCycle(event) {
         let savedCycle = new CycleModel();
         savedCycle.saveUserCycle(localStorage.getItem('currentUser'),event);
@@ -22,7 +22,7 @@ class CycleModel extends Cycle {
         let userId = localStorage.getItem('currentUser');
         let cycleReceiver = firebase.database().ref('users/' + userId + '/cycle');
         cycleReceiver.on('value', function (data) {
-            myCycle.renderSavedCycleSettings(data.val());
+            cycleController.receiveCycleDataForRender(data.val());
         });
     }
 }
