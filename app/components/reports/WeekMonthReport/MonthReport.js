@@ -22,53 +22,6 @@ class MonthReport {
         }
     }
 
-    receiveReportsData() {
-        let quantityOfAllTasks = 0;
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports').on("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                for (let i = 0; i < 5; i++) {
-                    for (let j in childData) {
-                        if (j == monthChartData.chartData[i].name) {
-                            monthChartData.chartData[i].data = childData[j];
-                        }
-                    }
-                    for (let k in childData) {
-                        for (let i = 0; i < childData[k].length; i++) {
-                            quantityOfAllTasks += childData[k][i];
-                        }
-                    }
-                    if (quantityOfAllTasks == 0) {
-                        reports.removeReportsContainers();
-                    }
-                }
-                return key;
-            });
-        });
-    }
-
-    generateReportsData() {
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                let finishDate = childData[key].dateOfFinish;
-                let priority = childData[key].priority;
-                monthChartData.countPositionFromToday(finishDate, priority);
-            });
-        });
-
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo("failed").once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childData = snapshot.val();
-                let key = childSnapshot.key;
-                let finishDate = childData[key].dateOfFinish;
-                let priority = childData[key].priority;
-                monthChartData.countPositionFromToday(finishDate, priority);
-            });
-        });
-    }
 
     countPositionFromToday(finishDate, priority) {
         let today = productivityManager.addDefaultData(); // i.e 7.2.2017
@@ -81,7 +34,7 @@ class MonthReport {
                 for (let key in monthAndCounterBinding) {
                     if (priority == key) {
                         monthAndCounterBinding[key][indexReport]++;
-                        monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
+                        weekMonthReportModel.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
                     }
                 }
             } catch (e) {
@@ -89,7 +42,6 @@ class MonthReport {
             }
         }
         else {
-
             let difference = parsedDate - parsedFinishedDate;
             if (difference < 0) {
                 difference = 31 + difference + 1;
@@ -99,29 +51,13 @@ class MonthReport {
                 for (let key in monthAndCounterBinding) {
                     if (priority == key) {
                         monthAndCounterBinding[key][indexReport]++;
-                        monthChartData.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
+                        weekMonthReportModel.sendUpdatedReportsData(indexReport, monthAndCounterBinding[key][indexReport], priority);
                     }
                 }
             } catch (e) {
                 return "can not create property";
             }
         }
-    }
-
-    clearReportsBeforeFill() {
-        for (let key in monthAndCounterBinding) {
-            for (let l = 0; l <= 30; l++) {
-                monthAndCounterBinding[key][l] = 0;
-            }
-        }
-
-        firebase.database().ref('users/' + localStorage.getItem('currentUser')).update({
-            reports: monthAndCounterBinding
-        });
-    }
-
-    sendUpdatedReportsData(indexReport, counterReports, priority) {
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports/' + priority + '/' + indexReport).set(counterReports);
     }
 }
 
@@ -145,6 +81,3 @@ let monthChartData = new MonthReport('container-month-report', [{
         '25', '26', '27', '28', '29', '30', '31'
     ], 10);
 
-
-//monthChartData.clearReportsBeforeFill();
-//reports.receiveReportsStatistics();

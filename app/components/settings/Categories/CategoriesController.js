@@ -1,6 +1,6 @@
 class CategoriesController { // mediator between categories module and categories view, core of the categories module
 
-    runCategories () {//get earlier saved categories from data base or default
+    runCategories() {//get earlier saved categories from data base or default
         categoriesController.subscribeOnCategories();
         categoriesModel.getSavedCategories();
     }
@@ -19,7 +19,9 @@ class CategoriesController { // mediator between categories module and categorie
         if (!(data)) {
             return false;
         }
-        categoriesView.renderEarlierSavedCategories(data, k);
+        else {
+            categoriesView.renderEarlierSavedCategories(data, k);
+        }
     }
 
     subscribeOnCategories() {

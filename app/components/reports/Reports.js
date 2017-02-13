@@ -1,28 +1,26 @@
 class Reports {
     receiveReportsStatistics() {
         monthChartData.initializeMonthCounter();
-        monthChartData.generateReportsData();
-        monthChartData.receiveReportsData();
+        weekMonthReportModel.generateReportsData();
+        weekMonthReportModel.receiveReportsData();
     }
 
     static downloadReports() {
+        weekMonthReportModel.clearReportsBeforeFill();
+        reports.receiveReportsStatistics();
         Router.addHash("reports");
         let reportsBinder = new Binder('app/components/reports/reports.html');
         let reportsDoc = reportsBinder.downloadComponent();
         document.body.innerHTML = '';
         document.body.appendChild(reportsDoc.getElementById('wrapper'));
         Icons.downloadMainIcons();
-        reports.receiveReportsStatistics();
-        reports.downloadDayChart();
         let tooltips = $('.tooltip');
         tooltips.tooltipSwitcher();
         Icons.iconLinksBinder();
-        dayReportController.deleteDayReportInfo(dayChartData);
-
-        document.getElementsByClassName('week-chart-visualizer')[0].addEventListener('click', reports.downloadWeekChart);
-        document.getElementsByClassName('day-chart-visualizer')[0].addEventListener('click', reports.downloadDayChart);
-        document.getElementsByClassName('month-chart-visualizer')[0].addEventListener('click', reports.downloadMonthChart);
-
+        reports.subscribeReportsEvents();
+        setTimeout(function () {
+            reports.downloadDayChart();
+        },200)
     }
 
     get initializeReportsObject() {
@@ -45,30 +43,34 @@ class Reports {
         }
     }
 
-    downloadWeekChart(){
-        let reportsElements = reports.initializeReportsObject;
-        reportsElements.chartContainer.id = 'container-week-report';
-        Reports.changeGapColor(reportsElements.gapVariants[1]);
+    downloadWeekChart() {
+        reports.addId('container-week-report', 1);
         weekChartData.transferDataToWeekChart();
-        Reports.createWeekOrMonthChart(weekChartData);
-        dayReportController.deleteDayReportInfo(dayChartData);
+        weekMonthReportView.createWeekOrMonthChart(weekChartData);
     }
 
-    downloadDayChart(){
-        let reportsElements = reports.initializeReportsObject;
-        reportsElements.chartContainer.id = 'container-day-report';
-        Reports.changeGapColor(reportsElements.gapVariants[0]);
+    downloadDayChart() {
+        reports.addId('container-day-report', 0);
         dayReportModel.transferDataToDayChart(dayChartData);
         dayReportView.createDayChart(dayChartData);
+    }
+
+    downloadMonthChart() {
+        reports.addId('container-month-report', 2);
+        weekMonthReportView.createWeekOrMonthChart(monthChartData);
+    }
+
+    addId(reportsId, count) {
+        let reportsElements = reports.initializeReportsObject;
+        reportsElements.chartContainer.id = reportsId;
+        Reports.changeGapColor(reportsElements.gapVariants[count]);
         dayReportController.deleteDayReportInfo(dayChartData);
     }
 
-    downloadMonthChart(){
-        let reportsElements = reports.initializeReportsObject;
-        reportsElements.chartContainer.id = 'container-month-report';
-        Reports.changeGapColor(reportsElements.gapVariants[2]);
-        Reports.createWeekOrMonthChart(monthChartData);
-        dayReportController.deleteDayReportInfo(dayChartData);
+    subscribeReportsEvents() {
+        document.getElementsByClassName('week-chart-visualizer')[0].addEventListener('click', reports.downloadWeekChart);
+        document.getElementsByClassName('day-chart-visualizer')[0].addEventListener('click', reports.downloadDayChart);
+        document.getElementsByClassName('month-chart-visualizer')[0].addEventListener('click', reports.downloadMonthChart);
     }
 
     static changeGapColor(target) { // change color of selected tab (gap)
@@ -78,104 +80,6 @@ class Reports {
         }
         target.classList.add("selectedTab");
     }
-
-
-    static createWeekOrMonthChart(chartObj) {
-        Highcharts.chart(chartObj.id, {
-            chart: {
-                type: 'column',
-                backgroundColor: 'transparent',
-                lineColor: 'blue',
-                borderColor: 'white',
-                spacingBottom: 65
-            },
-
-            credits: {
-                enabled: false
-            },
-
-            exporting: {
-                enabled: false
-            },
-            title: {
-                text: ''
-            },
-
-            legend: {
-                itemMarginTop: 30,
-                itemStyle: {
-                    color: '#8da5b8',
-                    fontSize: '14px',
-                    fontWeight: 'bold',
-                    fontFamily: '\'Roboto\', sans-serif',
-                },
-                itemHoverStyle: {
-                    color: 'white'
-                },
-                symbolRadius: 0
-            },
-
-            xAxis: {
-                categories: chartObj.chartCategories,
-                labels: {
-                    style: {
-                        color: 'white',
-                        fontFamily: '\'Roboto\', sans-serif',
-                    }
-                },
-                lineWidth: 1,
-                lineColor: 'white',
-                tickColor: 'transparent',
-            },
-
-            yAxis: {
-                allowDecimals: false,
-                min: 0,
-                gridLineColor: '#345168',
-                color: 'white',
-                title: {
-                    text: ''
-                },
-                lineWidth: 1,
-                lineColor: 'white',
-                labels: {
-                    style: {
-                        color: 'white',
-                        fontFamily: '\'Roboto\', sans-serif',
-                    }
-                }
-            },
-
-            tooltip: {
-                formatter: function () {
-                    return this.series.name.toUpperCase() + '<br/>' +
-                        'Tasks: ' + this.point.y;
-                },
-                borderColor: 'none',
-                opacity: 0.7,
-                useHTML: true,
-                backgroundColor: "#cddde9",
-                style: {
-                    "color": '#3c5162',
-                    "fontSize": "14px",
-                    "fontWeight": 'bold',
-                    "fontFamily": '\'Roboto-Bold\', sans-serif',
-                },
-            },
-
-            plotOptions: {
-                column: {
-                    pointPadding: 0,
-                    pointWidth: chartObj.columnWidth,
-                    borderWidth: 0,
-                    stacking: 'normal',
-                }
-            },
-            colors: ['#f15a4a', '#fea741', '#fddc43', '#1abb9b', '#8da5b8'],
-            series: chartObj.chartData,
-        });
-    }
-
 }
 
 
