@@ -20,7 +20,7 @@ class TaskList {
         let allRenderedMoveButtonsArr = Array.prototype.slice.call(allRenderedMoveButtons);
         index = allRenderedMoveButtonsArr.indexOf(event.target);
         let key = document.body.getElementsByClassName('task')[index].getAttribute("taskKey");
-        dailyTask.moveTaskToDaily(key);
+        //dailyTask.moveTaskToDaily(key);
     }
 
     static moveToTaskList() {
@@ -33,24 +33,12 @@ class TaskList {
         let headerBinder = new Binder('app/components/fixed-logo/fixed-logo.html');
         let headerDoc = headerBinder.downloadComponent();
         document.body.appendChild(headerDoc.getElementsByClassName('fixed-logo')[0]);
-        let modalWindowElements = modalWindowController.getModalWindowElements;
-        ElementsListener.listenToEvents('click', document.querySelectorAll('.remove-btn-icon'), taskDeletorObj.checkIfToDeleteTasks);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowController.initModalWindow);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {
-            TaskRenderer.addActiveClassSelector(this);
-            SelectionManager.selectAll('#globalTasks .task');
-        });
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('deselect-all-global'), function () {
-            TaskRenderer.addActiveClassSelector(this);
-            SelectionManager.deselectAllSelectedTasks('#globalTasks .task');
-        });
-
+        TaskList.subscribeCommonTaskListEvents();
         document.querySelector('.priority-list button:first-child').classList.add('active-elem-white');
         setTimeout(function () {
-            tasksRenderer.checkIfTaskListEmpty();
+            taskElementController.checkIfTaskListEmpty();
         }, 100);
-        ElementsListener.listenToEvents('click', document.querySelectorAll('.priority-list button'), filtrationTask.filterTasks);
+
         $(document).ready(function () {
             let tasksTabs = $("#tasksTabs");
             tasksTabs.tabSwitcher();
@@ -58,6 +46,25 @@ class TaskList {
             let tooltips = $('.tooltip');
             tooltips.tooltipSwitcher();
         });
+
+        Icons.iconLinksBinder();
+        Router.listenToHashChanges();
+    }
+
+    static subscribeCommonTaskListEvents() {
+        ElementsListener.listenToEvents('click', document.querySelectorAll('.priority-list button'), filtrationTask.filterTasks);
+        ElementsListener.listenToEvents('click', document.querySelectorAll('.remove-btn-icon'), taskDeletorObj.checkIfToDeleteTasks);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowController.initModalWindow);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {
+            taskElementController.addActiveClassSelector(this);
+            SelectionManager.selectAll('#globalTasks .task');
+        });
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('deselect-all-global'), function () {
+            taskElementController.addActiveClassSelector(this);
+            SelectionManager.deselectAllSelectedTasks('#globalTasks .task');
+        });
+
         window.onscroll = function () {
             if (document.getElementsByClassName('fixed-logo')[0]) {
                 let scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -67,8 +74,6 @@ class TaskList {
                 }
             }
         };
-        Icons.iconLinksBinder();
-        Router.listenToHashChanges();
     }
 }
 

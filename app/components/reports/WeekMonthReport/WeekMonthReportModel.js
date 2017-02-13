@@ -17,9 +17,12 @@ class WeekMonthReportModel {
                             quantityOfAllTasks += childData[k][i];
                         }
                     }
-                    if (quantityOfAllTasks == 0) {
+                }
+                if (quantityOfAllTasks == 0) {
+                    setTimeout(function () {
                         reports.removeReportsContainers();
-                    }
+                    },200)
+
                 }
                 return key;
             });

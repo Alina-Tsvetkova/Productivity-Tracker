@@ -32,16 +32,17 @@ class TaskManager {
             postData.deadline = productivityManager.addDefaultData();
         }
 
-        tasksRenderer.sendSubmittedData(postData);
+        productivityManager.sendSubmittedData(postData);
         if (document.getElementById('modal-window-elem')) {
             document.body.removeChild(document.getElementById('modal-window-elem'));
         }
         TaskNotification.createNotification('.message-success');
+        taskElementController.checkIfALLTasksAreDone();
     }
 
     sendSubmittedData(postData) {
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
-        tasksRenderer.checkIfTaskListEmpty();
+        taskElementController.checkIfTaskListEmpty();
     }
 
     saveEditedTask(index) {
@@ -65,13 +66,13 @@ class TaskManager {
         }
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
-        tasksRenderer.sendEditedData(updates, editedHash);
+        productivityManager.sendEditedData(updates, editedHash);
         modalWindowController.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 
     sendEditedData(updates, editedHash) {
         firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
-        tasksRenderer.checkIfTaskListEmpty();
+        taskElementController.checkIfTaskListEmpty();
     }
 
     addDefaultData() {

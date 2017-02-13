@@ -3,7 +3,7 @@ class TaskDeletor extends TaskManager {
     cancelDeletion() {
         selectedTaskHashes.clear();
         taskDeletorObj.removeIndicatorOfQuantityDel();
-        ModalWindow.closeModalWindow(document.getElementById('modal-w-remove'));
+        modalWindowController.closeModalWindow(document.getElementById('modal-w-remove'));
         for (let j = 0; j < document.getElementsByClassName('indicator').length; j++) {
             document.getElementsByClassName('indicator')[j].classList.remove('for-delete', 'for-delete-bg');
             document.getElementsByClassName('indicator')[j].classList.add('canceled-delete');
@@ -49,7 +49,7 @@ class TaskDeletor extends TaskManager {
         deleteTaskModal.dialogSwitcher('close');
         taskDeletorObj.removeIndicatorOfQuantityDel();
         selectedTaskHashes.clear();
-        tasksRenderer.checkIfTaskListEmpty();
+        taskElementController.checkIfTaskListEmpty();
         TaskNotification.createNotification('.message-delete');
     }
 

@@ -1,6 +1,6 @@
 class filtrationTask extends TaskManager {
     static filterTasks() {
-        tasksRenderer.clearContainers();
+        taskElementView.clearContainers();
         let priorityFilters = document.querySelectorAll('.priority-list button');
 
         for (let i = 0; i < priorityFilters.length; i++) {
@@ -12,11 +12,13 @@ class filtrationTask extends TaskManager {
         taskData.on('value', function (snapshot) {
             snapshot.forEach(function (child) {
                 let value = child.val();
+                console.log(value);
                 if (event.target.innerHTML == child.val().priority) {
-                    tasksRenderer.renderTask(value, child.key, true);
+                    let docTask = taskElementView.downloadTaskComponent();
+                    taskElementView.fillTaskWithInformation(docTask,value, child.key, true);
                 }
                 else if (event.target.innerHTML == 'All') {
-                    tasksRenderer.checkIfTaskListEmpty();
+                    taskElementController.checkIfTaskListEmpty();
                 }
             });
         });
