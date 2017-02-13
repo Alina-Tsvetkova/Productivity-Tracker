@@ -1,7 +1,7 @@
 class TaskManager {
 
     submitTask() {
-        let modalWindowElements = ModalWindow.getModalWindowElems;
+        let modalWindowElements =  modalWindowController.getModalWindowElements;
 
         let postData = {
             title: modalWindowElements.titleInput.value,

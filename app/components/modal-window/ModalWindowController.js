@@ -1,0 +1,72 @@
+class ModalWindowController {
+
+    initModalWindow() { // start module of Modal Window
+        modalWindowModel.downloadEarlierCategories();
+        modalWindowView.addTaskModal();
+    }
+
+    initEditModalWindow(index) { // start module of Modal Edit Window
+        modalWindowModel.downloadEarlierCategories();
+        modalWindowView.showEditModal(index);
+    }
+
+    get getModalWindowElements() {
+        return {
+            task: document.querySelectorAll('.task'),
+            titleInput: document.getElementsByClassName('title-input')[0],
+            descriptionInput: document.getElementsByClassName('description-input')[0],
+            categoryRadioBtn: document.querySelector('input.category-input:checked + label + label'),
+            deadlineInput: document.getElementsByClassName('deadline-input')[0],
+            estimationCheckboxes: document.querySelectorAll('input[type="checkbox"]:checked').length,
+            priorityRadioBtn: document.querySelector('input[name="priority-level"]:checked + label + label'),
+            categoryTitles: document.querySelectorAll('.categories-names .category-input'),
+            categoryLabels: document.querySelectorAll('.categories-names .category-title'),
+            categoriesInputs: document.querySelectorAll('input[name=category-name]'),
+            priorityInputs: document.querySelectorAll('input[name=priority-level]')
+        }
+    }
+
+    transitCategories(data, k) {
+        if (!(data)) {
+            return false;
+        }
+        modalWindowView.renderEarlierSavedCategories(data, k);
+    }
+
+    closeModalWindow(child) {
+        if (child == document.getElementById('modal-w-remove')) {
+            child.style.display = 'none';
+        }
+        else {
+            modalWindowController.moveModalWindow(-50);
+            setTimeout(function () {
+                document.body.removeChild(child);
+            }, 500)
+        }
+    }
+
+    moveModalWindow(coord) {
+        setTimeout(function () {
+            document.getElementsByClassName('add-task-modal')[0].style.top = coord + '%';
+        }, 100)
+    }
+
+    subscribeModalEvents() {
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {
+            modalWindowController.closeModalWindow(document.getElementById('modal-window-elem-edit'));
+        });
+
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('check-button-edit'), function () {
+            productivityManager.saveEditedTask(index)
+        });
+    }
+
+    subscribeAddTaskEvents() {
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('icon-add-task'), productivityManager.submitTask);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {
+            modalWindowController.closeModalWindow(document.getElementById('modal-window-elem'));
+        });
+    }
+}
+
+let modalWindowController = new ModalWindowController();

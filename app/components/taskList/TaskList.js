@@ -12,7 +12,7 @@ class TaskList {
         let allRenderedEditButtonsArr = Array.prototype.slice.call(allRenderedEditButtons);
         index = allRenderedEditButtonsArr.indexOf(event.target);
         let key = document.body.getElementsByClassName('task')[index].getAttribute("taskKey");
-        modalWindowObj.showEditModal(index, key);
+        modalWindowController.initEditModalWindow(index, key);
     }
 
     static getIndexOfMovableTasks(event) {
@@ -33,10 +33,10 @@ class TaskList {
         let headerBinder = new Binder('app/components/fixed-logo/fixed-logo.html');
         let headerDoc = headerBinder.downloadComponent();
         document.body.appendChild(headerDoc.getElementsByClassName('fixed-logo')[0]);
-        let modalWindowElements = ModalWindow.getModalWindowElems;
+        let modalWindowElements = modalWindowController.getModalWindowElements;
         ElementsListener.listenToEvents('click', document.querySelectorAll('.remove-btn-icon'), taskDeletorObj.checkIfToDeleteTasks);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('reports-switcher'), Reports.downloadReports);
-        ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowObj.addTaskModal);
+        ElementsListener.listenToEvents('click', document.getElementsByClassName('add-task'), modalWindowController.initModalWindow);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('select-all-global'), function () {
             TaskRenderer.addActiveClassSelector(this);
             SelectionManager.selectAll('#globalTasks .task');
