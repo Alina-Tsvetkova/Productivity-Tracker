@@ -96,11 +96,30 @@ class TaskElementController {
         });
     }
 
-     addActiveClassSelector(elem) {
+    addActiveClassSelector(elem) {
         for (let k = 0; k < document.querySelectorAll('.opportunity-select button').length; k++) {
             document.querySelectorAll('.opportunity-select button')[k].style.color = '#8da5b8';
         }
         elem.style.color = 'white';
+    }
+
+    addDefaultData() {
+        return new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+    };
+
+    moveTaskToDaily(key) {
+        taskElementModel.sendTodayTask(key);
+    }
+
+    filterTasksToPriority() {
+        taskElementView.clearContainers();
+        let priorityFilters = document.querySelectorAll('.priority-list button');
+
+        for (let i = 0; i < priorityFilters.length; i++) {
+            classManager.removeClass(priorityFilters[i], 'active-elem-white');
+        }
+        event.target.classList.add('active-elem-white');
+        taskElementModel.filterDataBase();
     }
 }
 

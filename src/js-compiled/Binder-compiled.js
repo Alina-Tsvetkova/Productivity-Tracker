@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -13,7 +13,7 @@ var Binder = function () {
     }
 
     _createClass(Binder, [{
-        key: "downloadComponent",
+        key: 'downloadComponent',
         value: function downloadComponent(route, parent) {
             var componentRequest = new XMLHttpRequest();
             var componentParser = new DOMParser();
@@ -27,10 +27,10 @@ var Binder = function () {
             return doc;
         }
     }], [{
-        key: "downloadPlugins",
-        value: function downloadPlugins() {
+        key: 'downloadPlugins',
+        value: function downloadPlugins(id) {
             $(document).ready(function () {
-                var tabs = $("#tabs");
+                var tabs = $(id);
                 tabs.tabSwitcher();
                 var tooltips = $('.tooltip');
                 tooltips.tooltipSwitcher();

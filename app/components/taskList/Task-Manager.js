@@ -1,8 +1,20 @@
 class TaskManager {
 
-    submitTask() {
-        let modalWindowElements =  modalWindowController.getModalWindowElements;
+    get editModalWindowElem() {
+        return {
+            titleField: document.getElementsByClassName('title-input')[0],
+            descriptionField: document.getElementsByClassName('description-input')[0],
+            checkedCategory: document.querySelector('input.category-input:checked'),
+            checkedPriority: document.querySelector('input[name="priority-level"]:checked + label + label'),
+            deadlineInput: document.getElementsByClassName('deadline-input')[0],
+            checkedEstimation: document.querySelectorAll('.tomato-estim:checked'),
+            allCategoriesNames: document.getElementsByClassName('category-input'),
+        }
+    }
 
+
+    submitTask() {
+        let modalWindowElements = modalWindowController.getModalWindowElements;
         let postData = {
             title: modalWindowElements.titleInput.value,
             description: modalWindowElements.descriptionInput.value,
@@ -29,55 +41,41 @@ class TaskManager {
         postData.colorIndicator = foundCategory - 1;
 
         if (postData.deadline == '') {
-            postData.deadline = productivityManager.addDefaultData();
+            postData.deadline = taskElementController.addDefaultData();
         }
 
-        productivityManager.sendSubmittedData(postData);
-        if (document.getElementById('modal-window-elem')) {
-            document.body.removeChild(document.getElementById('modal-window-elem'));
-        }
+        taskElementModel.sendSubmittedData(postData);
+        modalWindowController.closeModalWindow(document.getElementById('modal-window-elem'));
+
         TaskNotification.createNotification('.message-success');
         taskElementController.checkIfALLTasksAreDone();
     }
 
-    sendSubmittedData(postData) {
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').push(postData);
-        taskElementController.checkIfTaskListEmpty();
-    }
 
     saveEditedTask(index) {
+        let editModalElements = productivityManager.editModalWindowElem;
         let updates = {};
-        updates.title = document.querySelectorAll('.title-input')[0].value;
-        updates.description = document.querySelectorAll('.description-input')[0].value;
-        updates.category = document.querySelector('input.category-input:checked').value;
-        updates.priority = document.querySelector('input[name="priority-level"]:checked + label + label').innerHTML;
-        updates.deadline = document.querySelectorAll('.deadline-input')[0].value;
-        updates.estimation = document.querySelectorAll('.tomato-estim:checked').length;
+        updates.title = editModalElements.titleField.value;
+        updates.description = editModalElements.descriptionField.value;
+        updates.category = editModalElements.checkedCategory.value;
+        updates.priority = editModalElements.checkedPriority.innerHTML;
+        updates.deadline = editModalElements.deadlineInput.value;
+        updates.estimation = editModalElements.checkedEstimation.length;
 
-        if (document.querySelectorAll('.deadline-input')[0].value == '') {
-            let editedToday = new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+        if (editModalElements.deadlineInput.value == '') {
+            let editedToday = taskElementController.addDefaultData();
             updates.deadline = editedToday;
         }
 
-        let allCategoriesNames = document.getElementsByClassName('category-input');
         let allCategoriesValues = [];
-        for (let j = 0; j < allCategoriesNames.length; j++) {
-            allCategoriesValues.push(allCategoriesNames[j].value);
+        for (let j = 0; j < editModalElements.allCategoriesNames.length; j++) {
+            allCategoriesValues.push(editModalElements.allCategoriesNames[j].value);
         }
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
-        productivityManager.sendEditedData(updates, editedHash);
+        taskElementModel.sendEditedData(updates, editedHash);
         modalWindowController.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
-
-    sendEditedData(updates, editedHash) {
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + editedHash).update(updates);
-        taskElementController.checkIfTaskListEmpty();
-    }
-
-    addDefaultData() {
-        return new Date().getDate() + '.' + parseInt(new Date().getMonth() + 1) + '.' + new Date().getFullYear();
-    };
 }
 
 let productivityManager = new TaskManager();

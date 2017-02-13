@@ -1,22 +1,32 @@
 let selectedTaskHashes = new Set();
 class TaskDeletor extends TaskManager {
+
+    get deleteTaskObj() {
+        return {
+            indicator: document.getElementsByClassName('indicator'),
+            removeBtn: document.getElementsByClassName('remove-btn'),
+            cancelBtn: document.getElementsByClassName('cancel-btn')
+        }
+    }
+
     cancelDeletion() {
         selectedTaskHashes.clear();
         taskDeletorObj.removeIndicatorOfQuantityDel();
+        let deleteElements = taskDeletorObj.deleteTaskObj;
         modalWindowController.closeModalWindow(document.getElementById('modal-w-remove'));
-        for (let j = 0; j < document.getElementsByClassName('indicator').length; j++) {
-            document.getElementsByClassName('indicator')[j].classList.remove('for-delete', 'for-delete-bg');
-            document.getElementsByClassName('indicator')[j].classList.add('canceled-delete');
+        for (let j = 0; j < deleteElements.indicator.length; j++) {
+            deleteElements.indicator[j].classList.remove('for-delete', 'for-delete-bg');
+            deleteElements.indicator[j].classList.add('canceled-delete');
         }
         TaskNotification.createNotification('.message-info');
     }
 
     givePossibilityToDelete() {
         let taskListElements = TaskList.getTaskListElements;
-        let allTrashViews = document.getElementsByClassName('indicator');
-        for (let l = 0; l < allTrashViews.length; l++) {
-            document.getElementsByClassName('indicator')[l].classList.remove('canceled-delete');
-            allTrashViews[l].classList.add('for-delete');
+        let deleteElements = taskDeletorObj.deleteTaskObj;
+        for (let l = 0; l < deleteElements.indicator.length; l++) {
+            deleteElements.indicator[l].classList.remove('canceled-delete');
+            deleteElements.indicator[l].classList.add('for-delete');
         }
         for (let h = 0; h < taskListElements.quantityOfSelectedTasks.length; h++) {
             if (taskListElements.quantityOfSelectedTasks[h].innerHTML === '') {
@@ -30,10 +40,9 @@ class TaskDeletor extends TaskManager {
         console.log(selectedTaskHashes);
         let taskListElements = TaskList.getTaskListElements;
         if (event.target.classList.contains('indicator')) {
-            let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
             event.target.classList.add('for-delete-bg');
             selectedTaskHashes.add(event.target.parentNode.parentNode.getAttribute('taskKey'));
-            quantityOfSelectedTasks = selectedTaskHashes.size;
+            let quantityOfSelectedTasks = selectedTaskHashes.size;
             for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
                 taskListElements.quantityOfSelectedTasks[l].style.display = 'block';
                 taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
@@ -45,20 +54,20 @@ class TaskDeletor extends TaskManager {
         for (let selectedTaskHash of selectedTaskHashes) {
             firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + selectedTaskHash).remove();
         }
-        let deleteTaskModal = $('#modal-w-remove');
-        deleteTaskModal.dialogSwitcher('close');
+        modalWindowController.closeModalWindow(document.getElementById('modal-w-remove'));
         taskDeletorObj.removeIndicatorOfQuantityDel();
         selectedTaskHashes.clear();
         taskElementController.checkIfTaskListEmpty();
         TaskNotification.createNotification('.message-delete');
     }
 
+
+
     checkIfToDeleteTasks() {
+        let modalElements = taskDeletorObj.deleteTaskObj;
         if (document.querySelector('.quantity-del-tasks').innerHTML > 0) {
-            let deleteTaskModal = $('#modal-w-remove');
-            deleteTaskModal.dialogSwitcher('show');
-            ElementsListener.listenToEvents('click', document.getElementsByClassName('remove-btn'), taskDeletorObj.submitDeleteTask);
-            ElementsListener.listenToEvents('click', document.getElementsByClassName('cancel-btn'), taskDeletorObj.cancelDeletion);
+            modalWindowView.downloadRemoveModalWindow();
+            modalWindowController.subscribeRemoveTaskModalEvents(modalElements);
         }
         taskDeletorObj.givePossibilityToDelete();
     }

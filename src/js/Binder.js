@@ -17,9 +17,9 @@ class Binder {
         return doc;
     }
 
-    static downloadPlugins(){
+    static downloadPlugins(id){
         $(document).ready(function () {
-            let tabs = $("#tabs");
+            let tabs = $(id);
             tabs.tabSwitcher();
             let tooltips = $('.tooltip');
             tooltips.tooltipSwitcher();

@@ -6,6 +6,7 @@ class ModalWindowView {
         document.body.appendChild(receivedDoc.getElementById('modal-window-elem'));
         modalWindowController.subscribeAddTaskEvents();
         modalWindowController.moveModalWindow(50);
+        modalWindowView.attachDatePicker();
     }
 
     showEditModal(index) {
@@ -13,6 +14,13 @@ class ModalWindowView {
         let receivedDoc = modalBinder.downloadComponent();
         document.body.appendChild(receivedDoc.getElementById('modal-window-elem-edit'));
         modalWindowView.fillEditModal(index);
+    }
+
+    downloadRemoveModalWindow() {
+        let modalBinder = new Binder('app/components/modal-window/remove-modal-window.html');
+        let receivedDoc = modalBinder.downloadComponent();
+        document.body.appendChild(receivedDoc.getElementById('modal-w-remove'));
+        modalWindowController.moveModalWindow(50);
     }
 
     fillEditModal(index) {

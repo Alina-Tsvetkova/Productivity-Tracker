@@ -4,11 +4,9 @@ class SelectionManager {
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.pushHashesToDeleteSet(taskHashes);
         let selectedSize = selectedTaskHashes.size;
-        let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
-        quantityOfSelectedTasks = selectedSize;
         for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
             taskListElements.quantityOfSelectedTasks[l].style.display = 'block';
-            taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
+            taskListElements.quantityOfSelectedTasks[l].innerHTML = selectedSize;
         }
         taskDeletorObj.pushTaskToDelete();
         TaskNotification.createNotification('.message-warn');
@@ -22,13 +20,13 @@ class SelectionManager {
     }
 
     static changeSelectedTaskImage(task) {
-        classManager.removeClass(task,'canceled-delete');
+        classManager.removeClass(task, 'canceled-delete');
         task.classList.add('for-delete-bg');
     }
 
     static changeDeselectedTaskImage(task) {
-        classManager.removeClass(task,'for-delete-bg');
-        classManager.removeClass(task,'for-delete');
+        classManager.removeClass(task, 'for-delete-bg');
+        classManager.removeClass(task, 'for-delete');
         task.classList.add('canceled-delete');
     }
 
@@ -37,13 +35,11 @@ class SelectionManager {
         let taskHashes = document.querySelectorAll(elements);
         SelectionManager.removeHashesToDeselect(taskHashes);
         let selectedSize = selectedTaskHashes.size;
-        let quantityOfSelectedTasks = +taskListElements.quantityOfSelectedTasks[1].innerHTML;
-        quantityOfSelectedTasks = selectedSize;
         for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
             if (taskListElements.quantityOfSelectedTasks[l].innerHTML == 0) {
                 return;
             }
-            taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
+            taskListElements.quantityOfSelectedTasks[l].innerHTML = selectedSize;
         }
     }
 

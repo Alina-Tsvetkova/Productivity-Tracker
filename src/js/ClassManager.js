@@ -1,8 +1,4 @@
 class ClassManager {
-    addClass(){
-
-    }
-
     removeClass(obj, cls){
         try {
             let classes = obj.className.split(' ');

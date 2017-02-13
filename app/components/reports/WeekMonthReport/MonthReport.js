@@ -24,7 +24,7 @@ class MonthReport {
 
 
     countPositionFromToday(finishDate, priority) {
-        let today = productivityManager.addDefaultData(); // i.e 7.2.2017
+        let today = taskElementController.addDefaultData(); // i.e 7.2.2017
         let parsedDate = today.split('.')[0];
         let parsedFinishedDate = finishDate.split('.')[0];
         let indexReport;

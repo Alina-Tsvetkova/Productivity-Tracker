@@ -5,13 +5,13 @@ class CycleModel {
     }
 
     saveUserCycle(userId,event) {
-        this.getDataForCycle();
+        cycleController.getDataForCycle();
         firebase.database().ref('users/' + userId).update({
             cycle: {
-                "workTime": this.workTime,
-                "workIteration": this.workIteration,
-                "shortBreak": this.shortBreak,
-                "longBreak": this.longBreak
+                "workTime": cycleController.workTime,
+                "workIteration": cycleController.workIteration,
+                "shortBreak": cycleController.shortBreak,
+                "longBreak": cycleController.longBreak
             }
         });
 

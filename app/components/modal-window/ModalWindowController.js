@@ -34,15 +34,11 @@ class ModalWindowController {
     }
 
     closeModalWindow(child) {
-        if (child == document.getElementById('modal-w-remove')) {
-            child.style.display = 'none';
-        }
-        else {
-            modalWindowController.moveModalWindow(-50);
-            setTimeout(function () {
-                document.body.removeChild(child);
-            }, 500)
-        }
+        modalWindowController.moveModalWindow(-50);
+        setTimeout(function () {
+            document.body.removeChild(child);
+        }, 500)
+
     }
 
     moveModalWindow(coord) {
@@ -66,6 +62,11 @@ class ModalWindowController {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('close-button'), function () {
             modalWindowController.closeModalWindow(document.getElementById('modal-window-elem'));
         });
+    }
+
+    subscribeRemoveTaskModalEvents(modalElements) {
+        ElementsListener.listenToEvents('click', modalElements.removeBtn, taskDeletorObj.submitDeleteTask);
+        ElementsListener.listenToEvents('click', modalElements.cancelBtn, taskDeletorObj.cancelDeletion);
     }
 }
 

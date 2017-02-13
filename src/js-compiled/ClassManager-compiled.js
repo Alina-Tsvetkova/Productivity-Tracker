@@ -10,9 +10,6 @@ var ClassManager = function () {
     }
 
     _createClass(ClassManager, [{
-        key: 'addClass',
-        value: function addClass() {}
-    }, {
         key: 'removeClass',
         value: function removeClass(obj, cls) {
             try {
