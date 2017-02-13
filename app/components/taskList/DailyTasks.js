@@ -20,7 +20,6 @@ class DailyTasks {
         setTimeout(function () {
             tasksRenderer.checkIfTaskListEmpty();
         }, 100);
-
     }
 }
 

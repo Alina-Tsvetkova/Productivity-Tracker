@@ -66,7 +66,7 @@ class TaskManager {
         updates.colorIndicator = allCategoriesValues.indexOf(updates.category) - 1;
         let editedHash = document.getElementsByClassName('task')[index].getAttribute('taskKey');
         tasksRenderer.sendEditedData(updates, editedHash);
-        ModalWindow.closeModalWindow(document.getElementById('modal-window-elem-edit'));
+        modalWindowController.closeModalWindow(document.getElementById('modal-window-elem-edit'));
     }
 
     sendEditedData(updates, editedHash) {

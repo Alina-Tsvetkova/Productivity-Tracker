@@ -118,7 +118,7 @@ class TaskRenderer extends TaskManager {
                 TaskNotification.createNotification('.message-error');
                 return false;
             }
-            Timer.showTimer(taskKey);
+            initialTimerView.showTimer(taskKey);
         });
     }
 
