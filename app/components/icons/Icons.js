@@ -19,7 +19,7 @@ class Icons {
             Router.addHash("task-list");
         });
         ElementsListener.listenToEvents('click', icons.logOutIcon, function () {
-            loggedUser.logOutWrapper();
+            logOutView.downloadLogOut();
         });
         ElementsListener.listenToEvents('click', icons.reportsIcon, function () {
             Router.addHash("reports");
