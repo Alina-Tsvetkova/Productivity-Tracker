@@ -44,15 +44,20 @@ class TaskElementController {
     }
 
     checkIfALLTasksAreDone() {
-        if (document.querySelectorAll('#globalTasks .task, #daily-tasks .task').length == 0) {
-            classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
-            document.getElementsByClassName('tasks-intro')[0].classList.add('non-visible-elem');
+        try {
+            if (document.querySelectorAll('#globalTasks .task, #daily-tasks .task').length == 0) {
+                classManager.removeClass(document.getElementsByClassName('done-tasks-sect')[0], 'non-visible-elem');
+                document.getElementsByClassName('tasks-intro')[0].classList.add('non-visible-elem');
+            }
+
+            else {
+                document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
+                classManager.removeClass(document.getElementsByClassName('tasks-intro')[0], 'non-visible-elem');
+            }
+        } catch (e) {
+            return "element is removed";
         }
 
-        else {
-            document.getElementsByClassName('done-tasks-sect')[0].classList.add('non-visible-elem');
-            classManager.removeClass(document.getElementsByClassName('tasks-intro')[0], 'non-visible-elem');
-        }
     }
 
     generateWordMonth(splitedArray) {
