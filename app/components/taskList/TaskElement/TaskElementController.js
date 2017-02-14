@@ -18,7 +18,7 @@ class TaskElementController {
     checkIfTaskListEmpty() {
         taskElementView.clearContainers();
         try {
-            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks').on('value', function (data) {
+            firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks').on('value', function (data) {
                 let tasksTabs = document.getElementById('tasksTabs');
                 let addTaskSection = $('.add-task-sect')[0];
                 if (data.val() == null) {

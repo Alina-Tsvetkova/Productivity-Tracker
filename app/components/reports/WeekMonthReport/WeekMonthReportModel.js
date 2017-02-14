@@ -2,7 +2,7 @@ class WeekMonthReportModel {
 
     receiveReportsData() {
         let quantityOfAllTasks = 0;
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports').on("value", function (snapshot) {
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/reports').on("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -21,7 +21,7 @@ class WeekMonthReportModel {
                 if (quantityOfAllTasks == 0) {
                     setTimeout(function () {
                         reports.removeReportsContainers();
-                    },200)
+                    }, 200)
 
                 }
                 return key;
@@ -30,7 +30,7 @@ class WeekMonthReportModel {
     }
 
     generateReportsData() {
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks').orderByChild("taskIsDone").equalTo(true).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -43,7 +43,7 @@ class WeekMonthReportModel {
     }
 
     generateFailedReportsData() {
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/tasks').orderByChild("taskIsDone").equalTo("failed").once("value", function (snapshot) {
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks').orderByChild("taskIsDone").equalTo("failed").once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childData = snapshot.val();
                 let key = childSnapshot.key;
@@ -62,13 +62,13 @@ class WeekMonthReportModel {
             }
         }
 
-        firebase.database().ref('users/' + localStorage.getItem('currentUser')).update({
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally()).update({
             reports: monthAndCounterBinding
         });
     }
 
     sendUpdatedReportsData(indexReport, counterReports, priority) {
-        firebase.database().ref('users/' + localStorage.getItem('currentUser') + '/reports/' + priority + '/' + indexReport).set(counterReports);
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/reports/' + priority + '/' + indexReport).set(counterReports);
     }
 }
 

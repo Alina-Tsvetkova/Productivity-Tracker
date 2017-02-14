@@ -30,7 +30,7 @@ class Timer {
     receiveColorIndex(timerKey) {
         try {
             let borderColorIndex;
-            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
+            firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks/' + timerKey).on('value', function (data) {
                 borderColorIndex = data.val().colorIndicator;
             });
             return borderColorIndex;

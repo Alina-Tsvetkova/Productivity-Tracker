@@ -1,5 +1,5 @@
 let selectedTaskHashes = new Set();
-class TaskDeletor extends TaskManager {
+class TaskDeletor  {
 
     get deleteTaskObj() {
         return {
@@ -37,7 +37,6 @@ class TaskDeletor extends TaskManager {
     }
 
     pushTaskToDelete() {
-        console.log(selectedTaskHashes);
         let taskListElements = TaskList.getTaskListElements;
         if (event.target.classList.contains('indicator')) {
             event.target.classList.add('for-delete-bg');
@@ -52,7 +51,7 @@ class TaskDeletor extends TaskManager {
 
     submitDeleteTask() {
         for (let selectedTaskHash of selectedTaskHashes) {
-            firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + selectedTaskHash).remove();
+            firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks/' + selectedTaskHash).remove();
         }
         modalWindowController.closeModalWindow(document.getElementById('modal-w-remove'));
         taskDeletorObj.removeIndicatorOfQuantityDel();

@@ -15,7 +15,7 @@ class CycleModel {
             }
         });
 
-        Categories.notifyAboutSuccessfulSave(event);
+        Settings.notifyAboutSuccessfulSave(event);
     }
 
     static receiveCycleData() {

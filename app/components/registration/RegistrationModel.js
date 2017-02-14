@@ -42,8 +42,8 @@ class RegistrationModel {
         });
     }
 
-    saveUserDataLocally() {
-        localStorage.setItem('currentUser', this.userId);
+    saveUserDataLocally(userId) {
+        localStorage.setItem('currentUser', userId);
     }
 
     static getUserDataLocally() {

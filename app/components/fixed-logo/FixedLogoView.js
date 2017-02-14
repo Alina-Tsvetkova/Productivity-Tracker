@@ -1,4 +1,4 @@
-class FixedLogoView {
+class FixedLogoViewComponent {
     downloadFixedLogo (){
         let headerBinder = new Binder('app/components/fixed-logo/fixed-logo.html');
         let headerDoc = headerBinder.downloadComponent();
@@ -7,4 +7,4 @@ class FixedLogoView {
     }
 }
 
-let fixedLogoView = new FixedLogoView();
+let fixedLogoView = new FixedLogoViewComponent();

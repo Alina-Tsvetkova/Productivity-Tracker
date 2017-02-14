@@ -12,7 +12,7 @@ class CategoriesController { // mediator between categories module and categorie
             possibleCategories.push(allPossibleCategories[i].value);
         }
         categoriesModel.sendSavedCategories(possibleCategories, userId);
-        Categories.notifyAboutSuccessfulSave(event);
+        Settings.notifyAboutSuccessfulSave(event);
     };
 
     transitCategoriesToView(data, k) {

@@ -1,4 +1,4 @@
-class Categories extends Settings { // all logic for operations that are connected with data
+class Categories { // all logic for operations that are connected with data
     static createCategories(event) {
         let savedCategories = new Categories();
         categoriesController.saveCategories(event, localStorage.getItem('currentUser'));

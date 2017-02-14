@@ -1,7 +1,7 @@
 class UserValidationView {
     downloadSignUp(event) {
         event.preventDefault();
-        let registrationFormBinder = new Binder('app/components/registration/registration.html');
+        let registrationFormBinder = new Binder('app/components/registration/registration-form.html');
         let regFom = registrationFormBinder.downloadComponent();
         document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
         userValidationController.subscribeValidationEvents();

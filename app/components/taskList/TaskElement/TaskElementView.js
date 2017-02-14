@@ -25,7 +25,6 @@ class TaskElementView {
             renderedTask = data;
         }
 
-        console.log(renderedTask);
         let thisCategory = renderedTask.category;
         taskElementView.createCategoryGroup(thisCategory, docTask, renderedTask.colorIndicator, renderedTask, dataKey);
 
@@ -79,7 +78,6 @@ class TaskElementView {
     }
 
     createCategoryGroup(category, docTask, indicator, renderedTask) {
-        console.log(category, docTask, indicator, renderedTask);
         try {
             let ul = document.createElement('ul');
             ul.setAttribute('category', category);

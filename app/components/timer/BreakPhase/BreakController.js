@@ -1,7 +1,6 @@
 class BreakController {
 
     addBreakAnimationDuration(elem1, elem2, elem3, breakTimeDuration) {
-        alert(breakTimeDuration);
         let timerElements = Timer.initializeTimerElements;
         for (let j = 0; j < arguments.length - 1; j++) {
             arguments[j].style.animationDuration = breakTimeDuration * 60 + 's';

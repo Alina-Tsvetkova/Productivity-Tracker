@@ -32,7 +32,7 @@ class Settings {
             document.getElementById('save-form-wrapper').classList.add('save-form-wrapper-appearance');
         }, 200);
         setTimeout(function () {
-            Categories.removeNotificationSave();
+            Settings.removeNotificationSave();
         }, 2000);
     }
 

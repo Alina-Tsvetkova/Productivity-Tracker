@@ -1,7 +1,7 @@
 class FinishPhaseModel {
     sendDataTaskFailed(timerKey) {
         let today = finishPhaseController.receiveDateOfTaskFinish();
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks/' + timerKey).update({
             taskIsDone: 'failed',
             priority: 'Failed',
             dateOfFinish: today,
@@ -10,7 +10,7 @@ class FinishPhaseModel {
 
     sendDataTaskDone(timerKey) {
         let today = finishPhaseController.receiveDateOfTaskFinish();
-        firebase.database().ref('users/' + UserData.getUserDataLocally() + '/tasks/' + timerKey).update({
+        firebase.database().ref('users/' + RegistrationModel.getUserDataLocally() + '/tasks/' + timerKey).update({
             taskIsDone: true,
             dateOfFinish: today
         });

@@ -4,8 +4,6 @@ class InitialTimerView {
         timerKey = taskKey;
         let timerBinder = new Binder('app/components/timer/timer.html', document.body);
         timerBinder.downloadComponent();
-        let tooltips = $('.tooltip');
-        tooltips.tooltipSwitcher();
         initialTimerView.downloadIntroTimer();
         ElementsListener.listenToEvents('click', document.getElementsByClassName('start-timer'), initialTimerView.downloadStartTimer);
 
@@ -13,6 +11,8 @@ class InitialTimerView {
 
         Icons.downloadMainIcons();
         Icons.iconLinksBinder();
+        let tooltips = $('.tooltip');
+        tooltips.tooltipSwitcher();
     }
 
     downloadIntroTimer() {
