@@ -20,8 +20,9 @@ var AppStarter = function () {
             ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), userValidationView.downloadSignUp);
             if (userId != null) {
                 window.location.hash = "#task-list";
-                var isieEdge = navigator.appName == "Netscape" && navigator.appVersion.indexOf('Trident') === -1;
-                if (isieEdge) {
+                var winNav = window.navigator;
+                var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+                if (isIEedge) {
                     TaskList.moveToTaskList();
                 }
             } else if (userId == null) return false;

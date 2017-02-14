@@ -8,8 +8,9 @@ class AppStarter {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('sign-up'), userValidationView.downloadSignUp);
         if (userId != null) {
             window.location.hash = "#task-list";
-            let isieEdge = (navigator.appName == "Netscape") && (navigator.appVersion.indexOf('Trident') === -1);
-            if (isieEdge) {
+            let winNav = window.navigator;
+            let isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+            if (isIEedge) {
                 TaskList.moveToTaskList();
             }
         }
