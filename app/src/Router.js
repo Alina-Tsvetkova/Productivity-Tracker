@@ -17,6 +17,7 @@ class Router {
 
     static addHash(hash) {
         window.location.hash = hash;
+        return window.location.hash;
     }
 }
 

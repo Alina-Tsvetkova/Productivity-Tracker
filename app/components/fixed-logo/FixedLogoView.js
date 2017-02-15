@@ -1,5 +1,5 @@
 class FixedLogoViewComponent {
-    downloadFixedLogo (){
+    downloadFixedLogo() {
         let headerBinder = new Binder('app/components/fixed-logo/fixed-logo.html');
         let headerDoc = headerBinder.downloadComponent();
         document.body.appendChild(headerDoc.getElementsByClassName('fixed-logo')[0]);

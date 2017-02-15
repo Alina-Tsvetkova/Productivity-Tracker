@@ -49,7 +49,11 @@ var Settings = function () {
         value: function removeNotificationSave() {
             $('#save-form-wrapper').fadeOut(1500);
             setTimeout(function () {
-                document.body.removeChild(document.getElementById('save-form-wrapper'));
+                try {
+                    document.body.removeChild(document.getElementById('save-form-wrapper'));
+                } catch (e) {
+                    return 'element is already removed';
+                }
             }, 3000);
         }
     }, {

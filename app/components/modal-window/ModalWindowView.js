@@ -85,6 +85,7 @@ class ModalWindowView {
                 dateFormat: 'dd.mm.yy'
             });
         });
+        return true;
     };
 }
 

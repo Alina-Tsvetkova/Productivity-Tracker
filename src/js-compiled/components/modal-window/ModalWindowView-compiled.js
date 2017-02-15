@@ -102,6 +102,7 @@ var ModalWindowView = function () {
                     dateFormat: 'dd.mm.yy'
                 });
             });
+            return true;
         }
     }]);
 

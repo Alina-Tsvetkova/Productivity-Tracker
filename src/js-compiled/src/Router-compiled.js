@@ -27,6 +27,7 @@ var Router = function () {
         key: "addHash",
         value: function addHash(hash) {
             window.location.hash = hash;
+            return window.location.hash;
         }
     }]);
 

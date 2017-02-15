@@ -106,6 +106,7 @@ class TaskElementController {
             document.querySelectorAll('.opportunity-select button')[k].style.color = '#8da5b8';
         }
         elem.style.color = 'white';
+        return elem.style.color;
     }
 
     addDefaultData() {

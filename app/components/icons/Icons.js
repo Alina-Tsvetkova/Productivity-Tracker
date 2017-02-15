@@ -11,7 +11,6 @@ class Icons {
     }
 
     static iconLinksBinder() {
-
         let isieEdge = (navigator.appName == "Netscape") && (navigator.appVersion.indexOf('Trident') === -1); // IE Edge
 
         let icons = Icons.iconsObj;

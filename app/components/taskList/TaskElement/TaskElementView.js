@@ -117,6 +117,7 @@ class TaskElementView {
 
     appendTask(container, ul) {
         document.getElementById(container).appendChild(ul);
+        return 'Element is appended';
     }
 
     addColorsToCategories() {

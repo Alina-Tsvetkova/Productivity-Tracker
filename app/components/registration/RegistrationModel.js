@@ -44,6 +44,7 @@ class RegistrationModel {
 
     saveUserDataLocally(userId) {
         localStorage.setItem('currentUser', userId);
+        return 'user is saved';
     }
 
     static getUserDataLocally() {

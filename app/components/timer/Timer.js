@@ -40,13 +40,15 @@ class Timer {
     }
 
     addBorderColor(element, value) {
+        let borderColors = ['#ffb200', '#59abe3', '#9849b8', '#e16c65', '#00d4d9'];
         try {
-            let borderColors = ['#ffb200', '#59abe3', '#9849b8', '#e16c65', '#00d4d9'];
             element.style.borderColor = borderColors[value];
         }
         catch (e) {
             return 'no element to add border';
         }
+
+        return borderColors[value];
     }
 
     downloadTimerComponents(route) {

@@ -12,7 +12,6 @@ var Icons = function () {
     _createClass(Icons, null, [{
         key: 'iconLinksBinder',
         value: function iconLinksBinder() {
-
             var isieEdge = navigator.appName == "Netscape" && navigator.appVersion.indexOf('Trident') === -1; // IE Edge
 
             var icons = Icons.iconsObj;

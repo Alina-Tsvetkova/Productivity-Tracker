@@ -63,6 +63,7 @@ var TaskNotification = function () {
         value: function createNotification(params) {
             var newNotification = new TaskNotification();
             newNotification.wrapNotificationFunctionality(params);
+            return newNotification;
         }
     }]);
 

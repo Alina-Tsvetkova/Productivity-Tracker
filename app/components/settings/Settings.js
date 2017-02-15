@@ -47,9 +47,13 @@ class Settings {
 
     static removeNotificationSave() {
         $('#save-form-wrapper').fadeOut(1500);
-        setTimeout(function () {
-            document.body.removeChild(document.getElementById('save-form-wrapper'));
-        }, 3000);
+            setTimeout(function () {
+                try {
+                    document.body.removeChild(document.getElementById('save-form-wrapper'));
+                } catch (e) {
+                    return 'element is already removed';
+                }
+            }, 3000);
     }
 }
 

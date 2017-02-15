@@ -30,6 +30,7 @@ class ModalWindowController {
         if (!(data)) {
             return false;
         }
+
         modalWindowView.renderEarlierSavedCategories(data, k);
     }
 
@@ -45,6 +46,8 @@ class ModalWindowController {
         setTimeout(function () {
             document.getElementsByClassName('add-task-modal')[0].style.top = coord + '%';
         }, 100)
+
+        return coord;
     }
 
     subscribeModalEvents() {

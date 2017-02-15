@@ -29,12 +29,14 @@ var Timer = function () {
     }, {
         key: 'addBorderColor',
         value: function addBorderColor(element, value) {
+            var borderColors = ['#ffb200', '#59abe3', '#9849b8', '#e16c65', '#00d4d9'];
             try {
-                var borderColors = ['#ffb200', '#59abe3', '#9849b8', '#e16c65', '#00d4d9'];
                 element.style.borderColor = borderColors[value];
             } catch (e) {
                 return 'no element to add border';
             }
+
+            return borderColors[value];
         }
     }, {
         key: 'downloadTimerComponents',

@@ -29,6 +29,7 @@ var ModalWindowController = function () {
             if (!data) {
                 return false;
             }
+
             modalWindowView.renderEarlierSavedCategories(data, k);
         }
     }, {
@@ -45,6 +46,8 @@ var ModalWindowController = function () {
             setTimeout(function () {
                 document.getElementsByClassName('add-task-modal')[0].style.top = coord + '%';
             }, 100);
+
+            return coord;
         }
     }, {
         key: 'subscribeModalEvents',

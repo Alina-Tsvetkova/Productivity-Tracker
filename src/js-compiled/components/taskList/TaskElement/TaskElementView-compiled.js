@@ -133,6 +133,7 @@ var TaskElementView = function () {
         key: 'appendTask',
         value: function appendTask(container, ul) {
             document.getElementById(container).appendChild(ul);
+            return 'Element is appended';
         }
     }, {
         key: 'addColorsToCategories',

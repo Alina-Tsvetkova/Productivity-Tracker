@@ -15,6 +15,11 @@ var UserValidationView = function () {
             event.preventDefault();
             var registrationFormBinder = new Binder('app/components/registration/registration-form.html');
             var regFom = registrationFormBinder.downloadComponent();
+            userValidationView.appendSignUp(regFom);
+        }
+    }, {
+        key: 'appendSignUp',
+        value: function appendSignUp(regFom) {
             document.getElementById('wrapper').appendChild(regFom.getElementsByClassName('form-registration')[0]);
             userValidationController.subscribeValidationEvents();
             setTimeout(function () {

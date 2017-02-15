@@ -3,6 +3,7 @@ class TaskNotification {
     static createNotification(params) {
         let newNotification = new TaskNotification();
         newNotification.wrapNotificationFunctionality(params);
+        return newNotification;
     }
 
     wrapNotificationFunctionality(stateNotification) {

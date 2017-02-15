@@ -57,6 +57,7 @@ var RegistrationModel = function () {
         key: 'saveUserDataLocally',
         value: function saveUserDataLocally(userId) {
             localStorage.setItem('currentUser', userId);
+            return 'user is saved';
         }
     }], [{
         key: 'getUserDataLocally',
