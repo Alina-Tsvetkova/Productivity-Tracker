@@ -36,6 +36,7 @@ class SelectionManager {
         SelectionManager.removeHashesToDeselect(taskHashes);
         let selectedSize = selectedTaskHashes.size;
         for (let l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
+            taskListElements.quantityOfSelectedTasks[l].style.display = 'none';
             if (taskListElements.quantityOfSelectedTasks[l].innerHTML == 0) {
                 return;
             }

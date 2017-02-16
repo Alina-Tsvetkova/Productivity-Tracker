@@ -52,6 +52,7 @@ var SelectionManager = function () {
             SelectionManager.removeHashesToDeselect(taskHashes);
             var selectedSize = selectedTaskHashes.size;
             for (var l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
+                taskListElements.quantityOfSelectedTasks[l].style.display = 'none';
                 if (taskListElements.quantityOfSelectedTasks[l].innerHTML == 0) {
                     return;
                 }
