@@ -24,7 +24,12 @@ var UserValidationController = function () {
         key: 'checkLoginAndPass',
         value: function checkLoginAndPass(event) {
             event.preventDefault();
-            userValidationModel.openSessionForUser();
+            var loginObject = userValidationController.getLogInObject;
+            if (loginObject.loginField.value == '' && loginObject.passwordField.value == '') {
+                userValidationController.proceedSignInErrors('fill-both-values');
+            } else {
+                userValidationModel.openSessionForUser();
+            }
         }
     }, {
         key: 'proceedSignInErrors',
@@ -43,6 +48,19 @@ var UserValidationController = function () {
             if (errorCode == 'auth/user-not-found') {
                 registrationView.addBorderToInvalidInput('fail-validation', 0);
                 registrationView.addInvalidField(loginObject.loginField);
+            }
+            if (errorCode == 'fill-both-values') {
+                userValidationController.warnToFillBothFields();
+            }
+        }
+    }, {
+        key: 'warnToFillBothFields',
+        value: function warnToFillBothFields() {
+            var signInValidator = userValidationController.getLogInObject;
+            for (var k = 0; k < signInValidator.logInFields.length; k++) {
+                registrationView.addInvalidField(signInValidator.loginField, signInValidator.passwordField);
+                signInValidator.logInFields[k].classList.add('no-validate');
+                signInValidator.logInFields[k].innerHTML = 'Fill in both values';
             }
         }
     }, {

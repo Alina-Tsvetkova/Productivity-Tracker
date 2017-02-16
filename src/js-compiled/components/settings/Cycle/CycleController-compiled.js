@@ -195,7 +195,6 @@ var CycleController = function () {
             });
             ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), CycleModel.createCycle);
             ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
-                counterOfTasks = 0;
                 Router.addHash("task-list");
             });
         }
