@@ -44,6 +44,7 @@ class TaskList {
             taskElementController.checkIfTaskListEmpty();
         }, 100);
 
+
         Binder.downloadPlugins("#tasksTabs");
 
         Icons.iconLinksBinder();

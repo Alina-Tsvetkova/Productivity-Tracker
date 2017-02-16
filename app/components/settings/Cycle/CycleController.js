@@ -187,7 +187,7 @@ class CycleController {
         ElementsListener.listenToEvents('click', document.getElementsByClassName('save-cycle-btn'), CycleModel.createCycle);
         ElementsListener.listenToEvents('click', document.getElementsByClassName('next-btn'), function () {
             counterOfTasks = 0;
-            TaskList.moveToTaskList();
+            Router.addHash("task-list");
         });
     }
 
