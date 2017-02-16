@@ -44,14 +44,18 @@ var TaskDeletor = function () {
         key: 'pushTaskToDelete',
         value: function pushTaskToDelete(event) {
             var taskListElements = TaskList.getTaskListElements;
-            if (event.target.classList.contains('indicator')) {
-                event.target.classList.add('for-delete-bg');
-                selectedTaskHashes.add(event.target.parentNode.parentNode.getAttribute('taskKey'));
-                var quantityOfSelectedTasks = selectedTaskHashes.size;
-                for (var l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
-                    taskListElements.quantityOfSelectedTasks[l].style.display = 'block';
-                    taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
+            try {
+                if (event.target.classList.contains('indicator')) {
+                    event.target.classList.add('for-delete-bg');
+                    selectedTaskHashes.add(event.target.parentNode.parentNode.getAttribute('taskKey'));
+                    var quantityOfSelectedTasks = selectedTaskHashes.size;
+                    for (var l = 0; l < taskListElements.quantityOfSelectedTasks.length; l++) {
+                        taskListElements.quantityOfSelectedTasks[l].style.display = 'block';
+                        taskListElements.quantityOfSelectedTasks[l].innerHTML = quantityOfSelectedTasks;
+                    }
                 }
+            } catch (e) {
+                return "Element is undefined";
             }
         }
     }, {

@@ -5,8 +5,9 @@ class Settings {
         settingsBinder.downloadComponent();
         DOMElementsInitializer = Settings.settingsObj;
         categoriesController.runCategories(); // plug in categories module
-        Binder.downloadPlugins("#tabs");
         cycleController.runCycle();
+        Icons.downloadMainIcons();
+        Binder.downloadPlugins("#tabs");
         Icons.iconLinksBinder();
     }
 
