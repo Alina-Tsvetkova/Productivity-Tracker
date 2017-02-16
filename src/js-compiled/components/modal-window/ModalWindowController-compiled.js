@@ -20,7 +20,7 @@ var ModalWindowController = function () {
         key: 'initEditModalWindow',
         value: function initEditModalWindow(index) {
             // start module of Modal Edit Window
-            modalWindowModel.downloadEarlierCategories();
+
             modalWindowView.showEditModal(index);
         }
     }, {

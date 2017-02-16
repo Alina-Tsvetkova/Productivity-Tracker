@@ -25,6 +25,7 @@ var ModalWindowView = function () {
             var modalBinder = new Binder('app/components/modal-window/edit-modal-window.html');
             var receivedDoc = modalBinder.downloadComponent();
             document.body.appendChild(receivedDoc.getElementById('modal-window-elem-edit'));
+            modalWindowModel.downloadEarlierCategories();
             modalWindowView.fillEditModal(index);
         }
     }, {
@@ -38,6 +39,7 @@ var ModalWindowView = function () {
     }, {
         key: 'fillEditModal',
         value: function fillEditModal(index) {
+
             var modalWindow = modalWindowController.getModalWindowElements;
             var taskContainer = modalWindow.task[index];
             modalWindow.titleInput.value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
@@ -49,10 +51,15 @@ var ModalWindowView = function () {
                 modalCheckboxes[j].checked = true;
             }
             var taskPriority = $('.priority-indicator')[index];
-            var choosedRadioPriority = modalWindowView.findChoosedPriority(taskPriority);
-            var choosedRadioCategory = modalWindowView.findChoosedCategory(taskContainer);
 
-            modalWindow.categoriesInputs[choosedRadioCategory].checked = true;
+            modalWindowModel.downloadEarlierCategories();
+            var choosedRadioCategory = void 0;
+            setTimeout(function () {
+                choosedRadioCategory = modalWindowView.findChoosedCategory(taskContainer);
+                modalWindow.categoriesInputs[choosedRadioCategory].checked = true;
+            }, 200);
+            var choosedRadioPriority = modalWindowView.findChoosedPriority(taskPriority);
+
             modalWindow.priorityInputs[choosedRadioPriority].checked = true;
 
             modalWindowController.subscribeModalEvents();
@@ -62,11 +69,13 @@ var ModalWindowView = function () {
     }, {
         key: 'findChoosedCategory',
         value: function findChoosedCategory(taskContainer) {
+
             var choosedRadioCategory = taskContainer.getAttribute('category');
-            var allCategoriesNames = $('.categories li label.category-name');
+            var allCategoriesNames = document.querySelectorAll('label.category-name');
             var allCategoriesNamesArr = Array.prototype.slice.call(allCategoriesNames);
             for (var k = 0; k < allCategoriesNamesArr.length; k++) {
-                if (allCategoriesNamesArr[k].innerHTML == taskContainer.parentNode.getAttribute('category')) {
+                console.log(allCategoriesNamesArr[k].innerText);
+                if (allCategoriesNamesArr[k].innerText == taskContainer.parentNode.getAttribute('category')) {
                     choosedRadioCategory = allCategoriesNamesArr.indexOf(allCategoriesNamesArr[k]);
                 } else if (choosedRadioCategory == null) {
                     choosedRadioCategory = 0;
@@ -77,7 +86,7 @@ var ModalWindowView = function () {
     }, {
         key: 'findChoosedPriority',
         value: function findChoosedPriority(taskPriority) {
-            var allPriorityLevels = $('.priorities li label.priority-name');
+            var allPriorityLevels = document.querySelectorAll('.priorities li label.priority-name');
             var choosedRadioPriority = void 0;
             var allPriorityLevelsArr = Array.prototype.slice.call(allPriorityLevels);
             for (var k = 0; k < allPriorityLevelsArr.length; k++) {

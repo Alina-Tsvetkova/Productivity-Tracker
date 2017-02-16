@@ -6,7 +6,6 @@ class ModalWindowController {
     }
 
     initEditModalWindow(index) { // start module of Modal Edit Window
-        modalWindowModel.downloadEarlierCategories();
         modalWindowView.showEditModal(index);
     }
 

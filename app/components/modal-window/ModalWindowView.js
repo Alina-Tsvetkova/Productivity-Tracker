@@ -13,6 +13,7 @@ class ModalWindowView {
         let modalBinder = new Binder('app/components/modal-window/edit-modal-window.html');
         let receivedDoc = modalBinder.downloadComponent();
         document.body.appendChild(receivedDoc.getElementById('modal-window-elem-edit'));
+        modalWindowModel.downloadEarlierCategories();
         modalWindowView.fillEditModal(index);
     }
 
@@ -24,6 +25,7 @@ class ModalWindowView {
     }
 
     fillEditModal(index) {
+
         let modalWindow = modalWindowController.getModalWindowElements;
         let taskContainer = modalWindow.task[index];
         modalWindow.titleInput.value = taskContainer.getElementsByClassName('task-title')[0].innerHTML;
@@ -35,10 +37,15 @@ class ModalWindowView {
             modalCheckboxes[j].checked = true;
         }
         let taskPriority = $('.priority-indicator')[index];
-        let choosedRadioPriority = modalWindowView.findChoosedPriority(taskPriority);
-        let choosedRadioCategory = modalWindowView.findChoosedCategory(taskContainer);
 
-        modalWindow.categoriesInputs[choosedRadioCategory].checked = true;
+        modalWindowModel.downloadEarlierCategories();
+        let choosedRadioCategory;
+        setTimeout(function () {
+            choosedRadioCategory = modalWindowView.findChoosedCategory(taskContainer);
+            modalWindow.categoriesInputs[choosedRadioCategory].checked = true;
+        },200);
+        let choosedRadioPriority = modalWindowView.findChoosedPriority(taskPriority);
+
         modalWindow.priorityInputs[choosedRadioPriority].checked = true;
 
         modalWindowController.subscribeModalEvents();
@@ -47,11 +54,12 @@ class ModalWindowView {
     };
 
     findChoosedCategory(taskContainer) {
+
         let choosedRadioCategory = taskContainer.getAttribute('category');
-        let allCategoriesNames = $('.categories li label.category-name');
+        let allCategoriesNames = document.querySelectorAll('label.category-name');
         let allCategoriesNamesArr = Array.prototype.slice.call(allCategoriesNames);
         for (let k = 0; k < allCategoriesNamesArr.length; k++) {
-            if (allCategoriesNamesArr[k].innerHTML == taskContainer.parentNode.getAttribute('category')) {
+            if (allCategoriesNamesArr[k].innerText == taskContainer.parentNode.getAttribute('category')) {
                 choosedRadioCategory = allCategoriesNamesArr.indexOf(allCategoriesNamesArr[k]);
             }
             else if (choosedRadioCategory == null) {
@@ -62,7 +70,7 @@ class ModalWindowView {
     }
 
     findChoosedPriority(taskPriority) {
-        let allPriorityLevels = $('.priorities li label.priority-name');
+        let allPriorityLevels = document.querySelectorAll('.priorities li label.priority-name');
         let choosedRadioPriority;
         let allPriorityLevelsArr = Array.prototype.slice.call(allPriorityLevels);
         for (let k = 0; k < allPriorityLevelsArr.length; k++) {
