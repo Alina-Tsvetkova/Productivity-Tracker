@@ -7,7 +7,7 @@ For data storage is used an open-source service - `Firebase `(https://firebase.g
 
 **MAIN FEATURES**
 
-1. User can sign in or sign up and log out.
+1. User can sign in or sign up and sign out.
 
 2. User can chooses necessary settings for pomodoros on page with settings-cycle. Also user can see his cycle on the graph.
 User can create own categories by click on the toggle switcher Pomodoros | Categories.
@@ -36,4 +36,4 @@ _Supported Browsers_: Chrome, Opera, Firefox, Edge
 
 _Task manager_: Grunt
 
-**Test account: Login: a@mail.ru, Password: 123456.**
+**Test account: Login: a@mail.ru, Password: 123456.**.
