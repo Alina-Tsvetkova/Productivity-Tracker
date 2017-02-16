@@ -25,7 +25,7 @@ If user is already signed in, task list page would be downloaded.
 New screen appears with timer. User has ability start, break or cancel the task. Also it is available the option to go to a
 page with the settings, or log out from the application.
 
-7. Reports – can have 3 view: Daily/Week/Month.
+7. Reports – can have 3 views: Daily/Week/Month.
 Each preview has switcher to charts based on tasks.
 Daily task productivity chart based on Donut chart (high charts) inside it shows total number of the tasks on the day.
 Charts divides onto parts by priorities (urgent, high, medium, low) and number of failed tasks.
@@ -33,4 +33,7 @@ Weekly charts based on bar chart with same parts but in another view (see screen
 Monthly chart has same view divided by last 31 days before today Date.
 
 _Supported Browsers_: Chrome, Opera, Firefox, Edge
+
 _Task manager_: Grunt
+
+**Test account: Login: a@mail.ru, Password: 123456.**
