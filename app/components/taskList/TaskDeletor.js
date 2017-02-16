@@ -36,7 +36,7 @@ class TaskDeletor  {
         }
     }
 
-    pushTaskToDelete() {
+    pushTaskToDelete(event) {
         let taskListElements = TaskList.getTaskListElements;
         if (event.target.classList.contains('indicator')) {
             event.target.classList.add('for-delete-bg');

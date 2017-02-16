@@ -42,7 +42,7 @@ var TaskDeletor = function () {
         }
     }, {
         key: 'pushTaskToDelete',
-        value: function pushTaskToDelete() {
+        value: function pushTaskToDelete(event) {
             var taskListElements = TaskList.getTaskListElements;
             if (event.target.classList.contains('indicator')) {
                 event.target.classList.add('for-delete-bg');
